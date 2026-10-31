@@ -5,11 +5,41 @@
     const add = (parent, tag, text, cls) => { const el = document.createElement(tag); el.textContent = text; if (cls) el.className = cls; parent.append(el); return el; };
     function bundleRoomName(name) { return typeof name === 'string' ? name.trim().replace(/([a-z])([A-Z])/g, '$1 $2') : ''; }
     function bundles(target, data) { target.replaceChildren(); const rooms = { CraftsRoom: 'Sala de Artesanato', Pantry: 'Copa', FishTank: 'Aquário', BoilerRoom: 'Sala da Caldeira', BulletinBoard: 'Mural de Recados', Vault: 'Cofre', AbandonedJojaMart: 'Mercado Joja abandonado' }; const names = { 'Spring Foraging': 'Conjunto Recursos de Primavera', 'Summer Foraging': 'Conjunto Recursos de Verão', 'Fall Foraging': 'Conjunto Recursos de Outono', 'Winter Foraging': 'Conjunto Recursos de Inverno', 'Construction': 'Conjunto Construção', 'Exotic Foraging': 'Conjunto Recursos Exóticos', 'Spring Crops': 'Conjunto Plantações de Primavera', 'Summer Crops': 'Conjunto Plantações de Verão', 'Fall Crops': 'Conjunto Plantações de Outono', 'Quality Crops': 'Conjunto Plantações de Qualidade', 'Animal': 'Conjunto Animal', 'Artisan': 'Conjunto Artesão', 'River Fish': 'Conjunto Peixes de Rio', 'Lake Fish': 'Conjunto Peixes de Lago', 'Ocean Fish': 'Conjunto Peixes de Oceano', 'Night Fishing': 'Conjunto Pesca Noturna', 'Crab Pot': 'Conjunto Covo', 'Specialty Fish': 'Conjunto Peixes Especializados', "Blacksmith's": 'Conjunto de Ferreiro', "Geologist's": 'Conjunto de Geólogo', "Adventurer's": 'Conjunto de Aventureiro', "Chef's": 'Conjunto de Cozinheiro', 'Dye': 'Conjunto Tinta', 'Field Research': 'Conjunto Pesquisa de campo', 'Fodder': 'Conjunto Forragem', 'The Missing': 'Conjunto A Desaparecida', "Enchanter's": 'Conjunto de Encantador' }; const grouped = new Map(); for (const bundle of data.visuals.bundles) { const room = String(bundle.room || (bundle.items.some(e => e.isMoney) ? 'Vault' : 'Other')).replace(/\s+/g, '').toLowerCase(); if (!grouped.has(room)) grouped.set(room, []); grouped.get(room).push(bundle); } for (const [room, entries] of grouped) { const section = add(target, 'section', '', 'bundle-room'); add(section, 'h2', Object.entries(rooms).find(([key]) => key.toLowerCase() === room)?.[1] || (bundleRoomName(entries[0].room) || 'Sala desconhecida')); const panels = add(section, 'div', '', 'bundle-panels'); for (const bundle of entries) { const money = bundle.items.find(entry => entry.isMoney); const raw = (bundle.internalName || '').replace(/ Bundle$/, ''); const official = money ? 'Conjunto ' + new Intl.NumberFormat('pt-BR').format(money.quantity) + ' ouros' : names[raw] || (/^Conjunto/i.test(bundle.name || '') ? bundle.name : 'Conjunto ' + (bundle.name || raw || 'sem nome')); const theme = /spring/i.test(raw) ? 'spring' : /summer/i.test(raw) ? 'summer' : /fall|autumn/i.test(raw) ? 'fall' : /winter/i.test(raw) ? 'winter' : room === 'fishtank' ? 'fish' : room === 'boilerroom' ? 'mining' : room === 'vault' ? 'vault' : ''; const panel = add(panels, 'article', '', 'bundle-panel ' + theme); add(panel, 'h3', official); const list = add(panel, 'div', '', 'items'); for (const entry of bundle.items) { const row = add(list, 'div', '', 'item' + (entry.completed ? ' done' : '')); if (!entry.isMoney) window.GuiaSeason?.markItem(row, entry.item); if (entry.isMoney) { const coin = document.createElement('img'); coin.className = 'game-icon bundle-coin'; coin.src = 'https://stardewvalleywiki.com/Special:Redirect/file/Gold.png'; coin.alt = ''; row.append(coin); const label = add(row, 'span', new Intl.NumberFormat('pt-BR').format(entry.quantity) + ' ouros', 'item-amount'); label.style.fontWeight = '900'; add(row, 'span', entry.completed ? '✓ Entregue' : 'Pendente', entry.completed ? 'item-status completion' : 'item-status'); row.setAttribute('aria-label', label.textContent + (entry.completed ? ' — concluído' : ' — pendente')); continue; } const frame = add(row, 'span', '', 'sprite-frame'); frame.append(picture(entry.item.icon, entry.item.name)); if (entry.quality) { const tier = { 1: 'silver', 2: 'gold', 4: 'iridium' }[entry.quality]; if (tier && data.visuals.ui) { const star = picture(data.visuals.ui[tier], 'Qualidade ' + ({ 1: 'prata', 2: 'ouro', 4: 'irídio' }[entry.quality]), 'quality-star'); frame.append(star); } } const button = add(row, 'button', entry.item.name + ' × ' + entry.quantity + (entry.quality ? ' · qualidade ' + entry.quality : '')); button.onclick = () => window.openItemPage({ ...entry.item, quality: entry.quality }); add(row, 'span', entry.completed ? '✓ Entregue' : 'Pendente', entry.completed ? 'item-status completion' : 'item-status'); } } } }
+    const residentColors = new Map();
+    function colorResidentCard(card, portrait) {
+        if (typeof portrait !== 'string' || !portrait.startsWith('data:image/png;base64,')) return;
+        if (residentColors.has(portrait)) { const color = residentColors.get(portrait); if (color) card.style.setProperty('--npc-card-bg', color); return; }
+        const image = new Image();
+        image.onload = () => {
+            try {
+                const canvas = document.createElement('canvas'); canvas.width = 64; canvas.height = 64;
+                const ctx = canvas.getContext('2d', { willReadFrequently: true }); if (!ctx) return;
+                ctx.drawImage(image, 0, 0, 64, 64);
+                const pixels = ctx.getImageData(0, 0, 64, 64).data; const hues = new Map();
+                for (let i = 0; i < pixels.length; i += 4) {
+                    const r = pixels[i], g = pixels[i + 1], b = pixels[i + 2];
+                    const high = Math.max(r, g, b), low = Math.min(r, g, b), chroma = high - low;
+                    if (pixels[i + 3] < 128 || chroma < 35 || high < 55 || high > 245) continue;
+                    if (r > g && g > b && r > 130 && g > 75 && chroma < 120) continue;
+                    let hue = high === r ? ((g - b) / chroma) % 6 : high === g ? (b - r) / chroma + 2 : (r - g) / chroma + 4;
+                    const bucket = Math.round(((hue * 60 + 360) % 360) / 15) % 24;
+                    hues.set(bucket, (hues.get(bucket) || 0) + chroma);
+                }
+                let best = null, score = 0;
+                for (const [hue, value] of hues) if (value > score) { best = hue; score = value; }
+                const color = best === null ? null : `hsl(${best * 15} 55% 88%)`;
+                residentColors.set(portrait, color);
+                if (color && card.isConnected) card.style.setProperty('--npc-card-bg', color);
+            } catch (error) { console.warn('[Guia] Não foi possível obter a cor do morador:', error.name); }
+        };
+        image.src = portrait;
+    }
     function gifts(target, data) {
         target.classList.add('friendship-grid');
         target.replaceChildren();
         for (const npc of data.visuals.npcs) {
             const card = add(target, 'article', '', 'card npc-card');
+            colorResidentCard(card, npc.portrait);
             const summary = add(card, 'div', '', 'resident-summary');
             const frame = add(summary, 'div', '', 'resident-frame');
             frame.append(picture(npc.portrait, npc.name, 'portrait'));
