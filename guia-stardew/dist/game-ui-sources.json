@@ -1,0 +1,41 @@
+{
+  "owner": "ConcernedApe \u2014 Stardew Valley",
+  "gameVersion": "1.6.15.24356",
+  "cursor": {
+    "source": "Content/LooseSprites/Cursors.xnb",
+    "tile": [
+      0,
+      0,
+      16,
+      16
+    ],
+    "scale": 2,
+    "sha256": "1bf29068c86cc24f88afe2827543155affb37b00ccb04c958ac000a70c76accd"
+  },
+  "audio": {
+    "source": "Content/XACT/Wave Bank.xwb",
+    "sha256": "5ef10988d85ca3059c09d026eac62d73bc822232b2949cd7bd2a54568d7e0322",
+    "cues": [
+      {
+        "cue": "smallSelect",
+        "waveIndex": 20,
+        "file": "menu-hover.wav"
+      },
+      {
+        "cue": "select",
+        "waveIndex": 148,
+        "file": "menu-select.wav"
+      },
+      {
+        "cue": "bigSelect",
+        "waveIndex": 3,
+        "file": "menu-open.wav"
+      },
+      {
+        "cue": "bigDeSelect",
+        "waveIndex": 2,
+        "file": "menu-close.wav"
+      }
+    ]
+  }
+}

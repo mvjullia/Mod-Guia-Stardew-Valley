@@ -18,11 +18,12 @@ internal sealed class EmbeddedGuide : IDisposable
     private readonly string secret = Convert.ToHexString(RandomNumberGenerator.GetBytes(32));
     private readonly string session = Convert.ToHexString(RandomNumberGenerator.GetBytes(32));
     private readonly IMonitor monitor;
+    private readonly AlbumStore? albums;
     private string? latest;
     private long updateId;
     public string Origin { get; private set; } = "";
     public string StartUrl => Origin + "/#connect=" + secret;
-    public EmbeddedGuide(IMonitor monitor) { this.monitor = monitor; }
+    public EmbeddedGuide(IMonitor monitor, AlbumStore? albums = null) { this.monitor = monitor; this.albums = albums; }
     public void Start()
     {
         Exception? last = null;
@@ -59,6 +60,20 @@ internal sealed class EmbeddedGuide : IDisposable
             res.Headers["X-Content-Type-Options"] = "nosniff";
             if (req.UserHostName != new Uri(Origin).Authority || (req.Headers["Origin"] != null && req.Headers["Origin"] != Origin)) { res.StatusCode=403; res.Close(); return; }
             var route = req.Url?.AbsolutePath;
+            if (req.HttpMethod == "GET" && (route == "/api/albums" || route?.StartsWith("/api/albums/photos/", StringComparison.Ordinal) == true)) {
+                if (req.Cookies["guia_embedded"]?.Value != session) { res.StatusCode=401;res.Close();return; }
+                res.Headers["Cache-Control"] = "no-store";
+                if (route == "/api/albums") {
+                    res.ContentType="application/json; charset=utf-8";
+                    byte[] data=Encoding.UTF8.GetBytes(JsonSerializer.Serialize(albums?.List() ?? new {supported=false,active=false,photos=Array.Empty<object>()},new JsonSerializerOptions {PropertyNamingPolicy=JsonNamingPolicy.CamelCase}));
+                    await res.OutputStream.WriteAsync(data);
+                } else {
+                    string id=route!["/api/albums/photos/".Length..];
+                    byte[]? data=id.EndsWith(".png",StringComparison.Ordinal)?albums?.ReadImage(id[..^4]):null;
+                    if(data==null)res.StatusCode=404;else {res.ContentType="image/png";await res.OutputStream.WriteAsync(data);}
+                }
+                res.Close();return;
+            }
             if(route == "/api/wiki" && req.HttpMethod == "GET") {
                 if(req.Cookies["guia_embedded"]?.Value != session){res.StatusCode=401;res.Close();return;}
                 try {string content=await WikiReader.Fetch(req.QueryString["title"]??"",req.QueryString["lang"]??"pt");res.ContentType="application/json; charset=utf-8";await res.OutputStream.WriteAsync(Encoding.UTF8.GetBytes(content));}
@@ -82,11 +97,21 @@ internal sealed class EmbeddedGuide : IDisposable
                 return;
             }
             if (req.HttpMethod != "GET") { res.StatusCode=405;res.Close();return; }
-            string? resource = route switch { "/" or "/index.html" => "index.html", "/telemetry.js" => "telemetry.js", "/realtime.js" => "realtime.js", "/embedded.js" => "embedded.js", "/visual.js" => "visual.js", "/polish.js" => "polish.js", "/acquisition.js" => "acquisition.js", "/profile.js" => "profile.js", "/time-format.js" => "time-format.js", "/knowledge.js" => "knowledge.js", "/Pixellari.ttf" => "Pixellari.ttf", "/community-center.png" => "community-center.png", "/community-center-mask.png" => "community-center-mask.png", _ => null };
+            string? resource = route switch { "/" or "/index.html" => "index.html", "/telemetry.js" => "telemetry.js", "/realtime.js" => "realtime.js", "/embedded.js" => "embedded.js", "/visual.js" => "visual.js", "/polish.js" => "polish.js", "/acquisition.js" => "acquisition.js", "/profile.js" => "profile.js", "/time-format.js" => "time-format.js", "/knowledge.js" => "knowledge.js", "/item-catalog.js" => "item-catalog.js", "/item-fields.json" => "item-fields.json", "/items.json" => "items.json", "/game-ui.js" => "game-ui.js", "/game-cursor.png" => "game-cursor.png", "/game-ui-sources.json" => "game-ui-sources.json", "/menu-hover.wav" => "menu-hover.wav", "/menu-select.wav" => "menu-select.wav", "/menu-open.wav" => "menu-open.wav", "/menu-close.wav" => "menu-close.wav", _ => null };
+            resource ??= route switch { "/season.js" => "season.js", "/season-guide.json" => "season-guide.json", _ => null };
+            resource ??= route switch { "/albums.js" => "albums.js", "/album-moments.json" => "album-moments.json", _ => null };
+            resource ??= route == "/album-rules.json" ? "album-rules.json" : null;
+            resource ??= route == "/page-navigation.js" ? "page-navigation.js" : null;
+            resource ??= route == "/Pixellari.ttf" ? "Pixellari.ttf" : null;
+            resource ??= route == "/community-center.png" ? "community-center.png" : null;
+            resource ??= route == "/community-center-mask.png" ? "community-center-mask.png" : null;
             if (resource == null) { res.StatusCode=404;res.Close();return; }
             using Stream? file=typeof(EmbeddedGuide).Assembly.GetManifestResourceStream("Guide."+resource);
             if(file == null) {res.StatusCode=500;res.Close();return;}
-            res.ContentType=resource.EndsWith(".html") ? "text/html; charset=utf-8" : resource.EndsWith(".ttf") ? "font/ttf" : resource.EndsWith(".png") ? "image/png" : "text/javascript; charset=utf-8";
+            res.ContentType=Path.GetExtension(resource) switch {
+                ".html" => "text/html; charset=utf-8", ".json" => "application/json; charset=utf-8",
+                ".png" => "image/png", ".wav" => "audio/wav", ".ttf" => "font/ttf", _ => "text/javascript; charset=utf-8"
+            };
             res.Headers["Cache-Control"]="no-store";
             if (resource == "index.html") {
                 string? fetchSite=req.Headers["Sec-Fetch-Site"];

@@ -40,7 +40,8 @@ internal static class VisualSnapshot
                 object item=isMoney ? new {id="-1",name="Ouro",icon=""} : Item(parts[i]);
                 items.Add(new {item,quantity=int.Parse(parts[i+1]),quality=isMoney?0:int.Parse(parts[i+2]),completed=i/3<delivered.Length && delivered[i/3],isMoney});
             }
-            bundles.Add(new {id=bundleId,room=entry.Key.Split('/')[0],internalName=fields[0],name=fields.Length>6?fields[6]:fields[0],items});
+            int requiredCount = fields.Length > 4 && int.TryParse(fields[4], out int required) && required > 0 ? required : items.Count;
+            bundles.Add(new {id=bundleId,room=entry.Key.Split('/')[0],internalName=fields[0],name=fields.Length>6?fields[6]:fields[0],items,requiredCount,completed=delivered.Count(value=>value)>=requiredCount});
         }
         var tastes=Game1.content.Load<Dictionary<string,string>>("Data/NPCGiftTastes");
         var npcs=new List<object>();

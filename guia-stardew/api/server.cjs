@@ -4,7 +4,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 require('../dist/telemetry.js');
 const validate = globalThis.GuiaTelemetry.validateSnapshot;
-function createServer({ token, origin = 'http://127.0.0.1:8787', sessionTtl = 12*60*60*1000 } = {}) {
+function createServer({ token, origin = 'http://127.0.0.1:8787', sessionTtl = 12*60*60*1000, albumDir = process.env.ALBUM_DIR || null } = {}) {
   if (!token || token.length < 32) throw Error('Token deve ter pelo menos 32 caracteres.');
   const clients = new Set(), sessions = new Map();
   let latest = null, sequence = 0;
@@ -66,9 +66,35 @@ function createServer({ token, origin = 'http://127.0.0.1:8787', sessionTtl = 12
         res.on('close',()=>{clearInterval(timer);clients.delete(res);audit('sse_desconectado',{conexoes:clients.size});});return;
       }
       if(req.method==='GET' && url.pathname==='/api/health')return json(res,200,{ok:true});
-      const files={'/':'index.html','/index.html':'index.html','/telemetry.js':'telemetry.js','/realtime.js':'realtime.js','/embedded.js':'embedded.js','/visual.js':'visual.js','/polish.js':'polish.js','/acquisition.js':'acquisition.js','/profile.js':'profile.js','/time-format.js':'time-format.js','/knowledge.js':'knowledge.js','/Pixellari.ttf':'Pixellari.ttf','/community-center.png':'community-center.png','/community-center-mask.png':'community-center-mask.png'};
+      if(req.method==='GET' && (url.pathname==='/api/albums' || url.pathname.startsWith('/api/albums/photos/'))) {
+        if(!authenticated(req))return json(res,401,{error:'Conecte o guia para consultar os álbuns.'});
+        if(!albumDir)return json(res,503,{error:'Abra o guia hospedado pelo mod ou configure ALBUM_DIR para consultar os álbuns locais.'});
+        if(!latest)return json(res,200,{supported:true,active:false,photos:[]});
+        const directory=path.join(path.resolve(albumDir),latest.farm.saveId,latest.player.multiplayerId);
+        const index=path.join(directory,'index.json');
+        const photos=fs.existsSync(index)?JSON.parse(fs.readFileSync(index,'utf8').replace(/^\uFEFF/,'')):[];
+        if(!Array.isArray(photos) || photos.some(photo=>!photo || !/^[a-f0-9]{32}$/.test(photo.id) || !/^[a-f0-9]{32}$/.test(photo.imageId)))
+          return json(res,500,{error:'O índice do álbum precisa ser reparado.'});
+        if(url.pathname==='/api/albums') {
+          const sessionFile=path.join(directory,'sessions.json'),sessions=fs.existsSync(sessionFile)?JSON.parse(fs.readFileSync(sessionFile,'utf8').replace(/^\uFEFF/,'')):[];
+          if(!Array.isArray(sessions))return json(res,500,{error:'O índice de sessões precisa ser reparado.'});
+          return json(res,200,{supported:true,active:true,photos:[...photos].sort((a,b)=>String(b.capturedAt).localeCompare(String(a.capturedAt))),sessions});
+        }
+        const match=/^\/api\/albums\/photos\/([a-f0-9]{32})\.png$/.exec(url.pathname);
+        if(!match || !photos.some(photo=>photo.imageId===match[1]))return json(res,404,{error:'Foto não encontrada.'});
+        const file=path.join(directory,match[1]+'.png');if(!fs.existsSync(file))return json(res,404,{error:'Foto não encontrada.'});
+        res.writeHead(200,{'Content-Type':'image/png','Cache-Control':'no-store'});return res.end(fs.readFileSync(file));
+      }
+      const files={'/':'index.html','/index.html':'index.html','/telemetry.js':'telemetry.js','/realtime.js':'realtime.js','/embedded.js':'embedded.js','/visual.js':'visual.js','/polish.js':'polish.js','/acquisition.js':'acquisition.js','/profile.js':'profile.js','/time-format.js':'time-format.js','/knowledge.js':'knowledge.js','/item-catalog.js':'item-catalog.js','/item-fields.json':'item-fields.json','/items.json':'items.json','/game-ui.js':'game-ui.js','/game-cursor.png':'game-cursor.png','/game-ui-sources.json':'game-ui-sources.json','/menu-hover.wav':'menu-hover.wav','/menu-select.wav':'menu-select.wav','/menu-open.wav':'menu-open.wav','/menu-close.wav':'menu-close.wav'};
+      files['/season.js']='season.js';files['/season-guide.json']='season-guide.json';
+      files['/albums.js']='albums.js';files['/album-moments.json']='album-moments.json';
+      files['/album-rules.json']='album-rules.json';
+      files['/Pixellari.ttf']='Pixellari.ttf';
+      files['/community-center.png']='community-center.png';
+      files['/community-center-mask.png']='community-center-mask.png';
       if(req.method==='GET' && files[url.pathname]) {
-        res.writeHead(200,{'Content-Type':url.pathname.endsWith('.js')?'text/javascript; charset=utf-8':url.pathname.endsWith('.ttf')?'font/ttf':url.pathname.endsWith('.png')?'image/png':'text/html; charset=utf-8','Cache-Control':'no-store'});
+        const mime={'.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.html':'text/html; charset=utf-8','.png':'image/png','.wav':'audio/wav','.ttf':'font/ttf'};
+        res.writeHead(200,{'Content-Type':mime[path.extname(files[url.pathname])],'Cache-Control':'no-store'});
         return res.end(fs.readFileSync(path.join(__dirname,'../dist',files[url.pathname])));
       }
       json(res,404,{error:'Não encontrado'});

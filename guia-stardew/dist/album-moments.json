@@ -1,0 +1,302 @@
+{
+  "passout": {
+    "title": "A aventura foi até o chão",
+    "description": "{player} desmaiou às {eventTime} em {place}. A imagem foi registrada depois, quando foi possível fotografar novamente."
+  },
+  "passout-partner-bed": {
+    "title": "Um descansava, o outro desmaiava",
+    "description": "{player} desmaiou às {eventTime} em {place}, enquanto {partner} estava na cama. A imagem foi registrada depois, quando foi possível fotografar novamente."
+  },
+  "passout-health": {
+    "title": "Aventura com final inesperado",
+    "description": "A vida de {player} chegou a zero em {place}, às {eventTime}. A imagem foi registrada depois da recuperação."
+  },
+  "passout-late": {
+    "title": "Só mais cinco minutinhos",
+    "description": "{player} desmaiou em {place} às {eventTime}, depois de virar a noite. A imagem foi registrada depois da recuperação."
+  },
+  "center-arrival": {
+    "title": "Trouxe o que faltava!",
+    "description": "Quando {player} entrou no Centro com {item} que ainda precisava ser entregue."
+  },
+  "center-delivery": {
+    "title": "Deixando itens no Centro",
+    "description": "{player} passeando pelo Centro logo depois de entregar {item} em um conjunto."
+  },
+  "center-complete": {
+    "title": "Mais um conjunto completo!",
+    "description": "{player} completou um conjunto com {item}. Um passinho de comemoração para o álbum!"
+  },
+  "center-room": {
+    "title": "Na sala certa, com o item certo",
+    "description": "{player} passou perto de um conjunto ainda pendente com {item} na mochila. Só falta entregar!"
+  },
+  "center-forgot": {
+    "title": "Levei o item e esqueci de deixar",
+    "description": "Quando {player} entrou no Centro com {item} e saiu sem deixar o item no conjunto."
+  },
+  "rain-watering": {
+    "title": "Ajudando as nuvens",
+    "description": "{player} usou o regador na chuva. Alguém precisa garantir que a água fique bem molhada."
+  },
+  "late-home": {
+    "title": "Cheguei de fininho",
+    "description": "Quando {player} voltou para casa depois da meia-noite como se ninguém fosse perceber."
+  },
+  "coop-together-walking": {
+    "title": "Duas botas, uma aventura",
+    "description": "{player} e {partner} caminharam pelo vale em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-walking": {
+    "title": "Juntos, mas separados · caminhando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois caminhando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-fishing": {
+    "title": "Pescaria em boa companhia",
+    "description": "{player} e {partner} pescaram lado a lado em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-fishing": {
+    "title": "Juntos, mas separados · pescando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois pescando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-watering": {
+    "title": "Regando a vida a dois",
+    "description": "{player} e {partner} cuidaram da rega em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-watering": {
+    "title": "Juntos, mas separados · regando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois regando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-digging": {
+    "title": "Planos plantados no chão",
+    "description": "{player} e {partner} prepararam a terra em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-digging": {
+    "title": "Juntos, mas separados · preparando a terra",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois preparando a terra ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-mining": {
+    "title": "Minério é bom. Companhia também.",
+    "description": "{player} e {partner} usaram suas picaretas em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-mining": {
+    "title": "Juntos, mas separados · minerando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois minerando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-chopping": {
+    "title": "Lenha para nossas histórias",
+    "description": "{player} e {partner} cortaram madeira em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-chopping": {
+    "title": "Juntos, mas separados · cortando madeira",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois cortando madeira ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-cutting": {
+    "title": "Dupla de corte",
+    "description": "{player} e {partner} trabalharam com as foices em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-cutting": {
+    "title": "Juntos, mas separados · usando a foice",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois usando a foice ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-fighting": {
+    "title": "Eu cubro suas costas",
+    "description": "{player} e {partner} usaram suas armas em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-fighting": {
+    "title": "Juntos, mas separados · usando armas",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois usando armas ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-panning": {
+    "title": "Garimpando um futuro",
+    "description": "{player} e {partner} garimparam em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-panning": {
+    "title": "Juntos, mas separados · garimpando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois garimpando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-milking": {
+    "title": "Leite com parceria",
+    "description": "{player} e {partner} ordenharam os animais em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-milking": {
+    "title": "Juntos, mas separados · ordenhando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois ordenhando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-shearing": {
+    "title": "Planos de lã",
+    "description": "{player} e {partner} tosquiaram os animais em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-shearing": {
+    "title": "Juntos, mas separados · tosquiando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois tosquiando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-planting": {
+    "title": "Nosso futuro tem raízes",
+    "description": "{player} e {partner} plantaram sementes em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-planting": {
+    "title": "Juntos, mas separados · plantando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois plantando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-harvesting": {
+    "title": "Colhendo o que construímos",
+    "description": "{player} e {partner} colheram plantações em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-harvesting": {
+    "title": "Juntos, mas separados · colhendo",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois colhendo ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-foraging": {
+    "title": "Caça aos tesouros do caminho",
+    "description": "{player} e {partner} coletaram itens pelo caminho em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-foraging": {
+    "title": "Juntos, mas separados · coletando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois coletando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-crafting": {
+    "title": "Feito por nós",
+    "description": "{player} e {partner} fabricaram itens em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-crafting": {
+    "title": "Juntos, mas separados · fabricando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois fabricando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-cooking": {
+    "title": "Receita de boa companhia",
+    "description": "{player} e {partner} cozinharam em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-cooking": {
+    "title": "Juntos, mas separados · cozinhando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois cozinhando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-shopping": {
+    "title": "Passeio que saiu caro",
+    "description": "{player} e {partner} fizeram compras em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-shopping": {
+    "title": "Juntos, mas separados · comprando",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois comprando ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-gifting": {
+    "title": "Diplomacia do vale",
+    "description": "{player} e {partner} deram presentes em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-gifting": {
+    "title": "Juntos, mas separados · dando presentes",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois dando presentes ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-shipping": {
+    "title": "Sócios até na caixa de entregas",
+    "description": "{player} e {partner} enviaram itens para venda em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-shipping": {
+    "title": "Juntos, mas separados · vendendo na caixa",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois vendendo na caixa ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-petting": {
+    "title": "Carinho em dose dupla",
+    "description": "{player} e {partner} fizeram carinho nos animais em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-petting": {
+    "title": "Juntos, mas separados · acariciando animais",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois acariciando animais ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-sitting": {
+    "title": "Pausa para existir juntos",
+    "description": "{player} e {partner} sentaram para uma pausa em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-sitting": {
+    "title": "Juntos, mas separados · sentados",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois sentados ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "coop-together-eating": {
+    "title": "Mesa para dois",
+    "description": "{player} e {partner} comeram ou beberam em {place}. O trabalho rende uma lembrança melhor quando tem companhia."
+  },
+  "coop-apart-eating": {
+    "title": "Juntos, mas separados · comendo ou bebendo",
+    "description": "{player} em {place}; {partner} em {partnerPlace}. Os dois comendo ou bebendo ao mesmo tempo, cada um numa ponta do vale. Esta foto é do lado de {player}."
+  },
+  "festival-together": {
+    "title": "Nosso encontro tem data no calendário",
+    "description": "{player} e {partner} foram juntos a {festival}. Entre o movimento do festival, mais uma lembrança para guardar."
+  },
+  "night-together": {
+    "title": "Mais uma noite nossa",
+    "description": "Ano {year}, {season}, dia {day}: {player} e {partner} terminaram mais um dia no mesmo mapa. O vale vai dormir; a história fica."
+  },
+  "night-apart": {
+    "title": "Boa noite, até de longe",
+    "description": "Ano {year}, {season}, dia {day}: {player} e {partner} passaram a noite em mapas diferentes. Dois cantinhos do vale, a mesma noite para lembrar."
+  },
+  "sunset-together": {
+    "title": "O sol se põe. A companhia fica.",
+    "description": "{player} e {partner} estavam pertinho ao cair da noite. Por alguns instantes, o vale não precisava de pressa."
+  },
+  "night-sweethearts": {
+    "title": "Boa noite, meu bem",
+    "description": "{player} e {partner}, parceiros no jogo, ficaram juntinhos no fim de mais um dia. A melhor parte da fazenda não cabe na caixa de entregas."
+  },
+  "fishing-date": {
+    "title": "A pescaria era só uma desculpa",
+    "description": "{player} e {partner}, parceiros no jogo, pescaram pertinho. Se o peixe não vier, a companhia já valeu o passeio."
+  },
+  "player-kiss": {
+    "title": "Um beijo no meio da rotina",
+    "description": "{player} e {partner} trocaram um beijo. As plantações podem esperar só mais um pouquinho."
+  },
+  "competition-rout": {
+    "title": "De lavada!",
+    "description": "{winner} levou a melhor sobre {loser} em {competition}: {winnerScore} × {loserScore}. Comparação: {scoreBasis}. A revanche já pode entrar no calendário."
+  },
+  "competition-close": {
+    "title": "Foi por um triz",
+    "description": "{winner} ficou à frente de {loser} em {competition}: {winnerScore} × {loserScore}. Comparação: {scoreBasis}. Quase deu para culpar a sorte."
+  },
+  "competition-tie": {
+    "title": "Até o placar resolveu juntar a gente",
+    "description": "{player} e {partner} terminaram a comparação de {competition} com {score} pontos cada. Hoje a rivalidade ficou sem vencedor."
+  },
+  "strength-max": {
+    "title": "Força no topo!",
+    "description": "{player} acertou a faixa máxima do jogo do martelo na feira, com força {power}. O sino ouviu. O vale também."
+  },
+  "joja-visit": {
+    "title": "Era só uma olhadinha",
+    "description": "{player} entrou na JojaMart. O Cantinho da vergonha recebeu mais uma visita técnica."
+  },
+  "joja-shop": {
+    "title": "A vitrine me chamou pelo nome",
+    "description": "{player} abriu a loja da Joja. Resistir ao marketing também é uma habilidade, mas ela não aparece no menu."
+  },
+  "joja-purchase": {
+    "title": "O recibo entrega",
+    "description": "{player} comprou {item} da Joja. A nota fiscal virou prova documental no Cantinho da vergonha."
+  },
+  "joja-interaction": {
+    "title": "Só fui conversar com a firma",
+    "description": "{player} interagiu com uma ação da Joja em {place}. O departamento de desculpas está analisando o caso."
+  },
+  "joja-cola": {
+    "title": "A sede falou mais alto",
+    "description": "{player} bebeu uma Joja-Cola. A latinha foi embora; a evidência ficou no álbum."
+  },
+  "joja-gift": {
+    "title": "Terceirizando a vergonha",
+    "description": "{player} deu uma Joja-Cola de presente. Agora o problema tem laço e destinatário."
+  },
+  "joja-outfit": {
+    "title": "Vestindo o patrocínio",
+    "description": "{player} vestiu {item}. A Joja ganhou mais um cartaz ambulante no Cantinho da vergonha."
+  },
+  "joja-object": {
+    "title": "A decoração entregou",
+    "description": "{player} interagiu com {item}. A marca aparece até nos pequenos detalhes da vida."
+  },
+  "shared-photo": {
+    "title": "Um instante, duas histórias",
+    "description": "{player} e {partner} combinaram uma foto. Duas perspectivas do mesmo passeio pelo vale."
+  }
+}

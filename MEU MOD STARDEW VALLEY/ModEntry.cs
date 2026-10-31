@@ -1,5 +1,7 @@
 using System;
 using System.Globalization;
+using System.IO;
+
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
@@ -19,12 +21,21 @@ namespace StardewRealtimeTelemetry
         public string ApiUrl { get; set; } = "http://127.0.0.1:8787/api/snapshots";
         public string ApiToken { get; set; } = "";
         public int UploadIntervalSeconds { get; set; } = 2;
+        public bool EnableAlbums { get; set; } = true;
+        public int AlbumDailyLimit { get; set; } = 40;
+        public int AlbumMinSecondsBetweenPhotos { get; set; } = 10;
+        public bool EnableCoopAlbums { get; set; } = true;
+        public bool ShareAlbumPhotos { get; set; } = true;
+        public bool AllowSharedPhotoRequests { get; set; } = true;
+        public string AlbumRomanticPartnerId { get; set; } = "";
     }
 
     public class ModEntry : Mod
     {
         private ModConfig Config = new();
         private EmbeddedGuide? guide;
+        private AlbumStore? albumStore;
+        private AlbumRecorder? albumRecorder;
         private bool openedGuide;
         private void OpenGuide() { if (this.guide == null) { this.Monitor.Log("Guia indisponível; verifique o erro de inicialização.", LogLevel.Warn); return; } try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(this.guide.StartUrl) { UseShellExecute = true }); this.Monitor.Log("Abrindo guia com conexão automática no navegador padrão.", LogLevel.Info); } catch (Exception ex) { this.Monitor.Log("Não foi possível abrir o navegador: " + ex.Message, LogLevel.Warn); } }
         private int elapsedSeconds;
@@ -37,7 +48,9 @@ namespace StardewRealtimeTelemetry
         {
             this.Config = helper.ReadConfig<ModConfig>();
             ItemGuides.Monitor = this.Monitor;
-            try { this.guide = new EmbeddedGuide(this.Monitor); this.guide.Start(); AppDomain.CurrentDomain.ProcessExit += (_, _) => this.guide.Dispose(); this.Monitor.Log("Link do guia local: " + this.guide.Origin + "/", LogLevel.Info); }
+            try { this.albumStore = new AlbumStore(Path.Combine(helper.DirectoryPath, "albums")); this.albumRecorder = new AlbumRecorder(helper, this.Monitor, this.albumStore, () => this.Config, this.ModManifest.UniqueID); }
+            catch (Exception ex) { this.Monitor.Log("Não foi possível iniciar os álbuns: " + ex.Message, LogLevel.Warn); }
+            try { this.guide = new EmbeddedGuide(this.Monitor, this.albumStore); this.guide.Start(); AppDomain.CurrentDomain.ProcessExit += (_, _) => this.guide.Dispose(); this.Monitor.Log("Link do guia local: " + this.guide.Origin + "/", LogLevel.Info); }
             catch (Exception ex) { this.Monitor.Log("Não foi possível iniciar o guia local: " + ex.Message, LogLevel.Warn); this.guide = null; }
             helper.ConsoleCommands.Add("guia_abrir", "Abre o guia conectado no navegador padrão.", (_, _) => this.OpenGuide());
             helper.Events.GameLoop.GameLaunched += (_, _) => { if (!this.openedGuide) { this.OpenGuide(); this.openedGuide = true; } };
@@ -81,7 +94,10 @@ namespace StardewRealtimeTelemetry
                 visuals,
                 portrait = this.portrait,
                 headPortrait = this.headPortrait,
+                albums = new { enabled = this.Config.EnableAlbums && this.albumRecorder != null, version = this.albumStore?.Version ?? 0 },
+                inventory = AlbumRecorder.Inventory().Select(item => new { qualifiedId = item.GameId, name = item.Name, quantity = item.Quantity, quality = item.Quality }).ToArray(),
                 friends,
+
                 exportedAt = DateTimeOffset.UtcNow.ToString("O"),
                 modVersion = this.ModManifest.Version.ToString(),
                 farm = new
@@ -93,7 +109,8 @@ namespace StardewRealtimeTelemetry
                     season = Game1.currentSeason,
                     day = Game1.dayOfMonth,
                     time = Game1.timeOfDay,
-                    isNight = Game1.isDarkOut(Game1.currentLocation)
+                    isNight = Game1.isDarkOut(Game1.currentLocation),
+                    weather = Game1.isRaining ? "rainy" : Game1.isSnowing ? "snowy" : "sunny"
                 },
                 player = new
                 {

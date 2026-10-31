@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup>
+  <ItemGroup><Compile Include="../../AlbumStore.cs" Link="AlbumStore.cs"/><Compile Include="../../AlbumMoments.cs" Link="AlbumMoments.cs"/><Compile Include="../../CoopAlbumMoments.cs" Link="CoopAlbumMoments.cs"/><Compile Include="../../AlbumSessions.cs" Link="AlbumSessions.cs"/><Compile Include="../../AlbumPng.cs" Link="AlbumPng.cs"/><Compile Include="../../AlbumTransferInbox.cs" Link="AlbumTransferInbox.cs"/></ItemGroup>
+  <ItemGroup><None Include="../../guide-src/album-rules.json" Link="album-rules.json" CopyToOutputDirectory="PreserveNewest"/><None Include="../../guide-src/album-moments.json" Link="album-moments.json" CopyToOutputDirectory="PreserveNewest"/></ItemGroup>
+</Project>

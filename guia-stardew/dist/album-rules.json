@@ -1,0 +1,206 @@
+{
+  "activities": [
+    {
+      "id": "walking",
+      "label": "caminhando"
+    },
+    {
+      "id": "fishing",
+      "label": "pescando"
+    },
+    {
+      "id": "watering",
+      "label": "regando"
+    },
+    {
+      "id": "digging",
+      "label": "preparando a terra"
+    },
+    {
+      "id": "mining",
+      "label": "minerando"
+    },
+    {
+      "id": "chopping",
+      "label": "cortando madeira"
+    },
+    {
+      "id": "cutting",
+      "label": "usando a foice"
+    },
+    {
+      "id": "fighting",
+      "label": "usando armas"
+    },
+    {
+      "id": "panning",
+      "label": "garimpando"
+    },
+    {
+      "id": "milking",
+      "label": "ordenhando"
+    },
+    {
+      "id": "shearing",
+      "label": "tosquiando"
+    },
+    {
+      "id": "planting",
+      "label": "plantando"
+    },
+    {
+      "id": "harvesting",
+      "label": "colhendo"
+    },
+    {
+      "id": "foraging",
+      "label": "coletando"
+    },
+    {
+      "id": "crafting",
+      "label": "fabricando"
+    },
+    {
+      "id": "cooking",
+      "label": "cozinhando"
+    },
+    {
+      "id": "shopping",
+      "label": "comprando"
+    },
+    {
+      "id": "gifting",
+      "label": "dando presentes"
+    },
+    {
+      "id": "shipping",
+      "label": "vendendo na caixa"
+    },
+    {
+      "id": "petting",
+      "label": "acariciando animais"
+    },
+    {
+      "id": "sitting",
+      "label": "sentados"
+    },
+    {
+      "id": "eating",
+      "label": "comendo ou bebendo"
+    }
+  ],
+  "counters": {
+    "SeedsSown": "planting",
+    "ItemsCrafted": "crafting",
+    "ItemsCooked": "cooking",
+    "ItemsForaged": "foraging",
+    "ItemsShipped": "shipping"
+  },
+  "competitions": {
+    "fair-fishing": {
+      "label": "pescaria da feira",
+      "minLead": 50,
+      "ratio": 1.5
+    },
+    "fair-target": {
+      "label": "tiro ao alvo da feira",
+      "minLead": 20,
+      "ratio": 1.5
+    },
+    "ice-fishing": {
+      "label": "pesca no gelo",
+      "minLead": 2,
+      "ratio": 1.5
+    },
+    "egg-hunt": {
+      "label": "caça aos ovos",
+      "minLead": 3,
+      "ratio": 1.5
+    }
+  },
+  "jojaLocations": [
+    "JojaMart"
+  ],
+  "jojaShopIds": [
+    "Joja"
+  ],
+  "jojaItemIds": [
+    "(F)DecorativeJojaDoor",
+    "(F)GrayJojaBookcase",
+    "(F)GrayJojaCoffeeTable",
+    "(F)GrayJojaCushion",
+    "(F)GrayJojaDresser",
+    "(F)GrayJojaEndTable",
+    "(F)JojaBed",
+    "(F)JojaBookcase",
+    "(F)JojaCatalogue",
+    "(F)JojaChair",
+    "(F)JojaCoffeeTable",
+    "(F)JojaColaCans",
+    "(F)JojaColaFridge",
+    "(F)JojaColaOrnament",
+    "(F)JojaColaPainting",
+    "(F)JojaColaTeaTable",
+    "(F)JojaCouch",
+    "(F)JojaCrate",
+    "(F)JojaCushion",
+    "(F)JojaDresser",
+    "(F)JojaEndTable",
+    "(F)JojaFireplace",
+    "(F)JojaHQPainting",
+    "(F)JojaLamp",
+    "(F)JojaRug",
+    "(F)JojaShoppingCart",
+    "(F)JojaStool",
+    "(F)JojaTable",
+    "(F)JojaVault",
+    "(F)LargeJojaCrate",
+    "(F)LargeJojaRug",
+    "(F)SmallJojaRug",
+    "(F)SquareJojaRug",
+    "(F)StackedJojaCrates",
+    "(H)JojaCap",
+    "(O)167"
+  ],
+  "jojaActionPrefixes": [
+    "Joja",
+    "BuyJoja"
+  ],
+  "strengthTopTierMin": 99,
+  "passiveFestivals": [
+    {
+      "id": "NightMarket",
+      "label": "Mercado Noturno",
+      "locations": [
+        "Beach",
+        "BeachNightMarket"
+      ],
+      "startTime": 1700
+    },
+    {
+      "id": "DesertFestival",
+      "label": "Festival do Deserto",
+      "locations": [
+        "Desert",
+        "DesertFestival"
+      ],
+      "startTime": 1000
+    },
+    {
+      "id": "TroutDerby",
+      "label": "Derby da Truta",
+      "locations": [
+        "Forest"
+      ],
+      "startTime": 610
+    },
+    {
+      "id": "SquidFest",
+      "label": "Festival da Lula",
+      "locations": [
+        "Beach"
+      ],
+      "startTime": 610
+    }
+  ]
+}

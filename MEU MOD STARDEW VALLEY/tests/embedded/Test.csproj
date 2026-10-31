@@ -1,1 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net6.0</TargetFramework><Nullable>enable</Nullable></PropertyGroup><ItemGroup><Compile Include="../../EmbeddedGuide.cs" Link="EmbeddedGuide.cs"/><EmbeddedResource Include="../../guide-src/index.html" LogicalName="Guide.index.html"/><EmbeddedResource Include="../../guide-src/embedded.js" LogicalName="Guide.embedded.js"/><EmbeddedResource Include="../../guide-src/telemetry.js" LogicalName="Guide.telemetry.js"/><EmbeddedResource Include="../../guide-src/realtime.js" LogicalName="Guide.realtime.js"/></ItemGroup><ItemGroup><EmbeddedResource Include="../../guide-src/Pixellari.ttf" LogicalName="Guide.Pixellari.ttf" /><EmbeddedResource Include="../../guide-src/community-center.png" LogicalName="Guide.community-center.png" /><EmbeddedResource Include="../../guide-src/community-center-mask.png" LogicalName="Guide.community-center-mask.png" /></ItemGroup><ItemGroup><Compile Include="../../WikiReader.cs" Link="WikiReader.cs" /></ItemGroup></Project>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../../guide-src/community-center-mask.png"><LogicalName>Guide.community-center-mask.png</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="../../guide-src/community-center.png"><LogicalName>Guide.community-center.png</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="../../guide-src/Pixellari.ttf"><LogicalName>Guide.Pixellari.ttf</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="../../guide-src/season.js;../../guide-src/season-guide.json"><LogicalName>Guide.%(Filename)%(Extension)</LogicalName></EmbeddedResource>
+    <Compile Include="../../EmbeddedGuide.cs" Link="EmbeddedGuide.cs" />
+    <Compile Include="../../AlbumStore.cs" Link="AlbumStore.cs" />
+    <Compile Include="../../AlbumSessions.cs" Link="AlbumSessions.cs" />
+    <EmbeddedResource Include="../../guide-src/albums.js;../../guide-src/album-moments.json"><LogicalName>Guide.%(Filename)%(Extension)</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="../../guide-src/album-rules.json"><LogicalName>Guide.album-rules.json</LogicalName></EmbeddedResource>
+    <Compile Include="../../WikiReader.cs" Link="WikiReader.cs" />
+    <EmbeddedResource Include="../../guide-src/index.html;../../guide-src/embedded.js;../../guide-src/telemetry.js;../../guide-src/realtime.js;../../guide-src/item-catalog.js;../../guide-src/item-fields.json;../../guide-src/items.json;../../guide-src/game-ui.js;../../guide-src/game-cursor.png;../../guide-src/menu-hover.wav;../../guide-src/menu-select.wav;../../guide-src/menu-open.wav;../../guide-src/menu-close.wav;../../guide-src/game-ui-sources.json">
+      <LogicalName>Guide.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

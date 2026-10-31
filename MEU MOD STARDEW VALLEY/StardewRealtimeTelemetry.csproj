@@ -6,9 +6,15 @@
     <TargetFramework>net6.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+    <EnableHarmony>true</EnableHarmony>
+    <!-- Use SMAPI's detected game path and deploy into its Mods folder on normal builds. -->
+    <EnableModDeploy Condition="'$(EnableModDeploy)' == ''">true</EnableModDeploy>
+    <ModFolderName>StardewRealtimeTelemetry</ModFolderName>
     <ApplicationIcon>pickaxe_icon.ico</ApplicationIcon>
     <!-- Paths may be overridden with -p:GuideSourceDir=... and -p:GuideAssetsDir=... -->
     <GuideSourceDir Condition="'$(GuideSourceDir)' == ''">$(MSBuildProjectDirectory)/guide-src</GuideSourceDir>
+    <GuideAssetsDir Condition="'$(GuideAssetsDir)' == '' and '$(GuideDistDir)' != ''">$(GuideDistDir)</GuideAssetsDir>
+    <GenerateGuideAssets Condition="'$(GenerateGuideAssets)' == '' and '$(GuideDistDir)' != ''">false</GenerateGuideAssets>
     <GuideAssetsDir Condition="'$(GuideAssetsDir)' == ''">$(MSBuildProjectDirectory)/obj/guide-dist</GuideAssetsDir>
     <GenerateGuideAssets Condition="'$(GenerateGuideAssets)' == ''">true</GenerateGuideAssets>
   </PropertyGroup>
@@ -20,7 +26,8 @@
 
   <!-- This is the manifest of files and exact embedded resource names used by EmbeddedGuide. -->
   <ItemGroup>
-    <GuideFile Include="index.html;telemetry.js;realtime.js;embedded.js;visual.js;knowledge.js;polish.js;acquisition.js;profile.js;time-format.js;Pixellari.ttf;community-center.png;community-center-mask.png" />
+    <GuideFile Include="index.html;telemetry.js;realtime.js;embedded.js;visual.js;knowledge.js;polish.js;acquisition.js;profile.js;time-format.js;item-catalog.js;item-fields.json;items.json;game-ui.js;game-cursor.png;menu-hover.wav;menu-select.wav;menu-open.wav;menu-close.wav;game-ui-sources.json;season.js;season-guide.json" />
+    <GuideFile Include="albums.js;album-moments.json;album-rules.json;page-navigation.js;Pixellari.ttf;community-center.png;community-center-mask.png" />
     <EmbeddedResource Include="@(GuideFile->'$(GuideAssetsDir)/%(Identity)')">
       <LogicalName>Guide.%(Filename)%(Extension)</LogicalName>
     </EmbeddedResource>
