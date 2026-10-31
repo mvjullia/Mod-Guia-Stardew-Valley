@@ -50,7 +50,7 @@ internal static class VisualSnapshot
             var fields=entry.Value.Split('/');if(fields.Length<2)continue;
             string universal=tastes.TryGetValue("Universal_Love",out var universalLove)?universalLove:"";
             var loves=(fields[1]+" "+universal).Split(' ',StringSplitOptions.RemoveEmptyEntries).Where(id=>!id.StartsWith("-")).Distinct().Where(id=>npc.getGiftTasteForThisItem(ItemRegistry.Create(id))==0).Select(id=>Item(id,fields[1].Split(' ').Contains(id))).ToArray();
-            npcs.Add(new {hearts=Game1.player.getFriendshipHeartLevelForNPC(npc.Name),maxHearts=Game1.player.spouse==npc.Name?14:10,name=npc.displayName,portrait=Png(npc.Portrait,new Rectangle(0,0,64,64),"npc:"+entry.Key),gifts=loves});
+            npcs.Add(new {id=entry.Key,hearts=Game1.player.getFriendshipHeartLevelForNPC(npc.Name),maxHearts=Game1.player.spouse==npc.Name?14:10,name=npc.displayName,movesToFarm=npc.isMarried() || npc.isRoommate(),portrait=Png(npc.Portrait,new Rectangle(0,0,64,64),"npc:"+entry.Key),gifts=loves});
         }
         var pets = new List<StardewValley.Characters.Pet>();
         Utility.ForEachCharacter(character => { if (character is StardewValley.Characters.Pet pet && !pets.Contains(pet)) pets.Add(pet); return true; }, false);
