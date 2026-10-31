@@ -1,0 +1,1449 @@
+[
+  {
+    "id": 0,
+    "room": "Pantry",
+    "internalName": "Spring Crops",
+    "name": "Plantações de Primavera",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "room": "Pantry",
+    "internalName": "Summer Crops",
+    "name": "Plantações de Verão",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "room": "Pantry",
+    "internalName": "Fall Crops",
+    "name": "Plantações de Outono",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "room": "Pantry",
+    "internalName": "Quality Crops",
+    "name": "Plantações de Qualidade",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "room": "Pantry",
+    "internalName": "Animal",
+    "name": "Animal",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "room": "Pantry",
+    "internalName": "Artisan",
+    "name": "do Artesão",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "room": "Crafts Room",
+    "internalName": "Spring Foraging",
+    "name": "Recursos de Primavera",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "room": "Crafts Room",
+    "internalName": "Summer Foraging",
+    "name": "Recursos de Verão",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "room": "Crafts Room",
+    "internalName": "Fall Foraging",
+    "name": "Recursos de Outono",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "room": "Crafts Room",
+    "internalName": "Winter Foraging",
+    "name": "Recursos de Inverno",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "room": "Crafts Room",
+    "internalName": "Construction",
+    "name": "de Construção",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "room": "Crafts Room",
+    "internalName": "Exotic Foraging",
+    "name": "Recursos Exóticos",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "room": "Fish Tank",
+    "internalName": "River Fish",
+    "name": "Peixes de Rio",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "room": "Fish Tank",
+    "internalName": "Lake Fish",
+    "name": "Peixes de Lago",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "room": "Fish Tank",
+    "internalName": "Ocean Fish",
+    "name": "Peixes de Oceano",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "room": "Fish Tank",
+    "internalName": "Night Fishing",
+    "name": "Pesca Noturna",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "room": "Fish Tank",
+    "internalName": "Specialty Fish",
+    "name": "Peixes Especializados",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "room": "Fish Tank",
+    "internalName": "Crab Pot",
+    "name": "de Covo",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "room": "Boiler Room",
+    "internalName": "Blacksmith's",
+    "name": "de Ferreiro",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "room": "Boiler Room",
+    "internalName": "Geologist's",
+    "name": "de Geólogo",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "room": "Boiler Room",
+    "internalName": "Adventurer's",
+    "name": "de Aventureiro",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "room": "Vault",
+    "internalName": "2,500g",
+    "name": "2.500 ouros",
+    "items": [
+      {
+        "isMoney": true,
+        "quantity": 2500,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "room": "Vault",
+    "internalName": "5,000g",
+    "name": "5.000 ouros",
+    "items": [
+      {
+        "isMoney": true,
+        "quantity": 5000,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "room": "Vault",
+    "internalName": "10,000g",
+    "name": "10.000 ouros",
+    "items": [
+      {
+        "isMoney": true,
+        "quantity": 10000,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "room": "Vault",
+    "internalName": "25,000g",
+    "name": "25.000 ouros",
+    "items": [
+      {
+        "isMoney": true,
+        "quantity": 25000,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "room": "Bulletin Board",
+    "internalName": "Chef's",
+    "name": "de Cozinheiro",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "room": "Bulletin Board",
+    "internalName": "Field Research",
+    "name": "Pesquisa de Campo",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "room": "Bulletin Board",
+    "internalName": "Enchanter's",
+    "name": "de Encantador",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "room": "Bulletin Board",
+    "internalName": "Dye",
+    "name": "de Tinta",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "room": "Bulletin Board",
+    "internalName": "Fodder",
+    "name": "de Forragem",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "room": "Abandoned Joja Mart",
+    "internalName": "The Missing",
+    "name": "Perdido",
+    "items": [
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      },
+      {
+        "isMoney": false,
+        "item": {
+          "name": "Item"
+        },
+        "quality": 0,
+        "quantity": 1,
+        "completed": false
+      }
+    ]
+  }
+]

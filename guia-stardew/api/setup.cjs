@@ -1,0 +1,3 @@
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const dir=path.join(__dirname,'.runtime');fs.mkdirSync(dir,{recursive:true});const file=path.join(dir,'token.txt');if(!fs.existsSync(file))fs.writeFileSync(file,crypto.randomBytes(32).toString('hex'),{mode:0o600});
+const token=fs.readFileSync(file,'utf8').trim();fs.writeFileSync(path.join(dir,'config.json'),JSON.stringify({EnableHttpUpload:true,ApiUrl:'http://127.0.0.1:8787/api/snapshots',ApiToken:token,UploadIntervalSeconds:2},null,2),{mode:0o600});console.log('Configuração criada em api/.runtime/config.json. Copie para a pasta instalada do mod como config.json. O token não foi exibido.');
