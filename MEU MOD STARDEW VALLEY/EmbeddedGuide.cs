@@ -82,11 +82,11 @@ internal sealed class EmbeddedGuide : IDisposable
                 return;
             }
             if (req.HttpMethod != "GET") { res.StatusCode=405;res.Close();return; }
-            string? resource = route switch { "/" or "/index.html" => "index.html", "/telemetry.js" => "telemetry.js", "/realtime.js" => "realtime.js", "/embedded.js" => "embedded.js", "/visual.js" => "visual.js", "/polish.js" => "polish.js", "/acquisition.js" => "acquisition.js", "/profile.js" => "profile.js", "/time-format.js" => "time-format.js", "/knowledge.js" => "knowledge.js", _ => null };
+            string? resource = route switch { "/" or "/index.html" => "index.html", "/telemetry.js" => "telemetry.js", "/realtime.js" => "realtime.js", "/embedded.js" => "embedded.js", "/visual.js" => "visual.js", "/polish.js" => "polish.js", "/acquisition.js" => "acquisition.js", "/profile.js" => "profile.js", "/time-format.js" => "time-format.js", "/knowledge.js" => "knowledge.js", "/Pixellari.ttf" => "Pixellari.ttf", _ => null };
             if (resource == null) { res.StatusCode=404;res.Close();return; }
             using Stream? file=typeof(EmbeddedGuide).Assembly.GetManifestResourceStream("Guide."+resource);
             if(file == null) {res.StatusCode=500;res.Close();return;}
-            res.ContentType=resource.EndsWith(".html") ? "text/html; charset=utf-8" : "text/javascript; charset=utf-8";
+            res.ContentType=resource.EndsWith(".html") ? "text/html; charset=utf-8" : resource.EndsWith(".ttf") ? "font/ttf" : "text/javascript; charset=utf-8";
             res.Headers["Cache-Control"]="no-store";
             if (resource == "index.html") {
                 string? fetchSite=req.Headers["Sec-Fetch-Site"];
