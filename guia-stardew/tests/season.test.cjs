@@ -83,6 +83,8 @@ function browser(data = snapshot()) {
         setAttribute(key, value) { this.attrs[key] = value; }
         remove() { if (this.parent) this.parent.children = this.parent.children.filter(child => child !== this); }
         querySelector(selector) { return all(this).find(child => child.tagName === selector); }
+        querySelectorAll(selector) { return all(this).filter(child => child.tagName === selector); }
+        replaceWith(other) { const parent = this.parent, index = parent.children.indexOf(this); if (other.parent) other.parent.children = other.parent.children.filter(child => child !== other); parent.children[index] = other; other.parent = parent; this.parent = null; }
     }
     const content = new Element('main'), nav = new Element('nav'), head = new Element('head'), events = new Map(), opened = [];
     const document = { head, createElement: tag => new Element(tag), querySelector: selector => selector === '#content' ? content : null,
@@ -137,4 +139,17 @@ test('bordas nos itens acompanham a estação real e desaparecem ao trocar de es
     b.context.guiaData.farm.season = 'fall'; b.events.get('guia:update')(); await flush();
     assert.ok(!hasClass(melon, 'seasonal-available')); assert.ok(hasClass(pumpkin, 'seasonal-available'));
     assert.equal(melon.children.length, 0);
+});
+
+test('SSE de relógio preserva painel e ícone; inventário novo reaproveita as imagens', async () => {
+    const b = browser(); await flush(); b.context.current = 'season'; b.context.render(); await flush();
+    const board = b.content.children[0], icon = b.nav.children[1].querySelector('img');
+    const image = all(board).find(node => node.tagName === 'img' && String(node.src).includes('Red_Snapper'));
+    assert.ok(image);
+    b.context.guiaData.farm.time = 1230; b.events.get('guia:update')(); await flush();
+    assert.equal(b.content.children[0], board); assert.equal(b.nav.children[1].querySelector('img'), icon);
+    b.context.guiaData.inventory = [{ qualifiedId: '(O)150', quantity: 1, quality: 0 }]; b.events.get('guia:update')();
+    assert.equal(b.content.children[0], board, 'Refresh deve manter a tela anterior até terminar');
+    await flush();
+    assert.ok(all(b.content).includes(image), 'Imagem já carregada deve ser movida, não criada novamente');
 });

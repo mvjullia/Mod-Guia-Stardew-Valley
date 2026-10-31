@@ -141,7 +141,10 @@
         const index = tabs.findIndex(tab => tab[0] === 'season'), button = document.querySelectorAll('#nav button')[index];
         if (!button) return;
         const slot = button.querySelector('i'), season = rules?.seasons.find(entry => entry.id === root.guiaData?.farm?.season);
-        slot.replaceChildren(); if (season) seasonIcon(slot, season).className = 'menu-game-icon'; else add(slot, 'span', '📅');
+        if (slot._seasonKey !== (season?.id || 'none') || slot.children[0] !== slot._seasonImage) {
+            slot.replaceChildren(); if (season) slot._seasonImage = seasonIcon(slot, season); else slot._seasonImage = add(slot, 'span', '📅');
+            slot._seasonImage.className = 'menu-game-icon'; slot._seasonKey = season?.id || 'none';
+        }
         button.setAttribute('aria-label', 'Estação' + (season ? ': ' + season.label : ''));
     }
     function picture(parent, item, snapshot, fallback) {
@@ -193,14 +196,24 @@
     function empty(parent, message) { add(parent, 'div', message, 'season-empty'); }
     async function renderSeason() {
         const ticket = ++generation, target = document.querySelector('#content');
-        target.replaceChildren(); const loading = add(target, 'div', 'Preparando a estação…', 'season-empty');
+        const previous = target.children[0] === target._seasonBoard ? target._seasonBoard : null;
+        const loading = document.createElement('div'); loading.className = 'season-empty'; loading.textContent = 'Preparando a estação…';
+        if (!previous) target.replaceChildren(loading);
         try {
             const [catalog, data] = await Promise.all([root.GuiaItemCatalog.load(), loadRules()]);
             if (ticket !== generation || !active()) return;
             const snapshot = root.guiaData, farm = snapshot?.farm;
             if (follow && farm?.season) selected = farm.season;
-            target.replaceChildren();
-            const board = add(target, 'div', null, 'season-board'); board.dataset.season = selected || 'spring';
+            const holder = document.createElement('div'), board = add(holder, 'div', null, 'season-board'); board.dataset.season = selected || 'spring';
+            const commit = () => {
+                const images = new Map();
+                for (const image of previous?.querySelectorAll?.('img') || []) { if (!images.has(image.src)) images.set(image.src, []); images.get(image.src).push(image); }
+                for (const image of board.querySelectorAll?.('img') || []) {
+                    const existing = images.get(image.src)?.pop(); if (!existing) continue;
+                    existing.alt = image.alt; existing.className = image.className; existing.onerror = image.onerror; image.replaceWith(existing);
+                }
+                target.replaceChildren(board); target._seasonBoard = board;
+            };
             const hero = add(board, 'header', null, 'season-hero'), art = add(hero, 'div', null, 'season-hero-icon');
             const season = data.seasons.find(entry => entry.id === selected);
             if (season) seasonIcon(art, season); else art.textContent = '📅';
@@ -214,7 +227,7 @@
                 button.setAttribute('aria-pressed', String(option.id === selected));
                 button.onclick = () => { selected = option.id; follow = option.id === farm?.season; weatherFilter = 'all'; renderSeason(); };
             }
-            if (!season) return;
+            if (!season) { commit(); return; }
             const model = buildSeasonModel(catalog, data, snapshot, selected);
             const fishing = panel(board, 'Peixes da estação', '🎣', model.fish.length);
             const filters = add(fishing, 'div', null, 'season-filters'); filters.setAttribute('aria-label', 'Filtrar condições de pesca');
@@ -286,6 +299,7 @@
             const traps = panel(columns, 'Nos covos', '🦞', model.traps.length), trapGrid = add(traps, 'div', null, 'season-grid');
             for (const entry of model.traps) { const card = tile(trapGrid, entry.item, snapshot, '🦞'); routeSigns(card, entry.routes[0], snapshot, selected); }
             lastSignature = signature(snapshot);
+            commit();
         } catch (error) {
             if (ticket !== generation || !active()) return;
             target.replaceChildren(loading);
@@ -293,7 +307,8 @@
             const retry = add(loading, 'button', 'Tentar novamente'); retry.onclick = renderSeason;
         }
     }
-    const signature = snapshot => JSON.stringify([snapshot?.farm, snapshot?.player?.skills?.fishing, snapshot?.inventory, snapshot?.visuals?.bundles?.map(bundle =>
+    const signature = snapshot => JSON.stringify([snapshot?.farm?.saveId, snapshot?.farm?.year, snapshot?.farm?.season, snapshot?.farm?.day, snapshot?.farm?.weather,
+        snapshot?.player?.multiplayerId, snapshot?.player?.skills?.fishing, snapshot?.inventory, snapshot?.visuals?.bundles?.map(bundle =>
         [bundle.id, bundle.completed, bundle.requiredCount, bundle.items?.map(entry => [entry.completed, entry.quantity, entry.quality, entry.item?.qualifiedId || entry.item?.id])])]);
     if (!tabs.some(tab => tab[0] === 'season')) tabs.splice(1, 0, ['season', '📅', 'Estação']);
     const originalNav = root.nav; root.nav = function () { originalNav(); updateNav(); };

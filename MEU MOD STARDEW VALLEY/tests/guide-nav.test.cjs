@@ -28,6 +28,8 @@ assert.equal(buttons[0].icon.children[0].className, 'farmer-head');
 assert.equal(buttons[1].icon.children[0].src, '/community-center.png');
 assert.equal(buttons[1].icon.children[0].className, 'menu-game-icon community-center-icon');
 assert.equal(buttons[2].icon.children[0].src, 'data:image/png;base64,HEART');
+const stableCenterIcon = buttons[1].icon.children[0], stableHeartIcon = buttons[2].icon.children[0]; update();
+assert.equal(buttons[1].icon.children[0], stableCenterIcon); assert.equal(buttons[2].icon.children[0], stableHeartIcon);
 window.guiaData.headPortrait = 'data:image/png;base64,NEW';
 update();
 assert.equal(buttons[0].icon.children[0].src, 'data:image/png;base64,NEW');

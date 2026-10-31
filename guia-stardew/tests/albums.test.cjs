@@ -63,6 +63,16 @@ test('novas fotos atualizam o álbum; servidor sem suporte não entra em repeti�
     assert.match(unavailable.content.textContent, /Abra o guia pelo mod/);
 });
 
+test('refresh do álbum preserva a foto e não troca a tela por carregamento', async () => {
+    let resolveNext, waiting = false;
+    const b = browser(() => waiting ? new Promise(resolve => { resolveNext = resolve; }) : Promise.resolve({ ok: true, json: async () => ({ supported: true, active: true, photos: [photo] }) }));
+    b.context.render(); await flush(); const card = all(b.content).find(node => node.tagName === 'figure');
+    waiting = true; b.context.guiaData.albums.version++; b.events.get('guia:update')();
+    assert.ok(all(b.content).includes(card)); assert.ok(!b.content.textContent.includes('Abrindo as lembranças'));
+    resolveNext({ ok: true, json: async () => ({ supported: true, active: true, photos: [photo] }) }); await flush();
+    assert.equal(all(b.content).find(node => node.tagName === 'figure'), card);
+});
+
 test('API exige sessão e só serve fotos indexadas da fazenda e jogador ativos', async () => {
     const directory = fs.mkdtempSync(path.join(os.tmpdir(), 'guia-albums-'));
     const active = path.join(directory, '123', '456'); fs.mkdirSync(active, { recursive: true });

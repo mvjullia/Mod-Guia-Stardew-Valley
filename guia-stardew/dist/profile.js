@@ -44,7 +44,16 @@
  const seasonFiles={spring:'Spring',summer:'Summer',fall:'Fall',winter:'Winter'};
  const labels={spring:'Primavera',summer:'Verão',fall:'Outono',winter:'Inverno'};
  const add=(p,tag,text,cls)=>{const el=document.createElement(tag);el.textContent=text||'';if(cls)el.className=cls;p.append(el);return el;};
- const sprite=(p,src,alt,cls)=>{const img=add(p,'img','',cls);img.src=src;img.alt=alt;return img;};
+ let imagePool=null,roleImages=null,usedImages=null;
+ const sprite=(p,src,alt,cls)=>{
+  let img=imagePool?.get(src)?.pop();
+  if(!img&&(cls==='farmer-avatar'||cls==='pet-avatar')){const candidates=roleImages?.get(cls+'|'+alt)||[];while(candidates.length&&!img){const candidate=candidates.pop();if(!usedImages.has(candidate))img=candidate;}}
+  if(!img)img=document.createElement('img');usedImages?.add(img);img.className=cls||'';
+  if(img.src!==src){img._requestedSprite=src;if(img.src&&typeof Image!=='undefined'){const ready=new Image();ready.onload=()=>{if(img._requestedSprite===src)img.src=src;};ready.src=src;}else img.src=src;}
+  if(img.alt!==alt)img.alt=alt;p.append(img);return img;
+ };
+ const profileKey=d=>JSON.stringify([d.farm.saveId,d.player.multiplayerId,d.farm.name,d.farm.year,d.farm.season,d.farm.day,d.farm.totalEarnings,d.player.name,d.player.isMale,d.player.money,d.player.skills,d.player.relationship,d.portrait,d.visuals?.pets||d.visuals?.pet]);
+ const collectImages=node=>Array.from(node.children||[]).flatMap(child=>String(child.tagName||child.tag||'').toLowerCase()==='img'?[child]:collectImages(child));
  function outfitTheme(target,portrait){
   if(typeof portrait!=='string'||!portrait.startsWith('data:image/png;base64,'))return;
   const image=new Image();image.onload=()=>{try{
@@ -64,13 +73,15 @@
  }
  function field(parent,title,value){const group=add(parent,'div','','profile-field');add(group,'strong',title,'profile-field-title');const panel=add(group,'div','','profile-info');add(panel,'span',value,'profile-field-value');return group;}
  root.showFarmerSnapshot=function(d){
-  const target=document.querySelector('#saveinfo');if(!target)return;target.className='farmer-profile';target.replaceChildren();target.style.removeProperty('--outfit-hue');target.dataset.outfitPortrait=d.portrait||'';
+  const target=document.querySelector('#saveinfo');if(!target)return;const key=profileKey(d);if(target._profileKey===key&&target.children.length)return;
+  imagePool=new Map();roleImages=new Map();usedImages=new Set();for(const image of collectImages(target)){if(!imagePool.has(image.src))imagePool.set(image.src,[]);imagePool.get(image.src).push(image);const role=image.className+'|'+image.alt;if(!roleImages.has(role))roleImages.set(role,[]);roleImages.get(role).push(image);}
+  const themeChanged=target.dataset.outfitPortrait!==(d.portrait||'');target.className='farmer-profile';target.replaceChildren();target.dataset.outfitPortrait=d.portrait||'';if(themeChanged&&!d.portrait)target.style.removeProperty('--outfit-hue');
   const art=add(target,'div','','profile-art');if(d.portrait){const figure=add(art,'figure','','profile-portrait');sprite(figure,d.portrait,d.player.name,'farmer-avatar');add(figure,'figcaption',d.player.name);}const relationship=d.player.relationship;const partner=typeof relationship?.partnerName==='string'&&relationship.partnerName.trim()?relationship.partnerName.trim():null;let civil='Indisponível';if(relationship?.status==='single')civil=d.player.isMale?'Solteiro':'Solteira';else if(relationship?.status==='married')civil=(d.player.isMale?'Casado':'Casada')+(partner?' com '+partner:'');else if(relationship?.status==='roommate')civil=partner?'Mora com '+partner:'Mora com alguém';field(art,'Estado Civil',civil);const pets=Array.isArray(d.visuals?.pets)?d.visuals.pets:(d.visuals?.pet?[d.visuals.pet]:[]);if(pets.length){const gallery=add(art,'div','','pet-gallery');for(const pet of pets){const figure=add(gallery,'figure','','profile-portrait');sprite(figure,pet.icon,pet.name,'pet-avatar');add(figure,'figcaption',pet.name);}}
   const info=add(target,'div','','profile-information');add(info,'h1','Fazenda '+d.farm.name,'farm-name');
   const dateGroup=add(info,'div','','profile-field');add(dateGroup,'strong','Data','profile-field-title');const date=add(dateGroup,'div','','profile-date');sprite(date,'https://stardewvalleywiki.com/Special:Redirect/file/'+seasonFiles[d.farm.season]+'.png','');add(date,'span',d.farm.day+' de '+labels[d.farm.season]+' · Ano '+d.farm.year,'profile-field-value');
   const money=(title,amount)=>{const group=add(info,'div','','profile-field');add(group,'strong',title,'profile-field-title');const panel=add(group,'div','','profile-info profile-money');sprite(panel,'https://stardewvalleywiki.com/Special:Redirect/file/Gold.png','');add(panel,'span',Number.isSafeInteger(amount)&&amount>=0?new Intl.NumberFormat('pt-BR').format(amount)+' ouros':'Indisponível','profile-field-value');};money('Sua Carteira',d.player.money);money('Ganhos da Fazenda',d.farm.totalEarnings);
   add(info,'h2','Habilidades','skills-title');const grid=add(info,'div','','skill-grid');for(const [id,label,file] of [['farming','Cultivo','Farming'],['fishing','Pescaria','Fishing'],['foraging','Coleta','Foraging'],['mining','Mineração','Mining'],['combat','Combate','Combat']]){const card=add(grid,'div','','skill-card');sprite(card,'https://stardewvalleywiki.com/Special:Redirect/file/'+file+'_Skill_Icon.png','');const text=add(card,'div');add(text,'strong',label);add(text,'span','Nível '+d.player.skills[id]);}
-  outfitTheme(target,d.portrait);
+  imagePool=null;roleImages=null;usedImages=null;target._profileKey=key;if(themeChanged)outfitTheme(target,d.portrait);
  };
  const originalNav=root.nav;root.nav=function(){originalNav();const d=root.guiaData;if(d){const button=document.querySelector('#nav button');const label=d.player.isMale?'Fazendeiro':'Fazendeira';button.querySelector('span').textContent=label;button.setAttribute('aria-label',label);}};
  root.addEventListener('guia:update',e=>{const button=document.querySelector('#nav button');if(button){const text=e.detail.player.isMale?'Fazendeiro':'Fazendeira';button.querySelector('span').textContent=text;button.setAttribute('aria-label',text);}});
