@@ -11,6 +11,8 @@ Este é o contrato compartilhado entre `MEU MOD STARDEW VALLEY/ModEntry.cs` e `g
 Os eventos usados são SaveLoaded e Saved. As leituras do jogo ocorrem na thread principal. O HTTP é opcional e recebe somente uma string JSON já capturada. Não existe monitoramento contínuo de arquivos pelo navegador.
 
 ## Contrato v1
+- Campos opcionais adicionais: `inventory` contém `qualifiedId`, `name`, `quantity` e `quality`; `albums` contém `enabled` e `version`; `farm.weather` informa `rainy`, `snowy` ou `sunny`. `visuals.bundles` pode incluir `requiredCount` e `completed`. A ausência desses campos em exports antigos continua válida.
+- As fotos ficam fora do payload SSE, em arquivos locais. O guia usa as rotas autenticadas de álbuns para buscar metadados e PNGs, evitando incorporar screenshots nos snapshots da fazenda.
 - `schemaVersion`: inteiro 1.
 - `exportedAt`: data ISO 8601 em UTC.
 - `modVersion`: versão do manifesto SMAPI.

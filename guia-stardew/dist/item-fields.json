@@ -1,0 +1,142 @@
+[
+  {
+    "key": "name",
+    "label": "Nome"
+  },
+  {
+    "key": "description",
+    "label": "Descrição"
+  },
+  {
+    "key": "category",
+    "label": "Categoria"
+  },
+  {
+    "key": "purchasePrice",
+    "label": "Preço de compra"
+  },
+  {
+    "key": "salePrice",
+    "label": "Preço de venda"
+  },
+  {
+    "key": "sellers",
+    "label": "Quem vende"
+  },
+  {
+    "key": "buyers",
+    "label": "Quem compra"
+  },
+  {
+    "key": "foragingAndDropSources",
+    "label": "Como obter por coleta/drop"
+  },
+  {
+    "key": "purchaseAvailability",
+    "label": "Como obter comprando"
+  },
+  {
+    "key": "growingSeasons",
+    "label": "Estação em que pode cultivar"
+  },
+  {
+    "key": "foragingSeasons",
+    "label": "Estação em que pode coletar"
+  },
+  {
+    "key": "availabilitySeasons",
+    "label": "Estação em que pode obter"
+  },
+  {
+    "key": "growthDays",
+    "label": "Tempo de crescimento"
+  },
+  {
+    "key": "lastPlantingDay",
+    "label": "Data limite de plantio sem fertilizante"
+  },
+  {
+    "key": "lastPlantingDaySpeedGro",
+    "label": "Data limite com Speed-Gro (10%)"
+  },
+  {
+    "key": "lastPlantingDayDeluxeSpeedGro",
+    "label": "Data limite com Deluxe Speed-Gro (25%)"
+  },
+  {
+    "key": "lastPlantingDayHyperSpeedGro",
+    "label": "Data limite com Hyper Speed-Gro (33%)"
+  },
+  {
+    "key": "growthDaysSpeedGro",
+    "label": "Dias com Speed-Gro"
+  },
+  {
+    "key": "growthDaysDeluxeSpeedGro",
+    "label": "Dias com Deluxe Speed-Gro"
+  },
+  {
+    "key": "growthDaysHyperSpeedGro",
+    "label": "Dias com Hyper Speed-Gro"
+  },
+  {
+    "key": "productionAndCrafting",
+    "label": "Produção / fabricação"
+  },
+  {
+    "key": "notes",
+    "label": "Observações"
+  },
+  {
+    "key": "gameId",
+    "label": "ID do jogo"
+  },
+  {
+    "key": "englishName",
+    "label": "Nome em inglês"
+  },
+  {
+    "key": "itemSource",
+    "label": "Fonte do item"
+  },
+  {
+    "key": "descriptionSource",
+    "label": "Fonte da descrição"
+  },
+  {
+    "key": "purchaseSource",
+    "label": "Fonte de compra"
+  },
+  {
+    "key": "saleSource",
+    "label": "Fonte de venda"
+  },
+  {
+    "key": "acquisitionSource",
+    "label": "Fonte de obtenção"
+  },
+  {
+    "key": "growthSource",
+    "label": "Fonte de cultivo e crescimento"
+  },
+  {
+    "key": "nameAndIdSource",
+    "label": "Fonte de nome e ID"
+  },
+  {
+    "key": "coverage",
+    "label": "Cobertura"
+  },
+  {
+    "key": "missingFields",
+    "label": "Campos com lacunas"
+  },
+  {
+    "key": "fertilizerGrowthSource",
+    "label": "Fonte dos dias com fertilizante"
+  },
+  {
+    "key": "buyersSource",
+    "label": "Fonte de quem compra"
+  }
+]

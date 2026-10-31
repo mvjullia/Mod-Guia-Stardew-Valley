@@ -22,6 +22,10 @@ O mod envia um snapshot a cada dois segundos (configurável de 1 a 60) e ao carr
 - POST /api/session: {"token":"TOKEN"}; cria cookie HttpOnly, SameSite=Strict por 12 horas.
 - GET /api/events: cookie de sessão; text/event-stream; evento snapshot, ID crescente, retry de 3s e heartbeat a cada 15s.
 - GET /api/health: estado do processo sem dados do jogador.
+- GET /api/albums: sessão obrigatória; lista o álbum da fazenda/jogador do último snapshot recebido.
+- GET /api/albums/photos/<imageId>.png: sessão obrigatória; entrega somente imagens registradas no índice desse álbum.
+
+Para os álbuns no servidor Node, defina `ALBUM_DIR` com o caminho da pasta `albums` do mod instalado antes de iniciar a API. A API apenas lê esses arquivos; as capturas são feitas pelo mod. Sem essa configuração, o site orienta a abrir o guia hospedado pelo próprio mod, que já oferece o álbum. Não há upload automático de fotografias para um serviço externo.
 
 A reconexão recebe o snapshot mais recente, sem histórico intermediário. O estado fica em memória e é descartado quando o processo reinicia. Navegador atualiza a tela e o horário da última recepção. SSE não faz o caminho de envio do mod: esse caminho usa HTTP POST.
 

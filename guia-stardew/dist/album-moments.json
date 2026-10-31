@@ -1,0 +1,30 @@
+{
+  "center-arrival": {
+    "title": "Trouxe o que faltava!",
+    "description": "Quando {player} entrou no Centro com {item} que ainda precisava ser entregue."
+  },
+  "center-delivery": {
+    "title": "Deixando itens no Centro",
+    "description": "{player} passeando pelo Centro logo depois de entregar {item} em um conjunto."
+  },
+  "center-complete": {
+    "title": "Mais um conjunto completo!",
+    "description": "{player} completou um conjunto com {item}. Um passinho de comemoração para o álbum!"
+  },
+  "center-room": {
+    "title": "Na sala certa, com o item certo",
+    "description": "{player} passou perto de um conjunto ainda pendente com {item} na mochila. Só falta entregar!"
+  },
+  "center-forgot": {
+    "title": "Levei o item e esqueci de deixar",
+    "description": "Quando {player} entrou no Centro com {item} e saiu sem deixar o item no conjunto."
+  },
+  "rain-watering": {
+    "title": "Ajudando as nuvens",
+    "description": "{player} usou o regador na chuva. Alguém precisa garantir que a água fique bem molhada."
+  },
+  "late-home": {
+    "title": "Cheguei de fininho",
+    "description": "Quando {player} voltou para casa depois da meia-noite como se ninguém fosse perceber."
+  }
+}

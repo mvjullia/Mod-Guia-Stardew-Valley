@@ -1,0 +1,4220 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "gameVersion": "1.6.15.24356",
+    "files": {
+      "Data/Fish.xnb": "d53d4d47dcab5e36c8510a685e857858b764604238e6bcdb829652771074c037",
+      "Data/Locations.xnb": "adb0e19de4c88a03543454d7ed10ef281a1ee27c1ee76c657eee8008ccd8be49",
+      "Data/Shops.xnb": "dcdc84318f1025b4a200764de11b42368a0ffe0391ca69955e2b941b36d23d48",
+      "Data/PassiveFestivals.xnb": "84f960728e3ceed666c2aa0a5fd173fa0483f69d76052bf2da45485c946229ae"
+    }
+  },
+  "seasons": [
+    {
+      "id": "spring",
+      "label": "Primavera",
+      "icon": "🌸",
+      "image": "https://stardewvalleywiki.com/Special:Redirect/file/Spring.png"
+    },
+    {
+      "id": "summer",
+      "label": "Verão",
+      "icon": "☀️",
+      "image": "https://stardewvalleywiki.com/Special:Redirect/file/Summer.png"
+    },
+    {
+      "id": "fall",
+      "label": "Outono",
+      "icon": "🍂",
+      "image": "https://stardewvalleywiki.com/Special:Redirect/file/Fall.png"
+    },
+    {
+      "id": "winter",
+      "label": "Inverno",
+      "icon": "❄️",
+      "image": "https://stardewvalleywiki.com/Special:Redirect/file/Winter.png"
+    }
+  ],
+  "fishing": [
+    {
+      "gameId": "(O)160",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 3,
+      "flags": [
+        "legendary",
+        "position"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)899",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 3,
+      "flags": [
+        "quest",
+        "position"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)137",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)132",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1800,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)143",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "spring",
+        "fall",
+        "winter"
+      ],
+      "weather": "rainy",
+      "times": [
+        600,
+        2400
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)145",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer"
+      ],
+      "weather": "sunny",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)153",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)706",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "weather": "rainy",
+      "times": [
+        900,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)138",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "summer"
+      ],
+      "weather": "sunny",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)144",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)139",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)140",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "rainy",
+      "times": [
+        1200,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)699",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)141",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)707",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)159",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "summer"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 5,
+      "flags": [
+        "legendary",
+        "position",
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)898",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 5,
+      "flags": [
+        "quest",
+        "position",
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)798",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "magicBait",
+        "position",
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)799",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "magicBait",
+        "position",
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)800",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "magicBait",
+        "position",
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)129",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)131",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)147",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)148",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "weather": "rainy",
+      "times": [
+        1600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)152",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)708",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1100,
+        1900,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)267",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2000
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)128",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "summer"
+      ],
+      "weather": "sunny",
+      "times": [
+        1200,
+        1600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)130",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)146",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)149",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "summer"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1300
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)150",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "rainy",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)155",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        1800,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)701",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1400
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)154",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)705",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1100,
+        1800,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)151",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1800,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)151",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1800
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        12,
+        13
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)151",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        610,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        12,
+        13
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)898",
+      "location": "BeachNightMarket",
+      "locationLabel": "Oceano · Mercado Noturno",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1700,
+        2600
+      ],
+      "minFishingLevel": 5,
+      "flags": [
+        "quest",
+        "position",
+        "distance",
+        "festival"
+      ],
+      "days": [
+        15,
+        17
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)163",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "spring"
+      ],
+      "weather": "rainy",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 10,
+      "flags": [
+        "legendary",
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)900",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 10,
+      "flags": [
+        "quest",
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)136",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)142",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)153",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)702",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)700",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)138",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "summer"
+      ],
+      "weather": "sunny",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)698",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)140",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "rainy",
+      "times": [
+        1200,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)269",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        2200,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)141",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)707",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)775",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 6,
+      "flags": [
+        "legendary",
+        "position",
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)902",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 6,
+      "flags": [
+        "quest",
+        "position",
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)Goby",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "position"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)139",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": null,
+      "seasons": [
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "position"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)153",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)145",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "spring",
+        "summer"
+      ],
+      "weather": "sunny",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)143",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "spring",
+        "fall",
+        "winter"
+      ],
+      "weather": "rainy",
+      "times": [
+        600,
+        2400
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)137",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "Lake",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)132",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1800,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)706",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "weather": "rainy",
+      "times": [
+        900,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)702",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)144",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": null,
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)138",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "summer"
+      ],
+      "weather": "both",
+      "times": [
+        610,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        20,
+        21
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)138",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "summer"
+      ],
+      "weather": "sunny",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)704",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "summer"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)140",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": null,
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "rainy",
+      "times": [
+        1200,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)139",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)699",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)269",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "Lake",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        2200,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)141",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)707",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "area": "River",
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)682",
+      "location": "Sewer",
+      "locationLabel": "Esgotos",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "legendary"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)901",
+      "location": "Sewer",
+      "locationLabel": "Esgotos",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "quest"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)142",
+      "location": "Sewer",
+      "locationLabel": "Esgotos",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)153",
+      "location": "Sewer",
+      "locationLabel": "Esgotos",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)157",
+      "location": "Sewer",
+      "locationLabel": "Esgotos",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)796",
+      "location": "BugLand",
+      "locationLabel": "Covil dos Insetos Mutantes",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)142",
+      "location": "BugLand",
+      "locationLabel": "Covil dos Insetos Mutantes",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)153",
+      "location": "BugLand",
+      "locationLabel": "Covil dos Insetos Mutantes",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)157",
+      "location": "BugLand",
+      "locationLabel": "Covil dos Insetos Mutantes",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)153",
+      "location": "Desert",
+      "locationLabel": "Deserto",
+      "area": "TopPond",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)164",
+      "location": "Desert",
+      "locationLabel": "Deserto",
+      "area": "TopPond",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2000
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)165",
+      "location": "Desert",
+      "locationLabel": "Deserto",
+      "area": "TopPond",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2000
+      ],
+      "minFishingLevel": 4,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)734",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)142",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)143",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "rainy",
+      "times": [
+        600,
+        2400
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)795",
+      "location": "WitchSwamp",
+      "locationLabel": "Pântano da Bruxa",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)153",
+      "location": "WitchSwamp",
+      "locationLabel": "Pântano da Bruxa",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)143",
+      "location": "WitchSwamp",
+      "locationLabel": "Pântano da Bruxa",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "rainy",
+      "times": [
+        600,
+        2400
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)157",
+      "location": "WitchSwamp",
+      "locationLabel": "Pântano da Bruxa",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)136",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)142",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)153",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)702",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)700",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)163",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "spring"
+      ],
+      "weather": "rainy",
+      "times": [
+        600,
+        2000
+      ],
+      "minFishingLevel": 10,
+      "flags": [
+        "legendary"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)138",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "summer"
+      ],
+      "weather": "sunny",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)698",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "summer",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)140",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "weather": "rainy",
+      "times": [
+        1200,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)141",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)707",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)800",
+      "location": "Submarine",
+      "locationLabel": "Submarino do Mercado Noturno",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1700,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        15,
+        17
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)799",
+      "location": "Submarine",
+      "locationLabel": "Submarino do Mercado Noturno",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1700,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        15,
+        17
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)798",
+      "location": "Submarine",
+      "locationLabel": "Submarino do Mercado Noturno",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1700,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        15,
+        17
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)154",
+      "location": "Submarine",
+      "locationLabel": "Submarino do Mercado Noturno",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1700,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        15,
+        17
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)155",
+      "location": "Submarine",
+      "locationLabel": "Submarino do Mercado Noturno",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1700,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        15,
+        17
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)149",
+      "location": "Submarine",
+      "locationLabel": "Submarino do Mercado Noturno",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1700,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        15,
+        17
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)152",
+      "location": "Submarine",
+      "locationLabel": "Submarino do Mercado Noturno",
+      "area": null,
+      "seasons": [
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1700,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "festival"
+      ],
+      "days": [
+        15,
+        17
+      ],
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)155",
+      "location": "IslandSouth",
+      "locationLabel": "Ilha Gengibre · praia",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1800,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)130",
+      "location": "IslandSouth",
+      "locationLabel": "Ilha Gengibre · praia",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)128",
+      "location": "IslandSouth",
+      "locationLabel": "Ilha Gengibre · praia",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "sunny",
+      "times": [
+        1200,
+        1600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)267",
+      "location": "IslandSouth",
+      "locationLabel": "Ilha Gengibre · praia",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2000
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)837",
+      "location": "IslandSouth",
+      "locationLabel": "Ilha Gengibre · praia",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)155",
+      "location": "IslandSouthEast",
+      "locationLabel": "Ilha Gengibre · enseada",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1800,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)130",
+      "location": "IslandSouthEast",
+      "locationLabel": "Ilha Gengibre · enseada",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)128",
+      "location": "IslandSouthEast",
+      "locationLabel": "Ilha Gengibre · enseada",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "sunny",
+      "times": [
+        1200,
+        1600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)267",
+      "location": "IslandSouthEast",
+      "locationLabel": "Ilha Gengibre · enseada",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2000
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)837",
+      "location": "IslandSouthEast",
+      "locationLabel": "Ilha Gengibre · enseada",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)155",
+      "location": "IslandSouthEastCave",
+      "locationLabel": "Caverna do Pirata",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1800,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)130",
+      "location": "IslandSouthEastCave",
+      "locationLabel": "Caverna do Pirata",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)128",
+      "location": "IslandSouthEastCave",
+      "locationLabel": "Caverna do Pirata",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "sunny",
+      "times": [
+        1200,
+        1600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)267",
+      "location": "IslandSouthEastCave",
+      "locationLabel": "Caverna do Pirata",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2000
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)836",
+      "location": "IslandSouthEastCave",
+      "locationLabel": "Caverna do Pirata",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)149",
+      "location": "IslandWest",
+      "locationLabel": "Ilha Gengibre · oeste",
+      "area": "Ocean",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1300
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)155",
+      "location": "IslandWest",
+      "locationLabel": "Ilha Gengibre · oeste",
+      "area": "Ocean",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        1800,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)130",
+      "location": "IslandWest",
+      "locationLabel": "Ilha Gengibre · oeste",
+      "area": "Ocean",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1900
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)128",
+      "location": "IslandWest",
+      "locationLabel": "Ilha Gengibre · oeste",
+      "area": "Ocean",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "sunny",
+      "times": [
+        1200,
+        1600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)267",
+      "location": "IslandWest",
+      "locationLabel": "Ilha Gengibre · oeste",
+      "area": "Ocean",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2000
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)837",
+      "location": "IslandWest",
+      "locationLabel": "Ilha Gengibre · oeste",
+      "area": "Ocean",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)701",
+      "location": "IslandWest",
+      "locationLabel": "Ilha Gengibre · oeste",
+      "area": "Freshwater",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1400
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)838",
+      "location": "IslandWest",
+      "locationLabel": "Ilha Gengibre · oeste",
+      "area": "Freshwater",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)269",
+      "location": "IslandWest",
+      "locationLabel": "Ilha Gengibre · oeste",
+      "area": "Freshwater",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        2200,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)701",
+      "location": "IslandNorth",
+      "locationLabel": "Ilha Gengibre · norte",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        1400
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)838",
+      "location": "IslandNorth",
+      "locationLabel": "Ilha Gengibre · norte",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)269",
+      "location": "IslandNorth",
+      "locationLabel": "Ilha Gengibre · norte",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        2200,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)162",
+      "location": "Caldera",
+      "locationLabel": "Caldeira do Vulcão",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [
+        "distance"
+      ],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)153",
+      "location": "UndergroundMine",
+      "locationLabel": "Minas",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)156",
+      "location": "UndergroundMine",
+      "locationLabel": "Minas",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)157",
+      "location": "UndergroundMine",
+      "locationLabel": "Minas",
+      "area": null,
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null,
+      "method": "rod"
+    },
+    {
+      "gameId": "(O)715",
+      "method": "trap",
+      "location": "ocean",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    },
+    {
+      "gameId": "(O)717",
+      "method": "trap",
+      "location": "ocean",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    },
+    {
+      "gameId": "(O)723",
+      "method": "trap",
+      "location": "ocean",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    },
+    {
+      "gameId": "(O)372",
+      "method": "trap",
+      "location": "ocean",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    },
+    {
+      "gameId": "(O)720",
+      "method": "trap",
+      "location": "ocean",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    },
+    {
+      "gameId": "(O)718",
+      "method": "trap",
+      "location": "ocean",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    },
+    {
+      "gameId": "(O)719",
+      "method": "trap",
+      "location": "ocean",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    },
+    {
+      "gameId": "(O)721",
+      "method": "trap",
+      "location": "freshwater",
+      "locationLabel": "Água doce",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    },
+    {
+      "gameId": "(O)716",
+      "method": "trap",
+      "location": "freshwater",
+      "locationLabel": "Água doce",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    },
+    {
+      "gameId": "(O)722",
+      "method": "trap",
+      "location": "freshwater",
+      "locationLabel": "Água doce",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "weather": "both",
+      "times": [
+        600,
+        2600
+      ],
+      "minFishingLevel": 0,
+      "flags": [],
+      "days": null
+    }
+  ],
+  "pierreSeeds": [
+    {
+      "gameId": "(O)472",
+      "seasons": [
+        "spring"
+      ],
+      "minYear": 1,
+      "price": 20
+    },
+    {
+      "gameId": "(O)473",
+      "seasons": [
+        "spring"
+      ],
+      "minYear": 1,
+      "price": 60
+    },
+    {
+      "gameId": "(O)474",
+      "seasons": [
+        "spring"
+      ],
+      "minYear": 1,
+      "price": 80
+    },
+    {
+      "gameId": "(O)475",
+      "seasons": [
+        "spring"
+      ],
+      "minYear": 1,
+      "price": 50
+    },
+    {
+      "gameId": "(O)427",
+      "seasons": [
+        "spring"
+      ],
+      "minYear": 1,
+      "price": null
+    },
+    {
+      "gameId": "(O)477",
+      "seasons": [
+        "spring"
+      ],
+      "minYear": 1,
+      "price": 70
+    },
+    {
+      "gameId": "(O)429",
+      "seasons": [
+        "spring"
+      ],
+      "minYear": 1,
+      "price": null
+    },
+    {
+      "gameId": "(O)476",
+      "seasons": [
+        "spring"
+      ],
+      "minYear": 2,
+      "price": 40
+    },
+    {
+      "gameId": "(O)273",
+      "seasons": [
+        "spring"
+      ],
+      "minYear": 2,
+      "price": 40
+    },
+    {
+      "gameId": "(O)479",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 80
+    },
+    {
+      "gameId": "(O)480",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 50
+    },
+    {
+      "gameId": "(O)481",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 80
+    },
+    {
+      "gameId": "(O)482",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 40
+    },
+    {
+      "gameId": "(O)483",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 10
+    },
+    {
+      "gameId": "(O)484",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 40
+    },
+    {
+      "gameId": "(O)453",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 100
+    },
+    {
+      "gameId": "(O)455",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 50
+    },
+    {
+      "gameId": "(O)302",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 60
+    },
+    {
+      "gameId": "(O)487",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 150
+    },
+    {
+      "gameId": "(O)431",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 1,
+      "price": 200
+    },
+    {
+      "gameId": "(O)485",
+      "seasons": [
+        "summer"
+      ],
+      "minYear": 2,
+      "price": 100
+    },
+    {
+      "gameId": "(O)490",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 100
+    },
+    {
+      "gameId": "(O)487",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 150
+    },
+    {
+      "gameId": "(O)488",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 20
+    },
+    {
+      "gameId": "(O)491",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 50
+    },
+    {
+      "gameId": "(O)492",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 60
+    },
+    {
+      "gameId": "(O)493",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 240
+    },
+    {
+      "gameId": "(O)483",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 10
+    },
+    {
+      "gameId": "(O)431",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 200
+    },
+    {
+      "gameId": "(O)425",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 200
+    },
+    {
+      "gameId": "(O)299",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 70
+    },
+    {
+      "gameId": "(O)301",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 1,
+      "price": 60
+    },
+    {
+      "gameId": "(O)489",
+      "seasons": [
+        "fall"
+      ],
+      "minYear": 2,
+      "price": 30
+    },
+    {
+      "gameId": "(O)628",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "minYear": 1,
+      "price": 3400
+    },
+    {
+      "gameId": "(O)629",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "minYear": 1,
+      "price": 2000
+    },
+    {
+      "gameId": "(O)630",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "minYear": 1,
+      "price": 4000
+    },
+    {
+      "gameId": "(O)631",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "minYear": 1,
+      "price": 6000
+    },
+    {
+      "gameId": "(O)632",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "minYear": 1,
+      "price": 6000
+    },
+    {
+      "gameId": "(O)633",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "minYear": 1,
+      "price": 4000
+    }
+  ],
+  "forage": [
+    {
+      "gameId": "(O)18",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)402",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)410",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)418",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)414",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)283",
+      "location": "Town",
+      "locationLabel": "Rio da vila",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)372",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "conditional": true
+    },
+    {
+      "gameId": "(O)718",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "conditional": true
+    },
+    {
+      "gameId": "(O)719",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "conditional": true
+    },
+    {
+      "gameId": "(O)723",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "conditional": true
+    },
+    {
+      "gameId": "(O)394",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)372",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)392",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)718",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)719",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)723",
+      "location": "Beach",
+      "locationLabel": "Oceano",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)20",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)16",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)396",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)398",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)404",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)406",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)408",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)414",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)418",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)283",
+      "location": "Mountain",
+      "locationLabel": "Lago da montanha",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)16",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)22",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)396",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)402",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)404",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)410",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)418",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)414",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)283",
+      "location": "Forest",
+      "locationLabel": "Floresta Cinzaseiva",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)18",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)20",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)22",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)396",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)398",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)402",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)406",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)408",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)414",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)418",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)283",
+      "location": "BusStop",
+      "locationLabel": "Ponto de ônibus",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)88",
+      "location": "Desert",
+      "locationLabel": "Deserto",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)90",
+      "location": "Desert",
+      "locationLabel": "Deserto",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall",
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)257",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)404",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)16",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)259",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)420",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)281",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)404",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)420",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)283",
+      "location": "Woods",
+      "locationLabel": "Bosque Secreto",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)18",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)20",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)22",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)396",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)398",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)402",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)406",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)408",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)410",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)414",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)418",
+      "location": "Railroad",
+      "locationLabel": "Ferrovia",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)20",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)16",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "spring"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)396",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)398",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "summer"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)404",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)406",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)408",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "fall"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)414",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)418",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    },
+    {
+      "gameId": "(O)283",
+      "location": "Backwoods",
+      "locationLabel": "Lago da trilha",
+      "seasons": [
+        "winter"
+      ],
+      "conditional": false
+    }
+  ]
+}

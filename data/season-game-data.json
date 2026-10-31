@@ -1,0 +1,4461 @@
+{
+  "source": {
+    "gameVersion": "1.6.15.24356",
+    "files": {
+      "Data/Fish.xnb": "d53d4d47dcab5e36c8510a685e857858b764604238e6bcdb829652771074c037",
+      "Data/Locations.xnb": "adb0e19de4c88a03543454d7ed10ef281a1ee27c1ee76c657eee8008ccd8be49",
+      "Data/Shops.xnb": "dcdc84318f1025b4a200764de11b42368a0ffe0391ca69955e2b941b36d23d48",
+      "Data/PassiveFestivals.xnb": "84f960728e3ceed666c2aa0a5fd173fa0483f69d76052bf2da45485c946229ae"
+    }
+  },
+  "fish": {
+    "128": "Pufferfish/80/floater/1/36/1200 1600/summer/sunny/690 .4 685 .1/4/.3/.5/0/true",
+    "129": "Anchovy/30/dart/1/16/600 2600/spring fall/both/682 .2/1/.25/.3/0/true",
+    "130": "Tuna/70/smooth/12/60/600 1900/summer winter/both/689 .35 681 .1/3/.15/.55/0/true",
+    "131": "Sardine/30/dart/1/12/600 1900/spring summer fall winter/both/683 .3/1/.65/.1/0/true",
+    "132": "Bream/35/smooth/12/30/1800 2600/spring summer fall winter/both/684 .35/1/.45/.1/0/true",
+    "136": "Largemouth Bass/50/mixed/11/30/600 1900/spring summer fall winter/both/685 .35/3/.4/.2/0/true",
+    "137": "Smallmouth Bass/28/mixed/12/24/600 2600/spring fall/both/682 .2/1/.45/.1/0/true",
+    "138": "Rainbow Trout/45/mixed/10/25/600 1900/summer/sunny/684 .35/2/.35/.3/0/true",
+    "139": "Salmon/50/mixed/24/65/600 1900/fall/both/684 .35/3/.4/.2/0/true",
+    "140": "Walleye/45/smooth/10/40/1200 2600/fall winter/rainy/680 .35/2/.4/.15/0/true",
+    "141": "Perch/35/dart/10/24/600 2600/winter/both/683 .2/1/.45/.1/0/true",
+    "142": "Carp/15/mixed/15/50/600 2600/spring summer fall/both/682 .2/1/.45/.1/0/true",
+    "143": "Catfish/75/mixed/12/72/600 2400/spring fall winter/rainy/689 .4 680 .1/4/.4/.1/0/true",
+    "144": "Pike/60/dart/15/60/600 2600/summer winter/both/690 .3 681 .1/3/.4/.15/0/true",
+    "145": "Sunfish/30/mixed/5/15/600 1900/spring summer/sunny/683 .2/1/.45/.1/0/true",
+    "146": "Red Mullet/55/smooth/8/22/600 1900/summer winter/both/680 .25/2/.4/.15/0/true",
+    "147": "Herring/25/dart/8/20/600 2600/spring winter/both/685 .2/1/.45/.1/0/true",
+    "148": "Eel/70/smooth/12/80/1600 2600/spring fall/rainy/689 .35 680 .1/3/.55/.1/0/true",
+    "149": "Octopus/95/sinker/12/48/600 1300/summer/both/688 .6 684 .1/5/.1/.08/0/true",
+    "150": "Red Snapper/40/mixed/8/25/600 1900/summer fall winter/rainy/682 .25/2/.45/.1/0/true",
+    "151": "Squid/75/sinker/12/48/1800 2600/winter/both/690 .35 680 .1/3/.35/.3/0/true",
+    "152": "Seaweed/5/floater/5/30/600 2600/spring summer fall winter/both/-1/0/.3/0/0/false",
+    "153": "Green Algae/5/floater/5/30/600 2600/spring summer fall winter/both/-1/0/.3/0/0/false",
+    "154": "Sea Cucumber/40/sinker/3/20/600 1900/fall winter/both/683 .2 689 .4/3/.25/.25/0/false",
+    "155": "Super Cucumber/80/sinker/12/36/1800 2600/summer winter/both/683 .2 689 .4/4/.1/.25/0/false",
+    "156": "Ghostfish/50/mixed/10/35/600 2600/spring summer fall winter/both/684 .35/2/.3/.3/0/false",
+    "157": "White Algae/5/floater/5/30/600 2600/spring summer fall winter/both/-1/0/.3/0/0/false",
+    "158": "Stonefish/65/sinker/15/15/600 2600/spring summer fall winter/both/689 .2/2/.1/.1/3/false",
+    "159": "Crimsonfish/95/mixed/20/20/600 2000/winter/both/690 .15/4/.1/.1/5/false",
+    "160": "Angler/85/smooth/18/18/600 2600/spring summer fall winter/both/690 .1/4/.05/.1/3/false",
+    "161": "Ice Pip/85/dart/8/8/600 2600/spring summer fall winter/both/682 .1/2/.05/.1/5/false",
+    "162": "Lava Eel/90/mixed/32/32/600 2600/spring summer fall winter/both/684 .1/2/.05/.1/7/false",
+    "163": "Legend/110/mixed/50/50/600 2000/spring summer fall winter/rainy/688 .05/5/0/.1/10/false",
+    "775": "Glacierfish/100/mixed/27/27/600 2000/winter/sunny/688 .1/5/0/.02/7/false",
+    "682": "Mutant Carp/80/dart/36/36/600 2600/spring summer fall winter/both/688 .1/5/0/.02/0/false",
+    "164": "Sandfish/65/mixed/8/24/600 2000/spring summer fall winter/both/682 .2/1/.65/.1/0/false",
+    "165": "Scorpion Carp/90/dart/12/32/600 2000/spring summer fall winter/both/683 .4/2/.15/.1/4/false",
+    "267": "Flounder/50/sinker/4/16/600 2000/spring summer/both/680 .25/2/.15/.05/0/false",
+    "269": "Midnight Carp/55/mixed/12/52/2200 2600/fall winter/both/682 .2/1/.33/.1/0/false",
+    "715": "Lobster/trap/.05/688 .45 689 .35 690 .35/ocean/2/20/false",
+    "717": "Crab/trap/.1/684 .45/ocean/1/20/false",
+    "723": "Oyster/trap/.15/682 .35/ocean/1/5/false",
+    "372": "Clam/trap/.15/681 .35/ocean/1/5/false",
+    "720": "Shrimp/trap/.2/681 .35/ocean/1/3/false",
+    "718": "Cockle/trap/.3/680 .2/ocean/1/5/false",
+    "719": "Mussel/trap/.35/683 .15/ocean/1/5/false",
+    "721": "Snail/trap/.25/680 .35/freshwater/1/5/false",
+    "716": "Crayfish/trap/.35/682 .4/freshwater/1/8/false",
+    "722": "Periwinkle/trap/.55/681 .35/freshwater/1/3/false",
+    "698": "Sturgeon/78/mixed/12/60/600 1900/summer winter/both/689 .35 682 .1/3/.35/.2/0/false",
+    "699": "Tiger Trout/60/dart/10/20/600 1900/spring summer fall winter/both/688 .45 685 .2/3/.2/.1/0/false",
+    "700": "Bullhead/46/smooth/12/30/600 2600/spring summer fall winter/both/681 .25/2/.35/.2/0/false",
+    "701": "Tilapia/50/mixed/11/30/600 1400/summer fall/both/683 .35/3/.4/.2/0/false",
+    "702": "Chub/35/dart/12/24/600 2600/spring summer fall winter/both/684 .35/1/.45/.1/0/false",
+    "704": "Dorado/78/mixed/24/32/600 1900/summer/both/689 .35 681 .1/3/.15/.1/0/false",
+    "705": "Albacore/60/mixed/20/40/600 1100 1800 2600/fall winter/both/685 .35/3/.3/.15/0/false",
+    "706": "Shad/45/smooth/20/48/900 2600/spring summer fall/rainy/684 .35/2/.35/.2/0/false",
+    "707": "Lingcod/85/mixed/30/50/600 2600/winter/both/690 .4 685 .2/3/.3/.05/0/false",
+    "708": "Halibut/50/sinker/10/33/600 1100 1900 2600/spring summer winter/both/681 .35/3/.4/.2/0/false",
+    "734": "Woodskip/50/mixed/11/30/600 2600/spring summer fall winter/both/685 .35/3/.2/.1/0/false",
+    "795": "Void Salmon/80/mixed/24/65/600 2600/spring summer fall winter/both/685 .35/2/.33/.1/0/false",
+    "796": "Slimejack/55/dart/8/25/600 2600/spring summer fall winter/both/685 .35/3/.4/.1/0/false",
+    "798": "Midnight Squid/55/sinker/8/25/600 2600/spring summer fall winter/both/685 .35/3/.4/.1/0/false",
+    "799": "Spook Fish/60/dart/8/25/600 2600/spring summer fall winter/both/685 .35/3/.4/.1/0/false",
+    "800": "Blobfish/75/floater/8/25/600 2600/spring summer fall winter/both/685 .35/3/.4/.1/0/false",
+    "836": "Stingray/80/sinker/18/60/600 2600/spring summer fall winter/both/685 .35/4/.2/.1/0/false",
+    "837": "Lionfish/50/smooth/3/12/600 2600/spring summer fall winter/both/685 .35/3/.4/.1/0/false",
+    "838": "Blue Discus/60/dart/2/9/600 2600/spring summer fall winter/both/685 .35/1/.25/.1/0/false",
+    "898": "Son of Crimsonfish/95/mixed/20/20/600 2000/winter/both/690 .15/4/.1/.1/5/false",
+    "899": "Ms. Angler/85/smooth/18/18/600 2600/spring summer fall winter/both/690 .1/4/.05/.1/3/false",
+    "900": "Legend II/110/mixed/50/50/600 2000/spring summer fall winter/rainy/688 .05/5/0/.1/10/false",
+    "901": "Radioactive Carp/80/dart/36/36/600 2600/spring summer fall winter/both/688 .1/5/0/.02/0/false",
+    "902": "Glacierfish Jr./100/mixed/27/27/600 2000/winter/sunny/688 .1/5/0/.02/7/false",
+    "Goby": "Goby/55/dart/3/12/800 1800/spring summer fall/both/684 .35/1/.25/.2/0/false"
+  },
+  "festivals": {
+    "NightMarket": {
+      "DisplayName": "[LocalizedText Strings\\UI:Billboard_NightMarket]",
+      "Condition": "",
+      "ShowOnCalendar": true,
+      "Season": 3,
+      "StartDay": 15,
+      "EndDay": 17,
+      "StartTime": 1700,
+      "StartMessage": "[LocalizedText Strings\\Events:BeachNightMarket_NowOpen]",
+      "OnlyShowMessageOnFirstDay": false,
+      "MapReplacements": {
+        "Beach": "BeachNightMarket"
+      },
+      "DailySetupMethod": null,
+      "CleanupMethod": null,
+      "CustomFields": null
+    },
+    "DesertFestival": {
+      "DisplayName": "[LocalizedText Strings\\1_6_Strings:DesertFestival]",
+      "Condition": "LOCATION_ACCESSIBLE Desert",
+      "ShowOnCalendar": true,
+      "Season": 0,
+      "StartDay": 15,
+      "EndDay": 17,
+      "StartTime": 1000,
+      "StartMessage": "[LocalizedText Strings\\1_6_Strings:DesertFestival_NowOpen]",
+      "OnlyShowMessageOnFirstDay": false,
+      "MapReplacements": {
+        "Desert": "DesertFestival"
+      },
+      "DailySetupMethod": "StardewValley.Locations.DesertFestival, Stardew Valley: SetupFestivalDay",
+      "CleanupMethod": "StardewValley.Locations.DesertFestival, Stardew Valley: CleanupFestival",
+      "CustomFields": null
+    },
+    "TroutDerby": {
+      "DisplayName": "",
+      "Condition": "",
+      "ShowOnCalendar": false,
+      "Season": 1,
+      "StartDay": 20,
+      "EndDay": 21,
+      "StartTime": 610,
+      "StartMessage": "[LocalizedText Strings\\1_6_Strings:TroutDerby_NowOpen]",
+      "OnlyShowMessageOnFirstDay": true,
+      "MapReplacements": null,
+      "DailySetupMethod": null,
+      "CleanupMethod": null,
+      "CustomFields": null
+    },
+    "SquidFest": {
+      "DisplayName": "",
+      "Condition": "",
+      "ShowOnCalendar": false,
+      "Season": 3,
+      "StartDay": 12,
+      "EndDay": 13,
+      "StartTime": 610,
+      "StartMessage": "[LocalizedText Strings\\1_6_Strings:SquidFest_NowOpen]",
+      "OnlyShowMessageOnFirstDay": true,
+      "MapReplacements": null,
+      "DailySetupMethod": null,
+      "CleanupMethod": null,
+      "CustomFields": null
+    }
+  },
+  "locations": {
+    "Default": {
+      "fish": [
+        {
+          "ItemId": "(O)890",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "!IS_FESTIVAL_DAY, PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current DROP_QI_BEANS",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "SECRET_NOTE_OR_ITEM",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": null,
+          "RandomItemId": [
+            "(O)167",
+            "(O)168",
+            "(O)169",
+            "(O)170",
+            "(O)171",
+            "(O)172"
+          ],
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Farm_Beach": {
+      "fish": [
+        {
+          "ItemId": "(F)2421",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "!PLAYER_HAS_MAIL Current gotBoatPainting",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": {
+            "Left": 23,
+            "Right": 24,
+            "Top": 98,
+            "Bottom": 99,
+            "IsEmpty": false,
+            "Location": {
+              "X": 23,
+              "Y": 98
+            },
+            "Size": {
+              "X": 1,
+              "Y": 1
+            },
+            "Center": {
+              "X": 23,
+              "Y": 98
+            },
+            "X": 23,
+            "Y": 98,
+            "Width": 1,
+            "Height": 1
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)152",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": null,
+          "RandomItemId": [
+            "(O)723",
+            "(O)393",
+            "(O)719",
+            "(O)718"
+          ],
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "LOCATION_FISH Beach BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Farm_Forest": {
+      "fish": [
+        {
+          "ItemId": "(O)734",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Farm_FourCorners": {
+      "fish": [
+        {
+          "ItemId": "(O)103",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "!PLAYER_HAS_MAIL Current eric's_prank_1, PLAYER_HAS_MAIL Current cursed_doll",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": {
+            "Left": 0,
+            "Right": 40,
+            "Top": 55,
+            "Bottom": 310,
+            "IsEmpty": false,
+            "Location": {
+              "X": 0,
+              "Y": 55
+            },
+            "Size": {
+              "X": 40,
+              "Y": 255
+            },
+            "Center": {
+              "X": 20,
+              "Y": 182
+            },
+            "X": 0,
+            "Y": 55,
+            "Width": 40,
+            "Height": 255
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": {
+            "Left": 0,
+            "Right": 40,
+            "Top": 55,
+            "Bottom": 310,
+            "IsEmpty": false,
+            "Location": {
+              "X": 0,
+              "Y": 55
+            },
+            "Size": {
+              "X": 40,
+              "Y": 255
+            },
+            "Center": {
+              "X": 20,
+              "Y": 182
+            },
+            "X": 0,
+            "Y": 55,
+            "Width": 40,
+            "Height": 255
+          },
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Farm_Hilltop": {
+      "fish": [
+        {
+          "ItemId": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Farm_Riverland": {
+      "fish": [
+        {
+          "ItemId": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "LOCATION_FISH Town BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Farm_Wilderness": {
+      "fish": [
+        {
+          "ItemId": "LOCATION_FISH Mountain BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Farm_MeadowlandsFarm": {
+      "fish": [
+        {
+          "ItemId": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "RiverAndLargePond",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Town": {
+      "fish": [
+        {
+          "ItemId": "(O)160",
+          "RandomItemId": null,
+          "Season": 2,
+          "Condition": "!PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 3,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": true,
+          "PlayerPosition": {
+            "Left": 0,
+            "Right": 255,
+            "Top": 0,
+            "Bottom": 15,
+            "IsEmpty": false,
+            "Location": {
+              "X": 0,
+              "Y": 0
+            },
+            "Size": {
+              "X": 255,
+              "Y": 15
+            },
+            "Center": {
+              "X": 127,
+              "Y": 7
+            },
+            "X": 0,
+            "Y": 0,
+            "Width": 255,
+            "Height": 15
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)899",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 3,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": {
+            "Left": 0,
+            "Right": 255,
+            "Top": 0,
+            "Bottom": 15,
+            "IsEmpty": false,
+            "Location": {
+              "X": 0,
+              "Y": 0
+            },
+            "Size": {
+              "X": 255,
+              "Y": 15
+            },
+            "Center": {
+              "X": 127,
+              "Y": 7
+            },
+            "X": 0,
+            "Y": 0,
+            "Width": 255,
+            "Height": 15
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(F)2427",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Fountain",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": null,
+          "RandomItemId": [
+            "(O)388",
+            "(O)390"
+          ],
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Fountain",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)137",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring fall",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)132",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)143",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)145",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)706",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer fall",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)138",
+          "RandomItemId": null,
+          "Season": 1,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)144",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)139",
+          "RandomItemId": null,
+          "Season": 2,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)140",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)699",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)141",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)707",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)RiverJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": [
+        {
+          "ItemId": "(O)18",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)402",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)410",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)418",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)414",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)283",
+          "Season": 3,
+          "Condition": null
+        }
+      ]
+    },
+    "Beach": {
+      "fish": [
+        {
+          "ItemId": "(O)159",
+          "RandomItemId": null,
+          "Season": 1,
+          "Condition": "!PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 5,
+          "MinDistanceFromShore": 3,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": true,
+          "PlayerPosition": {
+            "Left": 82,
+            "Right": 182,
+            "Top": 0,
+            "Bottom": 100,
+            "IsEmpty": false,
+            "Location": {
+              "X": 82,
+              "Y": 0
+            },
+            "Size": {
+              "X": 100,
+              "Y": 100
+            },
+            "Center": {
+              "X": 132,
+              "Y": 50
+            },
+            "X": 82,
+            "Y": 0,
+            "Width": 100,
+            "Height": 100
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)898",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 5,
+          "MinDistanceFromShore": 3,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": {
+            "Left": 82,
+            "Right": 182,
+            "Top": 0,
+            "Bottom": 100,
+            "IsEmpty": false,
+            "Location": {
+              "X": 82,
+              "Y": 0
+            },
+            "Size": {
+              "X": 100,
+              "Y": 100
+            },
+            "Center": {
+              "X": 132,
+              "Y": 50
+            },
+            "X": 82,
+            "Y": 0,
+            "Width": 100,
+            "Height": 100
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": null,
+          "RandomItemId": [
+            "(O)798",
+            "(O)799",
+            "(O)800"
+          ],
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 3,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": true,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": {
+            "Left": 0,
+            "Right": 12,
+            "Top": 32,
+            "Bottom": 287,
+            "IsEmpty": false,
+            "Location": {
+              "X": 0,
+              "Y": 32
+            },
+            "Size": {
+              "X": 12,
+              "Y": 255
+            },
+            "Center": {
+              "X": 6,
+              "Y": 159
+            },
+            "X": 0,
+            "Y": 32,
+            "Width": 12,
+            "Height": 255
+          }
+        },
+        {
+          "ItemId": "(O)129",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring fall",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)131",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)147",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)148",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring fall",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)152",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)708",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)267",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)128",
+          "RandomItemId": null,
+          "Season": 1,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)130",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)146",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)149",
+          "RandomItemId": null,
+          "Season": 1,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)150",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)155",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer fall",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)701",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer fall",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)154",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)705",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)151",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)151",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "IS_PASSIVE_FESTIVAL_OPEN SquidFest, TIME 0600 1800",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)151",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "IS_PASSIVE_FESTIVAL_OPEN SquidFest",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)SeaJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": [
+        {
+          "ItemId": "(O)372",
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer fall"
+        },
+        {
+          "ItemId": "(O)718",
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer fall"
+        },
+        {
+          "ItemId": "(O)719",
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer fall"
+        },
+        {
+          "ItemId": "(O)723",
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer fall"
+        },
+        {
+          "ItemId": "(O)394",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)372",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)392",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)718",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)719",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)723",
+          "Season": 3,
+          "Condition": null
+        }
+      ]
+    },
+    "BeachNightMarket": {
+      "fish": [
+        {
+          "ItemId": "(O)898",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 5,
+          "MinDistanceFromShore": 3,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": {
+            "Left": 82,
+            "Right": 182,
+            "Top": 0,
+            "Bottom": 100,
+            "IsEmpty": false,
+            "Location": {
+              "X": 82,
+              "Y": 0
+            },
+            "Size": {
+              "X": 100,
+              "Y": 100
+            },
+            "Center": {
+              "X": 132,
+              "Y": 50
+            },
+            "X": 82,
+            "Y": 0,
+            "Width": 100,
+            "Height": 100
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "LOCATION_FISH Beach BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Mountain": {
+      "fish": [
+        {
+          "ItemId": "(O)163",
+          "RandomItemId": null,
+          "Season": 0,
+          "Condition": "!PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY, WEATHER Here Rain Storm GreenRain",
+          "FishAreaId": null,
+          "MinFishingLevel": 10,
+          "MinDistanceFromShore": 4,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": true,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)900",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 10,
+          "MinDistanceFromShore": 4,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)136",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)142",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer fall",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)702",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)700",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)138",
+          "RandomItemId": null,
+          "Season": 1,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)698",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)140",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)269",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)141",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)707",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)RiverJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": [
+        {
+          "ItemId": "(O)20",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)16",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)396",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)398",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)404",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)406",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)408",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)414",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)418",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)283",
+          "Season": 3,
+          "Condition": null
+        }
+      ]
+    },
+    "Forest": {
+      "fish": [
+        {
+          "ItemId": "(F)2396",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "!PLAYER_HAS_MAIL Current caughtIridiumKrobus",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": {
+            "Left": 0,
+            "Right": 255,
+            "Top": 109,
+            "Bottom": 364,
+            "IsEmpty": false,
+            "Location": {
+              "X": 0,
+              "Y": 109
+            },
+            "Size": {
+              "X": 255,
+              "Y": 255
+            },
+            "Center": {
+              "X": 127,
+              "Y": 236
+            },
+            "X": 0,
+            "Y": 109,
+            "Width": 255,
+            "Height": 255
+          }
+        },
+        {
+          "ItemId": "(O)775",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": "!PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 6,
+          "MinDistanceFromShore": 3,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": true,
+          "PlayerPosition": {
+            "Left": 58,
+            "Right": 59,
+            "Top": 87,
+            "Bottom": 88,
+            "IsEmpty": false,
+            "Location": {
+              "X": 58,
+              "Y": 87
+            },
+            "Size": {
+              "X": 1,
+              "Y": 1
+            },
+            "Center": {
+              "X": 58,
+              "Y": 87
+            },
+            "X": 58,
+            "Y": 87,
+            "Width": 1,
+            "Height": 1
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)902",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 6,
+          "MinDistanceFromShore": 3,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": {
+            "Left": 58,
+            "Right": 59,
+            "Top": 87,
+            "Bottom": 88,
+            "IsEmpty": false,
+            "Location": {
+              "X": 58,
+              "Y": 87
+            },
+            "Size": {
+              "X": 1,
+              "Y": 1
+            },
+            "Center": {
+              "X": 58,
+              "Y": 87
+            },
+            "X": 58,
+            "Y": 87,
+            "Width": 1,
+            "Height": 1
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)Goby",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": {
+            "Left": 51,
+            "Right": 66,
+            "Top": 100,
+            "Bottom": 355,
+            "IsEmpty": false,
+            "Location": {
+              "X": 51,
+              "Y": 100
+            },
+            "Size": {
+              "X": 15,
+              "Y": 255
+            },
+            "Center": {
+              "X": 58,
+              "Y": 227
+            },
+            "X": 51,
+            "Y": 100,
+            "Width": 15,
+            "Height": 255
+          }
+        },
+        {
+          "ItemId": "(O)139",
+          "RandomItemId": null,
+          "Season": 2,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": {
+            "Left": 51,
+            "Right": 66,
+            "Top": 100,
+            "Bottom": 355,
+            "IsEmpty": false,
+            "Location": {
+              "X": 51,
+              "Y": 100
+            },
+            "Size": {
+              "X": 15,
+              "Y": 255
+            },
+            "Center": {
+              "X": 58,
+              "Y": 227
+            },
+            "X": 51,
+            "Y": 100,
+            "Width": 15,
+            "Height": 255
+          }
+        },
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)145",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer",
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)143",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring fall winter",
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)137",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring fall",
+          "FishAreaId": "Lake",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)132",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)706",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer fall",
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)702",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)144",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)138",
+          "RandomItemId": null,
+          "Season": 1,
+          "Condition": "IS_PASSIVE_FESTIVAL_OPEN TroutDerby",
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)138",
+          "RandomItemId": null,
+          "Season": 1,
+          "Condition": null,
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)704",
+          "RandomItemId": null,
+          "Season": 1,
+          "Condition": null,
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)140",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)139",
+          "RandomItemId": null,
+          "Season": 2,
+          "Condition": null,
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)699",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)269",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": "Lake",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)141",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)707",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": null,
+          "FishAreaId": "River",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)RiverJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": [
+        {
+          "ItemId": "(O)16",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)22",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)396",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)402",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)404",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)410",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)418",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)414",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)283",
+          "Season": 3,
+          "Condition": null
+        }
+      ]
+    },
+    "BusStop": {
+      "fish": [],
+      "forage": [
+        {
+          "ItemId": "(O)18",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)20",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)22",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)396",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)398",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)402",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)406",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)408",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)414",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)418",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)283",
+          "Season": 3,
+          "Condition": null
+        }
+      ]
+    },
+    "Sewer": {
+      "fish": [
+        {
+          "ItemId": "(O)682",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "!PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": true,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)901",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "PLAYER_SPECIAL_ORDER_RULE_ACTIVE Current LEGENDARY_FAMILY",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)142",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)157",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "BugLand": {
+      "fish": [
+        {
+          "ItemId": "(O)796",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)142",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)157",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Desert": {
+      "fish": [
+        {
+          "ItemId": "(F)2334",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "BottomPond",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "TopPond",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)164",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "TopPond",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)165",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "TopPond",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)RiverJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": [
+        {
+          "ItemId": "(O)88",
+          "Season": null,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)90",
+          "Season": null,
+          "Condition": null
+        }
+      ]
+    },
+    "Woods": {
+      "fish": [
+        {
+          "ItemId": "(F)2425",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)734",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)142",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)143",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)RiverJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": [
+        {
+          "ItemId": "(O)257",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)404",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)16",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)259",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)420",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)281",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)404",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)420",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)283",
+          "Season": 3,
+          "Condition": null
+        }
+      ]
+    },
+    "Railroad": {
+      "fish": [
+        {
+          "ItemId": "(F)2423",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": [
+        {
+          "ItemId": "(O)18",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)20",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)22",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)396",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)398",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)402",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)406",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)408",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)410",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)414",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)418",
+          "Season": 3,
+          "Condition": null
+        }
+      ]
+    },
+    "WitchSwamp": {
+      "fish": [
+        {
+          "ItemId": "(O)308",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "!PLAYER_HAS_MAIL Host henchmanGone, !PLAYER_HAS_ITEM Current (O)308",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)795",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)143",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)157",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Backwoods": {
+      "fish": [
+        {
+          "ItemId": "(O)136",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)142",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here spring summer fall",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)702",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)700",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)163",
+          "RandomItemId": null,
+          "Season": 0,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": true,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)138",
+          "RandomItemId": null,
+          "Season": 1,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)698",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)140",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here fall winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)141",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)707",
+          "RandomItemId": null,
+          "Season": 3,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": [
+        {
+          "ItemId": "(O)20",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)16",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)396",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)398",
+          "Season": 1,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)404",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)406",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)408",
+          "Season": 2,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)414",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)418",
+          "Season": 3,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)283",
+          "Season": 3,
+          "Condition": null
+        }
+      ]
+    },
+    "Submarine": {
+      "fish": [
+        {
+          "ItemId": "(O)800",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)799",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)798",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)154",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)155",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)149",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)797",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)152",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)SeaJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "BoatTunnel": {
+      "fish": [
+        {
+          "ItemId": "(F)2418",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "IslandSouth": {
+      "fish": [
+        {
+          "ItemId": "(O)155",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)130",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)128",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)267",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)837",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)SeaJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "IslandSouthEast": {
+      "fish": [
+        {
+          "ItemId": "(O)155",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)130",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)128",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)267",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)837",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)SeaJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "IslandSouthEastCave": {
+      "fish": [
+        {
+          "ItemId": "(F)2332",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)155",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)130",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)128",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)267",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)836",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)SeaJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "IslandWest": {
+      "fish": [
+        {
+          "ItemId": "(O)825",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "PLAYER_HAS_MAIL Current islandNorthCaveOpened",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)149",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)155",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)130",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)128",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)267",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)837",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)701",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Freshwater",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)838",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Freshwater",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)269",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Freshwater",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)RiverJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Freshwater",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)SeaJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": "Ocean",
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "IslandNorth": {
+      "fish": [
+        {
+          "ItemId": "(O)821",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "IS_ISLAND_NORTH_BRIDGE_FIXED",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(F)2419",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": {
+            "Left": 0,
+            "Right": 255,
+            "Top": 72,
+            "Bottom": 327,
+            "IsEmpty": false,
+            "Location": {
+              "X": 0,
+              "Y": 72
+            },
+            "Size": {
+              "X": 255,
+              "Y": 255
+            },
+            "Center": {
+              "X": 127,
+              "Y": 199
+            },
+            "X": 0,
+            "Y": 72,
+            "Width": 255,
+            "Height": 255
+          },
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(F)2814",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": {
+            "Left": 0,
+            "Right": 4,
+            "Top": 0,
+            "Bottom": 35,
+            "IsEmpty": false,
+            "Location": {
+              "X": 0,
+              "Y": 0
+            },
+            "Size": {
+              "X": 4,
+              "Y": 35
+            },
+            "Center": {
+              "X": 2,
+              "Y": 17
+            },
+            "X": 0,
+            "Y": 0,
+            "Width": 4,
+            "Height": 35
+          }
+        },
+        {
+          "ItemId": "(O)701",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)838",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)269",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)RiverJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "IslandNorthCave1": {
+      "fish": [],
+      "forage": [
+        {
+          "ItemId": "(O)281",
+          "Season": null,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)404",
+          "Season": null,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)420",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)422",
+          "Season": 0,
+          "Condition": null
+        },
+        {
+          "ItemId": "(O)420",
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer fall winter"
+        },
+        {
+          "ItemId": "(O)422",
+          "Season": null,
+          "Condition": "LOCATION_SEASON Here summer fall winter"
+        }
+      ]
+    },
+    "IslandFarmCave": {
+      "fish": [
+        {
+          "ItemId": "(H)78",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Caldera": {
+      "fish": [
+        {
+          "ItemId": "(F)2732",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "!PLAYER_HAS_MAIL Current CalderaPainting",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)162",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 1,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)162",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 2,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)162",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 3,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)162",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 4,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)162",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 5,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)162",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 6,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)162",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 7,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)162",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 8,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "UndergroundMine": {
+      "fish": [
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)156",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)157",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)CaveJelly",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "DesertFestival": {
+      "fish": [
+        {
+          "ItemId": "LOCATION_FISH Desert BOBBER_X BOBBER_Y WATER_DEPTH",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "fishingGame": {
+      "fish": [
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)145",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)143",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)137",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)139",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)706",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)702",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    },
+    "Temp": {
+      "fish": [
+        {
+          "ItemId": "(O)153",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "!IS_FESTIVAL_DAY",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)145",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "!IS_FESTIVAL_DAY",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)141",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "IS_FESTIVAL_DAY, SEASON winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)707",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "IS_FESTIVAL_DAY, SEASON winter, YEAR 2, RANDOM 0.4",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)269",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "IS_FESTIVAL_DAY, SEASON winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)144",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "IS_FESTIVAL_DAY, SEASON winter",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)146",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": "IS_FESTIVAL_DAY, SEASON winter, RANDOM 0.6",
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": true,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)137",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)132",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)706",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        },
+        {
+          "ItemId": "(O)702",
+          "RandomItemId": null,
+          "Season": null,
+          "Condition": null,
+          "FishAreaId": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "IgnoreFishDataRequirements": false,
+          "RequireMagicBait": false,
+          "IsBossFish": false,
+          "PlayerPosition": null,
+          "BobberPosition": null
+        }
+      ],
+      "forage": []
+    }
+  },
+  "pierre": [
+    {
+      "ItemId": "(O)472",
+      "Condition": "SEASON spring",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)473",
+      "Condition": "SEASON spring",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)474",
+      "Condition": "SEASON spring",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)475",
+      "Condition": "SEASON spring",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)427",
+      "Condition": "SEASON spring",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)477",
+      "Condition": "SEASON spring",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)429",
+      "Condition": "SEASON spring",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)476",
+      "Condition": "SEASON spring, YEAR 2",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)273",
+      "Condition": "SEASON spring, YEAR 2",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)479",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)480",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)481",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)482",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)483",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)484",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)453",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)455",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)302",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)487",
+      "Condition": "SEASON summer",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)431",
+      "Condition": "SEASON summer",
+      "Price": 100,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)485",
+      "Condition": "SEASON summer, YEAR 2",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)490",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)487",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)488",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)491",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)492",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)493",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)483",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)431",
+      "Condition": "SEASON fall",
+      "Price": 100,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)425",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)299",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)301",
+      "Condition": "SEASON fall",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)489",
+      "Condition": "SEASON fall, YEAR 2",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)297",
+      "Condition": null,
+      "Price": 100,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)297",
+      "Condition": null,
+      "Price": 1000,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)245",
+      "Condition": null,
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)246",
+      "Condition": null,
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)423",
+      "Condition": null,
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)247",
+      "Condition": null,
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)419",
+      "Condition": null,
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)368",
+      "Condition": "DAYS_PLAYED 15",
+      "Price": 50,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)370",
+      "Condition": "DAYS_PLAYED 15",
+      "Price": 50,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)465",
+      "Condition": "DAYS_PLAYED 15",
+      "Price": 50,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)369",
+      "Condition": "YEAR 2",
+      "Price": 75,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)371",
+      "Condition": "YEAR 2",
+      "Price": 75,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)466",
+      "Condition": "YEAR 2",
+      "Price": 75,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "RANDOM_ITEMS (WP) 0 111 @requirePrice @isRandomSale",
+      "Condition": null,
+      "Price": 100,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "RANDOM_ITEMS (FL) 0 55 @requirePrice @isRandomSale",
+      "Condition": null,
+      "Price": 100,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(F)1308",
+      "Condition": null,
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    },
+    {
+      "ItemId": "(O)628",
+      "Condition": null,
+      "Price": 1700,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)629",
+      "Condition": null,
+      "Price": 1000,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)630",
+      "Condition": null,
+      "Price": 2000,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)631",
+      "Condition": null,
+      "Price": 3000,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)632",
+      "Condition": null,
+      "Price": 3000,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)633",
+      "Condition": null,
+      "Price": 2000,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(BC)Dehydrator",
+      "Condition": "!PLAYER_HAS_CRAFTING_RECIPE Current Dehydrator",
+      "Price": 5000,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "ITEMS_SOLD_BY_PLAYER SeedShop",
+      "Condition": null,
+      "Price": -1,
+      "IgnoreShopPriceModifiers": false
+    },
+    {
+      "ItemId": "(O)458",
+      "Condition": "PLAYER_HEARTS Current AnyDateable 8",
+      "Price": -1,
+      "IgnoreShopPriceModifiers": true
+    }
+  ]
+}

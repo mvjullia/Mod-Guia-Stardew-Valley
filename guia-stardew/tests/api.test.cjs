@@ -17,5 +17,11 @@ test('API autenticada entrega snapshot por SSE e reenvia estado na reconexão',a
  const replay=await request('/api/events',{headers:{Cookie:cookie}});const replayReader=replay.body.getReader();const replayEvent=new TextDecoder().decode((await replayReader.read()).value);assert.match(replayEvent,/Maria/);await replayReader.cancel();
  const stale=structuredClone(data);stale.exportedAt='2026-10-29T23:00:00Z';assert.equal((await request('/api/snapshots',{method:'POST',headers,body:JSON.stringify(stale)})).status,409);
  assert.equal((await request('/')).status,200);
+ for(const file of ['item-catalog.js','item-fields.json','items.json','polish.js','acquisition.js','profile.js','time-format.js','game-ui.js','game-cursor.png','menu-hover.wav','menu-select.wav','menu-open.wav','menu-close.wav','game-ui-sources.json','season.js','season-guide.json','albums.js','album-moments.json','Pixellari.ttf']) {
+   const asset=await request('/'+file);assert.equal(asset.status,200,file);
+   const type=file.endsWith('.json')?'application/json':file.endsWith('.png')?'image/png':file.endsWith('.wav')?'audio/wav':file.endsWith('.ttf')?'font/ttf':'text/javascript';
+   assert.ok(asset.headers.get('content-type').startsWith(type),file);
+   if(file==='items.json'){const catalog=await asset.json();assert.equal(catalog.schemaVersion,2);assert.ok(catalog.items.length>0);}
+ }
  }finally{server.closeStreams();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
 });
