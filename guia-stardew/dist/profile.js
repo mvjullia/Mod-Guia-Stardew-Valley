@@ -12,10 +12,11 @@
  .profile-information{display:grid;gap:18px}.profile-field{display:grid;gap:8px;min-width:0}
  .profile-info,.profile-date{display:flex;align-items:center;gap:14px;padding:14px 16px;border:3px ridge #b88b57;background:#f8f1dd}
  .profile-field-title{font-size:18px;font-weight:900;line-height:1.2;color:#553822}.profile-field-value{font-size:15px;line-height:1.4;color:#624634;overflow-wrap:anywhere}
- .profile-date img{width:42px;height:42px;image-rendering:pixelated;padding:5px;border:3px ridge #b88043;background:#fff0cb;object-fit:contain;box-sizing:content-box}
+ .profile-date img{width:42px;height:42px;image-rendering:pixelated;padding:0;border:0;background:transparent;object-fit:contain;box-sizing:content-box}
  .skills-title{font-size:19px;margin:4px 0 -6px;color:#553822}.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px}
  .skill-card{display:flex;gap:14px;align-items:center;padding:13px;background:#f8f1dd;border:3px ridge #b88043;min-width:0}
- .skill-card img{width:42px;height:42px;image-rendering:pixelated;object-fit:contain;padding:7px;border:3px ridge #b88043;background:#fff7df;box-sizing:content-box;flex:none}
+ .skill-card img{width:42px;height:42px;image-rendering:pixelated;object-fit:contain;padding:0;border:0;background:transparent;box-sizing:content-box;flex:none}
+ .nav .farmer-head{width:36px;height:36px;image-rendering:pixelated;object-fit:contain;border:0;background:transparent;padding:0;margin:0}
  .skill-card strong{display:block;font-size:16px;line-height:1.3}.skill-card span{display:block;margin-top:4px;font-size:14px;line-height:1.3}
  @media(max-width:700px){.farmer-profile,#saveinfo.farmer-profile{grid-template-columns:1fr}.profile-art{flex-direction:row;justify-content:center;flex-wrap:wrap}.top{padding:10px}.game-clock{font-size:12px}}
  `;document.head.append(style);

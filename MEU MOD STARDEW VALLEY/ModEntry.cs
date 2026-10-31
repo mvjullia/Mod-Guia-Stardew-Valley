@@ -28,6 +28,7 @@ namespace StardewRealtimeTelemetry
         private void OpenGuide() { if (this.guide == null) { this.Monitor.Log("Guia indisponível; verifique o erro de inicialização.", LogLevel.Warn); return; } try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(this.guide.StartUrl) { UseShellExecute = true }); this.Monitor.Log("Abrindo guia com conexão automática no navegador padrão.", LogLevel.Info); } catch (Exception ex) { this.Monitor.Log("Não foi possível abrir o navegador: " + ex.Message, LogLevel.Warn); } }
         private int elapsedSeconds;
         private string? portrait;
+        private string? headPortrait;
         private int uploadInProgress;
         private static readonly HttpClient Client = new() { Timeout = TimeSpan.FromSeconds(10) };
 
@@ -40,7 +41,7 @@ namespace StardewRealtimeTelemetry
             helper.ConsoleCommands.Add("guia_abrir", "Abre o guia conectado no navegador padrão.", (_, _) => this.OpenGuide());
             helper.Events.GameLoop.GameLaunched += (_, _) => { if (!this.openedGuide) { this.OpenGuide(); this.openedGuide = true; } };
             this.Monitor.Log($"Guia integrado: {(this.guide != null ? "ativo" : "indisponível")}; intervalo: {Math.Clamp(this.Config.UploadIntervalSeconds, 1, 60)}s.", LogLevel.Info);
-            helper.Events.GameLoop.SaveLoaded += (_, _) => { this.portrait=null; this.Monitor.Log("Jogador entrou na fazenda; iniciando atualizações do guia.", LogLevel.Info); this.ExportSnapshot(); };
+            helper.Events.GameLoop.SaveLoaded += (_, _) => { this.portrait=null; this.headPortrait=null; this.Monitor.Log("Jogador entrou na fazenda; iniciando atualizações do guia.", LogLevel.Info); this.ExportSnapshot(); };
             helper.Events.GameLoop.ReturnedToTitle += (_, _) => this.Monitor.Log("Jogador saiu da fazenda; atualizações pausadas.", LogLevel.Info);
             helper.Events.GameLoop.Saved += (_, _) => this.ExportSnapshot();
             helper.Events.GameLoop.OneSecondUpdateTicked += (_, e) => {
@@ -56,12 +57,14 @@ namespace StardewRealtimeTelemetry
             // Todas as leituras de Game1 acontecem na thread principal.
             var player = Game1.player;
             object? visuals=null;
-            try { visuals=VisualSnapshot.Capture(); this.portrait ??=VisualSnapshot.Portrait(); } catch(Exception ex) { this.Monitor.Log("Falha ao coletar imagens/progresso: "+ex.Message, LogLevel.Warn); }
+            try { visuals=VisualSnapshot.Capture(); } catch(Exception ex) { this.Monitor.Log("Falha ao coletar imagens/progresso: "+ex.Message, LogLevel.Warn); }
+            try { this.portrait=VisualSnapshot.Portrait(); this.headPortrait=VisualSnapshot.HeadPortrait(); } catch(Exception ex) { this.Monitor.Log("Falha ao capturar personagem: "+ex.Message, LogLevel.Warn); }
             var payload = new
             {
                 schemaVersion = 1,
                 visuals,
                 portrait = this.portrait,
+                headPortrait = this.headPortrait,
                 exportedAt = DateTimeOffset.UtcNow.ToString("O"),
                 modVersion = this.ModManifest.Version.ToString(),
                 farm = new

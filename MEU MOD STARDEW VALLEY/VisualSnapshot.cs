@@ -10,13 +10,15 @@ namespace StardewRealtimeTelemetry;
 internal static class VisualSnapshot
 {
     private static readonly Dictionary<string,string> images = new();
-    private static string Png(Texture2D texture, Rectangle rect, string key)
+    private static string Png(Texture2D texture, Rectangle rect, string? key)
     {
-        if(images.TryGetValue(key,out var cached))return cached;
+        if(key!=null && images.TryGetValue(key,out var cached))return cached;
         var pixels=new Color[rect.Width*rect.Height];texture.GetData(0,rect,pixels,0,pixels.Length);
         using var copy=new Texture2D(Game1.graphics.GraphicsDevice,rect.Width,rect.Height);copy.SetData(pixels);
         using var stream=new MemoryStream();copy.SaveAsPng(stream,rect.Width,rect.Height);
-        return images[key]="data:image/png;base64,"+Convert.ToBase64String(stream.ToArray());
+        string result="data:image/png;base64,"+Convert.ToBase64String(stream.ToArray());
+        if(key!=null)images[key]=result;
+        return result;
     }
     private static object Item(string id, bool personal = false)
     {
@@ -55,17 +57,20 @@ internal static class VisualSnapshot
         var petInfo = pets.Select(pet => new {name=pet.Name,icon=Png(pet.Sprite.Texture,pet.Sprite.SourceRect,"pet:"+pet.petId.Value+":"+pet.Sprite.CurrentFrame)}).ToArray();
         return new {bundles,npcs,pets=petInfo,pet=petInfo.FirstOrDefault(),ui=new {silver=Png(Game1.mouseCursors,new Rectangle(338,400,8,8),"silver"),gold=Png(Game1.mouseCursors,new Rectangle(346,400,8,8),"gold"),iridium=Png(Game1.mouseCursors,new Rectangle(346,392,8,8),"iridium"),heart=Png(Game1.mouseCursors,new Rectangle(211,428,7,6),"heart")},icons=new Dictionary<string,object>{{"home",Item("24")},{"center",Item("22")},{"gifts",Item("72")},{"fishing",Item("145")},{"foraging",Item("16")},{"farming",Item("24")},{"mining",Item("378")},{"combat",Item("768")},{"wiki",Item("102")}}};
     }
-    public static string Portrait()
+    private static string CapturePlayer(bool headOnly)
     {
         var graphics=Game1.graphics.GraphicsDevice;
         var previous=graphics.GetRenderTargets();
         using var target=new RenderTarget2D(graphics,96,160);using var batch=new SpriteBatch(graphics);
-        try {graphics.SetRenderTarget(target);graphics.Clear(Color.Transparent);var position=Game1.GlobalToLocal(Game1.viewport,Game1.player.Position);
-            batch.Begin(samplerState:SamplerState.PointClamp,transformMatrix:Matrix.CreateTranslation(-position.X,-position.Y,0)*Matrix.CreateScale(0.5f)*Matrix.CreateTranslation(32,80,0));
-            Game1.player.draw(batch);
+        try {graphics.SetRenderTarget(target);graphics.Clear(Color.Transparent);
+            batch.Begin(samplerState:SamplerState.PointClamp);
+            if(headOnly) Game1.player.FarmerRenderer.drawMiniPortrat(batch,new Vector2(16,24),0.5f,4f,2,Game1.player);
+            else Game1.player.FarmerRenderer.draw(batch,Game1.player.FarmerSprite,Game1.player.FarmerSprite.SourceRect,new Vector2(16,24),Vector2.Zero,0.5f,Color.White,0f,Game1.player);
             batch.End();graphics.SetRenderTargets(previous);
             var pixels=new Color[96*160];target.GetData(pixels);int left=96,top=160,right=-1,bottom=-1;for(int y=0;y<160;y++)for(int x=0;x<96;x++)if(pixels[y*96+x].A>0){left=Math.Min(left,x);right=Math.Max(right,x);top=Math.Min(top,y);bottom=Math.Max(bottom,y);}if(right<left)throw new InvalidOperationException("Sprite do jogador vazio");
-            return Png(target,new Rectangle(left,top,right-left+1,bottom-top+1),"player:"+Guid.NewGuid());
+            return Png(target,new Rectangle(left,top,right-left+1,bottom-top+1),null);
         } finally {graphics.SetRenderTargets(previous);}
     }
+    public static string Portrait() => CapturePlayer(false);
+    public static string HeadPortrait() => CapturePlayer(true);
 }
