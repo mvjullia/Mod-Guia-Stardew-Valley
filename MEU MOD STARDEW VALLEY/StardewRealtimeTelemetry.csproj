@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <AssemblyName>StardewRealtimeTelemetry</AssemblyName>
     <RootNamespace>StardewRealtimeTelemetry</RootNamespace>
@@ -8,18 +7,15 @@
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ApplicationIcon>pickaxe_icon.ico</ApplicationIcon>
+    <GuideDistDir Condition="'$(GuideDistDir)' == ''">$(MSBuildProjectDirectory)/../guia-stardew/dist</GuideDistDir>
   </PropertyGroup>
-
-  <ItemGroup><Compile Remove="tests/**/*.cs" /></ItemGroup>
   <ItemGroup>
-    <!-- Pacote oficial que referencia automaticamente o Stardew Valley e a SMAPI -->
+    <Compile Remove="tests/**/*.cs" />
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
+    <GuideFile Include="index.html;telemetry.js;realtime.js;embedded.js;visual.js;knowledge.js;polish.js;acquisition.js;profile.js;time-format.js" />
+    <EmbeddedResource Include="@(GuideFile->'$(GuideDistDir)/%(Identity)')" LogicalName="Guide.%(Filename)%(Extension)" />
   </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="../guia-stardew/dist/index.html" LogicalName="Guide.index.html" />
-    <EmbeddedResource Include="../guia-stardew/dist/telemetry.js" LogicalName="Guide.telemetry.js" />
-    <EmbeddedResource Include="../guia-stardew/dist/realtime.js" LogicalName="Guide.realtime.js" />
-    <EmbeddedResource Include="../guia-stardew/dist/embedded.js" LogicalName="Guide.embedded.js" />
-  </ItemGroup>
-<ItemGroup><EmbeddedResource Include="../guia-stardew/dist/visual.js" LogicalName="Guide.visual.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/knowledge.js" LogicalName="Guide.knowledge.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/polish.js" LogicalName="Guide.polish.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/acquisition.js" LogicalName="Guide.acquisition.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/profile.js" LogicalName="Guide.profile.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/time-format.js" LogicalName="Guide.time-format.js" /></ItemGroup></Project>
+  <Target Name="ValidateGuideFiles" BeforeTargets="PrepareResourceNames">
+    <Error Condition="!Exists('$(GuideDistDir)/%(GuideFile.Identity)')" Text="Arquivo do guia ausente: $(GuideDistDir)/%(GuideFile.Identity). Informe a pasta dist do guia com -p:GuideDistDir=&lt;caminho&gt;. Consulte o README." />
+  </Target>
+</Project>
