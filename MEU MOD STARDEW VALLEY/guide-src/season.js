@@ -141,7 +141,7 @@
         const index = tabs.findIndex(tab => tab[0] === 'season'), button = document.querySelectorAll('#nav button')[index];
         if (!button) return;
         const slot = button.querySelector('i'), season = rules?.seasons.find(entry => entry.id === root.guiaData?.farm?.season);
-        slot.replaceChildren(); if (season) seasonIcon(slot, season); else add(slot, 'span', '📅');
+        slot.replaceChildren(); if (season) seasonIcon(slot, season).className = 'menu-game-icon'; else add(slot, 'span', '📅');
         button.setAttribute('aria-label', 'Estação' + (season ? ': ' + season.label : ''));
     }
     function picture(parent, item, snapshot, fallback) {

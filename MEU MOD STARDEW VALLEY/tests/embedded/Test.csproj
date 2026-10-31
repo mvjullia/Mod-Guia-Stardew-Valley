@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="../../guide-src/community-center.png"><LogicalName>Guide.community-center.png</LogicalName></EmbeddedResource>
     <EmbeddedResource Include="../../guide-src/Pixellari.ttf"><LogicalName>Guide.Pixellari.ttf</LogicalName></EmbeddedResource>
     <EmbeddedResource Include="../../guide-src/season.js;../../guide-src/season-guide.json"><LogicalName>Guide.%(Filename)%(Extension)</LogicalName></EmbeddedResource>
     <Compile Include="../../EmbeddedGuide.cs" Link="EmbeddedGuide.cs" />

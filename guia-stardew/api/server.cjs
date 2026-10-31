@@ -85,6 +85,7 @@ function createServer({ token, origin = 'http://127.0.0.1:8787', sessionTtl = 12
       files['/season.js']='season.js';files['/season-guide.json']='season-guide.json';
       files['/albums.js']='albums.js';files['/album-moments.json']='album-moments.json';
       files['/Pixellari.ttf']='Pixellari.ttf';
+      files['/community-center.png']='community-center.png';
       if(req.method==='GET' && files[url.pathname]) {
         const mime={'.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.html':'text/html; charset=utf-8','.png':'image/png','.wav':'audio/wav','.ttf':'font/ttf'};
         res.writeHead(200,{'Content-Type':mime[path.extname(files[url.pathname])],'Cache-Control':'no-store'});

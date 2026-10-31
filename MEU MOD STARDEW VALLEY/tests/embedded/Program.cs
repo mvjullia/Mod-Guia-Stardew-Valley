@@ -28,7 +28,7 @@ class Program
         pageRequest.Headers.Add("Sec-Fetch-Site", "none");
         var page = await client.SendAsync(pageRequest);
         if (!(await page.Content.ReadAsStringAsync()).Contains("window.embeddedGuide=true")) throw new Exception("marcador ausente");
-        foreach (var file in new[] { "items.json", "item-fields.json", "item-catalog.js", "game-ui.js", "game-cursor.png", "menu-hover.wav", "menu-select.wav", "menu-open.wav", "menu-close.wav", "game-ui-sources.json", "season.js", "season-guide.json", "albums.js", "album-moments.json", "Pixellari.ttf" })
+        foreach (var file in new[] { "items.json", "item-fields.json", "item-catalog.js", "game-ui.js", "game-cursor.png", "menu-hover.wav", "menu-select.wav", "menu-open.wav", "menu-close.wav", "game-ui-sources.json", "season.js", "season-guide.json", "albums.js", "album-moments.json", "Pixellari.ttf", "community-center.png" })
         {
             using var asset = await client.GetAsync(server.Origin + "/" + file);
             asset.EnsureSuccessStatusCode();

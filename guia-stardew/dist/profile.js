@@ -21,6 +21,7 @@
  .skill-card{display:flex;gap:14px;align-items:center;padding:13px;background:#fce9bc;border:3px ridge #b88043;min-width:0}
  .skill-card img{width:42px;height:42px;image-rendering:pixelated;object-fit:contain;padding:0;border:0;background:transparent;box-sizing:content-box;flex:none}
  .nav .farmer-head{width:36px;height:36px;image-rendering:pixelated;object-fit:contain;border:0;background:transparent;padding:0;margin:0}
+ .nav .menu-game-icon{width:32px;height:32px;image-rendering:pixelated;object-fit:contain;border:0;background:transparent;padding:0;margin:0}
  .skill-card strong{display:block;font-size:16px;line-height:1.3}.skill-card span{display:block;margin-top:4px;font-size:14px;line-height:1.3}
  @media(max-width:700px){.farmer-profile,#saveinfo.farmer-profile{grid-template-columns:1fr}.profile-art{flex-direction:row;justify-content:center;flex-wrap:wrap}.profile-card-title,.profile-art>.profile-field{flex-basis:100%}.top{padding:10px}.game-clock{font-size:12px}}
  `;document.head.append(style);
