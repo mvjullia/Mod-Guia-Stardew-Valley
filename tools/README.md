@@ -81,7 +81,7 @@ node --test guia-stardew/tests/season.test.cjs
 ```
 
 ```powershell
-dotnet build "MEU MOD STARDEW VALLEY/StardewRealtimeTelemetry.csproj" -p:EnableModDeploy=false
+dotnet build "MEU MOD STARDEW VALLEY/StardewRealtimeTelemetry.csproj"
 ```
 
 ## Testar a ferramenta

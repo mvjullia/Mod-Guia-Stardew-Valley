@@ -7,6 +7,9 @@
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <EnableHarmony>true</EnableHarmony>
+    <!-- Use SMAPI's detected game path and deploy into its Mods folder on normal builds. -->
+    <EnableModDeploy Condition="'$(EnableModDeploy)' == ''">true</EnableModDeploy>
+    <ModFolderName>StardewRealtimeTelemetry</ModFolderName>
     <ApplicationIcon>pickaxe_icon.ico</ApplicationIcon>
     <!-- Paths may be overridden with -p:GuideSourceDir=... and -p:GuideAssetsDir=... -->
     <GuideSourceDir Condition="'$(GuideSourceDir)' == ''">$(MSBuildProjectDirectory)/guide-src</GuideSourceDir>

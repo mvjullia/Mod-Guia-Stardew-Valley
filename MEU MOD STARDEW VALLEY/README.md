@@ -72,10 +72,14 @@ Para compilar, são necessários .NET SDK 6, Stardew Valley e SMAPI instalados, 
 
 ```powershell
 dotnet restore
-dotnet build --no-restore -p:EnableModDeploy=false
+dotnet build --no-restore
 ```
 
-Antes da compilação, o alvo MSBuild `PrepareGuideAssets` gera automaticamente `obj/guide-dist/`, confere todos os arquivos obrigatórios e os incorpora à DLL. O pacote de build do SMAPI pode implantar o mod automaticamente se `EnableModDeploy` não for desativado; o comando acima apenas compila. Para gerar o diretório sem compilar a DLL:
+Antes da compilação, o alvo MSBuild `PrepareGuideAssets` gera automaticamente `obj/guide-dist/`, confere todos os arquivos obrigatórios e os incorpora à DLL. A build normal, inclusive pela IDE, instala o resultado em `Mods/StardewRealtimeTelemetry` na instalação do jogo detectada pelo pacote de build do SMAPI. Feche o jogo antes de compilar para liberar a DLL. Os álbuns e a configuração existentes são preservados.
+
+Para uma instalação em outro caminho, use `dotnet build "-p:GamePath=C:/caminho/Stardew Valley"`. Para mudar somente o destino dos mods, use `-p:GameModsPath=C:/caminho/Mods`. Para compilar sem instalar, use explicitamente `dotnet build -p:EnableModDeploy=false`.
+
+Para gerar o diretório sem compilar a DLL:
 
 ```powershell
 dotnet msbuild -target:PrepareGuideAssets
