@@ -14,13 +14,15 @@ const buttons = Array.from({ length: 3 }, () => { const el = new Element('button
 const top = new Element('header');
 const doc = { head: new Element('head'), createElement: tag => new Element(tag), querySelector: selector => selector === '.top' ? top : null, querySelectorAll: selector => selector === '#nav button' ? buttons : [] };
 let update;
-const window = { guiaData: { headPortrait: 'data:image/png;base64,HEAD', farm: { day: 1, season: 'spring', year: 1 }, visuals: { icons: { home: { icon: 'data:image/png;base64,PARSNIP' }, center: { icon: 'data:image/png;base64,CENTER' }, gifts: { icon: 'data:image/png;base64,GIFTS' } } } }, render() {}, renderCenterList() {}, showFarmerSnapshot() {}, addEventListener: (_, fn) => { update = fn; } };
+const window = { guiaData: { headPortrait: 'data:image/png;base64,HEAD', farm: { day: 1, season: 'spring', year: 1 }, visuals: { ui: { heart: 'data:image/png;base64,HEART' }, icons: { home: { icon: 'data:image/png;base64,PARSNIP' }, center: { icon: 'data:image/png;base64,CENTER' }, gifts: { icon: 'data:image/png;base64,GIFTS' } } } }, render() {}, renderCenterList() {}, showFarmerSnapshot() {}, addEventListener: (_, fn) => { update = fn; } };
 const context = { document: doc, window, current: 'home', tabs: [['home', '', 'Fazendeira'], ['center', '', 'Centro'], ['gifts', '', 'Amizade']], setTimeout() {} };
 vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../guide-src/visual.js'), 'utf8'), context);
 update();
 assert.equal(buttons[0].icon.children[0].src, 'data:image/png;base64,HEAD');
 assert.equal(buttons[0].icon.children[0].className, 'farmer-head');
-assert.equal(buttons[1].icon.children[0].src, 'data:image/png;base64,CENTER');
+assert.equal(buttons[1].icon.children[0].src, '/community-center.png');
+assert.equal(buttons[1].icon.children[0].className, 'menu-game-icon');
+assert.equal(buttons[2].icon.children[0].src, 'data:image/png;base64,HEART');
 window.guiaData.headPortrait = 'data:image/png;base64,NEW';
 update();
 assert.equal(buttons[0].icon.children[0].src, 'data:image/png;base64,NEW');
