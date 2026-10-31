@@ -100,6 +100,7 @@ internal sealed class EmbeddedGuide : IDisposable
             string? resource = route switch { "/" or "/index.html" => "index.html", "/telemetry.js" => "telemetry.js", "/realtime.js" => "realtime.js", "/embedded.js" => "embedded.js", "/visual.js" => "visual.js", "/polish.js" => "polish.js", "/acquisition.js" => "acquisition.js", "/profile.js" => "profile.js", "/time-format.js" => "time-format.js", "/knowledge.js" => "knowledge.js", "/item-catalog.js" => "item-catalog.js", "/item-fields.json" => "item-fields.json", "/items.json" => "items.json", "/game-ui.js" => "game-ui.js", "/game-cursor.png" => "game-cursor.png", "/game-ui-sources.json" => "game-ui-sources.json", "/menu-hover.wav" => "menu-hover.wav", "/menu-select.wav" => "menu-select.wav", "/menu-open.wav" => "menu-open.wav", "/menu-close.wav" => "menu-close.wav", _ => null };
             resource ??= route switch { "/season.js" => "season.js", "/season-guide.json" => "season-guide.json", _ => null };
             resource ??= route switch { "/albums.js" => "albums.js", "/album-moments.json" => "album-moments.json", _ => null };
+            resource ??= route == "/album-rules.json" ? "album-rules.json" : null;
             resource ??= route == "/Pixellari.ttf" ? "Pixellari.ttf" : null;
             resource ??= route == "/community-center.png" ? "community-center.png" : null;
             resource ??= route == "/community-center-mask.png" ? "community-center-mask.png" : null;

@@ -75,7 +75,11 @@ function createServer({ token, origin = 'http://127.0.0.1:8787', sessionTtl = 12
         const photos=fs.existsSync(index)?JSON.parse(fs.readFileSync(index,'utf8').replace(/^\uFEFF/,'')):[];
         if(!Array.isArray(photos) || photos.some(photo=>!photo || !/^[a-f0-9]{32}$/.test(photo.id) || !/^[a-f0-9]{32}$/.test(photo.imageId)))
           return json(res,500,{error:'O índice do álbum precisa ser reparado.'});
-        if(url.pathname==='/api/albums')return json(res,200,{supported:true,active:true,photos:[...photos].sort((a,b)=>String(b.capturedAt).localeCompare(String(a.capturedAt)))});
+        if(url.pathname==='/api/albums') {
+          const sessionFile=path.join(directory,'sessions.json'),sessions=fs.existsSync(sessionFile)?JSON.parse(fs.readFileSync(sessionFile,'utf8').replace(/^\uFEFF/,'')):[];
+          if(!Array.isArray(sessions))return json(res,500,{error:'O índice de sessões precisa ser reparado.'});
+          return json(res,200,{supported:true,active:true,photos:[...photos].sort((a,b)=>String(b.capturedAt).localeCompare(String(a.capturedAt))),sessions});
+        }
         const match=/^\/api\/albums\/photos\/([a-f0-9]{32})\.png$/.exec(url.pathname);
         if(!match || !photos.some(photo=>photo.imageId===match[1]))return json(res,404,{error:'Foto não encontrada.'});
         const file=path.join(directory,match[1]+'.png');if(!fs.existsSync(file))return json(res,404,{error:'Foto não encontrada.'});
@@ -84,6 +88,7 @@ function createServer({ token, origin = 'http://127.0.0.1:8787', sessionTtl = 12
       const files={'/':'index.html','/index.html':'index.html','/telemetry.js':'telemetry.js','/realtime.js':'realtime.js','/embedded.js':'embedded.js','/visual.js':'visual.js','/polish.js':'polish.js','/acquisition.js':'acquisition.js','/profile.js':'profile.js','/time-format.js':'time-format.js','/knowledge.js':'knowledge.js','/item-catalog.js':'item-catalog.js','/item-fields.json':'item-fields.json','/items.json':'items.json','/game-ui.js':'game-ui.js','/game-cursor.png':'game-cursor.png','/game-ui-sources.json':'game-ui-sources.json','/menu-hover.wav':'menu-hover.wav','/menu-select.wav':'menu-select.wav','/menu-open.wav':'menu-open.wav','/menu-close.wav':'menu-close.wav'};
       files['/season.js']='season.js';files['/season-guide.json']='season-guide.json';
       files['/albums.js']='albums.js';files['/album-moments.json']='album-moments.json';
+      files['/album-rules.json']='album-rules.json';
       files['/Pixellari.ttf']='Pixellari.ttf';
       files['/community-center.png']='community-center.png';
       files['/community-center-mask.png']='community-center-mask.png';

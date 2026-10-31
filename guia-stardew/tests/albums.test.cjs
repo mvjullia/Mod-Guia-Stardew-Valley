@@ -6,7 +6,7 @@ const os = require('node:os');
 const vm = require('node:vm');
 const { createServer } = require('../api/server.cjs');
 const source = path.resolve(__dirname, '../../MEU MOD STARDEW VALLEY/guide-src');
-const { groupPhotos } = require(path.join(source, 'albums.js'));
+const { groupPhotos, displayPhotos, sessionStatus } = require(path.join(source, 'albums.js'));
 const photo = { id: 'a'.repeat(32), imageId: 'b'.repeat(32), kind: 'center-forgot', title: 'Levei o item e esqueci de deixar',
     description: 'Quando Maria entrou no Centro com Chirívia e saiu sem entregar.', playerName: 'Maria', location: 'CommunityCenter',
     year: 1, season: 'spring', day: 2, time: 900, capturedAt: '2026-10-31T00:00:00Z' };
@@ -14,6 +14,14 @@ const photo = { id: 'a'.repeat(32), imageId: 'b'.repeat(32), kind: 'center-forgo
 test('álbuns agrupam dias e rejeitam identificadores de arquivo arbitrários', () => {
     const days = groupPhotos([photo, { ...photo, id: 'c'.repeat(32), day: 3 }, { ...photo, imageId: '../../segredo' }]);
     assert.equal(days.length, 2); assert.equal(days[0].photos.length, 1);
+});
+
+test('foto composta reúne a sessão sem duplicar as duas fontes na galeria', () => {
+    const originalA = { ...photo, sessionId: 'd'.repeat(32) }, originalB = { ...photo, id: 'c'.repeat(32), sessionId: originalA.sessionId };
+    const composed = { ...photo, id: 'e'.repeat(32), sessionId: originalA.sessionId, isComposite: true };
+    assert.equal(displayPhotos([originalA, originalB]).length, 2);
+    assert.deepEqual(displayPhotos([originalA, originalB, composed]), [composed]);
+    assert.match(sessionStatus({ status: 'confirming' }), /Conferindo/); assert.match(sessionStatus({ status: 'synchronized' }), /dois computadores/);
 });
 
 function browser(responseFactory) {

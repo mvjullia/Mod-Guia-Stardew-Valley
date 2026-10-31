@@ -4,6 +4,8 @@
     const collectionOf = photo => ['coop', 'romance', 'nights', 'festivals', 'joja'].includes(photo.collection) ? photo.collection : 'memories';
     const filterPhotos = (photos, collection = 'all', pair = '') => photos.filter(photo =>
         (collection === 'all' || collectionOf(photo) === collection) && (!pair || photo.pairKey === pair));
+    const displayPhotos = photos => { const combined = new Set(photos.filter(photo => photo.isComposite && photo.sessionId).map(photo => photo.sessionId)); return photos.filter(photo => photo.isComposite || !photo.sessionId || !combined.has(photo.sessionId)); };
+    const sessionStatus = session => ({ synchronized: '✓ Sincronizada nos dois computadores', confirming: 'Conferindo as duas cópias…', 'capture-failed': 'Captura não concluída · tente novamente no jogo', pending: 'Pendente · aguardando a outra visão' })[session?.status] || 'Pendente';
     function groupPhotos(photos) {
         const days = new Map();
         for (const photo of photos) {
@@ -14,7 +16,7 @@
         }
         return [...days.values()];
     }
-    if (typeof module !== 'undefined' && module.exports) module.exports = { groupPhotos, validId, filterPhotos, collectionOf };
+    if (typeof module !== 'undefined' && module.exports) module.exports = { groupPhotos, validId, filterPhotos, collectionOf, displayPhotos, sessionStatus };
     if (typeof document === 'undefined') return;
     const style = document.createElement('style'); style.textContent = `
     .album-header{padding:24px;background:linear-gradient(120deg,#f7d59a,#fff3d7);border:5px solid #a76227;box-shadow:inset 0 0 0 3px #ffe3ae,0 4px 0 #754019;margin-bottom:26px;display:flex;gap:18px;align-items:center}
@@ -47,7 +49,8 @@
         body.replaceChildren(); add(body, 'h2', photo.title);
         const image = add(body, 'img'); image.src = imageUrl(photo); image.alt = photo.description;
         add(body, 'p', photo.description);
-        if (photo.id !== photo.imageId) add(body, 'p', photo.kind === 'center-forgot' ? 'Foto registrada na chegada; legenda adicionada depois da visita.' : 'Esta foto também registra outras lembranças do mesmo momento.');
+        if (photo.isComposite) add(body, 'p', 'Montagem das duas perspectivas originais, com moldura de coração. As capturas podem ter uma pequena diferença de tempo.');
+        else if (photo.id !== photo.imageId) add(body, 'p', photo.kind === 'center-forgot' ? 'Foto registrada na chegada; legenda adicionada depois da visita.' : 'Esta foto também registra outras lembranças do mesmo momento.');
         if (!dialog.open) dialog.showModal();
     }
     async function renderAlbums() {
@@ -72,7 +75,8 @@
             if (!data.supported) throw Error('Este servidor ainda não oferece álbuns. Abra o guia pelo mod atualizado.');
             content.replaceChildren();
             const cards = new Map(descendants(previous?.content).filter(node => node._albumPhotoId).map(node => [node._albumPhotoId, node]));
-            const photos = (Array.isArray(data.photos) ? data.photos : []).filter(photo => photo && validId(photo.id) && validId(photo.imageId));
+            const photos = displayPhotos((Array.isArray(data.photos) ? data.photos : []).filter(photo => photo && validId(photo.id) && validId(photo.imageId)));
+            const sessions = new Map((Array.isArray(data.sessions) ? data.sessions : []).map(session => [session.id, session]));
             const filters = add(content, 'nav', null, 'album-filters'); filters.setAttribute('aria-label', 'Coleções de fotos');
             for (const [id, label] of collections) {
                 const button = add(filters, 'button', label); button.type = 'button'; button.setAttribute('aria-pressed', String(id === selectedCollection));
@@ -87,6 +91,9 @@
                 select.value = selectedPair; select.onchange = () => { selectedPair = select.value; renderAlbums(); };
             }
             const days = groupPhotos(filterPhotos(photos, selectedCollection, selectedPair));
+            for (const session of sessions.values()) if (!photos.some(photo => photo.sessionId === session.id) && (selectedCollection === 'all' || selectedCollection === session.collection)) {
+                const pending = add(content, 'div', null, 'album-empty'); add(pending, 'strong', session.playerNames.join(' & ')); add(pending, 'div', sessionStatus(session));
+            }
             if (!data.active || !days.length) {
                 const empty = add(content, 'div', null, 'album-empty'); add(empty, 'span', '📷');
                 add(empty, 'div', !data.active ? 'Carregue sua fazenda no jogo para abrir o álbum dela.' : photos.length && !days.length ? 'Esta coleção ainda não tem fotos com esse filtro.' : root.guiaData?.albums?.enabled === false ?
@@ -98,15 +105,17 @@
                 const grid = add(section, 'div', null, 'album-grid');
                 for (const photo of day.photos) {
                     const key = JSON.stringify(photo), prior = cards.get(photo.id);
-                    if (prior?._albumPhotoKey === key) { grid.append(prior); continue; }
+                    if (prior?._albumPhotoKey === key) { if (prior._sessionStatus) prior._sessionStatus.textContent = sessionStatus(sessions.get(photo.sessionId)); grid.append(prior); continue; }
                     const figure = add(grid, 'figure', null, 'album-photo'), button = add(figure, 'button'); button.type = 'button'; button.setAttribute('aria-label', 'Abrir foto: ' + photo.title);
                     figure._albumPhotoId = photo.id; figure._albumPhotoKey = key;
                     figure.setAttribute('data-collection', collectionOf(photo));
                     const image = add(button, 'img'); image.src = imageUrl(photo); image.alt = photo.description; image.loading = 'lazy';
                     button.onclick = () => show(photo);
                     const caption = add(figure, 'figcaption'); add(caption, 'strong', photo.title); add(caption, 'p', photo.description);
-                    if (photo.id !== photo.imageId) add(caption, 'small', photo.kind === 'center-forgot' ? 'Foto da chegada · lembrança da visita' : 'Uma foto · mais de uma lembrança');
+                    if (photo.isComposite) add(caption, 'small', 'Duas perspectivas · moldura de coração');
+                    else if (photo.id !== photo.imageId) add(caption, 'small', photo.kind === 'center-forgot' ? 'Foto da chegada · lembrança da visita' : 'Uma foto · mais de uma lembrança');
                     if (Array.isArray(photo.participants) && photo.participants.length > 1) add(caption, 'small', photo.participants.join(' & '));
+                    if (photo.sessionId) figure._sessionStatus = add(caption, 'small', sessionStatus(sessions.get(photo.sessionId)));
                     add(caption, 'small', photo.playerName + ' · ' + String(Math.floor(photo.time / 100) % 24).padStart(2, '0') + ':' + String(photo.time % 100).padStart(2, '0'));
                 }
             }

@@ -6,6 +6,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+    <EnableHarmony>true</EnableHarmony>
     <ApplicationIcon>pickaxe_icon.ico</ApplicationIcon>
     <!-- Paths may be overridden with -p:GuideSourceDir=... and -p:GuideAssetsDir=... -->
     <GuideSourceDir Condition="'$(GuideSourceDir)' == ''">$(MSBuildProjectDirectory)/guide-src</GuideSourceDir>
@@ -23,7 +24,7 @@
   <!-- This is the manifest of files and exact embedded resource names used by EmbeddedGuide. -->
   <ItemGroup>
     <GuideFile Include="index.html;telemetry.js;realtime.js;embedded.js;visual.js;knowledge.js;polish.js;acquisition.js;profile.js;time-format.js;item-catalog.js;item-fields.json;items.json;game-ui.js;game-cursor.png;menu-hover.wav;menu-select.wav;menu-open.wav;menu-close.wav;game-ui-sources.json;season.js;season-guide.json" />
-    <GuideFile Include="albums.js;album-moments.json;Pixellari.ttf;community-center.png;community-center-mask.png" />
+    <GuideFile Include="albums.js;album-moments.json;album-rules.json;Pixellari.ttf;community-center.png;community-center-mask.png" />
     <EmbeddedResource Include="@(GuideFile->'$(GuideAssetsDir)/%(Identity)')">
       <LogicalName>Guide.%(Filename)%(Extension)</LogicalName>
     </EmbeddedResource>

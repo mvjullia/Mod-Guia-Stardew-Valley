@@ -11,7 +11,9 @@
     <EmbeddedResource Include="../../guide-src/season.js;../../guide-src/season-guide.json"><LogicalName>Guide.%(Filename)%(Extension)</LogicalName></EmbeddedResource>
     <Compile Include="../../EmbeddedGuide.cs" Link="EmbeddedGuide.cs" />
     <Compile Include="../../AlbumStore.cs" Link="AlbumStore.cs" />
+    <Compile Include="../../AlbumSessions.cs" Link="AlbumSessions.cs" />
     <EmbeddedResource Include="../../guide-src/albums.js;../../guide-src/album-moments.json"><LogicalName>Guide.%(Filename)%(Extension)</LogicalName></EmbeddedResource>
+    <EmbeddedResource Include="../../guide-src/album-rules.json"><LogicalName>Guide.album-rules.json</LogicalName></EmbeddedResource>
     <Compile Include="../../WikiReader.cs" Link="WikiReader.cs" />
     <EmbeddedResource Include="../../guide-src/index.html;../../guide-src/embedded.js;../../guide-src/telemetry.js;../../guide-src/realtime.js;../../guide-src/item-catalog.js;../../guide-src/item-fields.json;../../guide-src/items.json;../../guide-src/game-ui.js;../../guide-src/game-cursor.png;../../guide-src/menu-hover.wav;../../guide-src/menu-select.wav;../../guide-src/menu-open.wav;../../guide-src/menu-close.wav;../../guide-src/game-ui-sources.json">
       <LogicalName>Guide.%(Filename)%(Extension)</LogicalName>

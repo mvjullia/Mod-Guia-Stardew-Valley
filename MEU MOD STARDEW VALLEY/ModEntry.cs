@@ -22,8 +22,12 @@ namespace StardewRealtimeTelemetry
         public string ApiToken { get; set; } = "";
         public int UploadIntervalSeconds { get; set; } = 2;
         public bool EnableAlbums { get; set; } = true;
-        public int AlbumDailyLimit { get; set; } = 12;
+        public int AlbumDailyLimit { get; set; } = 40;
         public int AlbumMinSecondsBetweenPhotos { get; set; } = 10;
+        public bool EnableCoopAlbums { get; set; } = true;
+        public bool ShareAlbumPhotos { get; set; } = true;
+        public bool AllowSharedPhotoRequests { get; set; } = true;
+        public string AlbumRomanticPartnerId { get; set; } = "";
     }
 
     public class ModEntry : Mod
@@ -44,7 +48,7 @@ namespace StardewRealtimeTelemetry
         {
             this.Config = helper.ReadConfig<ModConfig>();
             ItemGuides.Monitor = this.Monitor;
-            try { this.albumStore = new AlbumStore(Path.Combine(helper.DirectoryPath, "albums")); this.albumRecorder = new AlbumRecorder(helper, this.Monitor, this.albumStore, () => this.Config); }
+            try { this.albumStore = new AlbumStore(Path.Combine(helper.DirectoryPath, "albums")); this.albumRecorder = new AlbumRecorder(helper, this.Monitor, this.albumStore, () => this.Config, this.ModManifest.UniqueID); }
             catch (Exception ex) { this.Monitor.Log("Não foi possível iniciar os álbuns: " + ex.Message, LogLevel.Warn); }
             try { this.guide = new EmbeddedGuide(this.Monitor, this.albumStore); this.guide.Start(); AppDomain.CurrentDomain.ProcessExit += (_, _) => this.guide.Dispose(); this.Monitor.Log("Link do guia local: " + this.guide.Origin + "/", LogLevel.Info); }
             catch (Exception ex) { this.Monitor.Log("Não foi possível iniciar o guia local: " + ex.Message, LogLevel.Warn); this.guide = null; }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Globalization;
 using System.Linq;
 using System.Text.Json;
 using Microsoft.Xna.Framework;
@@ -11,6 +12,8 @@ using StardewValley;
 using StardewValley.Locations;
 using StardewValley.Tools;
 using StardewValley.Menus;
+using StardewValley.Minigames;
+using System.Text.RegularExpressions;
 
 namespace StardewRealtimeTelemetry;
 
@@ -23,6 +26,7 @@ internal sealed class AlbumRecorder
     private readonly CommunityAlbumVisit visit = new();
     private readonly List<(AlbumMoment Moment, DateTimeOffset Expires)> pending = new();
     private readonly Dictionary<string, Template> templates;
+    private readonly CoopAlbumRecorder? coop;
     private readonly List<(Vector2 Tile, string Room)> notes = new();
     private readonly HashSet<string> visitedRooms = new();
     private Vector2 lastPosition;
@@ -31,7 +35,7 @@ internal sealed class AlbumRecorder
     private bool enabled;
     private string? rainyWateringDay;
     private sealed class Template { public Template() {} public string Title { get; set; } = ""; public string Description { get; set; } = ""; }
-    public AlbumRecorder(IModHelper helper, IMonitor monitor, AlbumStore store, Func<ModConfig> config)
+    public AlbumRecorder(IModHelper helper, IMonitor monitor, AlbumStore store, Func<ModConfig> config, string modId)
     {
         this.monitor = monitor; this.store = store; this.config = config;
         using var stream = typeof(AlbumRecorder).Assembly.GetManifestResourceStream("Guide.album-moments.json") ?? throw new InvalidDataException("Legendas dos álbuns ausentes.");
@@ -41,6 +45,8 @@ internal sealed class AlbumRecorder
         helper.Events.Player.Warped += OnWarped;
         helper.Events.GameLoop.UpdateTicked += OnUpdate;
         helper.Events.Display.Rendered += OnRendered;
+        try { coop = new CoopAlbumRecorder(helper, monitor, store, config, Queue, modId); }
+        catch (Exception error) { monitor.Log("Álbuns cooperativos indisponíveis; lembranças básicas preservadas: " + error.Message, LogLevel.Warn); }
     }
     private void Load()
     {
@@ -90,10 +96,10 @@ internal sealed class AlbumRecorder
     }
     private void Queue(AlbumMoment? moment)
     {
-        if (moment == null || !templates.ContainsKey(moment.Kind)) return;
+        if (moment == null || !templates.ContainsKey(moment.Kind) || store.HasEpisode(moment.EpisodeKey)) return;
         if (moment.ReuseImageId != null) { Save(moment, null); return; }
-        if (!pending.Any(item => item.Moment.Kind == moment.Kind && item.Moment.ItemName == moment.ItemName))
-            pending.Add((moment, DateTimeOffset.UtcNow.AddSeconds(moment.Kind is "center-delivery" or "center-complete" ? 120 : 45)));
+        if (!pending.Any(item => moment.EpisodeKey != null ? item.Moment.EpisodeKey == moment.EpisodeKey : item.Moment.Kind == moment.Kind && item.Moment.ItemName == moment.ItemName))
+            pending.Add((moment, DateTimeOffset.UtcNow.AddSeconds(moment.Collection == "nights" ? 2400 : moment.CaptureMode is "strength" or "joja" or "scene" ? 15 : moment.Kind is "center-delivery" or "center-complete" ? 120 : 45)));
     }
     private void EnterCenter()
     {
@@ -130,7 +136,7 @@ internal sealed class AlbumRecorder
         if (!enabled || !config().EnableAlbums || !Context.IsWorldReady || !Game1.game1.IsActive || !e.IsMultipleOf(15)) return;
         try {
             var position = Game1.player.Position; bool moving = Vector2.DistanceSquared(position, lastPosition) > 1; lastPosition = position;
-            pending.RemoveAll(item => item.Expires < DateTimeOffset.UtcNow || item.Moment.Location != Game1.currentLocation.NameOrUniqueName ||
+            pending.RemoveAll(item => item.Expires < DateTimeOffset.UtcNow || (!item.Moment.FollowLocation && item.Moment.Location != Game1.currentLocation.NameOrUniqueName) ||
                 (item.Moment.Room != null && !notes.Any(note => note.Room == item.Moment.Room && Vector2.DistanceSquared(Game1.player.Tile, note.Tile) <= 25)));
             if (visit.Active && Game1.currentLocation is CommunityCenter)
             {
@@ -146,20 +152,42 @@ internal sealed class AlbumRecorder
             string day = Game1.year + ":" + Game1.currentSeason + ":" + Game1.dayOfMonth;
             if (Game1.isRaining && Game1.currentLocation.IsOutdoors && Game1.player.CurrentTool is WateringCan && Game1.player.UsingTool && rainyWateringDay != day)
             { rainyWateringDay = day; Queue(new AlbumMoment("rain-watering", "", Game1.currentLocation.NameOrUniqueName)); }
-            if (moving && CanCapture() && DateTimeOffset.UtcNow >= nextPhoto && pending.Count > 0)
+            if (moving && DateTimeOffset.UtcNow >= nextPhoto && pending.Any(item => item.Moment.CaptureMode == "walking" && CanCapture(item.Moment)))
             {
-                var chosen = pending.OrderBy(item => item.Moment.Kind == "center-complete" ? 0 : item.Moment.Kind == "center-delivery" ? 1 : item.Moment.Kind == "center-arrival" ? 2 : 3).First();
+                var chosen = pending.Where(item => item.Moment.CaptureMode == "walking" && CanCapture(item.Moment)).OrderBy(item => item.Moment.Kind == "center-complete" ? 0 : item.Moment.Kind == "center-delivery" ? 1 : item.Moment.Kind == "center-arrival" ? 2 : 3).First();
                 ready = chosen.Moment; pending.Remove(chosen);
             }
         } catch (Exception error) { monitor.Log("Álbum: evento ignorado com segurança: " + error.Message, LogLevel.Trace); }
     }
-    private static bool CanCapture() => AlbumCapturePolicy.Allows(new AlbumFrameState(Context.IsWorldReady, Game1.game1.IsActive,
-        Context.IsPlayerFree, Context.IsWorldReady && Game1.player.isMoving(), Game1.activeClickableMenu != null,
-        Game1.eventUp, Game1.currentMinigame != null, Game1.game1.takingMapScreenshot));
+    private static bool CanCapture(AlbumMoment moment)
+    {
+        try {
+            if (moment.Guard?.Invoke() == false || Game1.chatBox?.isActive() == true) return false;
+            var frame = new AlbumFrameState(Context.IsWorldReady, Game1.game1.IsActive, Context.IsPlayerFree,
+                Context.IsWorldReady && Game1.player.isMoving(), Game1.activeClickableMenu != null, Game1.eventUp,
+                Game1.currentMinigame != null, Game1.game1.takingMapScreenshot);
+            if (moment.CaptureMode == "walking") return AlbumCapturePolicy.Allows(frame);
+            bool festival = Game1.CurrentEvent?.isFestival == true && moment.CaptureMode is "festival" or "competition" or "strength" or "activity";
+            bool menu = moment.CaptureMode == "strength" && Game1.activeClickableMenu is StrengthGame && ReferenceEquals(moment.CaptureContext, Game1.activeClickableMenu);
+            if (moment.CaptureMode == "strength" && !menu) return false;
+            menu |= moment.CaptureMode == "joja" && Game1.activeClickableMenu is ShopMenu or DialogueBox && ReferenceEquals(moment.CaptureContext, Game1.activeClickableMenu);
+            menu |= moment.CaptureMode == "competition" && festival && Game1.activeClickableMenu is DialogueBox && ReferenceEquals(moment.CaptureContext, Game1.activeClickableMenu);
+            menu |= moment.CaptureMode == "activity" && Game1.activeClickableMenu is CraftingPage && (moment.Kind.EndsWith("crafting") || moment.Kind.EndsWith("cooking")) && ReferenceEquals(moment.CaptureContext, Game1.activeClickableMenu);
+            menu |= moment.CaptureMode == "activity" && moment.Kind.EndsWith("shopping") && Game1.activeClickableMenu is ShopMenu && ReferenceEquals(moment.CaptureContext, Game1.activeClickableMenu);
+            menu |= moment.CaptureMode == "joja-outfit" && Game1.activeClickableMenu is GameMenu && ReferenceEquals(moment.CaptureContext, Game1.activeClickableMenu);
+            bool minigame = moment.CaptureMode == "competition" && ReferenceEquals(moment.CaptureContext, Game1.currentMinigame) && AlbumGameHooks.IsCompletedGame(Game1.currentMinigame);
+            return AlbumCapturePolicy.AllowsReason(frame, true, menu, festival, minigame);
+        } catch { return false; }
+    }
     private void OnRendered(object? sender, RenderedEventArgs e)
     {
         var moment = ready; ready = null;
-        if (moment == null || !CanCapture() || Game1.currentLocation.NameOrUniqueName != moment.Location) return;
+        if (moment == null) {
+            var immediate = pending.Where(item => item.Expires >= DateTimeOffset.UtcNow && item.Moment.CaptureMode != "walking" && CanCapture(item.Moment))
+                .OrderByDescending(item => item.Moment.Priority).FirstOrDefault();
+            if (immediate.Moment != null) { moment = immediate.Moment; pending.Remove(immediate); }
+        }
+        if (moment == null || !CanCapture(moment) || (!moment.FollowLocation && Game1.currentLocation.NameOrUniqueName != moment.Location)) return;
         if (moment.Room != null && !notes.Any(note => note.Room == moment.Room && Vector2.DistanceSquared(Game1.player.Tile, note.Tile) <= 25)) return;
         try {
             var graphics = Game1.graphics.GraphicsDevice;
@@ -174,19 +202,31 @@ internal sealed class AlbumRecorder
                 scaled[y * photoWidth + x] = new Color(pixel.R, pixel.G, pixel.B, (byte)255);
             }
             using var image = new Texture2D(graphics, photoWidth, photoHeight); image.SetData(scaled);
-            using var stream = new MemoryStream(); image.SaveAsPng(stream, photoWidth, photoHeight); Save(moment, stream.ToArray());
+            using var stream = new MemoryStream(); image.SaveAsPng(stream, photoWidth, photoHeight);
+            var photo = Save(moment, stream.ToArray());
+            if (photo != null) {
+                // Several memories may describe the same valid frame. Reuse it instead of stalling gameplay with repeated GPU reads.
+                var simultaneous = pending.Where(item => item.Expires >= DateTimeOffset.UtcNow && item.Moment.CaptureMode != "walking" &&
+                    (item.Moment.FollowLocation || item.Moment.Location == Game1.currentLocation.NameOrUniqueName) && CanCapture(item.Moment)).Take(3).ToArray();
+                foreach (var extra in simultaneous) { pending.Remove(extra); Save(extra.Moment, null, photo.ImageId); }
+            }
             nextPhoto = DateTimeOffset.UtcNow.AddSeconds(Math.Max(3, config().AlbumMinSecondsBetweenPhotos));
         } catch (Exception error) { monitor.Log("Álbum: captura indisponível neste frame: " + error.Message, LogLevel.Trace); }
     }
-    private void Save(AlbumMoment moment, byte[]? png)
+    private AlbumPhoto? Save(AlbumMoment moment, byte[]? png, string? reuseImage = null)
     {
         var template = templates[moment.Kind];
-        string Fill(string text) => text.Replace("{player}", Game1.player.Name).Replace("{item}", moment.ItemName).Replace("{room}", moment.Room ?? "");
-        var photo = store.Add(png, moment.ReuseImageId, moment.Kind, Fill(template.Title), Fill(template.Description), Game1.player.Name,
-            moment.Location, Game1.year, Game1.currentSeason, Game1.dayOfMonth, Game1.timeOfDay, Math.Clamp(config().AlbumDailyLimit, 1, 100));
+        var values = new Dictionary<string, string>(moment.Values ?? new()) { ["player"] = Game1.player.Name, ["item"] = moment.ItemName, ["room"] = moment.Room ?? "" };
+        string Fill(string text) => Regex.Replace(text, @"\{([a-zA-Z0-9_]+)\}", match => values.TryGetValue(match.Groups[1].Value, out var value) ? value : match.Value);
+        var photo = store.Add(png, moment.ReuseImageId ?? reuseImage, moment.Kind, Fill(template.Title), Fill(template.Description), Game1.player.Name,
+            moment.FollowLocation ? Game1.currentLocation.NameOrUniqueName : moment.Location, Game1.year, Game1.currentSeason, Game1.dayOfMonth, Game1.timeOfDay, Math.Clamp(config().AlbumDailyLimit, 1, 200),
+            moment.Collection, moment.PairKey, moment.Participants, moment.EpisodeKey, Game1.player.UniqueMultiplayerID.ToString(CultureInfo.InvariantCulture),
+            JsonSerializer.Serialize(new { mode = moment.CaptureMode, values }), moment.SessionId);
         if (photo != null) {
             if (moment.Kind == "center-arrival" && visit.Active) visit.EntryImageId = photo.ImageId;
             monitor.Log("Memória guardada no álbum: " + photo.Title, LogLevel.Trace);
+            var bytes = png ?? store.ReadImage(photo.ImageId); if (bytes != null) coop?.PhotoSaved(photo, bytes);
         }
+        return photo;
     }
 }
