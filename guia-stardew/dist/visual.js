@@ -88,7 +88,7 @@
         }
     }
     function update() {
-        const d = window.guiaData; if (!d) return; let clock = document.querySelector('.game-clock'); if (!clock) { clock = add(document.querySelector('.top'), 'div', '', 'game-clock'); clock.setAttribute('role', 'status'); } const t = d.farm.time; clock.textContent = (d.farm.isNight ? '☾ Noite' : '☀ Dia') + ' · ' + (t === undefined ? '' : String(Math.floor(t / 100)).padStart(2, '0') + ':' + String(t % 100).padStart(2, '0') + ' · ') + d.farm.day + ' de ' + seasons[d.farm.season] + ' · Ano ' + d.farm.year;
+        const d = window.guiaData; if (!d) return; let clock = document.querySelector('.game-clock'); if (!clock) { clock = add(document.querySelector('.top'), 'div', '', 'game-clock'); clock.setAttribute('role', 'status'); } const t = d.farm.time; clock.textContent = (t === undefined ? '' : String(Math.floor(t / 100)).padStart(2, '0') + ':' + String(t % 100).padStart(2, '0') + ' · ') + d.farm.day + ' de ' + seasons[d.farm.season] + ' · Ano ' + d.farm.year;
         const out = document.querySelector('#saveinfo'); if (out && d.portrait) { let portrait = out.querySelector('.farmer-avatar'); if (!portrait) { portrait = picture(d.portrait, d.player.name, 'farmer-avatar'); out.prepend(portrait); } }
         if (current === 'center' && d.visuals) { const list = document.querySelector('#list'); if (list) bundles(list, d); document.querySelector('.toolbar')?.remove(); document.querySelector('.progress')?.remove(); document.querySelectorAll('.badge').forEach(x => x.remove()); }
         if (current === 'gifts' && d.visuals) { const target = document.querySelector('#content .grid'); if (target) gifts(target, d); }
