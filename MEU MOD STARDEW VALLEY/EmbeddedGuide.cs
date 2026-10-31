@@ -101,6 +101,7 @@ internal sealed class EmbeddedGuide : IDisposable
             resource ??= route switch { "/season.js" => "season.js", "/season-guide.json" => "season-guide.json", _ => null };
             resource ??= route switch { "/albums.js" => "albums.js", "/album-moments.json" => "album-moments.json", _ => null };
             resource ??= route == "/album-rules.json" ? "album-rules.json" : null;
+            resource ??= route == "/page-navigation.js" ? "page-navigation.js" : null;
             resource ??= route == "/Pixellari.ttf" ? "Pixellari.ttf" : null;
             resource ??= route == "/community-center.png" ? "community-center.png" : null;
             resource ??= route == "/community-center-mask.png" ? "community-center-mask.png" : null;
