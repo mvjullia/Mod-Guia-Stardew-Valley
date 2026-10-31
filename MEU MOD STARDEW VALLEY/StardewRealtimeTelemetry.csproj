@@ -23,7 +23,7 @@
   <!-- This is the manifest of files and exact embedded resource names used by EmbeddedGuide. -->
   <ItemGroup>
     <GuideFile Include="index.html;telemetry.js;realtime.js;embedded.js;visual.js;knowledge.js;polish.js;acquisition.js;profile.js;time-format.js;item-catalog.js;item-fields.json;items.json;game-ui.js;game-cursor.png;menu-hover.wav;menu-select.wav;menu-open.wav;menu-close.wav;game-ui-sources.json;season.js;season-guide.json" />
-    <GuideFile Include="albums.js;album-moments.json;Pixellari.ttf;community-center.png" />
+    <GuideFile Include="albums.js;album-moments.json;Pixellari.ttf;community-center.png;community-center-mask.png" />
     <EmbeddedResource Include="@(GuideFile->'$(GuideAssetsDir)/%(Identity)')">
       <LogicalName>Guide.%(Filename)%(Extension)</LogicalName>
     </EmbeddedResource>

@@ -102,6 +102,7 @@ internal sealed class EmbeddedGuide : IDisposable
             resource ??= route switch { "/albums.js" => "albums.js", "/album-moments.json" => "album-moments.json", _ => null };
             resource ??= route == "/Pixellari.ttf" ? "Pixellari.ttf" : null;
             resource ??= route == "/community-center.png" ? "community-center.png" : null;
+            resource ??= route == "/community-center-mask.png" ? "community-center-mask.png" : null;
             if (resource == null) { res.StatusCode=404;res.Close();return; }
             using Stream? file=typeof(EmbeddedGuide).Assembly.GetManifestResourceStream("Guide."+resource);
             if(file == null) {res.StatusCode=500;res.Close();return;}
