@@ -66,6 +66,19 @@
         return element && !element.disabled && element.getAttribute('aria-disabled') !== 'true' && element !== toggle ? element : null;
     };
     const modal = document.querySelector('#dialog');
+    let backdropStart = null;
+    function outsideDialog(event) {
+        const dialog = event.target;
+        if (!dialog || dialog.tagName !== 'DIALOG' || !dialog.open) return null;
+        const box = dialog.getBoundingClientRect();
+        return event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom ? dialog : null;
+    }
+    document.addEventListener('pointerdown', event => { backdropStart = outsideDialog(event); }, true);
+    document.addEventListener('click', event => {
+        const outside = outsideDialog(event);
+        if (outside && outside === backdropStart) outside.close();
+        backdropStart = null;
+    }, true);
     let wasOpen = false;
     document.addEventListener('click', () => { wasOpen = Boolean(modal?.open); }, true);
     document.addEventListener('click', event => {
@@ -86,4 +99,7 @@
     }
     document.addEventListener('pointerover', hover);
     document.addEventListener('focusin', hover);
+    const dialogStyle = document.createElement('style');
+    dialogStyle.textContent = `.dialog,.dialog.item-modal{box-sizing:border-box;width:min(1100px,94vw);max-width:94vw;max-height:90vh;overflow:auto}.item-modal .item-details .sprite-frame{width:56px;height:56px}.item-modal .item-details .sprite-frame .game-icon{width:40px;height:40px;padding:0;border:0;background:transparent;margin:0;box-sizing:border-box}`;
+    document.head.append(dialogStyle);
 })();

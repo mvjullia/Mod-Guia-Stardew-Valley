@@ -99,7 +99,7 @@ internal sealed class AlbumRecorder
         if (moment == null || !templates.ContainsKey(moment.Kind) || store.HasEpisode(moment.EpisodeKey)) return;
         if (moment.ReuseImageId != null) { Save(moment, null); return; }
         if (!pending.Any(item => moment.EpisodeKey != null ? item.Moment.EpisodeKey == moment.EpisodeKey : item.Moment.Kind == moment.Kind && item.Moment.ItemName == moment.ItemName))
-            pending.Add((moment, DateTimeOffset.UtcNow.AddSeconds(moment.Collection == "nights" ? 2400 : moment.CaptureMode is "strength" or "joja" or "scene" ? 15 : moment.Kind is "center-delivery" or "center-complete" ? 120 : 45)));
+            pending.Add((moment, DateTimeOffset.UtcNow.AddSeconds(moment.Collection == "nights" || moment.CaptureMode == "aftermath" ? 2400 : moment.CaptureMode is "strength" or "joja" or "scene" ? 15 : moment.Kind is "center-delivery" or "center-complete" ? 120 : 45)));
     }
     private void EnterCenter()
     {
@@ -167,6 +167,7 @@ internal sealed class AlbumRecorder
                 Context.IsWorldReady && Game1.player.isMoving(), Game1.activeClickableMenu != null, Game1.eventUp,
                 Game1.currentMinigame != null, Game1.game1.takingMapScreenshot);
             if (moment.CaptureMode == "walking") return AlbumCapturePolicy.Allows(frame);
+            if (moment.CaptureMode == "aftermath") return AlbumCapturePolicy.Allows(frame);
             bool festival = Game1.CurrentEvent?.isFestival == true && moment.CaptureMode is "festival" or "competition" or "strength" or "activity";
             bool menu = moment.CaptureMode == "strength" && Game1.activeClickableMenu is StrengthGame && ReferenceEquals(moment.CaptureContext, Game1.activeClickableMenu);
             if (moment.CaptureMode == "strength" && !menu) return false;
@@ -185,7 +186,7 @@ internal sealed class AlbumRecorder
         if (moment == null) {
             var immediate = pending.Where(item => item.Expires >= DateTimeOffset.UtcNow && item.Moment.CaptureMode != "walking" && CanCapture(item.Moment))
                 .OrderByDescending(item => item.Moment.Priority).FirstOrDefault();
-            if (immediate.Moment != null) { moment = immediate.Moment; pending.Remove(immediate); }
+            if (immediate.Moment != null) { moment = immediate.Moment; if (moment.CaptureMode != "aftermath") pending.Remove(immediate); }
         }
         if (moment == null || !CanCapture(moment) || (!moment.FollowLocation && Game1.currentLocation.NameOrUniqueName != moment.Location)) return;
         if (moment.Room != null && !notes.Any(note => note.Room == moment.Room && Vector2.DistanceSquared(Game1.player.Tile, note.Tile) <= 25)) return;
@@ -205,6 +206,7 @@ internal sealed class AlbumRecorder
             using var stream = new MemoryStream(); image.SaveAsPng(stream, photoWidth, photoHeight);
             var photo = Save(moment, stream.ToArray());
             if (photo != null) {
+                if (moment.CaptureMode == "aftermath") pending.RemoveAll(item => ReferenceEquals(item.Moment, moment));
                 // Several memories may describe the same valid frame. Reuse it instead of stalling gameplay with repeated GPU reads.
                 var simultaneous = pending.Where(item => item.Expires >= DateTimeOffset.UtcNow && item.Moment.CaptureMode != "walking" &&
                     (item.Moment.FollowLocation || item.Moment.Location == Game1.currentLocation.NameOrUniqueName) && CanCapture(item.Moment)).Take(3).ToArray();

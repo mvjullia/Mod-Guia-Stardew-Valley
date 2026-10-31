@@ -42,6 +42,11 @@ var coopRules = JsonSerializer.Deserialize<AlbumCoopRules>(File.ReadAllText(Path
 var captions = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(File.ReadAllText(Path.Combine(AppContext.BaseDirectory, "album-moments.json")))!;
 var alice = new AlbumActor("1", "Alice", "Beach", "Praia", "fishing", 1, "summer", 2, 1300, 10, 10, "", "", "2");
 var bob = new AlbumActor("2", "Bob", "Mountain", "Montanha", "fishing", 1, "summer", 2, 1300, 10, 10, "", "", "1");
+Check(AlbumPassOut.Kind(true, true, 2600) == "passout-partner-bed", "Parceiro na cama deve ser informado sem presumir sono.");
+Check(AlbumPassOut.Kind(false, true, 1500) == "passout-health", "Vida zerada deve ter legenda própria.");
+Check(AlbumPassOut.Kind(false, false, 2600) == "passout-late", "Desmaio tarde deve ter legenda própria.");
+Check(AlbumPassOut.Kind(false, false, 1000) == "passout", "Motivo desconhecido não deve ser inventado.");
+foreach (var kind in new[] { "passout", "passout-health", "passout-late", "passout-partner-bed" }) Check(captions.ContainsKey(kind), "Faltou legenda: " + kind);
 foreach (var activity in coopRules.Activities) {
     var director = new CoopAlbumDirector();
     var apart = director.Observe(alice with { Activity = activity.Id }, new[] { bob with { Activity = activity.Id } }, coopRules);

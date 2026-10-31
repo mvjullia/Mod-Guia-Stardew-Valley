@@ -1,4 +1,20 @@
 {
+  "passout": {
+    "title": "A aventura foi até o chão",
+    "description": "{player} desmaiou às {eventTime} em {place}. A imagem foi registrada depois, quando foi possível fotografar novamente."
+  },
+  "passout-partner-bed": {
+    "title": "Um descansava, o outro desmaiava",
+    "description": "{player} desmaiou às {eventTime} em {place}, enquanto {partner} estava na cama. A imagem foi registrada depois, quando foi possível fotografar novamente."
+  },
+  "passout-health": {
+    "title": "Aventura com final inesperado",
+    "description": "A vida de {player} chegou a zero em {place}, às {eventTime}. A imagem foi registrada depois da recuperação."
+  },
+  "passout-late": {
+    "title": "Só mais cinco minutinhos",
+    "description": "{player} desmaiou em {place} às {eventTime}, depois de virar a noite. A imagem foi registrada depois da recuperação."
+  },
   "center-arrival": {
     "title": "Trouxe o que faltava!",
     "description": "Quando {player} entrou no Centro com {item} que ainda precisava ser entregue."

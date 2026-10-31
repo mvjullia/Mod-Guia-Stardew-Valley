@@ -34,6 +34,8 @@ internal static class AlbumGameHooks
             } catch (Exception error) { log.Log("Álbum: integração indisponível para " + type.Name + "." + name + ": " + error.Message, LogLevel.Warn); }
         }
         Patch(typeof(Farmer), "doneEating", nameof(EatingBefore), nameof(EatingAfter));
+        Patch(typeof(Farmer), "startToPassOut", nameof(PassOutBefore), null);
+        Patch(typeof(Farmer), "performPassOut", nameof(PassOutBefore), null);
         Patch(typeof(Farmer), "performKissFarmer", null, nameof(KissAfter));
         Patch(typeof(StrengthGame), "afterSwingAnimation", null, nameof(StrengthAfter));
         Patch(typeof(FishingGame), "tick", null, nameof(GameTickAfter));
@@ -50,6 +52,7 @@ internal static class AlbumGameHooks
         Patch(typeof(StardewValley.Objects.Furniture), "checkForAction", null, nameof(ObjectAfter));
     }
     private sealed record EatState(string Id, string Name, bool Consuming);
+    private static void PassOutBefore(Farmer __instance) { if (Context.IsWorldReady && __instance.IsLocalPlayer) Safe(recorder => recorder.PassOut()); }
     private static void EatingBefore(Farmer __instance, out EatState? __state) {
         __state = Context.IsWorldReady && __instance.IsLocalPlayer && __instance.isEating && __instance.itemToEat != null && __instance.mostRecentlyGrabbedItem != null ?
             new EatState(__instance.itemToEat.QualifiedItemId, __instance.itemToEat.DisplayName, true) : null;

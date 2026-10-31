@@ -6,7 +6,7 @@ const os = require('node:os');
 const vm = require('node:vm');
 const { createServer } = require('../api/server.cjs');
 const source = path.resolve(__dirname, '../../MEU MOD STARDEW VALLEY/guide-src');
-const { groupPhotos, displayPhotos, sessionStatus } = require(path.join(source, 'albums.js'));
+const { groupPhotos, displayPhotos, sessionStatus, collectionOf } = require(path.join(source, 'albums.js'));
 const photo = { id: 'a'.repeat(32), imageId: 'b'.repeat(32), kind: 'center-forgot', title: 'Levei o item e esqueci de deixar',
     description: 'Quando Maria entrou no Centro com Chirívia e saiu sem entregar.', playerName: 'Maria', location: 'CommunityCenter',
     year: 1, season: 'spring', day: 2, time: 900, capturedAt: '2026-10-31T00:00:00Z' };
@@ -22,6 +22,15 @@ test('foto composta reúne a sessão sem duplicar as duas fontes na galeria', ()
     assert.equal(displayPhotos([originalA, originalB]).length, 2);
     assert.deepEqual(displayPhotos([originalA, originalB, composed]), [composed]);
     assert.match(sessionStatus({ status: 'confirming' }), /Conferindo/); assert.match(sessionStatus({ status: 'synchronized' }), /dois computadores/);
+});
+
+test('lembranças antigas e novas são agrupadas por tema sem alterar os dados salvos', () => {
+    assert.equal(collectionOf(photo), 'center');
+    assert.equal(collectionOf({ collection: 'coop', kind: 'coop-together-fishing' }), 'fishing');
+    assert.equal(collectionOf({ collection: 'coop', kind: 'coop-apart-planting' }), 'farm');
+    assert.equal(collectionOf({ collection: 'coop', kind: 'coop-together-mining' }), 'adventures');
+    assert.equal(collectionOf({ collection: 'mishaps', kind: 'passout' }), 'mishaps');
+    assert.equal(collectionOf({ collection: 'romance', kind: 'fishing-date' }), 'romance');
 });
 
 function browser(responseFactory) {
@@ -47,10 +56,28 @@ function browser(responseFactory) {
 const all = node => node.children.flatMap(child => [child, ...all(child)]);
 const flush = () => new Promise(resolve => setImmediate(resolve));
 
+test('menu e galeria mostram somente temas com fotos e acompanham novas capturas', async () => {
+    let photos = [], active = true;
+    const b = browser(async () => ({ ok: true, json: async () => ({ supported: true, active, photos }) }));
+    await flush(); assert.equal(b.context.tabs.some(tab => tab[0] === 'albums'), false);
+    photos = [photo, { ...photo, id: 'c'.repeat(32), kind: 'player-kiss', collection: 'romance' }];
+    b.context.guiaData.albums.version++; b.events.get('guia:update')(); await flush();
+    assert.equal(b.context.tabs.some(tab => tab[0] === 'albums'), true);
+    b.context.current = 'albums'; b.context.render(); await flush();
+    const books = all(b.content).filter(node => node.className === 'album-book');
+    assert.equal(books.length, 2); assert.ok(books.some(book => /carinho/.test(book.attrs['aria-label'])));
+    assert.ok(books.some(book => book.attrs['data-theme'] === 'center' && book.children.some(child => child.attrs['data-decoration'])));
+    assert.ok(books.every(book => book.children.some(child => child.className === 'album-book-pages')));
+    photos = []; b.context.guiaData.albums.version++; b.events.get('guia:update')(); await flush();
+    assert.equal(b.context.tabs.some(tab => tab[0] === 'albums'), false);
+    assert.equal(b.context.current, 'home');
+});
+
 test('fotos têm legenda abaixo e abrem na modal sem transformar texto em HTML', async () => {
     const malicious = { ...photo, description: '<img src=x onerror=alert(1)> é apenas texto' };
     const b = browser(async () => ({ ok: true, json: async () => ({ supported: true, active: true, photos: [malicious] }) }));
     b.context.render(); await flush();
+    all(b.content).find(node => node.className === 'album-book' && node.attrs['data-theme'] === 'center').onclick(); await flush();
     const figure = all(b.content).find(node => node.tagName === 'figure');
     assert.equal(figure.children[0].tagName, 'button'); assert.equal(figure.children[1].tagName, 'figcaption');
     assert.match(figure.children[1].textContent, /Levei o item/); assert.match(figure.children[1].textContent, /onerror/);
@@ -64,20 +91,20 @@ test('fotos têm legenda abaixo e abrem na modal sem transformar texto em HTML',
 test('novas fotos atualizam o álbum; servidor sem suporte não entra em repetição a cada snapshot', async () => {
     const b = browser(async () => ({ ok: true, json: async () => ({ supported: true, active: true, photos: [] }) }));
     b.context.render(); await flush(); assert.match(b.content.textContent, /primeira história/);
-    b.events.get('guia:update')(); await flush(); assert.equal(b.calls, 1);
-    b.context.guiaData.albums.version++; b.events.get('guia:update')(); await flush(); assert.equal(b.calls, 2);
+    b.events.get('guia:update')(); await flush(); assert.equal(b.calls, 2);
+    b.context.guiaData.albums.version++; b.events.get('guia:update')(); await flush(); assert.equal(b.calls, 4);
     const unavailable = browser(async () => ({ ok: false, status: 503 })); unavailable.context.render(); await flush();
-    unavailable.events.get('guia:update')(); await flush(); assert.equal(unavailable.calls, 1);
+    unavailable.events.get('guia:update')(); await flush(); assert.equal(unavailable.calls, 2);
     assert.match(unavailable.content.textContent, /Abra o guia pelo mod/);
 });
 
 test('refresh do álbum preserva a foto e não troca a tela por carregamento', async () => {
-    let resolveNext, waiting = false;
-    const b = browser(() => waiting ? new Promise(resolve => { resolveNext = resolve; }) : Promise.resolve({ ok: true, json: async () => ({ supported: true, active: true, photos: [photo] }) }));
-    b.context.render(); await flush(); const card = all(b.content).find(node => node.tagName === 'figure');
+    const pending = []; let waiting = false;
+    const b = browser(() => waiting ? new Promise(resolve => { pending.push(resolve); }) : Promise.resolve({ ok: true, json: async () => ({ supported: true, active: true, photos: [photo] }) }));
+    b.context.render(); await flush(); all(b.content).find(node => node.className === 'album-book' && node.attrs['data-theme'] === 'center').onclick(); await flush(); const card = all(b.content).find(node => node.tagName === 'figure');
     waiting = true; b.context.guiaData.albums.version++; b.events.get('guia:update')();
     assert.ok(all(b.content).includes(card)); assert.ok(!b.content.textContent.includes('Abrindo as lembranças'));
-    resolveNext({ ok: true, json: async () => ({ supported: true, active: true, photos: [photo] }) }); await flush();
+    for (const resolve of pending) resolve({ ok: true, json: async () => ({ supported: true, active: true, photos: [photo] }) }); await flush();
     assert.equal(all(b.content).find(node => node.tagName === 'figure'), card);
 });
 

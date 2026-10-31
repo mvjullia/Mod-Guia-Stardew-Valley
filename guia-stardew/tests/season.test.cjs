@@ -75,22 +75,24 @@ test('pendências distinguem o que falta coletar do que já está na mochila', (
 
 function browser(data = snapshot()) {
     class Element {
-        constructor(tag) { this.tagName = tag; this.children = []; this.attrs = {}; this.dataset = {}; this._text = ''; }
+        constructor(tag) { this.tagName = tag; this.children = []; this.attrs = {}; this.dataset = {}; this.style = {}; this._text = ''; }
         append(child) { child.parent = this; this.children.push(child); }
         replaceChildren(...children) { this.children = []; this._text = ''; for (const child of children) this.append(child); }
         set textContent(value) { this._text = String(value); this.children = []; }
         get textContent() { return this._text + this.children.map(child => child.textContent).join(''); }
         setAttribute(key, value) { this.attrs[key] = value; }
+        closest() { return null; }
+        getBoundingClientRect() { return { left: 100, top: 100, bottom: 125, width: 200, height: 70 }; }
         remove() { if (this.parent) this.parent.children = this.parent.children.filter(child => child !== this); }
         querySelector(selector) { return all(this).find(child => child.tagName === selector); }
         querySelectorAll(selector) { return all(this).filter(child => child.tagName === selector); }
         replaceWith(other) { const parent = this.parent, index = parent.children.indexOf(this); if (other.parent) other.parent.children = other.parent.children.filter(child => child !== other); parent.children[index] = other; other.parent = parent; this.parent = null; }
     }
     const content = new Element('main'), nav = new Element('nav'), head = new Element('head'), events = new Map(), opened = [];
-    const document = { head, createElement: tag => new Element(tag), querySelector: selector => selector === '#content' ? content : null,
+    const document = { head, body: new Element('body'), createElement: tag => new Element(tag), querySelector: selector => selector === '#content' ? content : null,
         querySelectorAll: () => nav.children };
     const context = { document, current: 'home', tabs: [['home', '🏡', 'Fazendeiro'], ['center', '🌳', 'Centro'], ['gifts', '🎁', 'Amizade']], guiaData: data,
-        GuiaItemCatalog: { load: async () => catalog }, fetch: async () => ({ ok: true, json: async () => rules }),
+        innerWidth: 800, innerHeight: 600, GuiaItemCatalog: { load: async () => catalog }, fetch: async () => ({ ok: true, json: async () => rules }),
         openItemPage: item => opened.push(item), render() {},
         nav() { nav.replaceChildren(); for (const [id, icon, label] of context.tabs) { const button = new Element('button');
             button.append(new Element('i')); button.append(new Element('span')); button.children[1].textContent = label; nav.append(button); } },
@@ -135,10 +137,33 @@ test('bordas nos itens acompanham a estação real e desaparecem ao trocar de es
     b.context.GuiaSeason.markItem(melon, { qualifiedId: '(O)254' });
     b.context.GuiaSeason.markItem(pumpkin, { qualifiedId: '(O)276' }); await flush();
     assert.ok(hasClass(melon, 'seasonal-available')); assert.ok(!hasClass(pumpkin, 'seasonal-available'));
-    assert.ok(melon.children.some(node => node.className === 'season-available-badge'));
+    assert.ok(all(melon).some(node => node.className === 'season-available-badge'));
     b.context.guiaData.farm.season = 'fall'; b.events.get('guia:update')(); await flush();
     assert.ok(!hasClass(melon, 'seasonal-available')); assert.ok(hasClass(pumpkin, 'seasonal-available'));
     assert.equal(melon.children.length, 0);
+});
+
+test('ícones distinguem ilha, deserto e vale e descrevem os locais disponíveis', async () => {
+    const data = snapshot(); data.farm.season = 'fall';
+    const b = browser(data); await flush();
+    const puffer = b.context.document.createElement('div'), desert = b.context.document.createElement('div');
+    b.context.GuiaSeason.markItem(puffer, { qualifiedId: '(O)128' });
+    b.context.GuiaSeason.markItem(desert, { qualifiedId: '(O)164' }); await flush();
+    const islandBadge = all(puffer).find(node => node.dataset.region === 'island');
+    assert.ok(islandBadge); assert.match(islandBadge.attrs['aria-label'], /Ilha Gengibre.*praia/);
+    assert.equal(islandBadge.attrs.tabindex, '0'); assert.equal(islandBadge.title, undefined);
+    islandBadge.onmouseenter(); const popup = b.context.document.body.children[0];
+    assert.equal(popup.attrs.role, 'tooltip'); assert.match(popup.textContent, /Ilha Gengibre.*praia/);
+    assert.equal(popup.style.top, '133px'); islandBadge.onmouseleave(); assert.equal(b.context.document.body.children.length, 0);
+    islandBadge.onfocus(); assert.equal(b.context.document.body.children.length, 1); islandBadge.onblur();
+    assert.ok(!hasClass(puffer, 'seasonal-available'));
+    assert.ok(!all(puffer).some(node => node.dataset.region === 'valley'));
+    assert.match(all(desert).find(node => node.dataset.region === 'desert').attrs['aria-label'], /Deserto/);
+    assert.ok(!hasClass(desert, 'seasonal-available'));
+    data.farm.season = 'summer'; b.events.get('guia:update')(); await flush();
+    assert.ok(hasClass(puffer, 'seasonal-available'));
+    assert.match(all(puffer).find(node => node.dataset.region === 'valley').attrs['aria-label'], /Oceano/);
+    assert.ok(all(puffer).some(node => node.dataset.region === 'island'));
 });
 
 test('SSE de relógio preserva painel e ícone; inventário novo reaproveita as imagens', async () => {

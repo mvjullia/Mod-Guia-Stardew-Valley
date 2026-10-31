@@ -146,10 +146,11 @@
         modal.classList.remove('wiki-dialog', 'album-viewer'); modal.classList.add('item-modal');
         body.replaceChildren();
         const header = document.createElement('div'); header.className = 'item-details';
-        if (item.icon) {
-            const icon = document.createElement('img'); icon.src = item.icon; icon.alt = '';
-            icon.className = 'game-icon'; header.append(icon);
-        }
+        const frame = document.createElement('span'); frame.className = 'sprite-frame';
+        const icon = document.createElement('img'); icon.alt = ''; icon.className = 'game-icon';
+        const iconFor = record => item.icon || ((record?.englishName || item.wikiName) ? 'https://stardewvalleywiki.com/Special:Redirect/file/' + encodeURIComponent((record?.englishName || item.wikiName).replaceAll(' ', '_') + '.png') : '');
+        const initialIcon = iconFor(null); if (initialIcon) icon.src = initialIcon; else icon.hidden = true;
+        icon.onerror = () => { icon.hidden = true; }; frame.append(icon); header.append(frame);
         const heading = document.createElement('h2'); heading.textContent = item.name || '';
         header.append(heading);
         if (referenceTrail.length) {
@@ -168,6 +169,8 @@
         if (!modal.open) modal.showModal();
         function render(catalog) {
             if (!fields.isConnected || !modal.open) return;
+            const resolvedIcon = iconFor(catalog.find(item));
+            if (resolvedIcon && icon.src !== resolvedIcon) { icon.hidden = false; icon.src = resolvedIcon; }
             const currentId = catalog.find(item)?.gameId || item.qualifiedId || item.id;
             fields.replaceChildren();
             for (const [label, value, key] of catalog.values(item)) {

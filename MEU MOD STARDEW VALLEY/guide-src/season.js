@@ -27,9 +27,8 @@
         function availability(item) {
             if (seeds.some(entry => entry.item.gameId === item.gameId && !entry.locked)) return { kind: 'purchase', routes: [] };
             const catches = routes.filter(route => route.gameId === item.gameId);
-            if (catches.length) return { kind: 'fish', routes: catches };
             const gathered = forage.find(entry => entry.item.gameId === item.gameId);
-            if (gathered) return { kind: 'forage', routes: gathered.routes };
+            if (catches.length || gathered) return { kind: catches.length ? 'fish' : 'forage', routes: [...catches, ...(gathered?.routes || [])] };
             if (seasonMatch(item.growingSeasons, season, rules)) return { kind: 'crop', routes: [] };
             if (item.category !== 'Peixe' && seasonMatch(item.availabilitySeasons, season, rules)) return { kind: 'other', routes: [] };
             return null;
@@ -56,7 +55,27 @@
             hasInventory, available: availability,
             hasChoiceCounts: (snapshot?.visuals?.bundles || []).every(bundle => Number.isInteger(bundle.requiredCount)) };
     }
-    if (typeof module !== 'undefined' && module.exports) module.exports = { buildSeasonModel, seasonMatch };
+    function routeRegion(route) {
+        if (route.location.startsWith('Island') || route.location === 'Caldera') return 'island';
+        if (route.location === 'Desert') return 'desert';
+        if (['UndergroundMine', 'Sewer', 'BugLand', 'WitchSwamp', 'Submarine', 'BeachNightMarket'].includes(route.location)) return 'special';
+        return 'valley';
+    }
+    function availabilitySigns(available, season) {
+        if (!available) return [];
+        if (!available.routes.length) {
+            const source = { purchase: 'À venda no Pierre', crop: 'Cultivo nesta estação', other: 'Disponível nesta estação' }[available.kind] || 'Disponível nesta estação';
+            return [{ region: 'valley', glyph: '🌿', label: source + ' · ' + season.label }];
+        }
+        const definitions = { valley: ['🌿', 'Vale'], island: ['🏝️', 'Ilha Gengibre'], desert: ['🏜️', 'Deserto'], special: ['🗝️', 'Locais especiais'] };
+        return Object.entries(definitions).flatMap(([region, [glyph, name]]) => {
+            const routes = available.routes.filter(route => routeRegion(route) === region);
+            if (!routes.length) return [];
+            const places = [...new Set(routes.map(route => route.locationLabel + (route.area === 'River' ? ' · rio' : route.area === 'Lake' ? ' · lago' : route.area === 'Ocean' ? ' · oceano' : '')))];
+            return [{ region, glyph, label: name + ' · ' + season.label + ': ' + places.join(', ') + '. Clima, horário e outros requisitos podem se aplicar.' }];
+        });
+    }
+    if (typeof module !== 'undefined' && module.exports) module.exports = { buildSeasonModel, seasonMatch, routeRegion, availabilitySigns };
     if (typeof document === 'undefined') return;
 
     const style = document.createElement('style');
@@ -70,11 +89,11 @@
     .season-hero h1{margin:0 0 6px;font-size:30px;color:#623d23}.season-hero p{margin:0;line-height:1.6}
     .season-switch{display:flex;gap:10px;flex-wrap:wrap}.season-switch button{display:flex;align-items:center;gap:8px;background:#fff4d7;border:3px solid #aa713e;padding:10px 15px;color:#62412d;font:800 14px Nunito,sans-serif;box-shadow:inset 0 0 0 2px #ffe4ad,0 3px 0 #805327}
     .season-switch button[aria-pressed="true"]{background:var(--season-tint);border-color:var(--season-accent);transform:translateY(2px);box-shadow:inset 0 0 0 2px #fff9e0}
-    .season-switch img{width:26px;height:26px;image-rendering:pixelated;object-fit:contain}.season-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+    .season-switch img{width:26px;height:26px;image-rendering:pixelated;object-fit:contain}.season-columns{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start}
     .season-panel{min-width:0;background:#fff3d6;border:4px solid #a76227;box-shadow:inset 0 0 0 2px #ffdc99,0 4px 0 #754019;padding:20px}
     .season-panel h2{display:flex;align-items:center;gap:10px;margin:0 0 18px;padding-bottom:12px;border-bottom:3px double #bb8b53;font-size:21px;color:#623d23}
-    .season-count{margin-left:auto;border:2px solid #bc9562;padding:3px 9px;background:#fff9e6;font-size:14px}.season-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:13px}
-    .season-columns .season-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}.season-tile{position:relative;padding:13px;border:2px solid #c9985c;background:#fff9e9;min-width:0;box-shadow:inset 0 0 0 2px #fff3d0}
+    .season-count{margin-left:auto;border:2px solid #bc9562;padding:3px 9px;background:#fff9e6;font-size:14px}.season-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:13px}
+    .season-tile{position:relative;padding:13px;border:2px solid #c9985c;background:#fff9e9;min-width:0;box-shadow:inset 0 0 0 2px #fff3d0}
     .season-tile.needs-rain{border-color:#6c9cb4;background:linear-gradient(145deg,#e0f0f7,#fff9e9 75%)}.season-tile.needs-sun{border-color:#c7a150;background:linear-gradient(145deg,#fff0b5,#fff9e9 75%)}
     .season-item-button{display:flex;align-items:center;gap:12px;background:none;border:0;padding:0;color:#5c3b25;text-align:left;font:800 15px/1.3 Nunito,sans-serif;width:100%;min-height:48px}
     .season-item-button:hover span:last-child{text-decoration:underline}.season-item-sprite{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;background:#f7deb1;border:2px solid #bd8a50;font-size:26px}
@@ -83,25 +102,52 @@
     .season-sign.rainy{background:#d4eafa;border:2px solid #679ab9;font-size:25px;min-width:44px;min-height:38px}.season-sign.sunny{background:#fff0b4;border-color:#c5a24c;font-size:23px}.season-sign.time{font-size:12px;font-weight:700;background:#fff8e7}.season-sign.warning{background:#ffe0c8;border-color:#b96b42}.season-sign.quality{color:#a16c0c;background:#ffedb3}
     .season-filters{display:flex;gap:7px;margin:-4px 0 18px;flex-wrap:wrap}.season-filters button{border:2px solid #bb965e;background:#fff8e6;min-width:45px;padding:6px 12px;font-size:19px;color:#62412d}.season-filters button[aria-pressed="true"]{background:#dbe9be;border-color:#63814b}
     .season-empty{padding:18px;text-align:center;color:#806244;background:#fff8e7;border:2px dashed #cdb17f;line-height:1.6}.season-bundle{margin-top:16px}.season-bundle h3{display:flex;align-items:center;gap:10px;font-size:16px;color:#6a492b;margin:0 0 10px}.season-bundle-count{font-size:12px;font-weight:600;margin-left:auto}
+    .season-bundle .season-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
     .season-price{margin-top:10px;font-weight:900;color:#92600e;display:flex;gap:7px;align-items:center}.season-planting{margin-top:8px;display:flex;gap:6px;align-items:center;font-size:12px;color:#725739}.season-planting.late{color:#a1492a}.season-locked{margin-top:15px}.season-locked summary{padding:9px;background:#eadbc0;font-weight:800;color:#765738}.season-locked .season-grid{margin-top:10px}.season-footnote{font-size:12px;line-height:1.6;color:#82684e;margin:12px 0 0}
-    @media(max-width:850px){.season-columns{grid-template-columns:1fr}.season-hero{padding:18px;gap:14px}.season-hero h1{font-size:25px}.season-grid,.season-columns .season-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
-    @media(max-width:450px){.season-grid,.season-columns .season-grid{grid-template-columns:1fr}.season-panel{padding:13px}.season-switch button{padding:9px}.season-hero-icon{font-size:38px}}
+    @media(max-width:850px){.season-hero{padding:18px;gap:14px}.season-hero h1{font-size:25px}.season-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}}
+    @media(max-width:450px){.season-grid,.season-bundle .season-grid{grid-template-columns:1fr}.season-panel{padding:13px}.season-switch button{padding:9px}.season-hero-icon{font-size:38px}}
     .season-stage-title{padding:10px 12px;margin:18px 0 12px;background:#e5eabf;border:2px solid #a7ad6e;font-weight:900;color:#526633}
     .season-hero h1,.season-panel h2{font-family:Pixellari,monospace}
     .seasonal-available{position:relative;border:3px solid #578946!important;box-shadow:inset 0 0 0 2px #d5edac,0 0 0 2px #a7c27866!important}
-    .seasonal-available .season-available-badge{position:absolute;top:-10px;right:4px;display:flex;align-items:center;justify-content:center;width:25px!important;height:23px;min-width:0;padding:0;background:#f0f7cf;border:2px solid #578946;border-radius:4px;font-size:16px;line-height:1;z-index:1}
+    .season-availability-badges{position:absolute;top:-10px;right:4px;display:flex;gap:3px;z-index:1}.season-available-badge{display:inline-flex;align-items:center;justify-content:center;width:27px;height:25px;background:#f0f7cf;border:2px solid #578946;border-radius:4px;font-size:16px;line-height:1}.season-available-badge[data-region="island"]{background:#d8f3ef;border-color:#3d9291}.season-available-badge[data-region="desert"]{background:#fff0ca;border-color:#ba843c}.season-available-badge[data-region="special"]{background:#e8def2;border-color:#806098}
+    .season-available-badge{cursor:help}.season-available-badge:focus-visible{outline:3px solid #315d94;outline-offset:2px}.season-popover{position:fixed;z-index:10000;box-sizing:border-box;width:min(330px,calc(100vw - 20px));padding:12px 15px;background:#fff5d8;border:4px ridge #a76227;box-shadow:inset 0 0 0 2px #ffe2a4,0 5px 14px #3f281a66;color:#583b29;font:600 14px/1.5 Nunito,sans-serif;pointer-events:none;overflow-wrap:anywhere}.season-popover strong{display:block;color:#744621;font-size:15px;margin-bottom:4px}
     `;
     document.head.append(style);
     let rules, pending, selected = null, follow = true, weatherFilter = 'all', generation = 0, lastSignature;
     const marked = new Set(); let availableCache, availabilityKey, refreshPending;
+    let popover;
+    function hidePopover() { popover?.remove(); popover = null; }
+    function showPopover(badge, sign) {
+        hidePopover();
+        const popup = document.createElement('div'); popup.className = 'season-popover'; popup.setAttribute('role', 'tooltip');
+        const title = document.createElement('strong'); title.textContent = sign.glyph + ' ' + sign.label.split(':')[0]; popup.append(title);
+        const text = document.createElement('span'); text.textContent = sign.label.includes(':') ? sign.label.slice(sign.label.indexOf(':') + 1).trim() : sign.label; popup.append(text);
+        (badge.closest('dialog') || document.body).append(popup); popover = popup;
+        const anchor = badge.getBoundingClientRect(), rect = popup.getBoundingClientRect();
+        const width = root.innerWidth || document.documentElement.clientWidth, height = root.innerHeight || document.documentElement.clientHeight;
+        popup.style.left = Math.max(10, Math.min(anchor.left, width - rect.width - 10)) + 'px';
+        popup.style.top = (anchor.bottom + rect.height + 10 <= height ? anchor.bottom + 8 : Math.max(10, anchor.top - rect.height - 8)) + 'px';
+    }
     function applyAvailability(node, catalog, model, season) {
         const record = catalog.find(node._guiaSeasonItem), available = record && model && model.available(record);
         const classes = (node.className || '').split(/\s+/).filter(cls => cls && cls !== 'seasonal-available');
-        if (available) classes.push('seasonal-available'); node.className = classes.join(' ');
-        if (!available) { node._seasonBadge?.remove(); node._seasonBadge = null; return; }
-        if (!node._seasonBadge) { node._seasonBadge = document.createElement('span'); node._seasonBadge.className = 'season-available-badge'; node._seasonBadge.textContent = '🌿'; node.append(node._seasonBadge); }
-        const label = 'Pode ser obtido em ' + season.label + '; clima, local, nível e outros requisitos podem se aplicar';
-        node._seasonBadge.title = label; node._seasonBadge.setAttribute('aria-label', label); node._seasonBadge.setAttribute('role', 'img');
+        const signs = available ? availabilitySigns(available, season) : [];
+        if (signs.some(sign => sign.region === 'valley')) classes.push('seasonal-available'); node.className = classes.join(' ');
+        const key = JSON.stringify(signs);
+        if (node._seasonBadgeKey === key) return;
+        hidePopover(); node._seasonBadge?.remove(); node._seasonBadge = null; node._seasonBadgeKey = key;
+        if (!signs.length) return;
+        const group = document.createElement('span'); group.className = 'season-availability-badges';
+        for (const sign of signs) {
+            const badge = document.createElement('span'); badge.className = 'season-available-badge'; badge.textContent = sign.glyph; badge.dataset.region = sign.region;
+            badge.setAttribute('aria-label', sign.label); badge.setAttribute('role', 'img'); badge.setAttribute('tabindex', '0');
+            badge.onmouseenter = () => showPopover(badge, sign); badge.onmouseleave = hidePopover;
+            badge.onfocus = () => showPopover(badge, sign); badge.onblur = hidePopover;
+            badge.onclick = event => { event.stopPropagation(); if (popover) hidePopover(); else showPopover(badge, sign); };
+            badge.onkeydown = event => { if (event.key === 'Escape') { hidePopover(); event.stopPropagation(); } };
+            group.append(badge);
+        }
+        node._seasonBadge = group; node.append(group);
     }
     function refreshMarks() {
         if (!marked.size) return;

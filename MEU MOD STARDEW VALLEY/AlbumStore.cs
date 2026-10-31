@@ -53,7 +53,7 @@ internal sealed class AlbumStore
         lock (gate)
         {
             if (activeDirectory == null || HasEpisode(episodeKey)) return null;
-            if (collection is not "joja" and not "nights" && photos.Count(p => !p.IsComposite && (p.OwnerId == null || p.OwnerId == ownerId) && p.Collection is not "joja" and not "nights" && p.Year == year && p.Season == season && p.Day == day) >= dailyLimit) return null;
+            if (collection is not "joja" and not "nights" and not "mishaps" && photos.Count(p => !p.IsComposite && (p.OwnerId == null || p.OwnerId == ownerId) && p.Collection is not "joja" and not "nights" and not "mishaps" && p.Year == year && p.Season == season && p.Day == day) >= dailyLimit) return null;
             if (episodeKey == null && photos.Any(p => p.Kind == kind && p.Year == year && p.Season == season && p.Day == day && p.Description == description)) return null;
             string id = Guid.NewGuid().ToString("N"), imageId = id;
             if (reuseImageId != null)

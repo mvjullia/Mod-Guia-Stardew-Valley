@@ -114,7 +114,9 @@ test('modais compartilham o carregamento, ocultam lacunas e ignoram abertura ant
     await flush();
     assert.match(oldFields.textContent, /Carregando/);
     assert.match(body.textContent, /Abóbora/);
-    assert.equal(body.children[0].children[0].textContent, 'Abóbora');
+    assert.equal(body.children[0].children[0].className, 'sprite-frame');
+    assert.match(body.children[0].children[0].children[0].src, /Pumpkin\.png/);
+    assert.equal(body.children[0].children[1].textContent, 'Abóbora');
     assert.match(body.textContent, /Dias com Hyper Speed-Gro/);
     assert.doesNotMatch(body.textContent, /Não verificado|Não se aplica|Como conseguir|Preço base/);
     for (const p of body.children[1].children) {
@@ -152,13 +154,13 @@ test('clicar em sementes de chirívia abre a modal das sementes pelo ID qualific
     seeds.onclick({ button: 0, preventDefault() { prevented = true; } });
     await flush();
     assert.equal(prevented, true);
-    assert.equal(body.children[0].children[0].textContent, 'Sementes de Chirívia');
+    assert.equal(body.children[0].children[1].textContent, 'Sementes de Chirívia');
     assert.match(body.textContent, /ID do jogo: \(O\)472/);
     assert.equal(calls, 2); // Reuse the already loaded catalog.
     const back = body.children[0].children.find(el => el.className === 'item-reference-back');
     assert.ok(back);
     back.onclick(); await flush();
-    assert.equal(body.children[0].children[0].textContent, 'Chirívia');
+    assert.equal(body.children[0].children[1].textContent, 'Chirívia');
     assert.ok(!body.children[0].children.some(el => el.className === 'item-reference-back'));
     seeds.onclick({ button: 0, preventDefault() {} }); await flush();
     context.openItemPage({ qualifiedId: '(O)276', name: 'Abóbora' }); await flush();
@@ -169,7 +171,7 @@ test('o destino da referência abre diretamente em uma nova página', async () =
     const { body, modal } = browser(async file => ({ ok: true, json: async () => file === 'items.json' ? data : columns }), '?item=(O)472');
     await flush();
     assert.equal(modal.open, true);
-    assert.equal(body.children[0].children[0].textContent, 'Sementes de Chirívia');
+    assert.equal(body.children[0].children[1].textContent, 'Sementes de Chirívia');
     assert.match(body.textContent, /ID do jogo: \(O\)472/);
 });
 

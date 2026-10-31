@@ -76,6 +76,16 @@ test('abrir e fechar modal, incluindo Escape, usam efeitos distintos', () => {
     assert.equal(b.played.at(-1), 'menu-close.wav');
 });
 
+test('clique no fundo fecha modal; clique interno e arrasto para fora não fecham', () => {
+    const b = browser(), dialog = b.modal; dialog.tagName = 'DIALOG'; dialog.open = true;
+    dialog.getBoundingClientRect = () => ({ left: 100, top: 100, right: 500, bottom: 500 });
+    dialog.close = () => { dialog.open = false; };
+    const fire = (type, x, y) => b.document.fire(type, { target: dialog, clientX: x, clientY: y });
+    fire('pointerdown', 150, 150); fire('click', 150, 150); assert.equal(dialog.open, true);
+    fire('pointerdown', 150, 150); fire('click', 20, 20); assert.equal(dialog.open, true);
+    fire('pointerdown', 20, 20); fire('click', 20, 20); assert.equal(dialog.open, false);
+});
+
 test('silenciar persiste preferência e para os efeitos ativos', () => {
     const b = browser(); b.document.fire('pointerdown'); b.click(b.button);
     b.click(b.toggle);

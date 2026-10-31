@@ -31,6 +31,7 @@ internal sealed partial class CoopAlbumRecorder
     private HashSet<string> wearables = new();
     private string session = "", pulse = "";
     private long sequence, pulseUntil, eventSequence;
+    private string? lastPassOut;
     private bool loaded;
     private sealed class Envelope
     {
@@ -59,7 +60,7 @@ internal sealed partial class CoopAlbumRecorder
     private bool Ready => loaded && Context.IsWorldReady && config().EnableAlbums;
     private void Reset()
     {
-        loaded = false; peers.Clear(); retired.Clear(); counters.Clear(); director.Reset(); session = ""; sequence = 0; eventSequence = 0; pulse = ""; pulseUntil = 0; ClearTransfers();
+        loaded = false; peers.Clear(); retired.Clear(); counters.Clear(); director.Reset(); session = ""; sequence = 0; eventSequence = 0; pulse = ""; pulseUntil = 0; lastPassOut = null; ClearTransfers();
     }
     private static string SaveId => Game1.uniqueIDForThisGame.ToString(CultureInfo.InvariantCulture);
     private static string Id(Farmer farmer) => farmer.UniqueMultiplayerID.ToString(CultureInfo.InvariantCulture);
@@ -176,6 +177,14 @@ internal sealed partial class CoopAlbumRecorder
             CaptureContext: context ?? Game1.activeClickableMenu ?? (object?)Game1.currentMinigame, FollowLocation: true));
     }
     internal bool IsJojaItem(string id) => rules.JojaItemIds.Contains(id);
+    internal void PassOut()
+    {
+        if (!Ready) return;
+        var actor = Actor(); string key = actor.DateKey + "/" + actor.Time + "/" + actor.Id;
+        if (key == lastPassOut) return; lastPassOut = key;
+        var inBed = Game1.getOnlineFarmers().Where(farmer => farmer.UniqueMultiplayerID != Game1.player.UniqueMultiplayerID && farmer.isInBed.Value).Select(farmer => farmer.Name).ToArray();
+        Record(AlbumPassOut.Kind(inBed.Length > 0, Game1.player.health <= 0, actor.Time), "mishaps", "aftermath", values: new() { ["partner"] = string.Join(", ", inBed), ["eventTime"] = (actor.Time / 100).ToString("00") + ":" + (actor.Time % 100).ToString("00") });
+    }
     internal bool IsJojaShop(string id) => rules.JojaShopIds.Contains(id);
     internal bool IsJojaAction(string action, GameLocation location) => rules.JojaLocations.Contains(location.Name) || rules.JojaActionPrefixes.Any(prefix => action.StartsWith(prefix, StringComparison.Ordinal));
     internal void Strength(float power, object context) { if (Game1.CurrentEvent?.isFestival == true && power >= rules.StrengthTopTierMin) Record("strength-max", "festivals", "strength", values: new() { ["power"] = power.ToString("0.0", CultureInfo.InvariantCulture) }, context: context); }

@@ -1,7 +1,17 @@
 (function (root) {
     'use strict';
     const validId = value => typeof value === 'string' && /^[a-f0-9]{32}$/.test(value);
-    const collectionOf = photo => ['coop', 'romance', 'nights', 'festivals', 'joja'].includes(photo.collection) ? photo.collection : 'memories';
+    const collectionOf = photo => {
+        if (photo.collection === 'mishaps') return photo.collection;
+        if (photo.kind?.startsWith('center-')) return 'center';
+        if (photo.kind === 'rain-watering') return 'mishaps';
+        if (photo.collection === 'coop') {
+            if (/-(fishing|panning)$/.test(photo.kind || '')) return 'fishing';
+            if (/-(planting|harvesting|watering|digging|milking|shearing|petting)$/.test(photo.kind || '')) return 'farm';
+            if (/-(mining|fighting|chopping|foraging)$/.test(photo.kind || '')) return 'adventures';
+        }
+        return ['coop', 'romance', 'nights', 'festivals', 'joja'].includes(photo.collection) ? photo.collection : 'memories';
+    };
     const filterPhotos = (photos, collection = 'all', pair = '') => photos.filter(photo =>
         (collection === 'all' || collectionOf(photo) === collection) && (!pair || photo.pairKey === pair));
     const displayPhotos = photos => { const combined = new Set(photos.filter(photo => photo.isComposite && photo.sessionId).map(photo => photo.sessionId)); return photos.filter(photo => photo.isComposite || !photo.sessionId || !combined.has(photo.sessionId)); };
@@ -32,12 +42,27 @@
     @media(prefers-reduced-motion:reduce){.album-photo{transform:none!important}}
     .album-header h1,.album-day h2{font-family:Pixellari,monospace}
     .album-filters{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin:0 0 20px}.album-filters button,.album-pair-filter{padding:9px 12px;border:3px solid #a76227;background:#fff1d1;color:#604126;font:800 14px Nunito,sans-serif;box-shadow:inset 0 0 0 2px #ffe4ad}.album-filters button[aria-pressed="true"]{background:#e3eabd;border-color:#63814b;transform:translateY(2px)}
+    .album-books{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:28px;padding:12px;perspective:1000px}.album-book{position:relative;min-height:235px;border:0;background:transparent;padding:0;text-align:left;color:#593b24;cursor:pointer;perspective:900px;font:inherit}.album-book-pages,.album-book-cover{position:absolute;inset:0;border-radius:4px 12px 12px 4px;box-sizing:border-box}.album-book-pages{padding:34px 22px 20px;background:#fff4d5;border:4px solid #b58a55;box-shadow:5px 6px 0 #8a592f55;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.5}.album-book-cover{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;background:linear-gradient(90deg,#754324 0 12px,#b9793e 13px,#d59d58);border:4px solid #754324;box-shadow:inset 0 0 0 4px #e9ba76;transform-origin:left center;transition:transform .3s ease;backface-visibility:hidden;text-align:center;color:#fff5d6}.album-book-cover span{font-size:38px}.album-book-cover strong{font:20px Pixellari,monospace}.album-book:hover .album-book-cover,.album-book:focus-visible .album-book-cover{transform:rotateY(-145deg)}.album-book:focus-visible{outline:3px solid #63814b;outline-offset:5px}.album-back{padding:9px 14px;border:3px solid #a76227;background:#fff1d1;color:#604126;font:800 14px Nunito,sans-serif;cursor:pointer}.album-theme-title{color:#6a492b}.album-book-count{font-size:13px}.album-pair-filter{margin-left:12px}@media(prefers-reduced-motion:reduce){.album-book-cover{transition:none}}
     .album-photo[data-collection="joja"]{border:3px solid #7c8bb0;background:#f0f1fd}.album-photo[data-collection="joja"]::after{content:'🧾 JOJA';position:absolute;right:12px;top:17px;padding:3px 7px;background:#eeeaf4df;border:2px solid #787a9c;color:#5a4b76;font-size:11px;font-weight:900;transform:rotate(7deg)}
     .album-photo[data-collection="nights"]{border-color:#708ca0;background:#eff3f7}.album-photo[data-collection="romance"]{border-color:#cba099;background:#fff0e9}.album-photo[data-collection="festivals"]{border-color:#c4a658;background:#fff8dc}
+    .album-book{--dark:#754324;--mid:#b9793e;--light:#d59d58;--trim:#e9ba76}.album-book[data-theme="coop"],.album-book[data-theme="farm"]{--dark:#345d39;--mid:#668c48;--light:#91ae5e;--trim:#d3e6a2}.album-book[data-theme="fishing"]{--dark:#28536d;--mid:#4388a0;--light:#74b9c4;--trim:#c5edef}.album-book[data-theme="adventures"]{--dark:#47465c;--mid:#6d6b82;--light:#9995aa;--trim:#d9cee2}.album-book[data-theme="center"]{--dark:#5b6635;--mid:#97a250;--light:#c7b967;--trim:#f5e7a1}.album-book[data-theme="mishaps"]{--dark:#843d30;--mid:#c36d46;--light:#e7a16a;--trim:#ffe0a7}.album-book[data-theme="romance"]{--dark:#893f56;--mid:#c9687e;--light:#e5a3a5;--trim:#ffe1cf}.album-book[data-theme="nights"]{--dark:#303a69;--mid:#505b94;--light:#8189b8;--trim:#e3dca9}.album-book[data-theme="festivals"]{--dark:#8c5824;--mid:#c79236;--light:#ecd17c;--trim:#fff1b2}.album-book[data-theme="joja"]{--dark:#303e70;--mid:#596ba2;--light:#8894c1;--trim:#d8ddf5}.album-book-cover{background:linear-gradient(90deg,var(--dark) 0 12px,var(--mid) 13px,var(--light));border-color:var(--dark);box-shadow:inset 0 0 0 4px var(--trim)}.album-book-cover::before,.album-book-cover::after{position:absolute;color:var(--trim);font-size:18px;letter-spacing:7px}.album-book-cover::before{content:attr(data-decoration);top:16px}.album-book-cover::after{content:attr(data-decoration);bottom:16px}.album-photo[data-collection="farm"]{background:#f2f8dc;border-color:#84a55c}.album-photo[data-collection="fishing"]{background:#e7f5f5;border-color:#6d9fad}.album-photo[data-collection="adventures"]{background:#efedf4;border-color:#89839d}.album-photo[data-collection="center"]{background:#f8f5da;border-color:#a5a065}.album-photo[data-collection="mishaps"]{background:#fff0df;border-color:#c77e58}
     `; document.head.append(style);
     const seasons = { spring: 'Primavera', summer: 'Verão', fall: 'Outono', winter: 'Inverno' };
-    let ticket = 0, lastVersion, lastIdentity, requesting = false, selectedCollection = 'all', selectedPair = '';
-    const collections = [['all', '📷 Todas'], ['coop', '🌱 Coop'], ['romance', '💕 Românticos'], ['nights', '🌙 Nossas noites'], ['festivals', '🎪 Festivais'], ['joja', '🧾 Cantinho da vergonha'], ['memories', '📖 Outras lembranças']];
+    let ticket = 0, availabilityTicket = 0, lastVersion, lastIdentity, requesting = false, selectedCollection = '', selectedPair = '';
+    const collections = [
+        ['farm', 'Vida na fazenda', 'Plantações, animais e trabalho em boa companhia.', '🌾'],
+        ['fishing', 'À beira da água', 'Pescarias e garimpos compartilhados.', '🎣'],
+        ['adventures', 'Grandes aventuras', 'Minas, batalhas e descobertas pelo vale.', '⛏️'],
+        ['center', 'Centro Comunitário', 'Entregas, conquistas e visitas aos Junimos.', '🌳'],
+        ['mishaps', 'Pequenas trapalhadas', 'Desmaios e momentos inesperados das aventuras.', '💫'],
+        ['coop', 'Coop', 'Momentos compartilhados na fazenda.', '\u{1f331}'],
+        ['romance', 'Rom\u00e2nticos', 'Lembran\u00e7as cheias de carinho.', '\u{1f495}'],
+        ['nights', 'Nossas noites', 'Hist\u00f3rias guardadas depois do p\u00f4r do sol.', '\u{1f319}'],
+        ['festivals', 'Festivais', 'Celebra\u00e7\u00f5es e encontros pelo vale.', '\u{1f3aa}'],
+        ['joja', 'Cantinho da vergonha', 'Pequenas trapalhadas que merecem ser lembradas.', '\u{1f9fe}'],
+        ['memories', 'Outras lembran\u00e7as', 'Outros momentos especiais da vida no vale.', '\u{1f4d6}']
+    ];
+    const decorations = { coop: '🌱 ☀ 🌱', farm: '🌻 ✿ 🌻', fishing: '〰 🐟 〰', adventures: '✦ 💎 ✦', center: '🍃 ✦ 🍃', mishaps: '✦ 💤 ✦', romance: '♡ ✿ ♡', nights: '✦ ☾ ✦', festivals: '✦ 🎈 ✦', joja: '★ ▰ ★', memories: '✦ ♡ ✦' };
     const identity = () => JSON.stringify([root.guiaData?.farm?.saveId, root.guiaData?.player?.multiplayerId]);
     const descendants = node => Array.from(node?.children || []).flatMap(child => [child, ...descendants(child)]);
     const active = () => typeof current !== 'undefined' && current === 'albums';
@@ -77,24 +102,37 @@
             const cards = new Map(descendants(previous?.content).filter(node => node._albumPhotoId).map(node => [node._albumPhotoId, node]));
             const photos = displayPhotos((Array.isArray(data.photos) ? data.photos : []).filter(photo => photo && validId(photo.id) && validId(photo.imageId)));
             const sessions = new Map((Array.isArray(data.sessions) ? data.sessions : []).map(session => [session.id, session]));
-            const filters = add(content, 'nav', null, 'album-filters'); filters.setAttribute('aria-label', 'Coleções de fotos');
-            for (const [id, label] of collections) {
-                const button = add(filters, 'button', label); button.type = 'button'; button.setAttribute('aria-pressed', String(id === selectedCollection));
-                button.onclick = () => { selectedCollection = id; selectedPair = ''; renderAlbums(); };
+            const available = collections.filter(([id]) => photos.some(photo => collectionOf(photo) === id));
+            if (selectedCollection && !available.some(([id]) => id === selectedCollection)) { selectedCollection = ''; selectedPair = ''; }
+            if (!selectedCollection) {
+                const gallery = add(content, 'div', null, 'album-books'); gallery.setAttribute('aria-label', 'Galeria de \u00c1lbuns');
+                for (const [id, title, description, icon] of available) {
+                    const count = photos.filter(photo => collectionOf(photo) === id).length;
+                    const book = add(gallery, 'button', null, 'album-book'); book.type = 'button';
+                    book.setAttribute('data-theme', id);
+                    book.setAttribute('aria-label', title + ': ' + description + ' ' + count + (count === 1 ? ' foto' : ' fotos'));
+                    const pages = add(book, 'span', null, 'album-book-pages'); add(pages, 'span', description);
+                    const cover = add(book, 'span', null, 'album-book-cover'); cover.setAttribute('data-decoration', decorations[id]); add(cover, 'span', icon); add(cover, 'strong', title); add(cover, 'small', count + (count === 1 ? ' foto' : ' fotos'), 'album-book-count');
+                    book.onclick = () => { selectedCollection = id; selectedPair = ''; renderAlbums(); };
+                }
+            } else {
+                const controls = add(content, 'nav', null, 'album-filters');
+                const back = add(controls, 'button', 'Voltar para a galeria de \u00c1lbuns', 'album-back'); back.type = 'button'; back.onclick = () => { selectedCollection = ''; selectedPair = ''; renderAlbums(); };
+                add(content, 'h2', collections.find(([id]) => id === selectedCollection)[1], 'album-theme-title');
+                const pairs = new Map();
+                for (const photo of filterPhotos(photos, selectedCollection)) if (photo.pairKey && Array.isArray(photo.participants) && photo.participants.length > 1) pairs.set(photo.pairKey, photo.participants.join(' & '));
+                if (pairs.size) {
+                    const select = add(controls, 'select', null, 'album-pair-filter'); select.setAttribute('aria-label', 'Escolher dupla');
+                    const any = add(select, 'option', 'Todas as duplas'); any.value = '';
+                    for (const [key, name] of pairs) { const option = add(select, 'option', name); option.value = key; }
+                    select.value = selectedPair; select.onchange = () => { selectedPair = select.value; renderAlbums(); };
+                }
             }
-            const pairs = new Map();
-            for (const photo of photos) if (photo.pairKey && Array.isArray(photo.participants) && photo.participants.length > 1) pairs.set(photo.pairKey, photo.participants.join(' & '));
-            if (pairs.size && selectedCollection !== 'joja' && selectedCollection !== 'memories') {
-                const select = add(filters, 'select', null, 'album-pair-filter'); select.setAttribute('aria-label', 'Escolher dupla');
-                const any = add(select, 'option', 'Todas as duplas'); any.value = '';
-                for (const [key, name] of pairs) { const option = add(select, 'option', name); option.value = key; }
-                select.value = selectedPair; select.onchange = () => { selectedPair = select.value; renderAlbums(); };
-            }
-            const days = groupPhotos(filterPhotos(photos, selectedCollection, selectedPair));
-            for (const session of sessions.values()) if (!photos.some(photo => photo.sessionId === session.id) && (selectedCollection === 'all' || selectedCollection === session.collection)) {
+            const days = selectedCollection ? groupPhotos(filterPhotos(photos, selectedCollection, selectedPair)) : [];
+            for (const session of sessions.values()) if (!photos.some(photo => photo.sessionId === session.id) && (selectedCollection && selectedCollection === session.collection)) {
                 const pending = add(content, 'div', null, 'album-empty'); add(pending, 'strong', session.playerNames.join(' & ')); add(pending, 'div', sessionStatus(session));
             }
-            if (!data.active || !days.length) {
+            if (!data.active || !photos.length || (selectedCollection && !days.length)) {
                 const empty = add(content, 'div', null, 'album-empty'); add(empty, 'span', '📷');
                 add(empty, 'div', !data.active ? 'Carregue sua fazenda no jogo para abrir o álbum dela.' : photos.length && !days.length ? 'Esta coleção ainda não tem fotos com esse filtro.' : root.guiaData?.albums?.enabled === false ?
                     'A captura automática está desativada no mod.' : 'Seu álbum ainda está esperando a primeira história.');
@@ -133,10 +171,30 @@
             }
         }
     }
-    if (!tabs.some(tab => tab[0] === 'albums')) tabs.push(['albums', '📸', 'Álbuns']);
+    async function updateAvailability() {
+        const run = ++availabilityTicket, requestedIdentity = identity();
+        try {
+            const response = await fetch('/api/albums');
+            if (!response.ok) return;
+            const data = await response.json();
+            if (run !== availabilityTicket || requestedIdentity !== identity()) return;
+            const hasPhotos = data.supported && data.active && Array.isArray(data.photos) && data.photos.some(photo => photo && validId(photo.id) && validId(photo.imageId));
+            const index = tabs.findIndex(tab => tab[0] === 'albums');
+            if (hasPhotos && index < 0) { tabs.push(['albums', '\u{1f4f8}', '\u00c1lbuns']); root.nav(); }
+            else if (!hasPhotos && index >= 0) { tabs.splice(index, 1); selectedCollection = ''; selectedPair = ''; if (active()) { current = 'home'; root.render(); } root.nav(); }
+        } catch (_) { /* Keep the last known state on temporary failures. */ }
+    }
     const previous = root.render; root.render = function () { if (active()) renderAlbums(); else { ticket++; requesting = false; previous(); } };
+    let availabilityVersion = root.guiaData?.albums?.version, availabilityIdentity = identity();
     root.addEventListener('guia:update', () => {
+        if (availabilityVersion !== root.guiaData?.albums?.version || availabilityIdentity !== identity()) {
+            if (availabilityIdentity !== identity()) {
+                const index = tabs.findIndex(tab => tab[0] === 'albums');
+                if (index >= 0) { tabs.splice(index, 1); selectedCollection = ''; selectedPair = ''; if (active()) { current = 'home'; root.render(); } root.nav(); }
+            }
+            availabilityVersion = root.guiaData?.albums?.version; availabilityIdentity = identity(); updateAvailability();
+        }
         if (active() && !requesting && (lastVersion !== root.guiaData?.albums?.version || identity() !== lastIdentity)) renderAlbums();
     });
-    root.nav();
+    updateAvailability();
 })(globalThis);

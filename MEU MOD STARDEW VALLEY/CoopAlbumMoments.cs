@@ -26,6 +26,11 @@ internal sealed class AlbumCoopRules
 }
 internal sealed record AlbumScore(AlbumActor Actor, string Competition, int Score, bool Final, bool Official);
 
+internal static class AlbumPassOut
+{
+    public static string Kind(bool partnerInBed, bool noHealth, int time) => partnerInBed ? "passout-partner-bed" : noHealth ? "passout-health" : time >= 2600 ? "passout-late" : "passout";
+}
+
 /// <summary>Consumes verified observations only. It never guesses activity from possession of a tool.</summary>
 internal sealed class CoopAlbumDirector
 {
