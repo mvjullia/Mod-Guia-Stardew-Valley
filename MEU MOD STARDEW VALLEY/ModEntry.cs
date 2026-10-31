@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using System.IO;
+
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
@@ -74,6 +75,15 @@ namespace StardewRealtimeTelemetry
             object? visuals=null;
             try { visuals=VisualSnapshot.Capture(); } catch(Exception ex) { this.Monitor.Log("Falha ao coletar imagens/progresso: "+ex.Message, LogLevel.Warn); }
             try { this.portrait=VisualSnapshot.Portrait(); this.headPortrait=VisualSnapshot.HeadPortrait(); } catch(Exception ex) { this.Monitor.Log("Falha ao capturar personagem: "+ex.Message, LogLevel.Warn); }
+            var friends = Game1.getOnlineFarmers().Where(f => f.UniqueMultiplayerID != player.UniqueMultiplayerID).Select(f => {
+                string? friendPortrait = null;
+                try { friendPortrait = VisualSnapshot.Portrait(f); } catch (Exception ex) { this.Monitor.Log("Falha ao capturar amigo: " + ex.Message, LogLevel.Warn); }
+                bool roommate = f.hasRoommate();
+                bool friendMarried = f.isMarriedOrRoommates() && !roommate;
+                long? friendSpouseId = friendMarried ? f.team.GetSpouse(f.UniqueMultiplayerID) : null;
+                string? friendPartner = friendSpouseId.HasValue ? Game1.GetPlayer(friendSpouseId.Value, onlyOnline: false)?.Name : (friendMarried || roommate ? f.getSpouse()?.displayName ?? f.spouse : null);
+                return new { portrait = friendPortrait, player = new { multiplayerId = f.UniqueMultiplayerID.ToString(CultureInfo.InvariantCulture), name = f.Name ?? "", money = f.Money, isMale = f.IsMale, relationship = new { status = roommate ? "roommate" : friendMarried ? "married" : "single", partnerName = friendPartner }, skills = new { farming = f.FarmingLevel, fishing = f.FishingLevel, foraging = f.ForagingLevel, mining = f.MiningLevel, combat = f.CombatLevel } } };
+            }).ToArray();
             var payload = new
             {
                 schemaVersion = 1,
@@ -82,6 +92,8 @@ namespace StardewRealtimeTelemetry
                 headPortrait = this.headPortrait,
                 albums = new { enabled = this.Config.EnableAlbums && this.albumRecorder != null, version = this.albumStore?.Version ?? 0 },
                 inventory = AlbumRecorder.Inventory().Select(item => new { qualifiedId = item.GameId, name = item.Name, quantity = item.Quantity, quality = item.Quality }).ToArray(),
+                friends,
+
                 exportedAt = DateTimeOffset.UtcNow.ToString("O"),
                 modVersion = this.ModManifest.Version.ToString(),
                 farm = new

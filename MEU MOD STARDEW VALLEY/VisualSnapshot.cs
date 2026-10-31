@@ -56,22 +56,25 @@ internal static class VisualSnapshot
         var pets = new List<StardewValley.Characters.Pet>();
         Utility.ForEachCharacter(character => { if (character is StardewValley.Characters.Pet pet && !pets.Contains(pet)) pets.Add(pet); return true; }, false);
         var petInfo = pets.Select(pet => new {name=pet.Name,icon=Png(pet.Sprite.Texture,pet.Sprite.SourceRect,"pet:"+pet.petId.Value+":"+pet.Sprite.CurrentFrame)}).ToArray();
-        return new {bundles,npcs,pets=petInfo,pet=petInfo.FirstOrDefault(),ui=new {silver=Png(Game1.mouseCursors,new Rectangle(338,400,8,8),"silver"),gold=Png(Game1.mouseCursors,new Rectangle(346,400,8,8),"gold"),iridium=Png(Game1.mouseCursors,new Rectangle(346,392,8,8),"iridium"),heart=Png(Game1.mouseCursors,new Rectangle(211,428,7,6),"heart")},icons=new Dictionary<string,object>{{"home",Item("24")},{"center",Item("22")},{"gifts",Item("72")},{"fishing",Item("145")},{"foraging",Item("16")},{"farming",Item("24")},{"mining",Item("378")},{"combat",Item("768")},{"wiki",Item("102")}}};
+        string? chicken = null;
+        try { chicken = Png(Game1.content.Load<Texture2D>("Animals\\White Chicken"), new Rectangle(0,0,16,16), "social-chicken"); } catch { /* Keep the menu usable if the animal texture is unavailable. */ }
+        return new {bundles,npcs,pets=petInfo,pet=petInfo.FirstOrDefault(),ui=new {chicken,silver=Png(Game1.mouseCursors,new Rectangle(338,400,8,8),"silver"),gold=Png(Game1.mouseCursors,new Rectangle(346,400,8,8),"gold"),iridium=Png(Game1.mouseCursors,new Rectangle(346,392,8,8),"iridium"),heart=Png(Game1.mouseCursors,new Rectangle(211,428,7,6),"heart")},icons=new Dictionary<string,object>{{"home",Item("24")},{"center",Item("22")},{"gifts",Item("72")},{"fishing",Item("145")},{"foraging",Item("16")},{"farming",Item("24")},{"mining",Item("378")},{"combat",Item("768")},{"wiki",Item("102")}}};
     }
-    private static string CapturePlayer(bool headOnly)
+    private static string CapturePlayer(Farmer farmer, bool headOnly)
     {
         var graphics=Game1.graphics.GraphicsDevice;
         var previous=graphics.GetRenderTargets();
         using var target=new RenderTarget2D(graphics,96,160);using var batch=new SpriteBatch(graphics);
         try {graphics.SetRenderTarget(target);graphics.Clear(Color.Transparent);
             batch.Begin(samplerState:SamplerState.PointClamp);
-            if(headOnly) Game1.player.FarmerRenderer.drawMiniPortrat(batch,new Vector2(16,24),0.5f,4f,2,Game1.player);
-            else Game1.player.FarmerRenderer.draw(batch,Game1.player.FarmerSprite,Game1.player.FarmerSprite.SourceRect,new Vector2(16,24),Vector2.Zero,0.5f,Color.White,0f,Game1.player);
+            if(headOnly) farmer.FarmerRenderer.drawMiniPortrat(batch,new Vector2(16,24),0.5f,4f,2,farmer);
+            else farmer.FarmerRenderer.draw(batch,farmer.FarmerSprite,farmer.FarmerSprite.SourceRect,new Vector2(16,24),Vector2.Zero,0.5f,Color.White,0f,farmer);
             batch.End();graphics.SetRenderTargets(previous);
             var pixels=new Color[96*160];target.GetData(pixels);int left=96,top=160,right=-1,bottom=-1;for(int y=0;y<160;y++)for(int x=0;x<96;x++)if(pixels[y*96+x].A>0){left=Math.Min(left,x);right=Math.Max(right,x);top=Math.Min(top,y);bottom=Math.Max(bottom,y);}if(right<left)throw new InvalidOperationException("Sprite do jogador vazio");
             return Png(target,new Rectangle(left,top,right-left+1,bottom-top+1),null);
         } finally {graphics.SetRenderTargets(previous);}
     }
-    public static string Portrait() => CapturePlayer(false);
-    public static string HeadPortrait() => CapturePlayer(true);
+    public static string Portrait() => CapturePlayer(Game1.player, false);
+    public static string Portrait(Farmer farmer) => CapturePlayer(farmer, false);
+    public static string HeadPortrait() => CapturePlayer(Game1.player, true);
 }
