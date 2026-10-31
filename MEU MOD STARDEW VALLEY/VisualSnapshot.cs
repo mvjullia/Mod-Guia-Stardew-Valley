@@ -50,9 +50,10 @@ internal static class VisualSnapshot
             var loves=(fields[1]+" "+universal).Split(' ',StringSplitOptions.RemoveEmptyEntries).Where(id=>!id.StartsWith("-")).Distinct().Where(id=>npc.getGiftTasteForThisItem(ItemRegistry.Create(id))==0).Select(id=>Item(id,fields[1].Split(' ').Contains(id))).ToArray();
             npcs.Add(new {hearts=Game1.player.getFriendshipHeartLevelForNPC(npc.Name),maxHearts=Game1.player.spouse==npc.Name?14:10,name=npc.displayName,portrait=Png(npc.Portrait,new Rectangle(0,0,64,64),"npc:"+entry.Key),gifts=loves});
         }
-        var pet=Game1.getFarm().characters.OfType<StardewValley.Characters.Pet>().FirstOrDefault();
-        object? petInfo=pet==null?null:new {name=pet.Name,icon=Png(pet.Sprite.Texture,pet.Sprite.SourceRect,"pet:"+pet.Name+":"+pet.Sprite.CurrentFrame)};
-        return new {bundles,npcs,pet=petInfo,ui=new {silver=Png(Game1.mouseCursors,new Rectangle(338,400,8,8),"silver"),gold=Png(Game1.mouseCursors,new Rectangle(346,400,8,8),"gold"),iridium=Png(Game1.mouseCursors,new Rectangle(346,392,8,8),"iridium"),heart=Png(Game1.mouseCursors,new Rectangle(211,428,7,6),"heart")},icons=new Dictionary<string,object>{{"home",Item("24")},{"center",Item("22")},{"gifts",Item("72")},{"fishing",Item("145")},{"foraging",Item("16")},{"farming",Item("24")},{"mining",Item("378")},{"combat",Item("768")},{"wiki",Item("102")}}};
+        var pets = new List<StardewValley.Characters.Pet>();
+        Utility.ForEachCharacter(character => { if (character is StardewValley.Characters.Pet pet && !pets.Contains(pet)) pets.Add(pet); return true; }, false);
+        var petInfo = pets.Select(pet => new {name=pet.Name,icon=Png(pet.Sprite.Texture,pet.Sprite.SourceRect,"pet:"+pet.petId.Value+":"+pet.Sprite.CurrentFrame)}).ToArray();
+        return new {bundles,npcs,pets=petInfo,pet=petInfo.FirstOrDefault(),ui=new {silver=Png(Game1.mouseCursors,new Rectangle(338,400,8,8),"silver"),gold=Png(Game1.mouseCursors,new Rectangle(346,400,8,8),"gold"),iridium=Png(Game1.mouseCursors,new Rectangle(346,392,8,8),"iridium"),heart=Png(Game1.mouseCursors,new Rectangle(211,428,7,6),"heart")},icons=new Dictionary<string,object>{{"home",Item("24")},{"center",Item("22")},{"gifts",Item("72")},{"fishing",Item("145")},{"foraging",Item("16")},{"farming",Item("24")},{"mining",Item("378")},{"combat",Item("768")},{"wiki",Item("102")}}};
     }
     public static string Portrait()
     {

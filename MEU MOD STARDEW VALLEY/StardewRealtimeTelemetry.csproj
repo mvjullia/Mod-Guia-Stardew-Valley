@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <AssemblyName>StardewRealtimeTelemetry</AssemblyName>
     <RootNamespace>StardewRealtimeTelemetry</RootNamespace>
@@ -8,18 +7,40 @@
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <ApplicationIcon>pickaxe_icon.ico</ApplicationIcon>
+    <!-- Paths may be overridden with -p:GuideSourceDir=... and -p:GuideAssetsDir=... -->
+    <GuideSourceDir Condition="'$(GuideSourceDir)' == ''">$(MSBuildProjectDirectory)/guide-src</GuideSourceDir>
+    <GuideAssetsDir Condition="'$(GuideAssetsDir)' == ''">$(MSBuildProjectDirectory)/obj/guide-dist</GuideAssetsDir>
+    <GenerateGuideAssets Condition="'$(GenerateGuideAssets)' == ''">true</GenerateGuideAssets>
   </PropertyGroup>
 
-  <ItemGroup><Compile Remove="tests/**/*.cs" /></ItemGroup>
   <ItemGroup>
-    <!-- Pacote oficial que referencia automaticamente o Stardew Valley e a SMAPI -->
+    <Compile Remove="tests/**/*.cs" />
     <PackageReference Include="Pathoschild.Stardew.ModBuildConfig" Version="4.1.1" />
   </ItemGroup>
 
+  <!-- This is the manifest of files and exact embedded resource names used by EmbeddedGuide. -->
   <ItemGroup>
-    <EmbeddedResource Include="../guia-stardew/dist/index.html" LogicalName="Guide.index.html" />
-    <EmbeddedResource Include="../guia-stardew/dist/telemetry.js" LogicalName="Guide.telemetry.js" />
-    <EmbeddedResource Include="../guia-stardew/dist/realtime.js" LogicalName="Guide.realtime.js" />
-    <EmbeddedResource Include="../guia-stardew/dist/embedded.js" LogicalName="Guide.embedded.js" />
+    <GuideFile Include="index.html;telemetry.js;realtime.js;embedded.js;visual.js;knowledge.js;polish.js;acquisition.js;profile.js;time-format.js" />
+    <EmbeddedResource Include="@(GuideFile->'$(GuideAssetsDir)/%(Identity)')">
+      <LogicalName>Guide.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
-<ItemGroup><EmbeddedResource Include="../guia-stardew/dist/visual.js" LogicalName="Guide.visual.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/knowledge.js" LogicalName="Guide.knowledge.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/polish.js" LogicalName="Guide.polish.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/acquisition.js" LogicalName="Guide.acquisition.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/profile.js" LogicalName="Guide.profile.js" /></ItemGroup><ItemGroup><EmbeddedResource Include="../guia-stardew/dist/time-format.js" LogicalName="Guide.time-format.js" /></ItemGroup></Project>
+
+  <Target Name="PrepareGuideAssets" BeforeTargets="PrepareForBuild;AssignTargetPaths">
+    <Error Condition="'$(GenerateGuideAssets)' != 'true' and '$(GenerateGuideAssets)' != 'false'"
+           Text="GenerateGuideAssets deve ser true ou false." />
+    <ItemGroup Condition="'$(GenerateGuideAssets)' == 'true'">
+      <_GuideSource Include="@(GuideFile->'$(GuideSourceDir)/%(Identity)')" />
+    </ItemGroup>
+    <Error Condition="'$(GenerateGuideAssets)' == 'true' and !Exists('%(_GuideSource.Identity)')"
+           Text="Arquivo-fonte do guia ausente: %(_GuideSource.Identity). Restaure guide-src ou configure GuideSourceDir; consulte README.md." />
+    <MakeDir Directories="$(GuideAssetsDir)" Condition="'$(GenerateGuideAssets)' == 'true'" />
+    <Copy SourceFiles="@(_GuideSource)" DestinationFiles="@(GuideFile->'$(GuideAssetsDir)/%(Identity)')"
+          SkipUnchangedFiles="true" Condition="'$(GenerateGuideAssets)' == 'true'" />
+    <ItemGroup>
+      <_GuideAsset Include="@(GuideFile->'$(GuideAssetsDir)/%(Identity)')" />
+    </ItemGroup>
+    <Error Condition="!Exists('%(_GuideAsset.Identity)')"
+           Text="Arquivo do guia ausente: %(_GuideAsset.Identity). Gere os arquivos com PrepareGuideAssets ou informe GuideAssetsDir válido; consulte README.md." />
+  </Target>
+</Project>
