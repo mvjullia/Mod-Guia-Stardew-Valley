@@ -82,7 +82,7 @@ internal sealed class EmbeddedGuide : IDisposable
                 return;
             }
             if (req.HttpMethod != "GET") { res.StatusCode=405;res.Close();return; }
-            string? resource = route switch { "/" or "/index.html" => "index.html", "/telemetry.js" => "telemetry.js", "/realtime.js" => "realtime.js", "/embedded.js" => "embedded.js", "/visual.js" => "visual.js", "/polish.js" => "polish.js", "/acquisition.js" => "acquisition.js", "/profile.js" => "profile.js", "/time-format.js" => "time-format.js", "/knowledge.js" => "knowledge.js", "/Pixellari.ttf" => "Pixellari.ttf", "/community-center.png" => "community-center.png", _ => null };
+            string? resource = route switch { "/" or "/index.html" => "index.html", "/telemetry.js" => "telemetry.js", "/realtime.js" => "realtime.js", "/embedded.js" => "embedded.js", "/visual.js" => "visual.js", "/polish.js" => "polish.js", "/acquisition.js" => "acquisition.js", "/profile.js" => "profile.js", "/time-format.js" => "time-format.js", "/knowledge.js" => "knowledge.js", "/Pixellari.ttf" => "Pixellari.ttf", "/community-center.png" => "community-center.png", "/community-center-mask.png" => "community-center-mask.png", _ => null };
             if (resource == null) { res.StatusCode=404;res.Close();return; }
             using Stream? file=typeof(EmbeddedGuide).Assembly.GetManifestResourceStream("Guide."+resource);
             if(file == null) {res.StatusCode=500;res.Close();return;}

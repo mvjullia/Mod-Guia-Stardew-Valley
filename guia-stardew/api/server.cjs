@@ -66,7 +66,7 @@ function createServer({ token, origin = 'http://127.0.0.1:8787', sessionTtl = 12
         res.on('close',()=>{clearInterval(timer);clients.delete(res);audit('sse_desconectado',{conexoes:clients.size});});return;
       }
       if(req.method==='GET' && url.pathname==='/api/health')return json(res,200,{ok:true});
-      const files={'/':'index.html','/index.html':'index.html','/telemetry.js':'telemetry.js','/realtime.js':'realtime.js','/embedded.js':'embedded.js','/visual.js':'visual.js','/polish.js':'polish.js','/acquisition.js':'acquisition.js','/profile.js':'profile.js','/time-format.js':'time-format.js','/knowledge.js':'knowledge.js','/Pixellari.ttf':'Pixellari.ttf','/community-center.png':'community-center.png'};
+      const files={'/':'index.html','/index.html':'index.html','/telemetry.js':'telemetry.js','/realtime.js':'realtime.js','/embedded.js':'embedded.js','/visual.js':'visual.js','/polish.js':'polish.js','/acquisition.js':'acquisition.js','/profile.js':'profile.js','/time-format.js':'time-format.js','/knowledge.js':'knowledge.js','/Pixellari.ttf':'Pixellari.ttf','/community-center.png':'community-center.png','/community-center-mask.png':'community-center-mask.png'};
       if(req.method==='GET' && files[url.pathname]) {
         res.writeHead(200,{'Content-Type':url.pathname.endsWith('.js')?'text/javascript; charset=utf-8':url.pathname.endsWith('.ttf')?'font/ttf':url.pathname.endsWith('.png')?'image/png':'text/html; charset=utf-8','Cache-Control':'no-store'});
         return res.end(fs.readFileSync(path.join(__dirname,'../dist',files[url.pathname])));

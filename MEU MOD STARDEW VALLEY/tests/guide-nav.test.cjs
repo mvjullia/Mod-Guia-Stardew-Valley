@@ -21,7 +21,7 @@ update();
 assert.equal(buttons[0].icon.children[0].src, 'data:image/png;base64,HEAD');
 assert.equal(buttons[0].icon.children[0].className, 'farmer-head');
 assert.equal(buttons[1].icon.children[0].src, '/community-center.png');
-assert.equal(buttons[1].icon.children[0].className, 'menu-game-icon');
+assert.equal(buttons[1].icon.children[0].className, 'menu-game-icon community-center-icon');
 assert.equal(buttons[2].icon.children[0].src, 'data:image/png;base64,HEART');
 window.guiaData.headPortrait = 'data:image/png;base64,NEW';
 update();

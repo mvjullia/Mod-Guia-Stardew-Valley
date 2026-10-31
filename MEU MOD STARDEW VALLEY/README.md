@@ -4,7 +4,7 @@ Mod SMAPI que hospeda o Guia Especial Stardew Valley localmente e atualiza os da
 
 ## Código e build do guia
 
-`guide-src/` contém o código-fonte versionável do site entregue com o mod. Não há dependências npm nem etapa de minificação: gerar o `dist` consiste em copiar, sem alterar os bytes, os doze arquivos declarados em `StardewRealtimeTelemetry.csproj`. Edite os arquivos em `guide-src/`; `obj/guide-dist/` é uma saída gerada e não deve ser editado. O código do servidor opcional em `../guia-stardew/api/` não é necessário para o guia incorporado.
+`guide-src/` contém o código-fonte versionável do site entregue com o mod. Não há dependências npm nem etapa de minificação: gerar o `dist` consiste em copiar, sem alterar os bytes, os treze arquivos declarados em `StardewRealtimeTelemetry.csproj`. Edite os arquivos em `guide-src/`; `obj/guide-dist/` é uma saída gerada e não deve ser editado. O código do servidor opcional em `../guia-stardew/api/` não é necessário para o guia incorporado.
 
 Para compilar, são necessários .NET SDK 6, Stardew Valley e SMAPI instalados, além de restaurar o pacote NuGet do projeto. Na pasta do mod:
 
@@ -31,7 +31,7 @@ Os caminhos relativos passados por propriedades são relativos à pasta do proje
 dotnet build --no-restore -p:EnableModDeploy=false "-p:GuideAssetsDir=C:/caminho/para/dist" -p:GenerateGuideAssets=false
 ```
 
-Com geração ativa, um arquivo ausente em `GuideSourceDir` interrompe a build com o caminho faltante. Com geração desativada, a build verifica cada arquivo em `GuideAssetsDir` e falha com mensagem equivalente. Os recursos continuam incorporados como `Guide.index.html`, `Guide.telemetry.js`, `Guide.realtime.js`, `Guide.embedded.js`, `Guide.visual.js`, `Guide.knowledge.js`, `Guide.polish.js`, `Guide.acquisition.js`, `Guide.profile.js` `Guide.time-format.js`, `Guide.Pixellari.ttf` e `Guide.community-center.png`, nomes usados pelo servidor do mod. O mesmo processo deve ser executado na CI antes da compilação: a própria chamada de `dotnet build` executa o alvo de preparação.
+Com geração ativa, um arquivo ausente em `GuideSourceDir` interrompe a build com o caminho faltante. Com geração desativada, a build verifica cada arquivo em `GuideAssetsDir` e falha com mensagem equivalente. Os recursos continuam incorporados como `Guide.index.html`, `Guide.telemetry.js`, `Guide.realtime.js`, `Guide.embedded.js`, `Guide.visual.js`, `Guide.knowledge.js`, `Guide.polish.js`, `Guide.acquisition.js`, `Guide.profile.js` `Guide.time-format.js`, `Guide.Pixellari.ttf`, `Guide.community-center.png` e `Guide.community-center-mask.png`, nomes usados pelo servidor do mod. O mesmo processo deve ser executado na CI antes da compilação: a própria chamada de `dotnet build` executa o alvo de preparação.
 
 Para testar a geração em um caminho alternativo, a igualdade dos arquivos e os erros de arquivos ausentes, execute `./tests/guide-build.test.ps1` no PowerShell, a partir da pasta do mod. O teste de integração do servidor incorporado pode ser executado com `dotnet run --project tests/embedded/Test.csproj`.
 
