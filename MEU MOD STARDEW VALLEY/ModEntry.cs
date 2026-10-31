@@ -72,6 +72,7 @@ namespace StardewRealtimeTelemetry
                     saveId = Game1.uniqueIDForThisGame.ToString(CultureInfo.InvariantCulture),
                     name = player.farmName.Value ?? "",
                     year = Game1.year,
+                    totalEarnings = player.team.totalMoneyEarned.Value,
                     season = Game1.currentSeason,
                     day = Game1.dayOfMonth,
                     time = Game1.timeOfDay,
@@ -82,6 +83,7 @@ namespace StardewRealtimeTelemetry
                     multiplayerId = player.UniqueMultiplayerID.ToString(CultureInfo.InvariantCulture),
                     steamId = this.GetSteamId(),
                     name = player.Name ?? "",
+                    money = player.Money,
                     isMale = player.IsMale,
                     skills = new
                     {
