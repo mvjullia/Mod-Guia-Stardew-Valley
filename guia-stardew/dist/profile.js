@@ -13,7 +13,7 @@
  .profile-information{display:grid;gap:18px}.profile-field{display:grid;gap:8px;min-width:0}
  .profile-info,.profile-date{display:flex;align-items:center;gap:14px;padding:14px 16px;border:3px ridge #b88b57;background:#f8f1dd}
  .profile-field-title{font-size:18px;font-weight:900;line-height:1.2;color:#553822}.profile-field-value{font-size:15px;line-height:1.4;color:#624634;overflow-wrap:anywhere}
- .farm-name{font:900 clamp(13px,1.5vw,20px)/1.7 'Press Start 2P',monospace;color:#6b421e;text-shadow:1px 2px 0 #edc27a;margin:0 0 4px;overflow-wrap:anywhere}.profile-money{justify-content:flex-start}.profile-money img{width:32px;height:32px;object-fit:contain;image-rendering:pixelated}.profile-money .profile-field-value{font-size:18px;font-weight:900}
+ .farm-name{font:900 clamp(13px,1.5vw,20px)/1.7 'Press Start 2P',monospace;color:#6b421e;text-shadow:1px 2px 0 #edc27a;margin:0 0 4px;overflow-wrap:anywhere;text-align:right}.profile-money{justify-content:flex-start}.profile-money img{width:32px;height:32px;object-fit:contain;image-rendering:pixelated}.profile-money .profile-field-value{font-size:18px;font-weight:900}
  .profile-date img{width:42px;height:42px;image-rendering:pixelated;padding:0;border:0;background:transparent;object-fit:contain;box-sizing:content-box}
  .skills-title{font-size:19px;margin:4px 0 -6px;color:#553822}.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:12px}
  .skill-card{display:flex;gap:14px;align-items:center;padding:13px;background:#f8f1dd;border:3px ridge #b88043;min-width:0}
@@ -26,7 +26,7 @@
  body{background:#efb575}
  :is(.bundle-room,.bundle-panel,.npc-card,.resident-frame,.resident-name,.gift,.sprite-frame,.item,.panel,.card,.notice,.dialog,.profile-info,.profile-date,.skill-card,.farmer-profile,.toolbar input,.toolbar button,.smallbtn){border-style:solid;border-width:3px;border-color:#a76227;border-radius:2px;box-shadow:inset 0 0 0 2px #f9d38e,0 2px 0 #754019}
  .bundle-room,.bundle-panel,.farmer-profile,#saveinfo.farmer-profile,.dialog.item-modal{border-width:5px;box-shadow:inset 0 0 0 2px #ffdc99,0 0 0 2px #78431f,0 4px 0 #633717}
- .item.done{border-color:#4e793f}.gift .sprite-frame{width:64px;height:64px;padding:5px}.gift .sprite-frame .game-icon{width:48px;height:48px}.gift{color:#65412c;font-weight:900}
+ .item.done{border-color:#4e793f}.gift-list .gift{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:10px;padding:14px;box-sizing:border-box;text-align:center;color:#65412c;font-weight:900}.gift .sprite-frame{width:64px;height:64px;padding:5px}.gift .sprite-frame .game-icon{width:48px;height:48px}.gift>span:not(.sprite-frame){width:100%;text-align:center;overflow-wrap:anywhere}
  .profile-art .farmer-avatar,.profile-art .pet-avatar{box-shadow:inset 0 0 0 2px #ffe3ab,0 2px 0 #70401e}
  .nav button:focus-visible,.gift:focus-visible,.item button:focus-visible{outline:3px solid #244d89;outline-offset:4px}
  `;document.head.append(theme);
