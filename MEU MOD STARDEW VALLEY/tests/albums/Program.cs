@@ -2,6 +2,11 @@ using StardewRealtimeTelemetry;
 using System.Text.Json;
 
 static void Check(bool condition, string message) { if (!condition) throw new Exception(message); }
+var bottomUp = new[] { "bottom-left", "bottom-right", "middle-left", "middle-right", "top-left", "top-right" };
+Check(bottomUp[AlbumCapturePixels.SourceIndex(0, 0, 2, 3, 2, 3)] == "top-left" &&
+      bottomUp[AlbumCapturePixels.SourceIndex(1, 2, 2, 3, 2, 3)] == "bottom-right", "A captura deve converter linhas de baixo para cima sem espelhar horizontalmente.");
+Check(bottomUp[AlbumCapturePixels.SourceIndex(0, 0, 2, 3, 1, 2)] == "top-left" &&
+      bottomUp[AlbumCapturePixels.SourceIndex(0, 1, 2, 3, 1, 2)] == "middle-left", "A foto deve manter o topo ao ser reduzida.");
 var need = new AlbumRequirement("1:0", "(O)24", "Chirívia", 1, 0, "Pantry", false, false);
 List<AlbumInventoryItem> Pack(int amount, int quality = 0) => new() { new("(O)24", "Chirívia", amount, quality) };
 var safe = new AlbumFrameState(true, true, true, true, false, false, false, false);
