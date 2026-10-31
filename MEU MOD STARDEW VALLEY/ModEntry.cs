@@ -56,6 +56,12 @@ namespace StardewRealtimeTelemetry
 
             // Todas as leituras de Game1 acontecem na thread principal.
             var player = Game1.player;
+            bool hasRoommate = player.hasRoommate();
+            bool married = player.isMarriedOrRoommates() && !hasRoommate;
+            long? spouseId = married ? player.team.GetSpouse(player.UniqueMultiplayerID) : null;
+            string? partnerName = spouseId.HasValue
+                ? Game1.GetPlayer(spouseId.Value, onlyOnline: false)?.Name
+                : (married || hasRoommate ? player.getSpouse()?.displayName ?? player.spouse : null);
             object? visuals=null;
             try { visuals=VisualSnapshot.Capture(); } catch(Exception ex) { this.Monitor.Log("Falha ao coletar imagens/progresso: "+ex.Message, LogLevel.Warn); }
             try { this.portrait=VisualSnapshot.Portrait(); this.headPortrait=VisualSnapshot.HeadPortrait(); } catch(Exception ex) { this.Monitor.Log("Falha ao capturar personagem: "+ex.Message, LogLevel.Warn); }
@@ -85,6 +91,7 @@ namespace StardewRealtimeTelemetry
                     name = player.Name ?? "",
                     money = player.Money,
                     isMale = player.IsMale,
+                    relationship = new { status = hasRoommate ? "roommate" : married ? "married" : "single", partnerName },
                     skills = new
                     {
                         farming = player.FarmingLevel,
