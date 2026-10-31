@@ -9,6 +9,13 @@ namespace StardewRealtimeTelemetry;
 
 internal sealed record AlbumPixels(int Width, int Height, byte[] Rgba);
 
+internal static class AlbumCapturePixels
+{
+    // The game back buffer is read bottom-up; PNG and Texture2D rows are top-down.
+    public static int SourceIndex(int x, int y, int width, int height, int photoWidth, int photoHeight) =>
+        (height - 1 - y * height / photoHeight) * width + x * width / photoWidth;
+}
+
 /// <summary>Small bounded PNG codec for our own screenshots. No screenshot/image libraries are used.</summary>
 internal static class AlbumPng
 {

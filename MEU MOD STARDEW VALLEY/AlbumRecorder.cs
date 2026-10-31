@@ -199,7 +199,7 @@ internal sealed class AlbumRecorder
             int photoWidth = Math.Min(1280, width), photoHeight = Math.Max(1, height * photoWidth / width);
             var scaled = new Color[photoWidth * photoHeight];
             for (int y = 0; y < photoHeight; y++) for (int x = 0; x < photoWidth; x++) {
-                var pixel = pixels[(y * height / photoHeight) * width + x * width / photoWidth];
+                var pixel = pixels[AlbumCapturePixels.SourceIndex(x, y, width, height, photoWidth, photoHeight)];
                 scaled[y * photoWidth + x] = new Color(pixel.R, pixel.G, pixel.B, (byte)255);
             }
             using var image = new Texture2D(graphics, photoWidth, photoHeight); image.SetData(scaled);
