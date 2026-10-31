@@ -5,10 +5,33 @@
     const add = (parent, tag, text, cls) => { const el = document.createElement(tag); el.textContent = text; if (cls) el.className = cls; parent.append(el); return el; };
     function bundleRoomName(name) { return typeof name === 'string' ? name.trim().replace(/([a-z])([A-Z])/g, '$1 $2') : ''; }
     function bundles(target, data) { target.replaceChildren(); const rooms = { CraftsRoom: 'Sala de Artesanato', Pantry: 'Copa', FishTank: 'Aquário', BoilerRoom: 'Sala da Caldeira', BulletinBoard: 'Mural de Recados', Vault: 'Cofre', AbandonedJojaMart: 'Mercado Joja abandonado' }; const names = { 'Spring Foraging': 'Conjunto Recursos de Primavera', 'Summer Foraging': 'Conjunto Recursos de Verão', 'Fall Foraging': 'Conjunto Recursos de Outono', 'Winter Foraging': 'Conjunto Recursos de Inverno', 'Construction': 'Conjunto Construção', 'Exotic Foraging': 'Conjunto Recursos Exóticos', 'Spring Crops': 'Conjunto Plantações de Primavera', 'Summer Crops': 'Conjunto Plantações de Verão', 'Fall Crops': 'Conjunto Plantações de Outono', 'Quality Crops': 'Conjunto Plantações de Qualidade', 'Animal': 'Conjunto Animal', 'Artisan': 'Conjunto Artesão', 'River Fish': 'Conjunto Peixes de Rio', 'Lake Fish': 'Conjunto Peixes de Lago', 'Ocean Fish': 'Conjunto Peixes de Oceano', 'Night Fishing': 'Conjunto Pesca Noturna', 'Crab Pot': 'Conjunto Covo', 'Specialty Fish': 'Conjunto Peixes Especializados', "Blacksmith's": 'Conjunto de Ferreiro', "Geologist's": 'Conjunto de Geólogo', "Adventurer's": 'Conjunto de Aventureiro', "Chef's": 'Conjunto de Cozinheiro', 'Dye': 'Conjunto Tinta', 'Field Research': 'Conjunto Pesquisa de campo', 'Fodder': 'Conjunto Forragem', 'The Missing': 'Conjunto A Desaparecida', "Enchanter's": 'Conjunto de Encantador' }; const grouped = new Map(); for (const bundle of data.visuals.bundles) { const room = String(bundle.room || (bundle.items.some(e => e.isMoney) ? 'Vault' : 'Other')).replace(/\s+/g, '').toLowerCase(); if (!grouped.has(room)) grouped.set(room, []); grouped.get(room).push(bundle); } for (const [room, entries] of grouped) { const section = add(target, 'section', '', 'bundle-room'); add(section, 'h2', Object.entries(rooms).find(([key]) => key.toLowerCase() === room)?.[1] || (bundleRoomName(entries[0].room) || 'Sala desconhecida')); const panels = add(section, 'div', '', 'bundle-panels'); for (const bundle of entries) { const money = bundle.items.find(entry => entry.isMoney); const raw = (bundle.internalName || '').replace(/ Bundle$/, ''); const official = money ? 'Conjunto ' + new Intl.NumberFormat('pt-BR').format(money.quantity) + ' ouros' : names[raw] || (/^Conjunto/i.test(bundle.name || '') ? bundle.name : 'Conjunto ' + (bundle.name || raw || 'sem nome')); const theme = /spring/i.test(raw) ? 'spring' : /summer/i.test(raw) ? 'summer' : /fall|autumn/i.test(raw) ? 'fall' : /winter/i.test(raw) ? 'winter' : room === 'fishtank' ? 'fish' : room === 'boilerroom' ? 'mining' : room === 'vault' ? 'vault' : ''; const panel = add(panels, 'article', '', 'bundle-panel ' + theme); add(panel, 'h3', official); const list = add(panel, 'div', '', 'items'); for (const entry of bundle.items) { const row = add(list, 'div', '', 'item' + (entry.completed ? ' done' : '')); if (!entry.isMoney) window.GuiaSeason?.markItem(row, entry.item); if (entry.isMoney) { const coin = document.createElement('img'); coin.className = 'game-icon bundle-coin'; coin.src = 'https://stardewvalleywiki.com/Special:Redirect/file/Gold.png'; coin.alt = ''; row.append(coin); const label = add(row, 'span', new Intl.NumberFormat('pt-BR').format(entry.quantity) + ' ouros', 'item-amount'); label.style.fontWeight = '900'; add(row, 'span', entry.completed ? '✓ Entregue' : 'Pendente', entry.completed ? 'item-status completion' : 'item-status'); row.setAttribute('aria-label', label.textContent + (entry.completed ? ' — concluído' : ' — pendente')); continue; } const frame = add(row, 'span', '', 'sprite-frame'); frame.append(picture(entry.item.icon, entry.item.name)); if (entry.quality) { const tier = { 1: 'silver', 2: 'gold', 4: 'iridium' }[entry.quality]; if (tier && data.visuals.ui) { const star = picture(data.visuals.ui[tier], 'Qualidade ' + ({ 1: 'prata', 2: 'ouro', 4: 'irídio' }[entry.quality]), 'quality-star'); frame.append(star); } } const button = add(row, 'button', entry.item.name + ' × ' + entry.quantity + (entry.quality ? ' · qualidade ' + entry.quality : '')); button.onclick = () => window.openItemPage({ ...entry.item, quality: entry.quality }); add(row, 'span', entry.completed ? '✓ Entregue' : 'Pendente', entry.completed ? 'item-status completion' : 'item-status'); } } } }
+    // Default residences: https://stardewvalleywiki.com/Villagers and each resident's page.
+    // Leo's move: https://stardewvalleywiki.com/Treehouse
+    const residentHomes = {
+        Abigail:'Na loja do Pierre, no centro da vila.', Alex:'Na casa de George e Evelyn, ao lado da loja do Pierre.',
+        Caroline:'Na loja do Pierre, no centro da vila.', Clint:'Na Ferraria, a leste da vila.',
+        Demetrius:'Na Carpintaria da Robin, na montanha.', Dwarf:'Na caverna à direita da entrada das Minas.',
+        Elliott:'Na cabana da praia.', Emily:'Na casa ao sul da praça, ao lado da casa da Jodi.',
+        Evelyn:'Na casa de George, ao lado da loja do Pierre.', George:'Na casa ao lado da loja do Pierre.',
+        Gus:'No Saloon Fruta Estrelar, no centro da vila.', Haley:'Na casa ao sul da praça, ao lado da casa da Jodi.',
+        Harvey:'No apartamento acima da Clínica, na vila.', Jas:'No Rancho da Marnie, na floresta ao sul da fazenda.',
+        Jodi:'Na casa ao sul da praça, ao lado da casa de Haley e Emily.', Kent:'Na casa da Jodi, ao sul da praça; retorna no ano 2.',
+        Krobus:'Nos Esgotos, acessíveis pela vila ou floresta.', Leo:'Na cabana da Ilha Gengibre; depois pode mudar para a casa na árvore, na montanha.',
+        Leah:'Na cabana ao sul do Rancho da Marnie, na floresta.', Lewis:'Na Mansão do Prefeito, ao sul da vila.',
+        Linus:'Na barraca junto às Minas, na montanha.', Marnie:'No Rancho da Marnie, na floresta ao sul da fazenda.',
+        Maru:'Na Carpintaria da Robin, na montanha.', Pam:'No trailer, a leste da vila; pode ser substituído por uma casa.',
+        Penny:'No trailer com a Pam, a leste da vila; pode ser substituído por uma casa.',
+        Pierre:'Na loja do Pierre, no centro da vila.', Robin:'Na Carpintaria, na montanha ao norte da vila.',
+        Sam:'Na casa da Jodi, ao sul da praça.', Sandy:'No Oásis, no Deserto de Calico.',
+        Sebastian:'No porão da Carpintaria da Robin, na montanha.', Shane:'No Rancho da Marnie, na floresta ao sul da fazenda.',
+        Vincent:'Na casa da Jodi, ao sul da praça.', Willy:'Na Peixaria, na praia ao sul da vila.',
+        Wizard:'Na Torre do Feiticeiro, a oeste da floresta.'
+    };
+    const residentAliases = { 'Anão':'Dwarf', 'Feiticeiro':'Wizard', 'Mago':'Wizard' };
     const residentColors = new Map();
-    function colorResidentCard(card, portrait) {
+    function colorResidentBorder(card, portrait) {
         if (typeof portrait !== 'string' || !portrait.startsWith('data:image/png;base64,')) return;
-        if (residentColors.has(portrait)) { const color = residentColors.get(portrait); if (color) card.style.setProperty('--npc-card-bg', color); return; }
+        if (residentColors.has(portrait)) { const hue = residentColors.get(portrait); if (hue !== null) card.style.setProperty('--npc-card-hue', hue); return; }
         const image = new Image();
         image.onload = () => {
             try {
@@ -27,9 +50,9 @@
                 }
                 let best = null, score = 0;
                 for (const [hue, value] of hues) if (value > score) { best = hue; score = value; }
-                const color = best === null ? null : `hsl(${best * 15} 55% 88%)`;
-                residentColors.set(portrait, color);
-                if (color && card.isConnected) card.style.setProperty('--npc-card-bg', color);
+                const hue = best === null ? null : String(best * 15);
+                residentColors.set(portrait, hue);
+                if (hue !== null && card.isConnected) card.style.setProperty('--npc-card-hue', hue);
             } catch (error) { console.warn('[Guia] Não foi possível obter a cor do morador:', error.name); }
         };
         image.src = portrait;
@@ -39,7 +62,7 @@
         target.replaceChildren();
         for (const npc of data.visuals.npcs) {
             const card = add(target, 'article', '', 'card npc-card');
-            colorResidentCard(card, npc.portrait);
+            colorResidentBorder(card, npc.portrait);
             const summary = add(card, 'div', '', 'resident-summary');
             const frame = add(summary, 'div', '', 'resident-frame');
             frame.append(picture(npc.portrait, npc.name, 'portrait'));
@@ -50,6 +73,8 @@
                 hearts.append(picture(data.visuals.ui?.heart, '', 'heart' + (i < npc.hearts ? '' : ' empty')));
             }
             add(summary, 'h2', npc.name, 'resident-name');
+            const home = npc.movesToFarm ? 'Na casa da fazenda de seu parceiro.' : residentHomes[npc.id || residentAliases[npc.name] || npc.name];
+            if (home) add(summary, 'p', home, 'resident-home');
             const list = add(card, 'div', '', 'gift-list');
             for (const gift of npc.gifts) {
                 const chip = add(list, 'button', '', 'gift');
@@ -63,7 +88,7 @@
         }
     }
     function update() {
-        const d = window.guiaData; if (!d) return; let clock = document.querySelector('.game-clock'); if (!clock) { clock = add(document.querySelector('.top'), 'div', '', 'game-clock'); clock.setAttribute('role', 'status'); } const t = d.farm.time; clock.textContent = (d.farm.isNight ? '☾ Noite' : '☀ Dia') + ' · ' + (t === undefined ? '' : String(Math.floor(t / 100)).padStart(2, '0') + ':' + String(t % 100).padStart(2, '0') + ' · ') + d.farm.day + ' de ' + seasons[d.farm.season] + ' · Ano ' + d.farm.year;
+        const d = window.guiaData; if (!d) return; let clock = document.querySelector('.game-clock'); if (!clock) { clock = add(document.querySelector('.top'), 'div', '', 'game-clock'); clock.setAttribute('role', 'status'); } const t = d.farm.time; clock.textContent = (t === undefined ? '' : String(Math.floor(t / 100)).padStart(2, '0') + ':' + String(t % 100).padStart(2, '0') + ' · ') + d.farm.day + ' de ' + seasons[d.farm.season] + ' · Ano ' + d.farm.year;
         const out = document.querySelector('#saveinfo'); if (out && d.portrait) { let portrait = out.querySelector('.farmer-avatar'); if (!portrait) { portrait = picture(d.portrait, d.player.name, 'farmer-avatar'); out.prepend(portrait); } }
         if (current === 'center' && d.visuals) { const list = document.querySelector('#list'); if (list) bundles(list, d); document.querySelector('.toolbar')?.remove(); document.querySelector('.progress')?.remove(); document.querySelectorAll('.badge').forEach(x => x.remove()); }
         if (current === 'gifts' && d.visuals) { const target = document.querySelector('#content .grid'); if (target) gifts(target, d); }
