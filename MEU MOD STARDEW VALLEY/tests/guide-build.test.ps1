@@ -9,7 +9,7 @@ $sourceDir = Join-Path $projectDir 'guide-src'
 try {
     & dotnet msbuild $project -target:PrepareGuideAssets "-p:GuideAssetsDir=$testDir"
     if ($LASTEXITCODE -ne 0) { throw 'Não foi possível gerar o guia no caminho alternativo.' }
-    $files = @('index.html','telemetry.js','realtime.js','embedded.js','visual.js','knowledge.js','polish.js','acquisition.js','profile.js','time-format.js')
+    $files = @('index.html','telemetry.js','realtime.js','embedded.js','visual.js','knowledge.js','polish.js','acquisition.js','profile.js','time-format.js','Pixellari.ttf')
     foreach ($file in $files) {
         $source = (Get-FileHash -LiteralPath (Join-Path $sourceDir $file)).Hash
         $generated = (Get-FileHash -LiteralPath (Join-Path $testDir $file)).Hash

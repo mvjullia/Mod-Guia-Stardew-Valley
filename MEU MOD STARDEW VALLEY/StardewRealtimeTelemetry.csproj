@@ -20,7 +20,7 @@
 
   <!-- This is the manifest of files and exact embedded resource names used by EmbeddedGuide. -->
   <ItemGroup>
-    <GuideFile Include="index.html;telemetry.js;realtime.js;embedded.js;visual.js;knowledge.js;polish.js;acquisition.js;profile.js;time-format.js" />
+    <GuideFile Include="index.html;telemetry.js;realtime.js;embedded.js;visual.js;knowledge.js;polish.js;acquisition.js;profile.js;time-format.js;Pixellari.ttf" />
     <EmbeddedResource Include="@(GuideFile->'$(GuideAssetsDir)/%(Identity)')">
       <LogicalName>Guide.%(Filename)%(Extension)</LogicalName>
     </EmbeddedResource>
