@@ -1,0 +1,1606 @@
+{
+  "data": "2026-10-30",
+  "concluida": false,
+  "escopo": "Snapshot parcial de um save; não abrange o catálogo completo do jogo.",
+  "fontesGerais": [
+    "https://www.stardewvalley.net/links/",
+    "https://stardewvalleywiki.com/Stardew_Valley_Wiki:About",
+    "https://stardewvalleywiki.com/Modding:Items"
+  ],
+  "totais": {
+    "itens": 225,
+    "revisados": 7
+  },
+  "itens": [
+    {
+      "id": "Book_Crabbing",
+      "nome": "A Arte dos Covos",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "276",
+      "nome": "Abóbora",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "373",
+      "nome": "Abóbora Dourada",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "136",
+      "nome": "Achigã",
+      "estado": "verificado_parcialmente",
+      "fontes": [
+        "https://stardewvalleywiki.com/Largemouth_Bass"
+      ],
+      "motivo": "Ficha local menciona a pesca principal, mas omite alternativas e compra. Demais meios, versão instalada e inexistências ainda precisam de confirmação."
+    },
+    {
+      "id": "214",
+      "nome": "Achigã Crocante",
+      "estado": "verificado_parcialmente",
+      "fontes": [
+        "https://stardewvalleywiki.com/Crispy_Bass"
+      ],
+      "motivo": "Ingredientes do snapshot coincidem; falta informar a origem da receita. Demais meios, versão instalada e inexistências ainda precisam de confirmação."
+    },
+    {
+      "id": "62",
+      "nome": "Água-marinha",
+      "estado": "verificado_parcialmente",
+      "fontes": [
+        "https://stardewvalleywiki.com/Aquamarine"
+      ],
+      "motivo": "Snapshot associa fabricação com argila, pedra e quartzo refinado; essa receita não é fonte de obtenção da água-marinha na ficha consultada. Investigar colisão de IDs. Demais meios, versão instalada e inexistências ainda precisam de confirmação."
+    },
+    {
+      "id": "726",
+      "nome": "Alcatrão de Pinho",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "20",
+      "nome": "Alho-poró",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "879",
+      "nome": "Almíscar de Monstro",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "240",
+      "nome": "Almoço de Fazendeiro",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "706",
+      "nome": "Alocine",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "406",
+      "nome": "Ameixa Selvagem",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "66",
+      "nome": "Ametista",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "410",
+      "nome": "Amora",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "164",
+      "nome": "Areinha",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "905",
+      "nome": "Arroz Doce de Manga",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "767",
+      "nome": "Asa de Morcego",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "130",
+      "nome": "Atum",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "408",
+      "nome": "Avelã",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "607",
+      "nome": "Avelãs Torradas",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "143",
+      "nome": "Bagre",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "128",
+      "nome": "Baiacu",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "334",
+      "nome": "Barra de Cobre",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "335",
+      "nome": "Barra de Ferro",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "337",
+      "nome": "Barra de Irídio",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "336",
+      "nome": "Barra de Ouro",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "910",
+      "nome": "Barra Radioativa",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "192",
+      "nome": "Batata",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "718",
+      "nome": "Berbigão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "272",
+      "nome": "Berinjela",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "231",
+      "nome": "Berinjela à Parmegiana",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "284",
+      "nome": "Beterraba",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "651",
+      "nome": "Bolinho de Papoula",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "732",
+      "nome": "Bolinhos de Caranguejo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "220",
+      "nome": "Bolo de Chocolate",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "221",
+      "nome": "Bolo Rosa",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "132",
+      "nome": "Brema",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "259",
+      "nome": "Broto de Samambaia",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "395",
+      "nome": "Café",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "201",
+      "nome": "Café da Manhã Completo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "396",
+      "nome": "Café de Jardim",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "FairyBox",
+      "nome": "Caixa de Fada",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "720",
+      "nome": "Camarão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "722",
+      "nome": "Caramujo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "717",
+      "nome": "Caranguejo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "142",
+      "nome": "Carpa",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "Book_PriceCatalogue",
+      "nome": "Catálogo de Preço",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "445",
+      "nome": "Caviar",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "78",
+      "nome": "Cenoura Subterrânea",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "638",
+      "nome": "Cereja",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "346",
+      "nome": "Cerveja",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "614",
+      "nome": "Chá Verde",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "24",
+      "nome": "Chirívia",
+      "estado": "inconsistente",
+      "fontes": [
+        "https://stardewvalleywiki.com/Parsnip",
+        "https://stardewvalleywiki.com/Mayonnaise_Machine"
+      ],
+      "motivo": "Receita da máquina de maionese atribuída à chirívia; a chirívia cresce em quatro dias."
+    },
+    {
+      "id": "150",
+      "nome": "Cioba",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "88",
+      "nome": "Coco",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "404",
+      "nome": "Cogumelo Comum",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "205",
+      "nome": "Cogumelo Frito",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "422",
+      "nome": "Cogumelo Roxo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "420",
+      "nome": "Cogumelo Vermelho",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "Book_Void",
+      "nome": "Compêndio de Monstros",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "372",
+      "nome": "Concha",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "392",
+      "nome": "Concha de Náutilo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "787",
+      "nome": "Conjunto de Pilhas",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "190",
+      "nome": "Couve-flor",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "197",
+      "nome": "Couve-flor com Queijo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "86",
+      "nome": "Cristal de Terra",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "907",
+      "nome": "Curry Tropical",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "634",
+      "nome": "Damasco",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "22",
+      "nome": "Dente-de-leão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "72",
+      "nome": "Diamante",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "122",
+      "nome": "Dispositivo de Anão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "612",
+      "nome": "Doce de Oxicoco",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "279",
+      "nome": "Doce-Pedra Mágico",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "148",
+      "nome": "Enguia",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "162",
+      "nome": "Enguia de Lava",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "225",
+      "nome": "Enguia Frita",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "226",
+      "nome": "Enguia Picante",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "215",
+      "nome": "Enroladinhos de Pimenta",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "402",
+      "nome": "Ervilha-de-cheiro",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "729",
+      "nome": "Escargô",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "60",
+      "nome": "Esmeralda",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "224",
+      "nome": "Espaguete",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "702",
+      "nome": "Esquálio",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "769",
+      "nome": "Essência Nula",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "768",
+      "nome": "Essência Solar",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "698",
+      "nome": "Esturjão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "178",
+      "nome": "Feno",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "418",
+      "nome": "Flor de Açafrão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "593",
+      "nome": "Flor-Miçanga",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "74",
+      "nome": "Fragmento Prismático",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "454",
+      "nome": "Fruta Antiga",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "414",
+      "nome": "Fruta de Cristal",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "90",
+      "nome": "Fruto do Cacto",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "344",
+      "nome": "Geléia",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "536",
+      "nome": "Geodo Congelado",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "903",
+      "nome": "Ginger Ale",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "421",
+      "nome": "Girassol",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "766",
+      "nome": "Gosma",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "241",
+      "nome": "Hambúrguer de Sobrevivência",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "459",
+      "nome": "Hidromel",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "228",
+      "nome": "Hossomaki",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "280",
+      "nome": "Inhame",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "416",
+      "nome": "Inhame da Neve",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "208",
+      "nome": "Inhames com Cobertura",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "Book_Defense",
+      "nome": "Jack seja ágil, Jack seja parrudo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "70",
+      "nome": "Jade",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "212",
+      "nome": "Jantar de Salmão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "Book_Roe",
+      "nome": "Joias do Mar",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "440",
+      "nome": "Lã",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "715",
+      "nome": "Lagosta",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "716",
+      "nome": "Lagostim",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "84",
+      "nome": "Lágrima Congelada",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "635",
+      "nome": "Laranja",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "186",
+      "nome": "Leite Grande",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "438",
+      "nome": "Leite Grande de Cabra",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "721",
+      "nome": "Lesma",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "Book_Mystery",
+      "nome": "Livro de Mistérios",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "202",
+      "nome": "Lula Frita",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "613",
+      "nome": "Maçã",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "388",
+      "nome": "Madeira",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "709",
+      "nome": "Madeira de Lei",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "734",
+      "nome": "Madeirão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "807",
+      "nome": "Maionese de Dinossauro",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "308",
+      "nome": "Maionese Nula",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "834",
+      "nome": "Manga",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "340",
+      "nome": "Mel",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "254",
+      "nome": "Melão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "200",
+      "nome": "Mexido de Legumes",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "719",
+      "nome": "Mexilhão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "270",
+      "nome": "Milho",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "258",
+      "nome": "Mirtilo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "605",
+      "nome": "Molho de Alcachofra",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "400",
+      "nome": "Morango",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "257",
+      "nome": "Morel",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "18",
+      "nome": "Narciso",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "Book_Trash",
+      "nome": "O Bufê do Beco",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "Book_Woodcutting",
+      "nome": "O Segredo da Floresta",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "575",
+      "nome": "Obsidiana",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "432",
+      "nome": "Óleo de Trufas",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "562",
+      "nome": "Olho de Tigre",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "749",
+      "nome": "Omnigeodo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "723",
+      "nome": "Ostra",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "397",
+      "nome": "Ouriço-do-mar",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "289",
+      "nome": "Ovo de Avestruz",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "ParrotEgg",
+      "nome": "Ovo de Papagaio",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "442",
+      "nome": "Ovo de Pata",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "FrogEgg",
+      "nome": "Ovo de Sapo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "194",
+      "nome": "Ovo Frito",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "182",
+      "nome": "Ovo Grande",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "174",
+      "nome": "Ovo Grande",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "305",
+      "nome": "Ovo Nulo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "303",
+      "nome": "Pale Ale",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "211",
+      "nome": "Panquecas",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "731",
+      "nome": "Pão de Ácer",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "376",
+      "nome": "Papoula",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "Raisins",
+      "nome": "Passas",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "446",
+      "nome": "Pé de Coelho",
+      "estado": "incompleto",
+      "fontes": [
+        "https://stardewvalleywiki.com/Rabbit%27s_Foot"
+      ],
+      "motivo": "Resumo omite possível presente de gato com amizade máxima."
+    },
+    {
+      "id": "390",
+      "nome": "Pedra",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "554",
+      "nome": "Pedra de Limão",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "156",
+      "nome": "Peixe-fantasma",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "700",
+      "nome": "Peixe-gato-cabeçudo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "145",
+      "nome": "Peixe-sol",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "444",
+      "nome": "Pena de Pato",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "154",
+      "nome": "Pepino-do-mar",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "797",
+      "nome": "Pérola",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "636",
+      "nome": "Pêssego",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "140",
+      "nome": "Picão-verde",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "342",
+      "nome": "Picles",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "260",
+      "nome": "Pimenta Picante",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "873",
+      "nome": "Piña Colada",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "206",
+      "nome": "Pizza",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "906",
+      "nome": "Poi",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "149",
+      "nome": "Polvo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "235",
+      "nome": "Prato de Outono",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "244",
+      "nome": "Prato de Raízes",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "242",
+      "nome": "Prato do Mar",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "230",
+      "nome": "Prato Vermelho",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "604",
+      "nome": "Pudim de Ameixa",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "232",
+      "nome": "Pudim de Arroz",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "904",
+      "nome": "Pudim de Banana ",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "80",
+      "nome": "Quartzo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "82",
+      "nome": "Quartzo de Fogo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "424",
+      "nome": "Queijo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "426",
+      "nome": "Queijo de Cabra",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "412",
+      "nome": "Raiz de Inverno",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "16",
+      "nome": "Raiz-forte",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "239",
+      "nome": "Recheio",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "243",
+      "nome": "Refeição de Mineiro",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "606",
+      "nome": "Refogado",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "266",
+      "nome": "Repolho Roxo",
+      "estado": "incompleto",
+      "fontes": [
+        "https://stardewvalleywiki.com/Traveling_Cart"
+      ],
+      "motivo": "A garantia de uma oferta não é recorrente; é preciso comprar quando ela aparecer."
+    },
+    {
+      "id": "725",
+      "nome": "Resina de Carvalho",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "649",
+      "nome": "Risoto de Samambaia",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "637",
+      "nome": "Romã",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "595",
+      "nome": "Rosa-de-fada",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "64",
+      "nome": "Rubi",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "196",
+      "nome": "Salada",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "610",
+      "nome": "Salada de Frutas",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "699",
+      "nome": "Salmão Híbrido",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "795",
+      "nome": "Salmão Nulo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "131",
+      "nome": "Sardinha",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "227",
+      "nome": "Sashimi",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "236",
+      "nome": "Sopa de Abóbora",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "199",
+      "nome": "Sopa de Chirívia",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "207",
+      "nome": "Sopa de Vagens",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "218",
+      "nome": "Sopa Tom Kha",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "233",
+      "nome": "Sorvete",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "237",
+      "nome": "Super-prato",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "155",
+      "nome": "Superpepino",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "213",
+      "nome": "Taco de Peixe",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "428",
+      "nome": "Tecido",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "701",
+      "nome": "Tilápia",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "814",
+      "nome": "Tinta de Lula",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "256",
+      "nome": "Tomate",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "68",
+      "nome": "Topázio",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "608",
+      "nome": "Torta de Abóbora",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "611",
+      "nome": "Torta de Amoras",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "234",
+      "nome": "Torta de Mirtilo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "222",
+      "nome": "Torta de Ruibarbo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "262",
+      "nome": "Trigo",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "430",
+      "nome": "Trufa",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "591",
+      "nome": "Tulipa",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "398",
+      "nome": "Uva",
+      "estado": "incompleto",
+      "fontes": [
+        "https://stardewvalleywiki.com/Grape"
+      ],
+      "motivo": "Resumo omite sementes silvestres de verão e tempos de cultivo de outono."
+    },
+    {
+      "id": "188",
+      "nome": "Vagem",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "348",
+      "nome": "Vinho",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    },
+    {
+      "id": "724",
+      "nome": "Xarope de Ácer",
+      "estado": "nao_verificado",
+      "fontes": [],
+      "motivo": "Sem evidência suficiente para declarar conformidade."
+    }
+  ]
+}

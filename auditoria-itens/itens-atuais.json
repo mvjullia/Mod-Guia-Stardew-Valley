@@ -1,0 +1,3806 @@
+{
+  "geradoEm": "2026-10-31T02:47:35.424Z",
+  "origem": "Último snapshot local do mod; itens presentes nos conjuntos e favoritos, não catálogo integral.",
+  "quantidade": 225,
+  "limites": [
+    "Dados capturados de um único save.",
+    "Fontes da Wiki obtidas em tempo real no navegador não estão incluídas.",
+    "IDs são reproduzidos como exportados; tipos de item podem estar ausentes."
+  ],
+  "itens": [
+    {
+      "id": "Book_Crabbing",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "A Arte dos Covos",
+      "wikiName": "The Art O' Crabbing",
+      "description": "Covos tem 25% de \r\nchance de render o \r\ndobro. ",
+      "category": "Livro",
+      "price": 2000,
+      "contextos": [
+        "Presente favorito: Willy"
+      ]
+    },
+    {
+      "id": "276",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Abóbora em solo arado e regue diariamente.",
+        "season": "Outono",
+        "growthDays": 13,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Abóbora",
+      "wikiName": "Pumpkin",
+      "description": "Uma delícia favorita \r\ndo outono. Cultivada \r\npor suas sementes \r\ncrocantes e polpa \r\ndelicada e saborosa. \r\nDe quebra, a casca \r\noca pode ser utilizada \r\ncomo decoração \r\nfestiva. ",
+      "category": "Vegetal",
+      "price": 640,
+      "contextos": [
+        "Centro Comunitário: Plantações de Outono",
+        "Centro Comunitário: Plantações de Qualidade",
+        "Presente favorito: Abigail",
+        "Presente favorito: Willy",
+        "Presente favorito: Krobus"
+      ]
+    },
+    {
+      "id": "373",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Abóbora Dourada",
+      "wikiName": "Golden Pumpkin",
+      "description": "É valiosa, mas não possui \r\npropósito algum. ",
+      "category": "",
+      "price": 5000,
+      "contextos": [
+        "Presente favorito: Robin",
+        "Presente favorito: Demetrius",
+        "Presente favorito: Maru",
+        "Presente favorito: Sebastian",
+        "Presente favorito: Linus",
+        "Presente favorito: Pierre",
+        "Presente favorito: Caroline",
+        "Presente favorito: Abigail",
+        "Presente favorito: Alex",
+        "Presente favorito: George",
+        "Presente favorito: Evelyn",
+        "Presente favorito: Lewis",
+        "Presente favorito: Clint",
+        "Presente favorito: Penny",
+        "Presente favorito: Pam",
+        "Presente favorito: Emily",
+        "Presente favorito: Haley",
+        "Presente favorito: Jas",
+        "Presente favorito: Vincent",
+        "Presente favorito: Jodi",
+        "Presente favorito: Kent",
+        "Presente favorito: Sam",
+        "Presente favorito: Leah",
+        "Presente favorito: Shane",
+        "Presente favorito: Marnie",
+        "Presente favorito: Elliott",
+        "Presente favorito: Gus",
+        "Presente favorito: Anão",
+        "Presente favorito: Feiticeiro",
+        "Presente favorito: Harvey",
+        "Presente favorito: Sandy",
+        "Presente favorito: Willy",
+        "Presente favorito: Krobus",
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "136",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Achigã",
+      "wikiName": "Largemouth Bass",
+      "description": "Um peixe popular que \r\nvive em lagos. ",
+      "category": "Peixe",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: Peixes de Lago"
+      ]
+    },
+    {
+      "id": "214",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Achigã, 1 × Farinha de Trigo, 1 × Óleo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Achigã Crocante",
+      "wikiName": "Crispy Bass",
+      "description": "O acompanhamento \r\ncom pão fica perfeito! ",
+      "category": "Culinária",
+      "price": 300,
+      "contextos": [
+        "Presente favorito: Jodi"
+      ]
+    },
+    {
+      "id": "62",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 1 × Argila, 10 × Pedra, 1 × Quartzo Refinado",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Água-marinha",
+      "wikiName": "Aquamarine",
+      "description": "Uma brilhante pedra \r\ncor de água. ",
+      "category": "Mineral",
+      "price": 360,
+      "contextos": [
+        "Centro Comunitário: de Tinta",
+        "Presente favorito: Clint",
+        "Presente favorito: Emily",
+        "Presente favorito: Anão"
+      ]
+    },
+    {
+      "id": "726",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Alcatrão de Pinho",
+      "wikiName": "Pine Tar",
+      "description": "Uma substância \r\nmalcheirosa vinda da \r\nseiva do pinheiro. ",
+      "category": "Mercadorias Artesanais",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: Recursos Exóticos"
+      ]
+    },
+    {
+      "id": "20",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 25 × Madeira, 25 × Pedra, 1 × Barra de Ferro",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Alho-poró",
+      "wikiName": "Leek",
+      "description": "Um delicioso parente \r\nda cebola. ",
+      "category": "Coleta",
+      "price": 120,
+      "contextos": [
+        "Centro Comunitário: Recursos de Primavera",
+        "Presente favorito: George"
+      ]
+    },
+    {
+      "id": "879",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 30 × Asa de Morcego, 30 × Gosma",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Almíscar de Monstro",
+      "wikiName": "Monster Musk",
+      "description": "Use isto para atrair mais \r\nmonstros. ",
+      "category": "",
+      "price": 100,
+      "contextos": [
+        "Presente favorito: Krobus"
+      ]
+    },
+    {
+      "id": "240",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Omelete, 1 × Chirívia",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Almoço de Fazendeiro",
+      "wikiName": "Farmer's Lunch",
+      "description": "Isto vai te dar bastante \r\nenergia. ",
+      "category": "Culinária",
+      "price": 300,
+      "contextos": [
+        "Presente favorito: Marnie"
+      ]
+    },
+    {
+      "id": "706",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Alocine",
+      "wikiName": "Shad",
+      "description": "Vive em cardumes em \r\nágua salgada, mas \r\nvolta aos rios para se \r\nreproduzir. ",
+      "category": "Peixe",
+      "price": 120,
+      "contextos": [
+        "Centro Comunitário: Peixes de Rio"
+      ]
+    },
+    {
+      "id": "406",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ameixa Selvagem",
+      "wikiName": "Wild Plum",
+      "description": "Ácida e suculenta, com \r\num expressivo aroma. ",
+      "category": "Fruta",
+      "price": 160,
+      "contextos": [
+        "Centro Comunitário: Recursos de Outono"
+      ]
+    },
+    {
+      "id": "66",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ametista",
+      "wikiName": "Amethyst",
+      "description": "Uma variante roxa do \r\nquartzo. ",
+      "category": "Mineral",
+      "price": 200,
+      "contextos": [
+        "Presente favorito: Abigail",
+        "Presente favorito: Clint",
+        "Presente favorito: Emily",
+        "Presente favorito: Anão"
+      ]
+    },
+    {
+      "id": "410",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Amora",
+      "wikiName": "Blackberry",
+      "description": "Uma delícia do começo \r\ndo outono. ",
+      "category": "Fruta",
+      "price": 40,
+      "contextos": [
+        "Centro Comunitário: Recursos de Outono"
+      ]
+    },
+    {
+      "id": "164",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Areinha",
+      "wikiName": "Sandfish",
+      "description": "Tenta se esconder se \r\ncamuflando. ",
+      "category": "Peixe",
+      "price": 150,
+      "contextos": [
+        "Centro Comunitário: Peixes Especializados",
+        "Presente favorito: Penny"
+      ]
+    },
+    {
+      "id": "905",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Manga, 1 × Coco, 1 × Arroz",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Arroz Doce de Manga",
+      "wikiName": "Mango Sticky Rice",
+      "description": "Manga doce e coco tornam \r\neste arroz em algo muito \r\nespecial. ",
+      "category": "Culinária",
+      "price": 500,
+      "contextos": [
+        "Presente favorito: Sandy"
+      ]
+    },
+    {
+      "id": "767",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Asa de Morcego",
+      "wikiName": "Bat Wing",
+      "description": "Surpreendentemente \r\ndelicada. ",
+      "category": "Espólios de Monstros",
+      "price": 30,
+      "contextos": [
+        "Centro Comunitário: de Aventureiro"
+      ]
+    },
+    {
+      "id": "130",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 50 × Madeira",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Atum",
+      "wikiName": "Tuna",
+      "description": "Um grande peixe que \r\nvive no oceano. ",
+      "category": "Peixe",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: Peixes de Oceano"
+      ]
+    },
+    {
+      "id": "408",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Avelã",
+      "wikiName": "Hazelnut",
+      "description": "Que avelã grande! ",
+      "category": "Coleta",
+      "price": 180,
+      "contextos": [
+        "Centro Comunitário: Recursos de Outono"
+      ]
+    },
+    {
+      "id": "607",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 3 × Avelã",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Avelãs Torradas",
+      "wikiName": "Roasted Hazelnuts",
+      "description": "O processo de torra \r\nadiciona um delicioso \r\nsabor de floresta. ",
+      "category": "Culinária",
+      "price": 540,
+      "contextos": [
+        "Presente favorito: Kent"
+      ]
+    },
+    {
+      "id": "143",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 10 × Madeira, 1 × Carvão, 5 × Fibra",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Bagre",
+      "wikiName": "Catfish",
+      "description": "Um peixe incomum \r\nencontrado em \r\ncorrentes. ",
+      "category": "Peixe",
+      "price": 400,
+      "contextos": [
+        "Centro Comunitário: Peixes de Rio",
+        "Presente favorito: Willy"
+      ]
+    },
+    {
+      "id": "128",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Baiacu",
+      "wikiName": "Pufferfish",
+      "description": "Infla quando \r\nameaçado. ",
+      "category": "Peixe",
+      "price": 400,
+      "contextos": [
+        "Centro Comunitário: Peixes Especializados",
+        "Presente favorito: Abigail"
+      ]
+    },
+    {
+      "id": "334",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Barra de Cobre",
+      "wikiName": "Copper Bar",
+      "description": "Uma barra de cobre \r\npuro. ",
+      "category": "Recursos",
+      "price": 120,
+      "contextos": [
+        "Centro Comunitário: de Ferreiro"
+      ]
+    },
+    {
+      "id": "335",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 3 × Barra de Cobre",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Barra de Ferro",
+      "wikiName": "Iron Bar",
+      "description": "Uma barra de ferro \r\npuro. ",
+      "category": "Recursos",
+      "price": 240,
+      "contextos": [
+        "Centro Comunitário: de Ferreiro"
+      ]
+    },
+    {
+      "id": "337",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Barra de Irídio",
+      "wikiName": "Iridium Bar",
+      "description": "Uma barra de irídio \r\npuro. ",
+      "category": "Recursos",
+      "price": 2000,
+      "contextos": [
+        "Presente favorito: Maru",
+        "Presente favorito: Clint",
+        "Presente favorito: Willy",
+        "Presente favorito: Krobus"
+      ]
+    },
+    {
+      "id": "336",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 2 × Barra de Ferro",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Barra de Ouro",
+      "wikiName": "Gold Bar",
+      "description": "Uma barra de ouro \r\npuro. ",
+      "category": "Recursos",
+      "price": 500,
+      "contextos": [
+        "Centro Comunitário: de Ferreiro",
+        "Presente favorito: Maru",
+        "Presente favorito: Clint",
+        "Presente favorito: Willy"
+      ]
+    },
+    {
+      "id": "910",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Barra Radioativa",
+      "wikiName": "Radioactive Bar",
+      "description": "Conhecida pela Comissão \r\nde Segurança da Cidade \r\nZuzu por causar dano \r\nirreversível ao corpo. ",
+      "category": "Recursos",
+      "price": 6000,
+      "contextos": [
+        "Presente favorito: Maru"
+      ]
+    },
+    {
+      "id": "192",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Batata em solo arado e regue diariamente.",
+        "season": "Primavera",
+        "growthDays": 6,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Batata",
+      "wikiName": "Potato",
+      "description": "Um tubérculo muito \r\ncultivado. ",
+      "category": "Vegetal",
+      "price": 160,
+      "contextos": [
+        "Centro Comunitário: Plantações de Primavera"
+      ]
+    },
+    {
+      "id": "718",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Berbigão",
+      "wikiName": "Cockle",
+      "description": "Uma concha de água \r\nsalgada muito comum. ",
+      "category": "Peixe",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: de Covo"
+      ]
+    },
+    {
+      "id": "272",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Berinjela em solo arado e regue diariamente.",
+        "season": "Outono",
+        "growthDays": 5,
+        "regrowDays": 5,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Berinjela",
+      "wikiName": "Eggplant",
+      "description": "Uma alternativa rica e \r\nsaudável para o \r\ntomate. Deliciosa frita \r\nou cozida. ",
+      "category": "Vegetal",
+      "price": 120,
+      "contextos": [
+        "Centro Comunitário: Plantações de Outono"
+      ]
+    },
+    {
+      "id": "231",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 10 × Quartzo Refinado, 5 × Barra de Ferro, 5 × Barra de Ouro",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Berinjela à Parmegiana",
+      "wikiName": "Eggplant Parmesan",
+      "description": "Picante, cheia de queijo, e \r\nmaravilhosa. ",
+      "category": "Culinária",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Jodi"
+      ]
+    },
+    {
+      "id": "284",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Beterraba em solo arado e regue diariamente.",
+        "season": "Outono",
+        "growthDays": 6,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Beterraba",
+      "wikiName": "Beet",
+      "description": "Um legume doce e \r\nterroso. De quebra, as \r\nfolhas dão uma ótima \r\nsalada. ",
+      "category": "Vegetal",
+      "price": 200,
+      "contextos": [
+        "Presente favorito: Evelyn"
+      ]
+    },
+    {
+      "id": "651",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Papoula, 1 × Farinha de Trigo, 1 × Açúcar",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Bolinho de Papoula",
+      "wikiName": "Poppyseed Muffin",
+      "description": "Possui um efeito calmante. ",
+      "category": "Culinária",
+      "price": 500,
+      "contextos": [
+        "Presente favorito: Penny",
+        "Presente favorito: Leah"
+      ]
+    },
+    {
+      "id": "732",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Caranguejo, 1 × Farinha de Trigo, 1 × categoria de ingrediente -5, 1 × Óleo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Bolinhos de Caranguejo",
+      "wikiName": "Crab Cakes",
+      "description": "Caranguejo, pão e ovo achatados \r\ne fritos até ficarem dourados. ",
+      "category": "Culinária",
+      "price": 550,
+      "contextos": [
+        "Presente favorito: Elliott"
+      ]
+    },
+    {
+      "id": "220",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Farinha de Trigo, 1 × Açúcar, 1 × categoria de ingrediente -5",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Bolo de Chocolate",
+      "wikiName": "Chocolate Cake",
+      "description": "Rico e úmido, com uma \r\ncamada bem grossa de \r\nglacê. ",
+      "category": "Culinária",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Abigail",
+        "Presente favorito: Evelyn",
+        "Presente favorito: Jodi"
+      ]
+    },
+    {
+      "id": "221",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Melão, 1 × Farinha de Trigo, 1 × Açúcar, 1 × categoria de ingrediente -5",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Bolo Rosa",
+      "wikiName": "Pink Cake",
+      "description": "Tem pequenos doces \r\nde coração por cima. ",
+      "category": "Culinária",
+      "price": 960,
+      "contextos": [
+        "Presente favorito: Haley",
+        "Presente favorito: Jas",
+        "Presente favorito: Vincent",
+        "Presente favorito: Marnie"
+      ]
+    },
+    {
+      "id": "132",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Brema",
+      "wikiName": "Bream",
+      "description": "Um peixe de água doce \r\nmuito comum que fica \r\nativo durante a noite. ",
+      "category": "Peixe",
+      "price": 90,
+      "contextos": [
+        "Centro Comunitário: Pesca Noturna"
+      ]
+    },
+    {
+      "id": "259",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Broto de Samambaia",
+      "wikiName": "Fiddlehead Fern",
+      "description": "Os brotinhos são uma \r\nespeciaria deliciosa. ",
+      "category": "Vegetal",
+      "price": 180,
+      "contextos": [
+        "Centro Comunitário: de Cozinheiro"
+      ]
+    },
+    {
+      "id": "395",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Café",
+      "wikiName": "Coffee",
+      "description": "Possui um cheiro \r\ndelicioso. Com certeza \r\nvai te dar energia \r\nextra. ",
+      "category": "",
+      "price": 300,
+      "contextos": [
+        "Presente favorito: Harvey"
+      ]
+    },
+    {
+      "id": "201",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Ovo Frito, 1 × categoria de ingrediente -6, 1 × Hash Brown, 1 × Panquecas",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Café da Manhã Completo",
+      "wikiName": "Complete Breakfast",
+      "description": "Dá energia para conquistar o \r\nmundo! ",
+      "category": "Culinária",
+      "price": 700,
+      "contextos": [
+        "Presente favorito: Alex"
+      ]
+    },
+    {
+      "id": "396",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Verão em solo arado e regue diariamente.",
+        "season": "Verão",
+        "growthDays": 7,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Café de Jardim",
+      "wikiName": "Spice Berry",
+      "description": "Possui um cheiro bem \r\nforte. ",
+      "category": "Fruta",
+      "price": 160,
+      "contextos": [
+        "Centro Comunitário: Recursos de Verão"
+      ]
+    },
+    {
+      "id": "FairyBox",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Caixa de Fada",
+      "wikiName": "FairyBox",
+      "description": "Invoca uma fada de \r\nnível 1 que cura em \r\nsituações de batalha. ",
+      "category": "Amuleto",
+      "price": 0,
+      "contextos": [
+        "Presente favorito: Jas"
+      ]
+    },
+    {
+      "id": "720",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Camarão",
+      "wikiName": "Shrimp",
+      "description": "Um necrófago que se \r\nalimenta do fundo do \r\noceano. Sua carne é \r\nmuito apreciada. ",
+      "category": "Peixe",
+      "price": 120,
+      "contextos": [
+        "Centro Comunitário: de Covo"
+      ]
+    },
+    {
+      "id": "722",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Caramujo",
+      "wikiName": "Periwinkle",
+      "description": "Um molusco de água \r\ndoce que vive em um \r\ncasco azul. ",
+      "category": "Peixe",
+      "price": 40,
+      "contextos": [
+        "Centro Comunitário: de Covo"
+      ]
+    },
+    {
+      "id": "717",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Caranguejo",
+      "wikiName": "Crab",
+      "description": "Um crustáceo marinho \r\ncom duas puãs \r\npoderosas. ",
+      "category": "Peixe",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: de Covo"
+      ]
+    },
+    {
+      "id": "142",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Carpa",
+      "wikiName": "Carp",
+      "description": "Um peixe comum de \r\nlago. ",
+      "category": "Peixe",
+      "price": 60,
+      "contextos": [
+        "Centro Comunitário: Peixes de Lago"
+      ]
+    },
+    {
+      "id": "Book_PriceCatalogue",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Catálogo de Preço",
+      "wikiName": "Price Catalogue",
+      "description": "Agora você pode ver o \r\nvalor dos seus itens. ",
+      "category": "Livro",
+      "price": 2000,
+      "contextos": [
+        "Presente favorito: Pierre"
+      ]
+    },
+    {
+      "id": "445",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Caviar",
+      "wikiName": "Caviar",
+      "description": "As ovas maturadas de \r\num esturjão. \r\nConsideradas uma \r\niguaria luxuosa! ",
+      "category": "Mercadorias Artesanais",
+      "price": 1000,
+      "contextos": [
+        "Centro Comunitário: Perdido"
+      ]
+    },
+    {
+      "id": "78",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Cenoura Subterrânea",
+      "wikiName": "Cave Carrot",
+      "description": "Uma cenoura rica em amido \r\nencontrada em cavernas. Ajuda \r\nos mineradores a trabalhar \r\nmais. ",
+      "category": "Coleta",
+      "price": 50,
+      "contextos": [
+        "Centro Comunitário: Recursos Exóticos"
+      ]
+    },
+    {
+      "id": "638",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Cereja",
+      "wikiName": "Cherry",
+      "description": "É popular, e \r\namadurece mais cedo \r\nque a maioria das \r\nfrutas. ",
+      "category": "Fruta",
+      "price": 160,
+      "contextos": [
+        "Centro Comunitário: do Artesão"
+      ]
+    },
+    {
+      "id": "346",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Cerveja",
+      "wikiName": "Beer",
+      "description": "Beba com moderação. ",
+      "category": "Mercadorias Artesanais",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Pam",
+        "Presente favorito: Shane"
+      ]
+    },
+    {
+      "id": "614",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Chá Verde",
+      "wikiName": "Green Tea",
+      "description": "Uma bebida relaxante \r\ne estimulante feita \r\ncom folhas de chá \r\nprocessadas. ",
+      "category": "Mercadorias Artesanais",
+      "price": 200,
+      "contextos": [
+        "Presente favorito: Caroline",
+        "Presente favorito: Lewis"
+      ]
+    },
+    {
+      "id": "24",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 15 × Madeira, 15 × Pedra, 1 × Cristal de Terra, 1 × Barra de Cobre",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Chirívia",
+      "wikiName": "Parsnip",
+      "description": "Um tubérculo que \r\nnasce na primavera e \r\né parente da cenoura. \r\nPossui um leve gosto \r\nde terra e é cheio de \r\nnutrientes. ",
+      "category": "Vegetal",
+      "price": 70,
+      "contextos": [
+        "Centro Comunitário: Plantações de Primavera",
+        "Centro Comunitário: Plantações de Qualidade",
+        "Presente favorito: Pam"
+      ]
+    },
+    {
+      "id": "150",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 50 × Madeira, 1 × Essência Solar, 1 × Carvão",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Cioba",
+      "wikiName": "Red Snapper",
+      "description": "Um peixe popular com \r\numa bonita cor \r\nvermelha. ",
+      "category": "Peixe",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: Peixes de Oceano"
+      ]
+    },
+    {
+      "id": "88",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Coco",
+      "wikiName": "Coconut",
+      "description": "Uma semente da \r\npalma do coco. Possui \r\nmuitas aplicações \r\nculinárias. ",
+      "category": "Fruta",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: Recursos Exóticos",
+        "Presente favorito: Linus",
+        "Presente favorito: Haley"
+      ]
+    },
+    {
+      "id": "404",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Outono em solo arado e regue diariamente.",
+        "season": "Outono",
+        "growthDays": 7,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Cogumelo Comum",
+      "wikiName": "Common Mushroom",
+      "description": "Com ligeiro sabor de \r\nnozes e uma boa textura. ",
+      "category": "Coleta",
+      "price": 80,
+      "contextos": [
+        "Centro Comunitário: Recursos de Outono"
+      ]
+    },
+    {
+      "id": "205",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Cogumelo Comum, 1 × Morel, 1 × Óleo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Cogumelo Frito",
+      "wikiName": "Fried Mushroom",
+      "description": "Terroso e aromático. ",
+      "category": "Culinária",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: George"
+      ]
+    },
+    {
+      "id": "422",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Cogumelo Roxo",
+      "wikiName": "Purple Mushroom",
+      "description": "Um cogumelo raro \r\nencontrado nas \r\nprofundezas das \r\ncavernas. ",
+      "category": "Coleta",
+      "price": 500,
+      "contextos": [
+        "Centro Comunitário: Recursos Exóticos",
+        "Centro Comunitário: Pesquisa de Campo",
+        "Presente favorito: Feiticeiro"
+      ]
+    },
+    {
+      "id": "420",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Cogumelo Vermelho",
+      "wikiName": "Red Mushroom",
+      "description": "Um cogumelo manchado \r\ngeralmente achado em \r\ncavernas. ",
+      "category": "Coleta",
+      "price": 150,
+      "contextos": [
+        "Centro Comunitário: Recursos Exóticos",
+        "Centro Comunitário: de Tinta"
+      ]
+    },
+    {
+      "id": "Book_Void",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Compêndio de Monstros",
+      "wikiName": "Monster Compendium",
+      "description": "Ler este livro novamente \r\nconcederá uma pequena \r\nquantidade de experiência. ",
+      "category": "Livro",
+      "price": 4000,
+      "contextos": [
+        "Presente favorito: Abigail",
+        "Presente favorito: Krobus"
+      ]
+    },
+    {
+      "id": "372",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Concha",
+      "wikiName": "Clam",
+      "description": "Alguém já viveu aqui. ",
+      "category": "Peixe",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: de Covo"
+      ]
+    },
+    {
+      "id": "392",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Concha de Náutilo",
+      "wikiName": "Nautilus Shell",
+      "description": "Uma concha antiga. ",
+      "category": "",
+      "price": 240,
+      "contextos": [
+        "Centro Comunitário: Pesquisa de Campo"
+      ]
+    },
+    {
+      "id": "787",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Conjunto de Pilhas",
+      "wikiName": "Battery Pack",
+      "description": "Cheias de energia valiosa. ",
+      "category": "Recursos",
+      "price": 1000,
+      "contextos": [
+        "Presente favorito: Maru"
+      ]
+    },
+    {
+      "id": "190",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Couve-flor em solo arado e regue diariamente.",
+        "season": "Primavera",
+        "growthDays": 12,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Couve-flor",
+      "wikiName": "Cauliflower",
+      "description": "Valiosa, mas de \r\ncrescimento lento. \r\nApesar de sua cor, as \r\nfolhas estão cheias de \r\nnutrientes. ",
+      "category": "Vegetal",
+      "price": 350,
+      "contextos": [
+        "Centro Comunitário: Plantações de Primavera",
+        "Presente favorito: Maru"
+      ]
+    },
+    {
+      "id": "197",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Couve-flor, 1 × Queijo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Couve-flor com Queijo",
+      "wikiName": "Cheese Cauliflower",
+      "description": "Um cheiro maravilhoso! ",
+      "category": "Culinária",
+      "price": 600,
+      "contextos": [
+        "Presente favorito: Maru"
+      ]
+    },
+    {
+      "id": "86",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Cristal de Terra",
+      "wikiName": "Earth Crystal",
+      "description": "Substância resinosa \r\nencontrada perto da \r\nsuperfície. ",
+      "category": "Mineral",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: de Geólogo"
+      ]
+    },
+    {
+      "id": "907",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Coco, 1 × Abacaxi, 1 × Pimenta Picante",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Curry Tropical",
+      "wikiName": "Tropical Curry",
+      "description": "Um exótico e \r\naromático curry \r\nservido em uma tigela \r\nde abacaxi. ",
+      "category": "Culinária",
+      "price": 1000,
+      "contextos": [
+        "Presente favorito: Caroline",
+        "Presente favorito: Gus"
+      ]
+    },
+    {
+      "id": "634",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Damasco",
+      "wikiName": "Apricot",
+      "description": "Uma frutinha macia \r\ncom uma semente \r\nmuito dura. ",
+      "category": "Fruta",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: do Artesão"
+      ]
+    },
+    {
+      "id": "22",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Dente-de-leão",
+      "wikiName": "Dandelion",
+      "description": "Não é a flor mais \r\nbonita, mas as folhas \r\ndão uma ótima salada. ",
+      "category": "Coleta",
+      "price": 80,
+      "contextos": [
+        "Centro Comunitário: Recursos de Primavera"
+      ]
+    },
+    {
+      "id": "72",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Diamante",
+      "wikiName": "Diamond",
+      "description": "Uma joia rara e \r\nvaliosa. ",
+      "category": "Mineral",
+      "price": 1500,
+      "contextos": [
+        "Presente favorito: Maru",
+        "Presente favorito: Evelyn",
+        "Presente favorito: Penny",
+        "Presente favorito: Jodi",
+        "Presente favorito: Marnie",
+        "Presente favorito: Gus",
+        "Presente favorito: Willy",
+        "Presente favorito: Krobus"
+      ]
+    },
+    {
+      "id": "122",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Dispositivo de Anão",
+      "wikiName": "Dwarf Gadget",
+      "description": "Tecnologia avançada \r\nconhecida pelos anões há \r\nmuito tempo. Ainda está \r\nbrilhando e fazendo \r\nbarulhos, mas você é \r\nincapaz de entender como \r\nfunciona. ",
+      "category": "Artefato",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Maru"
+      ]
+    },
+    {
+      "id": "612",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Oxicoco, 1 × Maçã, 1 × Açúcar",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Doce de Oxicoco",
+      "wikiName": "Cranberry Candy",
+      "description": "Doce o suficiente para \r\ndisfarçar o amargor \r\nda fruta. ",
+      "category": "Culinária",
+      "price": 350,
+      "contextos": [
+        "Presente favorito: Vincent"
+      ]
+    },
+    {
+      "id": "279",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Doce-Pedra Mágico",
+      "wikiName": "Magic Rock Candy",
+      "description": "Um doce raro e poderoso \r\ninfundido com a essência de \r\num fragmento prismático. ",
+      "category": "Culinária",
+      "price": 10000,
+      "contextos": [
+        "Presente favorito: Robin",
+        "Presente favorito: Demetrius",
+        "Presente favorito: Maru",
+        "Presente favorito: Sebastian",
+        "Presente favorito: Linus",
+        "Presente favorito: Pierre",
+        "Presente favorito: Caroline",
+        "Presente favorito: Abigail",
+        "Presente favorito: Alex",
+        "Presente favorito: George",
+        "Presente favorito: Evelyn",
+        "Presente favorito: Lewis",
+        "Presente favorito: Clint",
+        "Presente favorito: Penny",
+        "Presente favorito: Pam",
+        "Presente favorito: Emily",
+        "Presente favorito: Haley",
+        "Presente favorito: Jas",
+        "Presente favorito: Vincent",
+        "Presente favorito: Jodi",
+        "Presente favorito: Kent",
+        "Presente favorito: Sam",
+        "Presente favorito: Leah",
+        "Presente favorito: Shane",
+        "Presente favorito: Marnie",
+        "Presente favorito: Elliott",
+        "Presente favorito: Gus",
+        "Presente favorito: Anão",
+        "Presente favorito: Feiticeiro",
+        "Presente favorito: Harvey",
+        "Presente favorito: Sandy",
+        "Presente favorito: Willy",
+        "Presente favorito: Krobus",
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "148",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 10 × Madeira de Lei, 1 × Carvão",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Enguia",
+      "wikiName": "Eel",
+      "description": "Um peixe alongado, \r\nescorregadio e \r\npequeno. ",
+      "category": "Peixe",
+      "price": 170,
+      "contextos": [
+        "Centro Comunitário: Pesca Noturna"
+      ]
+    },
+    {
+      "id": "162",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Enguia de Lava",
+      "wikiName": "Lava Eel",
+      "description": "Por algum motivo, \r\nconsegue sobreviver \r\nem piscinas de lava \r\nsuperquente. ",
+      "category": "Peixe",
+      "price": 1400,
+      "contextos": [
+        "Presente favorito: Anão"
+      ]
+    },
+    {
+      "id": "225",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Enguia, 1 × Óleo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Enguia Frita",
+      "wikiName": "Fried Eel",
+      "description": "Oleosa, mas cheia de \r\nsabor. ",
+      "category": "Culinária",
+      "price": 240,
+      "contextos": [
+        "Presente favorito: Jodi"
+      ]
+    },
+    {
+      "id": "226",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Enguia, 1 × Pimenta Picante",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Enguia Picante",
+      "wikiName": "Spicy Eel",
+      "description": "É muito picante! \r\nCuidado. ",
+      "category": "Culinária",
+      "price": 350,
+      "contextos": [
+        "Presente favorito: Abigail"
+      ]
+    },
+    {
+      "id": "215",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Pimenta Picante, 1 × Queijo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Enroladinhos de Pimenta",
+      "wikiName": "Pepper Poppers",
+      "description": "Enroladinhos apimentados cheios de \r\nqueijo. ",
+      "category": "Culinária",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Maru",
+        "Presente favorito: Shane"
+      ]
+    },
+    {
+      "id": "402",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ervilha-de-cheiro",
+      "wikiName": "Sweet Pea",
+      "description": "Uma fragrante flor de \r\nverão. ",
+      "category": "Flor",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: Recursos de Verão",
+        "Presente favorito: Sandy"
+      ]
+    },
+    {
+      "id": "729",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Lesma, 1 × Alho",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Escargô",
+      "wikiName": "Escargot",
+      "description": "Lesmas cobertas de \r\nmanteiga e cozidas \r\ncom perfeição. ",
+      "category": "Culinária",
+      "price": 250,
+      "contextos": [
+        "Presente favorito: Gus"
+      ]
+    },
+    {
+      "id": "60",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Esmeralda",
+      "wikiName": "Emerald",
+      "description": "Uma pedra preciosa \r\ncom uma cor brilhante \r\ne verde. ",
+      "category": "Mineral",
+      "price": 500,
+      "contextos": [
+        "Presente favorito: Clint",
+        "Presente favorito: Penny",
+        "Presente favorito: Emily",
+        "Presente favorito: Anão"
+      ]
+    },
+    {
+      "id": "224",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Farinha de Trigo, 1 × Tomate",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Espaguete",
+      "wikiName": "Spaghetti",
+      "description": "Um clássico. ",
+      "category": "Culinária",
+      "price": 240,
+      "contextos": [
+        "Presente favorito: Robin"
+      ]
+    },
+    {
+      "id": "702",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Esquálio",
+      "wikiName": "Chub",
+      "description": "Um peixe de água doce \r\nconhecido por seu \r\napetite. ",
+      "category": "Peixe",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: Pesquisa de Campo"
+      ]
+    },
+    {
+      "id": "769",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Essência Nula",
+      "wikiName": "Void Essence",
+      "description": "Treme de tanta \r\nenergia negativa. ",
+      "category": "Espólios de Monstros",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: de Aventureiro",
+        "Presente favorito: Feiticeiro"
+      ]
+    },
+    {
+      "id": "768",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Essência Solar",
+      "wikiName": "Solar Essence",
+      "description": "O lado brilhante é \r\nquente ao toque. ",
+      "category": "Espólios de Monstros",
+      "price": 80,
+      "contextos": [
+        "Centro Comunitário: de Aventureiro",
+        "Presente favorito: Feiticeiro"
+      ]
+    },
+    {
+      "id": "698",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Esturjão",
+      "wikiName": "Sturgeon",
+      "description": "Um antigo peixe \r\nlimpador com uma \r\npopulação em queda. \r\nAs fêmeas podem viver \r\naté 150 anos. ",
+      "category": "Peixe",
+      "price": 400,
+      "contextos": [
+        "Centro Comunitário: Peixes de Lago",
+        "Presente favorito: Willy"
+      ]
+    },
+    {
+      "id": "178",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Feno",
+      "wikiName": "Hay",
+      "description": "Grama seca utilizada \r\ncomo comida de \r\nanimais. ",
+      "category": "",
+      "price": 0,
+      "contextos": [
+        "Centro Comunitário: de Forragem"
+      ]
+    },
+    {
+      "id": "418",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Flor de Açafrão",
+      "wikiName": "Crocus",
+      "description": "Uma flor que pode \r\ndesabrochar no \r\ninverno. ",
+      "category": "Flor",
+      "price": 120,
+      "contextos": [
+        "Centro Comunitário: Recursos de Inverno",
+        "Presente favorito: Sandy"
+      ]
+    },
+    {
+      "id": "593",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Miçanga em solo arado e regue diariamente.",
+        "season": "Verão",
+        "growthDays": 8,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Flor-Miçanga",
+      "wikiName": "Summer Spangle",
+      "description": "Uma flor tropical que \r\nfloresce no ar quente \r\ne úmido de verão. \r\nPossui um aroma doce \r\ne amargo. ",
+      "category": "Flor",
+      "price": 180,
+      "contextos": [
+        "Presente favorito: Caroline"
+      ]
+    },
+    {
+      "id": "74",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Fragmento Prismático",
+      "wikiName": "Prismatic Shard",
+      "description": "Uma substância muito rara e \r\npoderosa de origem \r\ndesconhecida. ",
+      "category": "Mineral",
+      "price": 4000,
+      "contextos": [
+        "Centro Comunitário: Perdido",
+        "Presente favorito: Robin",
+        "Presente favorito: Demetrius",
+        "Presente favorito: Maru",
+        "Presente favorito: Sebastian",
+        "Presente favorito: Linus",
+        "Presente favorito: Pierre",
+        "Presente favorito: Caroline",
+        "Presente favorito: Abigail",
+        "Presente favorito: Alex",
+        "Presente favorito: George",
+        "Presente favorito: Evelyn",
+        "Presente favorito: Lewis",
+        "Presente favorito: Clint",
+        "Presente favorito: Penny",
+        "Presente favorito: Pam",
+        "Presente favorito: Emily",
+        "Presente favorito: Jas",
+        "Presente favorito: Vincent",
+        "Presente favorito: Jodi",
+        "Presente favorito: Kent",
+        "Presente favorito: Sam",
+        "Presente favorito: Leah",
+        "Presente favorito: Shane",
+        "Presente favorito: Marnie",
+        "Presente favorito: Elliott",
+        "Presente favorito: Gus",
+        "Presente favorito: Anão",
+        "Presente favorito: Feiticeiro",
+        "Presente favorito: Harvey",
+        "Presente favorito: Sandy",
+        "Presente favorito: Willy",
+        "Presente favorito: Krobus",
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "454",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes Antigas em solo arado e regue diariamente.",
+        "season": "Primavera, Verão, Outono",
+        "growthDays": 28,
+        "regrowDays": 7,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Fruta Antiga",
+      "wikiName": "Ancient Fruit",
+      "description": "Está dormente há \r\neras. ",
+      "category": "Fruta",
+      "price": 1100,
+      "contextos": [
+        "Centro Comunitário: Perdido"
+      ]
+    },
+    {
+      "id": "414",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Fruta de Cristal",
+      "wikiName": "Crystal Fruit",
+      "description": "Uma fruta delicada que \r\nsurge da neve. ",
+      "category": "Fruta",
+      "price": 300,
+      "contextos": [
+        "Centro Comunitário: Recursos de Inverno"
+      ]
+    },
+    {
+      "id": "90",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 10 × Fragmento de Osso, 3 × Argila, 20 × Pedra",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Fruto do Cacto",
+      "wikiName": "Cactus Fruit",
+      "description": "O doce fruto da \r\nespinhosa pera do \r\ncacto. ",
+      "category": "Fruta",
+      "price": 150,
+      "contextos": [
+        "Centro Comunitário: Recursos Exóticos",
+        "Presente favorito: Linus",
+        "Presente favorito: Pam",
+        "Presente favorito: Sam"
+      ]
+    },
+    {
+      "id": "344",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Geléia",
+      "wikiName": "Jelly",
+      "description": "Gosmenta. ",
+      "category": "Mercadorias Artesanais",
+      "price": 320,
+      "contextos": [
+        "Centro Comunitário: do Artesão"
+      ]
+    },
+    {
+      "id": "536",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Geodo Congelado",
+      "wikiName": "Frozen Geode",
+      "description": "Um ferreiro pode \r\nquebrar isto para você. ",
+      "category": "",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: Pesquisa de Campo"
+      ]
+    },
+    {
+      "id": "903",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 3 × Gengibre, 1 × Açúcar",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Ginger Ale",
+      "wikiName": "Ginger Ale",
+      "description": "Um refrigerante \r\npicante conhecido por \r\nseus efeitos \r\nacalmantes no \r\nestomâgo. ",
+      "category": "Culinária",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Vincent"
+      ]
+    },
+    {
+      "id": "421",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Girassol em solo arado e regue diariamente.",
+        "season": "Verão, Outono",
+        "growthDays": 8,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Girassol",
+      "wikiName": "Sunflower",
+      "description": "Um erro muito comum \r\né acreditar que a flor \r\nvira para onde o sol \r\nestá. ",
+      "category": "Flor",
+      "price": 160,
+      "contextos": [
+        "Centro Comunitário: de Tinta",
+        "Presente favorito: Haley"
+      ]
+    },
+    {
+      "id": "766",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Gosma",
+      "wikiName": "Slime",
+      "description": "Um bolha brilhante, \r\ngelatinosa e inodora. ",
+      "category": "Espólios de Monstros",
+      "price": 10,
+      "contextos": [
+        "Centro Comunitário: de Aventureiro"
+      ]
+    },
+    {
+      "id": "241",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Pão, 1 × Cenoura Subterrânea, 1 × Berinjela",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Hambúrguer de Sobrevivência",
+      "wikiName": "Survival Burger",
+      "description": "Uma refeição conveniente para o \r\nexplorador. ",
+      "category": "Culinária",
+      "price": 360,
+      "contextos": [
+        "Presente favorito: Emily"
+      ]
+    },
+    {
+      "id": "459",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Hidromel",
+      "wikiName": "Mead",
+      "description": "Uma bebida \r\nfermentada feita com \r\nmel. Beba com \r\nmoderação. ",
+      "category": "Mercadorias Artesanais",
+      "price": 600,
+      "contextos": [
+        "Presente favorito: Pam",
+        "Presente favorito: Willy"
+      ]
+    },
+    {
+      "id": "228",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × categoria de ingrediente -4, 1 × Algas Marinhas, 1 × Arroz",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Hossomaki",
+      "wikiName": "Maki Roll",
+      "description": "Peixe e arroz \r\nenrolados em algas. ",
+      "category": "Culinária",
+      "price": 440,
+      "contextos": [
+        "Centro Comunitário: de Cozinheiro"
+      ]
+    },
+    {
+      "id": "280",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Inhame em solo arado e regue diariamente.",
+        "season": "Outono",
+        "growthDays": 10,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Inhame",
+      "wikiName": "Yam",
+      "description": "Um tubérculo rico em \r\namido e altamente \r\nversátil. ",
+      "category": "Vegetal",
+      "price": 320,
+      "contextos": [
+        "Centro Comunitário: Plantações de Outono",
+        "Presente favorito: Linus"
+      ]
+    },
+    {
+      "id": "416",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Inhame da Neve",
+      "wikiName": "Snow Yam",
+      "description": "Este pequeno inhame \r\nestava se escondendo \r\nna neve. ",
+      "category": "Coleta",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: Recursos de Inverno"
+      ]
+    },
+    {
+      "id": "208",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Inhame, 1 × Açúcar",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Inhames com Cobertura",
+      "wikiName": "Glazed Yams",
+      "description": "Doces e saborosos... O açúcar dá \r\num gostinho de caramelo. ",
+      "category": "Culinária",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Lewis",
+        "Presente favorito: Pam"
+      ]
+    },
+    {
+      "id": "Book_Defense",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Jack seja ágil, Jack seja parrudo",
+      "wikiName": "Jack Be Nimble, Jack Be Thick",
+      "description": "Ler este livro novamente concederá uma \r\npequena quantidade de experiência. ",
+      "category": "Livro",
+      "price": 1000,
+      "contextos": [
+        "Presente favorito: Alex"
+      ]
+    },
+    {
+      "id": "70",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Jade",
+      "wikiName": "Jade",
+      "description": "Uma pedra \r\nornamental de cor \r\nverde-pálida. ",
+      "category": "Mineral",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Clint",
+        "Presente favorito: Emily",
+        "Presente favorito: Anão"
+      ]
+    },
+    {
+      "id": "212",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Salmão, 1 × Amaranto, 1 × Couve",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Jantar de Salmão",
+      "wikiName": "Salmon Dinner",
+      "description": "O que torna este prato \r\nespecial são os \r\nbiscoitinhos de limão como \r\nacompanhamento. ",
+      "category": "Culinária",
+      "price": 600,
+      "contextos": [
+        "Presente favorito: Alex"
+      ]
+    },
+    {
+      "id": "Book_Roe",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Joias do Mar",
+      "wikiName": "Jewels Of The Sea",
+      "description": "Pescar baús do \r\ntesouro tem uma \r\nchance de render \r\novas. ",
+      "category": "Livro",
+      "price": 1600,
+      "contextos": [
+        "Presente favorito: Willy"
+      ]
+    },
+    {
+      "id": "440",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Lã",
+      "wikiName": "Wool",
+      "description": "Macia e fofinha. ",
+      "category": "Produto Animal",
+      "price": 680,
+      "contextos": [
+        "Centro Comunitário: Animal",
+        "Presente favorito: Emily"
+      ]
+    },
+    {
+      "id": "715",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Lagosta",
+      "wikiName": "Lobster",
+      "description": "Um crustáceo grande \r\nque vive no oceano. \r\nPossui uma grande \r\ncauda. ",
+      "category": "Peixe",
+      "price": 240,
+      "contextos": [
+        "Centro Comunitário: de Covo",
+        "Presente favorito: Elliott"
+      ]
+    },
+    {
+      "id": "716",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Lagostim",
+      "wikiName": "Crayfish",
+      "description": "Um pequeno peixe de \r\nágua doce parente da \r\nlagosta. ",
+      "category": "Peixe",
+      "price": 150,
+      "contextos": [
+        "Centro Comunitário: de Covo"
+      ]
+    },
+    {
+      "id": "84",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Lágrima Congelada",
+      "wikiName": "Frozen Tear",
+      "description": "Um cristal que dizem ser \r\nas lágrimas congeladas de \r\num ieti. ",
+      "category": "Mineral",
+      "price": 150,
+      "contextos": [
+        "Centro Comunitário: de Geólogo",
+        "Presente favorito: Sebastian"
+      ]
+    },
+    {
+      "id": "635",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Laranja",
+      "wikiName": "Orange",
+      "description": "Suculenta, azedinha, e \r\nexalando um doce \r\naroma de verão. ",
+      "category": "Fruta",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: do Artesão",
+        "Presente favorito: Gus"
+      ]
+    },
+    {
+      "id": "186",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Leite Grande",
+      "wikiName": "Large Milk",
+      "description": "Um jarro grande de \r\nleite de vaca. ",
+      "category": "Produto Animal",
+      "price": 380,
+      "contextos": [
+        "Centro Comunitário: Animal"
+      ]
+    },
+    {
+      "id": "438",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Leite Grande de Cabra",
+      "wikiName": "L. Goat Milk",
+      "description": "Um galão de leite de cabra \r\ncremoso. ",
+      "category": "Produto Animal",
+      "price": 690,
+      "contextos": [
+        "Centro Comunitário: Animal"
+      ]
+    },
+    {
+      "id": "721",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Lesma",
+      "wikiName": "Snail",
+      "description": "Um molusco amplo \r\nmuito comum que vive \r\nnuma casca em \r\nespiral. ",
+      "category": "Peixe",
+      "price": 130,
+      "contextos": [
+        "Centro Comunitário: de Covo",
+        "Presente favorito: Vincent"
+      ]
+    },
+    {
+      "id": "Book_Mystery",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Livro de Mistérios",
+      "wikiName": "Book of Mysteries",
+      "description": "Ler este livro novamente \r\nconcederá uma pequena \r\nquantidade de experiência \r\nem todas as áreas. ",
+      "category": "Livro",
+      "price": 6000,
+      "contextos": [
+        "Presente favorito: Feiticeiro"
+      ]
+    },
+    {
+      "id": "202",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Lula, 1 × Farinha de Trigo, 1 × Óleo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Lula Frita",
+      "wikiName": "Fried Calamari",
+      "description": "Que borrachenta! ",
+      "category": "Culinária",
+      "price": 300,
+      "contextos": [
+        "Presente favorito: Pierre"
+      ]
+    },
+    {
+      "id": "613",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Maçã",
+      "wikiName": "Apple",
+      "description": "Fruta crocante \r\nutilizada para suco e \r\nsidra. ",
+      "category": "Fruta",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: do Artesão",
+        "Centro Comunitário: de Forragem"
+      ]
+    },
+    {
+      "id": "388",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Madeira",
+      "wikiName": "Wood",
+      "description": "Um material ao \r\nmesmo tempo flexível \r\ne resistente com \r\nvárias utilizações. ",
+      "category": "Recursos",
+      "price": 50,
+      "contextos": [
+        "Centro Comunitário: de Construção"
+      ]
+    },
+    {
+      "id": "709",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Madeira de Lei",
+      "wikiName": "Hardwood",
+      "description": "Um tipo especial de \r\nmadeira. Muito bonita \r\ne resistente. ",
+      "category": "Recursos",
+      "price": 30,
+      "contextos": [
+        "Centro Comunitário: de Construção"
+      ]
+    },
+    {
+      "id": "734",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Madeirão",
+      "wikiName": "Woodskip",
+      "description": "Um peixe muito \r\nsensível que só pode \r\nviver em lagos no meio \r\nda floresta. ",
+      "category": "Peixe",
+      "price": 150,
+      "contextos": [
+        "Centro Comunitário: Peixes Especializados"
+      ]
+    },
+    {
+      "id": "807",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Maionese de Dinossauro",
+      "wikiName": "Dinosaur Mayonnaise",
+      "description": "É grossa e creomsa, com uma cor \r\nverde intensa. Tem cheiro de \r\ngrama e couro. ",
+      "category": "Mercadorias Artesanais",
+      "price": 1600,
+      "contextos": [
+        "Centro Comunitário: Perdido"
+      ]
+    },
+    {
+      "id": "308",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Maionese Nula",
+      "wikiName": "Void Mayonnaise",
+      "description": "Uma pasta espessa e \r\ngrossa com cheiro de \r\ncabelo queimado. ",
+      "category": "Mercadorias Artesanais",
+      "price": 550,
+      "contextos": [
+        "Presente favorito: Krobus"
+      ]
+    },
+    {
+      "id": "834",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Manga",
+      "wikiName": "Mango",
+      "description": "Uma fruta tropical \r\ngrande, doce e com \r\num sabor único. ",
+      "category": "Fruta",
+      "price": 260,
+      "contextos": [
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "340",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Mel",
+      "wikiName": "Honey",
+      "description": "É um xarope doce \r\nproduzido por abelhas. ",
+      "category": "Mercadorias Artesanais",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: do Artesão"
+      ]
+    },
+    {
+      "id": "254",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 50 × Fragmento de Osso, 50 × Madeira de Lei, 20 × Fragmento de Brasa",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Melão",
+      "wikiName": "Melon",
+      "description": "Uma delícia doce e \r\nfresca de verão. ",
+      "category": "Fruta",
+      "price": 500,
+      "contextos": [
+        "Centro Comunitário: Plantações de Verão",
+        "Centro Comunitário: Plantações de Qualidade",
+        "Presente favorito: Penny"
+      ]
+    },
+    {
+      "id": "200",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Tomate, 1 × Beterraba",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Mexido de Legumes",
+      "wikiName": "Vegetable Medley",
+      "description": "Muito nutritivo. ",
+      "category": "Culinária",
+      "price": 240,
+      "contextos": [
+        "Presente favorito: Lewis",
+        "Presente favorito: Jodi",
+        "Presente favorito: Leah"
+      ]
+    },
+    {
+      "id": "719",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Mexilhão",
+      "wikiName": "Mussel",
+      "description": "Um bivalve muito \r\ncomum que \r\ngeralmente vive em \r\ngrupo. ",
+      "category": "Peixe",
+      "price": 60,
+      "contextos": [
+        "Centro Comunitário: de Covo"
+      ]
+    },
+    {
+      "id": "270",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Milho em solo arado e regue diariamente.",
+        "season": "Verão, Outono",
+        "growthDays": 14,
+        "regrowDays": 4,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Milho",
+      "wikiName": "Corn",
+      "description": "Um dos grãos mais \r\npopulares. Os grãos \r\ndoces e frescos são \r\numa delícia de verão. ",
+      "category": "Vegetal",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: Plantações de Outono",
+        "Centro Comunitário: Plantações de Qualidade"
+      ]
+    },
+    {
+      "id": "258",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Mirtilo em solo arado e regue diariamente.",
+        "season": "Verão",
+        "growthDays": 13,
+        "regrowDays": 4,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Mirtilo",
+      "wikiName": "Blueberry",
+      "description": "Uma fruta bastante \r\npopular e que faz \r\nmuito bem para a \r\nsaúde. Sua casca azul \r\npossui a mais alta \r\nconcentração de \r\nnutrientes. ",
+      "category": "Fruta",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: Plantações de Verão"
+      ]
+    },
+    {
+      "id": "605",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Alcachofra, 1 × categoria de ingrediente -6",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Molho de Alcachofra",
+      "wikiName": "Artichoke Dip",
+      "description": "Muito refrescante. ",
+      "category": "Culinária",
+      "price": 420,
+      "contextos": [
+        "Presente favorito: Clint"
+      ]
+    },
+    {
+      "id": "400",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Morango em solo arado e regue diariamente.",
+        "season": "Primavera",
+        "growthDays": 8,
+        "regrowDays": 4,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Morango",
+      "wikiName": "Strawberry",
+      "description": "Uma fruta doce e \r\nsuculenta com uma \r\nsedutora cor \r\nvermelha. ",
+      "category": "Fruta",
+      "price": 240,
+      "contextos": [
+        "Presente favorito: Demetrius",
+        "Presente favorito: Maru"
+      ]
+    },
+    {
+      "id": "257",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Morel",
+      "wikiName": "Morel",
+      "description": "Cobiçado por seu \r\nsabor único e que \r\nlembra nozes. ",
+      "category": "Coleta",
+      "price": 300,
+      "contextos": [
+        "Centro Comunitário: Recursos Exóticos"
+      ]
+    },
+    {
+      "id": "18",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Narciso",
+      "wikiName": "Daffodil",
+      "description": "Uma tradicional flor \r\nda primavera. Dá um \r\nótimo presente. ",
+      "category": "Coleta",
+      "price": 60,
+      "contextos": [
+        "Centro Comunitário: Recursos de Primavera",
+        "Presente favorito: Sandy"
+      ]
+    },
+    {
+      "id": "Book_Trash",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "O Bufê do Beco",
+      "wikiName": "The Alleyway Buffet",
+      "description": "Ler este livro \r\nnovamente concederá \r\numa pequena \r\nquantidade de \r\nexperiência. ",
+      "category": "Livro",
+      "price": 6000,
+      "contextos": [
+        "Presente favorito: Linus"
+      ]
+    },
+    {
+      "id": "Book_Woodcutting",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "O Segredo da Floresta",
+      "wikiName": "Woody's Secret",
+      "description": "Ler este livro novamente \r\nconcederá uma pequena \r\nquantidade de experiência. ",
+      "category": "Livro",
+      "price": 1000,
+      "contextos": [
+        "Presente favorito: Robin"
+      ]
+    },
+    {
+      "id": "575",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Obsidiana",
+      "wikiName": "Obsidian",
+      "description": "Vidro vulcânico que se \r\nforma quando o \r\nmagma esfria \r\nrapidamente. ",
+      "category": "Mineral",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Sebastian"
+      ]
+    },
+    {
+      "id": "432",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Óleo de Trufas",
+      "wikiName": "Truffle Oil",
+      "description": "Um ingrediente \r\ngourmet. ",
+      "category": "Mercadorias Artesanais",
+      "price": 2130,
+      "contextos": [
+        "Centro Comunitário: do Artesão",
+        "Presente favorito: Harvey"
+      ]
+    },
+    {
+      "id": "562",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Olho de Tigre",
+      "wikiName": "Tigerseye",
+      "description": "Uma camada de ouro \r\nbrilhante dá a esta \r\njoia um lustre \r\nbrilhante. ",
+      "category": "Mineral",
+      "price": 550,
+      "contextos": [
+        "Presente favorito: Sam"
+      ]
+    },
+    {
+      "id": "749",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Omnigeodo",
+      "wikiName": "Omni Geode",
+      "description": "Um ferreiro pode \r\nquebrar isto para \r\nvocê. Estes geodos \r\ncontém vários \r\nminerais. ",
+      "category": "",
+      "price": 0,
+      "contextos": [
+        "Presente favorito: Clint",
+        "Presente favorito: Anão"
+      ]
+    },
+    {
+      "id": "723",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ostra",
+      "wikiName": "Oyster",
+      "description": "Filtra água \r\nconstantemente para \r\nse alimentar. Durante \r\no processo, remove \r\ntoxinas perigosas para \r\no meio ambiente. ",
+      "category": "Peixe",
+      "price": 80,
+      "contextos": [
+        "Centro Comunitário: de Covo"
+      ]
+    },
+    {
+      "id": "397",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ouriço-do-mar",
+      "wikiName": "Sea Urchin",
+      "description": "Uma criatura lenta e \r\nespinhosa que alguns \r\nconsideram uma \r\niguaria. ",
+      "category": "",
+      "price": 320,
+      "contextos": [
+        "Centro Comunitário: de Tinta"
+      ]
+    },
+    {
+      "id": "289",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ovo de Avestruz",
+      "wikiName": "Ostrich Egg",
+      "description": "Talvez seja o maior ovo \r\ndo mundo. ",
+      "category": "Produto Animal",
+      "price": 1200,
+      "contextos": [
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "ParrotEgg",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ovo de Papagaio",
+      "wikiName": "ParrotEgg",
+      "description": "Invoca um papagaio de \r\nnível 3, que concede \r\numa chance alta de \r\nencontrar ouro ao \r\nmatar monstros. ",
+      "category": "Amuleto",
+      "price": 0,
+      "contextos": [
+        "Presente favorito: Emily",
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "442",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ovo de Pata",
+      "wikiName": "Duck Egg",
+      "description": "Ainda está quente. ",
+      "category": "Produto Animal",
+      "price": 190,
+      "contextos": [
+        "Centro Comunitário: Animal"
+      ]
+    },
+    {
+      "id": "FrogEgg",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ovo de Sapo",
+      "wikiName": "FrogEgg",
+      "description": "Invoca um sapo faminto como \r\ncompanheiro. ",
+      "category": "Amuleto",
+      "price": 0,
+      "contextos": [
+        "Presente favorito: Sebastian",
+        "Presente favorito: Vincent"
+      ]
+    },
+    {
+      "id": "194",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × categoria de ingrediente -5",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Ovo Frito",
+      "wikiName": "Fried Egg",
+      "description": "Com a gema mole. ",
+      "category": "Culinária",
+      "price": 70,
+      "contextos": [
+        "Centro Comunitário: de Cozinheiro"
+      ]
+    },
+    {
+      "id": "182",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 2 × Barra de Ouro, 50 × Pedra, 1 × Diamante",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Ovo Grande",
+      "wikiName": "Large Egg",
+      "description": "Que ovo marrom \r\nabsurdamente grande! ",
+      "category": "Produto Animal",
+      "price": 190,
+      "contextos": [
+        "Centro Comunitário: Animal"
+      ]
+    },
+    {
+      "id": "174",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ovo Grande",
+      "wikiName": "Large Egg",
+      "description": "Um ovo muito maior \r\nque o normal! ",
+      "category": "Produto Animal",
+      "price": 190,
+      "contextos": [
+        "Centro Comunitário: Animal"
+      ]
+    },
+    {
+      "id": "305",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Ovo Nulo",
+      "wikiName": "Void Egg",
+      "description": "Um ovo negro como a \r\nnoite com pintas \r\nvermelhas. É quente \r\nao toque. ",
+      "category": "Produto Animal",
+      "price": 130,
+      "contextos": [
+        "Presente favorito: Sebastian",
+        "Presente favorito: Krobus"
+      ]
+    },
+    {
+      "id": "303",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Pale Ale",
+      "wikiName": "Pale Ale",
+      "description": "Beba com moderação. ",
+      "category": "Mercadorias Artesanais",
+      "price": 600,
+      "contextos": [
+        "Presente favorito: Pam"
+      ]
+    },
+    {
+      "id": "211",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Farinha de Trigo, 1 × categoria de ingrediente -5",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Panquecas",
+      "wikiName": "Pancakes",
+      "description": "Uma pilha dupla de \r\npanquecas fofinhas e \r\nmacias. ",
+      "category": "Culinária",
+      "price": 160,
+      "contextos": [
+        "Presente favorito: Jodi"
+      ]
+    },
+    {
+      "id": "731",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Xarope de Ácer, 1 × Açúcar, 1 × Farinha de Trigo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Pão de Ácer",
+      "wikiName": "Maple Bar",
+      "description": "Uma rosquinha doce \r\ncoberta com xarope \r\nde ácer. ",
+      "category": "Culinária",
+      "price": 600,
+      "contextos": [
+        "Presente favorito: Sam"
+      ]
+    },
+    {
+      "id": "376",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Papoula em solo arado e regue diariamente.",
+        "season": "Verão",
+        "growthDays": 7,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Papoula",
+      "wikiName": "Poppy",
+      "description": "Além de ser colorida, \r\na papoula possui \r\naplicações culinárias e \r\nmedicinais. ",
+      "category": "Flor",
+      "price": 280,
+      "contextos": [
+        "Centro Comunitário: de Cozinheiro",
+        "Presente favorito: Penny"
+      ]
+    },
+    {
+      "id": "Raisins",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Passas",
+      "wikiName": "Raisins",
+      "description": "É dito que esta é a \r\ncomida favorita dos \r\nJunimos. ",
+      "category": "Mercadorias Artesanais",
+      "price": 1200,
+      "contextos": [
+        "Presente favorito: Evelyn"
+      ]
+    },
+    {
+      "id": "446",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Pé de Coelho",
+      "wikiName": "Rabbit's Foot",
+      "description": "Dizem que dá sorte. ",
+      "category": "Produto Animal",
+      "price": 1130,
+      "contextos": [
+        "Centro Comunitário: de Encantador",
+        "Presente favorito: Robin",
+        "Presente favorito: Demetrius",
+        "Presente favorito: Maru",
+        "Presente favorito: Sebastian",
+        "Presente favorito: Linus",
+        "Presente favorito: Pierre",
+        "Presente favorito: Caroline",
+        "Presente favorito: Abigail",
+        "Presente favorito: Alex",
+        "Presente favorito: George",
+        "Presente favorito: Evelyn",
+        "Presente favorito: Lewis",
+        "Presente favorito: Clint",
+        "Presente favorito: Pam",
+        "Presente favorito: Emily",
+        "Presente favorito: Haley",
+        "Presente favorito: Jas",
+        "Presente favorito: Vincent",
+        "Presente favorito: Jodi",
+        "Presente favorito: Kent",
+        "Presente favorito: Sam",
+        "Presente favorito: Leah",
+        "Presente favorito: Shane",
+        "Presente favorito: Marnie",
+        "Presente favorito: Elliott",
+        "Presente favorito: Gus",
+        "Presente favorito: Anão",
+        "Presente favorito: Feiticeiro",
+        "Presente favorito: Harvey",
+        "Presente favorito: Sandy",
+        "Presente favorito: Willy",
+        "Presente favorito: Krobus",
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "390",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Pedra",
+      "wikiName": "Stone",
+      "description": "Um material comum \r\ncom diversos usos em \r\nconstruções. ",
+      "category": "Recursos",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: de Construção"
+      ]
+    },
+    {
+      "id": "554",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Pedra de Limão",
+      "wikiName": "Lemon Stone",
+      "description": "Dizem que o cristal em \r\npó é uma especiaria \r\ndos anões. ",
+      "category": "Mineral",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Anão"
+      ]
+    },
+    {
+      "id": "156",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 2 × Barra de Irídio, 100 × Gosma",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Peixe-fantasma",
+      "wikiName": "Ghostfish",
+      "description": "Um peixe pálido e cego \r\nencontrado em lagos \r\nsubterrâneos. ",
+      "category": "Peixe",
+      "price": 90,
+      "contextos": [
+        "Centro Comunitário: Peixes Especializados"
+      ]
+    },
+    {
+      "id": "700",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Peixe-gato-cabeçudo",
+      "wikiName": "Bullhead",
+      "description": "Um parente do bagre que se \r\nalimenta do fundo de lagos. ",
+      "category": "Peixe",
+      "price": 150,
+      "contextos": [
+        "Centro Comunitário: Peixes de Lago"
+      ]
+    },
+    {
+      "id": "145",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 1 × Barra de Ouro, 1 × Carvão, 5 × Fibra",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Peixe-sol",
+      "wikiName": "Sunfish",
+      "description": "Um peixe muito comum \r\nem rios. ",
+      "category": "Peixe",
+      "price": 60,
+      "contextos": [
+        "Centro Comunitário: Peixes de Rio"
+      ]
+    },
+    {
+      "id": "444",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Pena de Pato",
+      "wikiName": "Duck Feather",
+      "description": "Que colorida! ",
+      "category": "Produto Animal",
+      "price": 500,
+      "contextos": [
+        "Centro Comunitário: de Tinta",
+        "Presente favorito: Elliott",
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "154",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 15 × Madeira de Lei, 1 × Barra de Ouro, 1 × Barra de Ferro, 50 × Fibra",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Pepino-do-mar",
+      "wikiName": "Sea Cucumber",
+      "description": "Uma criatura \r\nescorregadia e \r\ngosmenta encontrada \r\nno fundo do oceano. ",
+      "category": "Peixe",
+      "price": 150,
+      "contextos": [
+        "Presente favorito: Willy"
+      ]
+    },
+    {
+      "id": "797",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Pérola",
+      "wikiName": "Pearl",
+      "description": "Um tesouro raro que \r\nveio do mar. ",
+      "category": "",
+      "price": 5000,
+      "contextos": [
+        "Presente favorito: Robin",
+        "Presente favorito: Demetrius",
+        "Presente favorito: Maru",
+        "Presente favorito: Sebastian",
+        "Presente favorito: Linus",
+        "Presente favorito: Pierre",
+        "Presente favorito: Caroline",
+        "Presente favorito: Abigail",
+        "Presente favorito: Alex",
+        "Presente favorito: George",
+        "Presente favorito: Evelyn",
+        "Presente favorito: Lewis",
+        "Presente favorito: Clint",
+        "Presente favorito: Penny",
+        "Presente favorito: Pam",
+        "Presente favorito: Emily",
+        "Presente favorito: Haley",
+        "Presente favorito: Jas",
+        "Presente favorito: Vincent",
+        "Presente favorito: Jodi",
+        "Presente favorito: Kent",
+        "Presente favorito: Sam",
+        "Presente favorito: Leah",
+        "Presente favorito: Shane",
+        "Presente favorito: Marnie",
+        "Presente favorito: Elliott",
+        "Presente favorito: Gus",
+        "Presente favorito: Anão",
+        "Presente favorito: Feiticeiro",
+        "Presente favorito: Harvey",
+        "Presente favorito: Sandy",
+        "Presente favorito: Willy",
+        "Presente favorito: Krobus",
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "636",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Pêssego",
+      "wikiName": "Peach",
+      "description": "Possui uma textura \r\nde veludo. ",
+      "category": "Fruta",
+      "price": 280,
+      "contextos": [
+        "Centro Comunitário: do Artesão",
+        "Presente favorito: Robin"
+      ]
+    },
+    {
+      "id": "140",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Picão-verde",
+      "wikiName": "Walleye",
+      "description": "Um peixe de água doce \r\nque pode ser \r\ncapturado à noite. ",
+      "category": "Peixe",
+      "price": 210,
+      "contextos": [
+        "Centro Comunitário: Pesca Noturna"
+      ]
+    },
+    {
+      "id": "342",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Picles",
+      "wikiName": "Pickles",
+      "description": "Uma jarra com seus \r\npicles caseiros. ",
+      "category": "Mercadorias Artesanais",
+      "price": 200,
+      "contextos": [
+        "Presente favorito: Harvey"
+      ]
+    },
+    {
+      "id": "260",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Pimenta em solo arado e regue diariamente.",
+        "season": "Verão",
+        "growthDays": 5,
+        "regrowDays": 3,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Pimenta Picante",
+      "wikiName": "Hot Pepper",
+      "description": "Incrivelmente picante \r\ncom um toque de \r\ndoçura. ",
+      "category": "Fruta",
+      "price": 80,
+      "contextos": [
+        "Centro Comunitário: Plantações de Verão",
+        "Presente favorito: Lewis",
+        "Presente favorito: Shane"
+      ]
+    },
+    {
+      "id": "873",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Piña Colada",
+      "wikiName": "Piña Colada",
+      "description": "Beba com moderação. ",
+      "category": "Culinária",
+      "price": 600,
+      "contextos": [
+        "Presente favorito: Pam"
+      ]
+    },
+    {
+      "id": "206",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Farinha de Trigo, 1 × Tomate, 1 × Queijo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Pizza",
+      "wikiName": "Pizza",
+      "description": "Popular pelos motivos \r\ncertos. ",
+      "category": "Culinária",
+      "price": 600,
+      "contextos": [
+        "Presente favorito: Sam",
+        "Presente favorito: Shane"
+      ]
+    },
+    {
+      "id": "906",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 4 × Inhame-coco",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Poi",
+      "wikiName": "Poi",
+      "description": "Uma comida \r\ntradicional com um \r\nsabor delicado e doce \r\nquando está fresca. ",
+      "category": "Culinária",
+      "price": 800,
+      "contextos": [
+        "Presente favorito: Leo"
+      ]
+    },
+    {
+      "id": "149",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 10 × Fragmento de Osso",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Polvo",
+      "wikiName": "Octopus",
+      "description": "Uma criatura \r\nmisteriosa e \r\ninteligente. ",
+      "category": "Peixe",
+      "price": 300,
+      "contextos": [
+        "Presente favorito: Willy"
+      ]
+    },
+    {
+      "id": "235",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Inhame, 1 × Abóbora",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Prato de Outono",
+      "wikiName": "Autumn's Bounty",
+      "description": "Uma amostra da \r\nestação. ",
+      "category": "Culinária",
+      "price": 700,
+      "contextos": [
+        "Presente favorito: Lewis"
+      ]
+    },
+    {
+      "id": "244",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Cenoura Subterrânea, 1 × Raiz de Inverno",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Prato de Raízes",
+      "wikiName": "Roots Platter",
+      "description": "Vai fazer você comer \r\naté terra. ",
+      "category": "Culinária",
+      "price": 200,
+      "contextos": [
+        "Presente favorito: Penny"
+      ]
+    },
+    {
+      "id": "242",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 2 × Sardinha, 1 × Hash Brown",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Prato do Mar",
+      "wikiName": "Dish O' The Sea",
+      "description": "Mantém você quente \r\nno vento frio do mar. ",
+      "category": "Culinária",
+      "price": 440,
+      "contextos": [
+        "Presente favorito: Linus"
+      ]
+    },
+    {
+      "id": "230",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Repolho Roxo, 1 × Rabanete",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Prato Vermelho",
+      "wikiName": "Red Plate",
+      "description": "Cheio de antioxidantes. ",
+      "category": "Culinária",
+      "price": 800,
+      "contextos": [
+        "Presente favorito: Penny"
+      ]
+    },
+    {
+      "id": "604",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 2 × Ameixa Selvagem, 1 × Farinha de Trigo, 1 × Açúcar",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Pudim de Ameixa",
+      "wikiName": "Plum Pudding",
+      "description": "Um doce tradicional de \r\nfim de ano. ",
+      "category": "Culinária",
+      "price": 520,
+      "contextos": [
+        "Presente favorito: Jas"
+      ]
+    },
+    {
+      "id": "232",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 50 × Pedra",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Pudim de Arroz",
+      "wikiName": "Rice Pudding",
+      "description": "Cremoso, doce, e \r\ndivertido de comer. ",
+      "category": "Culinária",
+      "price": 520,
+      "contextos": [
+        "Presente favorito: Demetrius"
+      ]
+    },
+    {
+      "id": "904",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Banana, 1 × categoria de ingrediente -6, 1 × Açúcar",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Pudim de Banana ",
+      "wikiName": "Banana Pudding",
+      "description": "Uma sobremsa cremosa \r\ncom um incrível sabor \r\ntropical. ",
+      "category": "Culinária",
+      "price": 520,
+      "contextos": [
+        "Presente favorito: Abigail"
+      ]
+    },
+    {
+      "id": "80",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Quartzo",
+      "wikiName": "Quartz",
+      "description": "Um cristal \r\ntransparente \r\nencontrado em \r\ncavernas e minas. ",
+      "category": "Mineral",
+      "price": 50,
+      "contextos": [
+        "Centro Comunitário: de Geólogo"
+      ]
+    },
+    {
+      "id": "82",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Quartzo de Fogo",
+      "wikiName": "Fire Quartz",
+      "description": "Um cristal brilhante \r\ngeralmente encontrado \r\nperto do magma. ",
+      "category": "Mineral",
+      "price": 200,
+      "contextos": [
+        "Centro Comunitário: de Geólogo"
+      ]
+    },
+    {
+      "id": "424",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Queijo",
+      "wikiName": "Cheese",
+      "description": "Queijo comum. ",
+      "category": "Mercadorias Artesanais",
+      "price": 460,
+      "contextos": [
+        "Centro Comunitário: do Artesão"
+      ]
+    },
+    {
+      "id": "426",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Queijo de Cabra",
+      "wikiName": "Goat Cheese",
+      "description": "Queijo suave feito com \r\nleite de cabra. ",
+      "category": "Mercadorias Artesanais",
+      "price": 800,
+      "contextos": [
+        "Centro Comunitário: do Artesão",
+        "Presente favorito: Robin",
+        "Presente favorito: Leah"
+      ]
+    },
+    {
+      "id": "412",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Inverno em solo arado e regue diariamente.",
+        "season": "Inverno",
+        "growthDays": 7,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Raiz de Inverno",
+      "wikiName": "Winter Root",
+      "description": "Um tubérculo rico em \r\namido. ",
+      "category": "Coleta",
+      "price": 140,
+      "contextos": [
+        "Centro Comunitário: Recursos de Inverno"
+      ]
+    },
+    {
+      "id": "16",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 45 × Madeira, 45 × Pedra, 10 × Madeira de Lei, 1 × Barra de Cobre",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Raiz-forte",
+      "wikiName": "Wild Horseradish",
+      "description": "Uma raiz picante \r\nencontrada na \r\nprimavera. ",
+      "category": "Coleta",
+      "price": 100,
+      "contextos": [
+        "Centro Comunitário: Recursos de Primavera",
+        "Presente favorito: Krobus"
+      ]
+    },
+    {
+      "id": "239",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Fabrique com a receita desbloqueada. Ingredientes: 1 × Dispositivo de Anão, 1 × Conjunto de Pilhas, 10 × Quartzo Refinado",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Recheio",
+      "wikiName": "Stuffing",
+      "description": "Ah... o doce de pão \r\nquente e salva. ",
+      "category": "Culinária",
+      "price": 330,
+      "contextos": [
+        "Presente favorito: Evelyn"
+      ]
+    },
+    {
+      "id": "243",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 2 × Cenoura Subterrânea, 1 × Açúcar, 1 × categoria de ingrediente -6",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Refeição de Mineiro",
+      "wikiName": "Miner's Treat",
+      "description": "Mantém você energizado. ",
+      "category": "Culinária",
+      "price": 400,
+      "contextos": [
+        "Presente favorito: Maru"
+      ]
+    },
+    {
+      "id": "606",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Cenoura Subterrânea, 1 × Cogumelo Comum, 1 × Couve, 1 × Óleo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Refogado",
+      "wikiName": "Stir Fry",
+      "description": "Legumes à juliana em \r\numa cama de arroz. ",
+      "category": "Culinária",
+      "price": 670,
+      "contextos": [
+        "Presente favorito: Leah"
+      ]
+    },
+    {
+      "id": "266",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Repolho Roxo em solo arado e regue diariamente.",
+        "season": "Verão",
+        "growthDays": 9,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Repolho Roxo",
+      "wikiName": "Red Cabbage",
+      "description": "Geralmente utilizado \r\nem saladas. A cor \r\npode variar de roxa \r\naté verde amarelado \r\ndependendo do \r\nfertilizante. ",
+      "category": "Vegetal",
+      "price": 520,
+      "contextos": [
+        "Centro Comunitário: de Tinta"
+      ]
+    },
+    {
+      "id": "725",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Resina de Carvalho",
+      "wikiName": "Oak Resin",
+      "description": "Uma resina pegajosa e \r\ncheirosa extraída da seiva \r\ndo carvalho. ",
+      "category": "Mercadorias Artesanais",
+      "price": 300,
+      "contextos": [
+        "Centro Comunitário: Recursos Exóticos",
+        "Centro Comunitário: de Encantador"
+      ]
+    },
+    {
+      "id": "649",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Óleo, 1 × Broto de Samambaia, 1 × Alho",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Risoto de Samambaia",
+      "wikiName": "Fiddlehead Risotto",
+      "description": "Um prato de arroz cremoso \r\ncom samambaias salteadas. É \r\nmeio insosso. ",
+      "category": "Culinária",
+      "price": 700,
+      "contextos": [
+        "Presente favorito: Clint",
+        "Presente favorito: Kent"
+      ]
+    },
+    {
+      "id": "637",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Romã",
+      "wikiName": "Pomegranate",
+      "description": "Dentro do fruto há \r\ngrupos de sementes \r\nsuculentas. ",
+      "category": "Fruta",
+      "price": 280,
+      "contextos": [
+        "Centro Comunitário: do Artesão",
+        "Centro Comunitário: de Encantador",
+        "Presente favorito: Elliott"
+      ]
+    },
+    {
+      "id": "595",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Fada em solo arado e regue diariamente.",
+        "season": "Outono",
+        "growthDays": 12,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Rosa-de-fada",
+      "wikiName": "Fairy Rose",
+      "description": "Uma lenda popular \r\nantiga sugere que o \r\ncheiro doce desta flor \r\natrai fadas. ",
+      "category": "Flor",
+      "price": 580,
+      "contextos": [
+        "Presente favorito: Evelyn",
+        "Presente favorito: Jas"
+      ]
+    },
+    {
+      "id": "64",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Rubi",
+      "wikiName": "Ruby",
+      "description": "Uma pedra preciosa \r\ncobiçada por sua cor e \r\nlustre maravilhosos. ",
+      "category": "Mineral",
+      "price": 500,
+      "contextos": [
+        "Presente favorito: Clint",
+        "Presente favorito: Emily",
+        "Presente favorito: Anão"
+      ]
+    },
+    {
+      "id": "196",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Alho-poró, 1 × Dente-de-leão, 1 × Vinagre",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Salada",
+      "wikiName": "Salad",
+      "description": "Uma saudável salada \r\nde jardim. ",
+      "category": "Culinária",
+      "price": 220,
+      "contextos": [
+        "Presente favorito: Leah"
+      ]
+    },
+    {
+      "id": "610",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Mirtilo, 1 × Melão, 1 × Damasco",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Salada de Frutas",
+      "wikiName": "Fruit Salad",
+      "description": "Uma combinação deliciosa \r\nde frutas de verão. ",
+      "category": "Culinária",
+      "price": 900,
+      "contextos": [
+        "Presente favorito: Haley"
+      ]
+    },
+    {
+      "id": "699",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Salmão Híbrido",
+      "wikiName": "Tiger Trout",
+      "description": "Um salmão híbrido \r\nraro e estéril. ",
+      "category": "Peixe",
+      "price": 300,
+      "contextos": [
+        "Centro Comunitário: Peixes de Rio"
+      ]
+    },
+    {
+      "id": "795",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Salmão Nulo",
+      "wikiName": "Void Salmon",
+      "description": "Um salmão modificado \r\npor energia nula. A \r\ncarne fresca é preta \r\ncomo carvão, mas fica \r\nrosa rapidamente \r\nquando exposta ao ar. ",
+      "category": "Peixe",
+      "price": 300,
+      "contextos": [
+        "Centro Comunitário: Perdido"
+      ]
+    },
+    {
+      "id": "131",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Sardinha",
+      "wikiName": "Sardine",
+      "description": "Um peixe comum do \r\noceano. ",
+      "category": "Peixe",
+      "price": 80,
+      "contextos": [
+        "Centro Comunitário: Peixes de Oceano"
+      ]
+    },
+    {
+      "id": "227",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × categoria de ingrediente -4",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Sashimi",
+      "wikiName": "Sashimi",
+      "description": "Peixe cru fatiado em \r\npedaços finos. ",
+      "category": "Culinária",
+      "price": 150,
+      "contextos": [
+        "Presente favorito: Sebastian"
+      ]
+    },
+    {
+      "id": "236",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Abóbora, 1 × categoria de ingrediente -6",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Sopa de Abóbora",
+      "wikiName": "Pumpkin Soup",
+      "description": "Favorita da estação. ",
+      "category": "Culinária",
+      "price": 600,
+      "contextos": [
+        "Presente favorito: Sebastian"
+      ]
+    },
+    {
+      "id": "199",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Chirívia, 1 × categoria de ingrediente -6, 1 × Vinagre",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Sopa de Chirívia",
+      "wikiName": "Parsnip Soup",
+      "description": "Fresca e com um sabor \r\nforte. ",
+      "category": "Culinária",
+      "price": 240,
+      "contextos": [
+        "Presente favorito: Pam"
+      ]
+    },
+    {
+      "id": "207",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 2 × Vagem",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Sopa de Vagens",
+      "wikiName": "Bean Hotpot",
+      "description": "É bem saudável. ",
+      "category": "Culinária",
+      "price": 200,
+      "contextos": [
+        "Presente favorito: Demetrius"
+      ]
+    },
+    {
+      "id": "218",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Coco, 1 × Camarão, 1 × Cogumelo Comum",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Sopa Tom Kha",
+      "wikiName": "Tom Kha Soup",
+      "description": "Que sabores incríveis! ",
+      "category": "Culinária",
+      "price": 500,
+      "contextos": [
+        "Presente favorito: Penny",
+        "Presente favorito: Elliott"
+      ]
+    },
+    {
+      "id": "233",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × categoria de ingrediente -6, 1 × Açúcar",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Sorvete",
+      "wikiName": "Ice Cream",
+      "description": "Difícil achar quem não \r\ngosta disso. ",
+      "category": "Culinária",
+      "price": 240,
+      "contextos": [
+        "Presente favorito: Demetrius"
+      ]
+    },
+    {
+      "id": "237",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Acelga Chinesa, 1 × Oxicoco, 1 × Alcachofra",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Super-prato",
+      "wikiName": "Super Meal",
+      "description": "Um prato muito \r\nenergizante. ",
+      "category": "Culinária",
+      "price": 440,
+      "contextos": [
+        "Presente favorito: Harvey"
+      ]
+    },
+    {
+      "id": "155",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Superpepino",
+      "wikiName": "Super Cucumber",
+      "description": "Uma variedade rara e \r\npúrpura de \r\npepino-do-mar. ",
+      "category": "Peixe",
+      "price": 500,
+      "contextos": [
+        "Presente favorito: Feiticeiro"
+      ]
+    },
+    {
+      "id": "213",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Atum, 1 × Tortilha, 1 × Repolho Roxo, 1 × Maionese",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Taco de Peixe",
+      "wikiName": "Fish Taco",
+      "description": "Tem um cheiro \r\ndelicioso. ",
+      "category": "Culinária",
+      "price": 1000,
+      "contextos": [
+        "Presente favorito: Caroline",
+        "Presente favorito: Gus"
+      ]
+    },
+    {
+      "id": "428",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Tecido",
+      "wikiName": "Cloth",
+      "description": "Feito com lã fina. ",
+      "category": "Mercadorias Artesanais",
+      "price": 940,
+      "contextos": [
+        "Centro Comunitário: do Artesão",
+        "Presente favorito: Emily"
+      ]
+    },
+    {
+      "id": "701",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Tilápia",
+      "wikiName": "Tilapia",
+      "description": "Um peixe herbívoro \r\nque prefere água \r\nquente. ",
+      "category": "Peixe",
+      "price": 150,
+      "contextos": [
+        "Centro Comunitário: Peixes de Oceano"
+      ]
+    },
+    {
+      "id": "814",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Tinta de Lula",
+      "wikiName": "Squid Ink",
+      "description": "Lulas usam essa tinta \r\npara confundir \r\npredadores. ",
+      "category": "",
+      "price": 220,
+      "contextos": [
+        "Presente favorito: Elliott"
+      ]
+    },
+    {
+      "id": "256",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Tomate em solo arado e regue diariamente.",
+        "season": "Verão",
+        "growthDays": 11,
+        "regrowDays": 4,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Tomate",
+      "wikiName": "Tomato",
+      "description": "Muito saboroso e \r\nligeiramente picante, o \r\nTomate possui uma \r\nvariedade de \r\nutilizações culinárias. ",
+      "category": "Vegetal",
+      "price": 120,
+      "contextos": [
+        "Centro Comunitário: Plantações de Verão"
+      ]
+    },
+    {
+      "id": "68",
+      "personal": true,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Topázio",
+      "wikiName": "Topaz",
+      "description": "Muito comum, mas \r\nainda admirado por \r\nsua beleza. ",
+      "category": "Mineral",
+      "price": 160,
+      "contextos": [
+        "Presente favorito: Clint",
+        "Presente favorito: Emily",
+        "Presente favorito: Anão"
+      ]
+    },
+    {
+      "id": "608",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Abóbora, 1 × Farinha de Trigo, 1 × categoria de ingrediente -6, 1 × Açúcar",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Torta de Abóbora",
+      "wikiName": "Pumpkin Pie",
+      "description": "Um creme de abóbora \r\nextremamente suave em \r\numa massa seca e \r\ncrocante. ",
+      "category": "Culinária",
+      "price": 770,
+      "contextos": [
+        "Presente favorito: Marnie"
+      ]
+    },
+    {
+      "id": "611",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 2 × Amora, 1 × Açúcar, 1 × Farinha de Trigo",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Torta de Amoras",
+      "wikiName": "Blackberry Cobbler",
+      "description": "Não tem nada igual. ",
+      "category": "Culinária",
+      "price": 520,
+      "contextos": [
+        "Presente favorito: Abigail"
+      ]
+    },
+    {
+      "id": "234",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Mirtilo, 1 × Farinha de Trigo, 1 × Açúcar, 1 × categoria de ingrediente -5",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Torta de Mirtilo",
+      "wikiName": "Blueberry Tart",
+      "description": "Sutil e refrescante. ",
+      "category": "Culinária",
+      "price": 300,
+      "contextos": [
+        "Presente favorito: Linus"
+      ]
+    },
+    {
+      "id": "222",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Prepare em uma cozinha ou kit de cozinha, com a receita desbloqueada. Ingredientes: 1 × Ruibarbo, 1 × Farinha de Trigo, 1 × Açúcar",
+        "source": "Receitas da versão instalada do jogo."
+      },
+      "name": "Torta de Ruibarbo",
+      "wikiName": "Rhubarb Pie",
+      "description": "Huum... picante e doce! ",
+      "category": "Culinária",
+      "price": 800,
+      "contextos": [
+        "Presente favorito: Maru",
+        "Presente favorito: Jodi"
+      ]
+    },
+    {
+      "id": "262",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Sementes de Trigo em solo arado e regue diariamente.",
+        "season": "Verão, Outono",
+        "growthDays": 4,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Trigo",
+      "wikiName": "Wheat",
+      "description": "Um dos grãos mais \r\ncultivados. Dá uma \r\nboa farinha para pães \r\ne bolos. ",
+      "category": "Vegetal",
+      "price": 50,
+      "contextos": [
+        "Centro Comunitário: de Forragem"
+      ]
+    },
+    {
+      "id": "430",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Trufa",
+      "wikiName": "Truffle",
+      "description": "Um tipo gourmet de \r\ncogumelo com um \r\ngosto único. ",
+      "category": "",
+      "price": 1250,
+      "contextos": [
+        "Centro Comunitário: de Cozinheiro",
+        "Presente favorito: Leah"
+      ]
+    },
+    {
+      "id": "591",
+      "personal": true,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Bulbo de Tulipa em solo arado e regue diariamente.",
+        "season": "Primavera",
+        "growthDays": 6,
+        "regrowDays": -1,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Tulipa",
+      "wikiName": "Tulip",
+      "description": "A mais popular flor de \r\nprimavera. Possui um \r\ncheiro bem delicado. ",
+      "category": "Flor",
+      "price": 60,
+      "contextos": [
+        "Presente favorito: Evelyn"
+      ]
+    },
+    {
+      "id": "398",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Mudas de Uva em solo arado e regue diariamente.",
+        "season": "Outono",
+        "growthDays": 10,
+        "regrowDays": 3,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Uva",
+      "wikiName": "Grape",
+      "description": "Um doce cacho de \r\nuvas. ",
+      "category": "Fruta",
+      "price": 160,
+      "contextos": [
+        "Centro Comunitário: Recursos de Verão",
+        "Presente favorito: Vincent"
+      ]
+    },
+    {
+      "id": "188",
+      "personal": false,
+      "quality": 0,
+      "obtaining": {
+        "method": "Cultive Mudas de Vagem em solo arado e regue diariamente.",
+        "season": "Primavera",
+        "growthDays": 10,
+        "regrowDays": 3,
+        "source": "Dados de cultivo da versão instalada do jogo. Tempo base sem bônus; plantio não conta como dia de crescimento."
+      },
+      "name": "Vagem",
+      "wikiName": "Green Bean",
+      "description": "Uma pequena vagem \r\nsuculenta e firme. ",
+      "category": "Vegetal",
+      "price": 80,
+      "contextos": [
+        "Centro Comunitário: Plantações de Primavera"
+      ]
+    },
+    {
+      "id": "348",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Vinho",
+      "wikiName": "Wine",
+      "description": "Beba com moderação. ",
+      "category": "Mercadorias Artesanais",
+      "price": 800,
+      "contextos": [
+        "Centro Comunitário: de Encantador",
+        "Centro Comunitário: Perdido",
+        "Presente favorito: Leah",
+        "Presente favorito: Harvey"
+      ]
+    },
+    {
+      "id": "724",
+      "personal": false,
+      "quality": 0,
+      "obtaining": null,
+      "name": "Xarope de Ácer",
+      "wikiName": "Maple Syrup",
+      "description": "Um xarope doce com \r\num sabor único. ",
+      "category": "Mercadorias Artesanais",
+      "price": 400,
+      "contextos": [
+        "Centro Comunitário: Recursos Exóticos",
+        "Centro Comunitário: de Cozinheiro"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+AUDITORIA DE FONTES — 30/10/2026
+STATUS: INCOMPLETA. O snapshot contém 225 itens; somente 4 foram verificados individualmente.
+O site do desenvolvedor indica a Wiki como oficial; ela é editada pela comunidade e pode mudar. Seu texto é CC BY-NC-SA; imagens têm direitos separados.
+https://www.stardewvalley.net/links/
+https://stardewvalleywiki.com/Stardew_Valley_Wiki:About
+
+ACHADOS INDIVIDUAIS
+Parsnip: Receita da máquina de maionese atribuída à chirívia; a chirívia cresce em quatro dias. https://stardewvalleywiki.com/Parsnip https://stardewvalleywiki.com/Mayonnaise_Machine
+Grape: Resumo omite sementes silvestres de verão e tempos de cultivo de outono. https://stardewvalleywiki.com/Grape
+Red Cabbage: A garantia de uma oferta não é recorrente; é preciso comprar quando ela aparecer. https://stardewvalleywiki.com/Traveling_Cart
+Rabbit's Foot: Resumo omite possível presente de gato com amizade máxima. https://stardewvalleywiki.com/Rabbit%27s_Foot
+
+ACHADOS SISTÊMICOS
+ItemGuides.cs elimina o tipo de ID e sobrescreve métodos: usar QualifiedItemId e listas de métodos. https://stardewvalleywiki.com/Modding:Items
+Exceções de receitas são ignoradas silenciosamente; compras não são modeladas; a captura depende dos NPCs carregados no save.
+Dados não verificados e valores nulos não provam ausência de método.
+Os arquivos XNB locais ainda não foram integralmente extraídos e comparados.
+Para concluir: exportar todos os tipos com IDs qualificados, versão e mods; comparar cada método e registrar fontes e datas.

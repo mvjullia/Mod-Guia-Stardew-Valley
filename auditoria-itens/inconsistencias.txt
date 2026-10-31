@@ -1,0 +1,36 @@
+AUDITORIA PARCIAL — 2026-10-31T02:47:35.427Z
+Escopo: 225 itens únicos extraídos do último snapshot, sem ícones nem dados do jogador. Não é uma auditoria completa do jogo.
+
+1. CONFIRMADA — Chirívia (Parsnip, ID exportado 24).
+   Atual: Fabrique com a receita desbloqueada. Ingredientes: 15 × Madeira, 15 × Pedra, 1 × Cristal de Terra, 1 × Barra de Cobre
+   Correto: cultivo na primavera; crescimento base de 4 dias. Fonte: https://stardewvalleywiki.com/Parsnip
+   Causa no código: ItemGuides indexa por ItemId sem tipo, e a construção de receitas sobrescreve registros de cultivo. Confirmar identificação exata do outro objeto antes de nomeá-lo.
+   Ajuste: usar QualifiedItemId e listas de métodos, não uma entrada única por número.
+
+2. CONFIRMADA — Sobrescrita de múltiplas fontes. ItemGuides.Build atribui guides[id] para cada cultivo e receita, de forma que apenas a última entrada permanece; métodos anteriores desaparecem.
+   Ajuste: preservar todos os métodos, sem substituir cultivo por receita ou receita por outra receita.
+
+3. CONFIRMADA — Compra não é representada no modelo local ItemGuides. Não é possível concluir se há ou não compra para cada item.
+   Ajuste: incluir vendedor, preço, disponibilidade e fonte em entradas separadas.
+
+4. CONFIRMADA — Ingredientes por categoria são exibidos como identificadores negativos, dificultando a compreensão. Itens afetados na amostra: 16.
+   Ajuste: resolver categorias para nomes e explicar alternativas de ingredientes.
+
+5. NÃO VERIFICADA — Divergências individuais em outros itens, fontes externas e todo o catálogo de objetos/equipamentos/móveis ainda não foram auditados.
+   Ajuste: exportar catálogo completo com IDs qualificados e validar cada método com referência específica; não assumir campos vazios como inexistentes.
+
+A licença e a atribuição das fontes devem ser respeitadas; os resumos da Wiki presentes no catálogo são previamente existentes e precisam de revisão.
+
+ITERAÇÃO 2 — Água-marinha: snapshot mostra uma receita de argila, pedra e quartzo refinado. Isso não aparece como fonte da gema na Wiki e sugere colisão de IDs; investigar tipo do resultado. https://stardewvalleywiki.com/Aquamarine
+Achigã Crocante: ingredientes conferem, mas origem da receita enviada por Kent após três corações não é mostrada. https://stardewvalleywiki.com/Crispy_Bass
+
+
+ITERAÇÃO 3: correção por IDs qualificados e preservação de métodos múltiplos compilada, aguardando instalação e teste no jogo. Chirívia e água-marinha necessitam confirmação com um novo snapshot.
+
+ITERAÇÃO 6 — Caixa de Fada: é uma bugiganga, mas o snapshot não preserva seu tipo de forma confiável. Confirmar ID qualificado e corrigir a renderização antes de declarar o item concluído. Fonte: https://stardewvalleywiki.com/Fairy_Box
+
+Iteração 9 (31/10/2026): ovos de sapo e papagaio são acessórios de combate, não ovos de animais; conferir tipo qualificado e apresentação no mod. Informações de obtenção dos 40 itens foram atualizadas parcialmente; faltam métodos alternativos e validação em jogo. Fontes individuais: iteracao-9-dados.json.
+
+Iteração 10 (31/10/2026): dados de obtenção foram ampliados com horários de pesca, receitas e tempos de crescimento; a compra da Piña Colada foi diferenciada de receitas fabricáveis. Pendentes: comparação integral de cada campo e teste em jogo. Fontes: iteracao-10-dados.json.
+
+Iteração 11 (31/10/2026): Uva tinha resumo sem sementes silvestres de verão e sem tempos de cultivo de outono; guia atualizado com os dois métodos e tempos. Demais resumos foram ampliados com fontes individuais; comparação integral e validação em jogo continuam pendentes. Fontes: iteracao-11-dados.json.

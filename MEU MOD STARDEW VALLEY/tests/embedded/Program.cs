@@ -1,0 +1,8 @@
+using System;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
+using StardewRealtimeTelemetry;
+namespace StardewModdingAPI { public enum LogLevel {Info,Warn,Trace} public interface IMonitor {void Log(string text, LogLevel level);} }
+class TestMonitor:StardewModdingAPI.IMonitor { public void Log(string text, StardewModdingAPI.LogLevel level) {Console.WriteLine(text);} }
+class Program { static async Task Main(){using var server=new EmbeddedGuide(new TestMonitor());server.Start();using var handler=new HttpClientHandler{UseCookies=true};using var client=new HttpClient(handler){Timeout=TimeSpan.FromSeconds(5)}; var bad=await client.GetAsync(server.Origin+"/api/events");if(bad.StatusCode!=HttpStatusCode.Unauthorized)throw new Exception("SSE sem sessão");var pageRequest=new HttpRequestMessage(HttpMethod.Get,server.Origin+"/");pageRequest.Headers.Add("Sec-Fetch-Site","none");var page=await client.SendAsync(pageRequest);if(!(await page.Content.ReadAsStringAsync()).Contains("window.embeddedGuide=true"))throw new Exception("marcador ausente");server.Publish("{\"teste\":true}");using var response=await client.GetAsync(server.Origin+"/api/events",HttpCompletionOption.ResponseHeadersRead);using var reader=new System.IO.StreamReader(await response.Content.ReadAsStreamAsync());string? line;bool found=false;while((line=await reader.ReadLineAsync())!=null && line!=""){if(line.Contains("\"teste\":true"))found=true;}if(!found)throw new Exception("snapshot não recebido");Console.WriteLine("OK: página, sessão e SSE integrados");} }

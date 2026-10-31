@@ -1,0 +1,10 @@
+{
+  "Name": "Stardew Realtime Telemetry",
+  "Author": "SeuNome",
+  "Version": "1.0.0",
+  "Description": "Sincroniza os dados do jogador e da fazenda em tempo real ao carregar um save.",
+  "UniqueID": "SeuNome.StardewRealtimeTelemetry",
+  "EntryDll": "StardewRealtimeTelemetry.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
