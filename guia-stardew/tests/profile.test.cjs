@@ -13,12 +13,15 @@ const document = { head: new Element('head'), querySelector: s => s === '#savein
 class Image { constructor() { this.naturalWidth = 10; this.naturalHeight = 10; } set src(value) { this.onload(); } }
 const context = { document, Image, nav() {}, addEventListener() {} };
 vm.runInNewContext(fs.readFileSync(require('node:path').join(__dirname, '../dist/profile.js'), 'utf8'), context);
-const d = { portrait: 'data:image/png;base64,abc', player: { name: 'Ana', isMale: false, money: 1234567, skills: { farming: 1, fishing: 2, foraging: 3, mining: 4, combat: 5 } }, farm: { name: 'Sol', day: 5, season: 'spring', year: 1, totalEarnings: 9876543 }, visuals: { pets: [{ name: 'Gato', icon: 'pet' }, { name: 'Cão', icon: 'pet2' }] } };
+const d = { portrait: 'data:image/png;base64,abc', player: { name: 'Ana', isMale: false, money: 1234567, relationship: { status: 'married', partnerName: 'Leah' }, skills: { farming: 1, fishing: 2, foraging: 3, mining: 4, combat: 5 } }, farm: { name: 'Sol', day: 5, season: 'spring', year: 1, totalEarnings: 9876543 }, visuals: { pets: [{ name: 'Gato', icon: 'pet' }, { name: 'Cão', icon: 'pet2' }] } };
 context.showFarmerSnapshot(d);
 const [art, info] = profile.children;
-assert.deepEqual(art.children.map(x => x.className), ['profile-portrait', 'pet-gallery']);
-assert.equal(art.children[0].children[1].textContent, 'Ana');
-assert.deepEqual(art.children[1].children.map(x => x.children[1].textContent), ['Gato', 'Cão']);
+assert.deepEqual(art.children.map(x => x.className), ['profile-card-title', 'profile-portrait', 'profile-field', 'pet-gallery']);
+assert.equal(art.children[0].textContent, 'Card do Jogador');
+assert.equal(art.children[1].children[1].textContent, 'Ana');
+assert.equal(art.children[2].children[0].textContent, 'Estado Civil');
+assert.equal(art.children[2].children[1].children[0].textContent, 'Casada com Leah');
+assert.deepEqual(art.children[3].children.map(x => x.children[1].textContent), ['Gato', 'Cão']);
 assert.equal(info.children[0].textContent, 'Fazenda Sol');
 assert.equal(info.children[1].children[0].textContent, 'Data');
 assert.equal(info.children[2].children[0].textContent, 'Sua Carteira');
@@ -28,8 +31,12 @@ assert.equal(info.children[3].children[1].children[1].textContent, '9.876.543 ou
 assert.equal(info.children[5].children.length, 5);
 assert.equal(profile.style['--outfit-hue'], '225');
 context.showFarmerSnapshot({ ...d, visuals: { pet: { name: 'Legado', icon: 'pet' } } });
-assert.equal(profile.children[0].children[1].children[0].children[1].textContent, 'Legado');
+assert.equal(profile.children[0].children[3].children[0].children[1].textContent, 'Legado');
+context.showFarmerSnapshot({ ...d, player: { ...d.player, relationship: { status: 'single' } } });
+assert.equal(profile.children[0].children[2].children[1].children[0].textContent, 'Solteira');
+context.showFarmerSnapshot({ ...d, player: { ...d.player, relationship: { status: 'roommate', partnerName: 'Krobus' } } });
+assert.equal(profile.children[0].children[2].children[1].children[0].textContent, 'Mora com Krobus');
 context.showFarmerSnapshot({ ...d, portrait: null, visuals: {} });
 assert.equal(profile.style['--outfit-hue'], undefined);
-assert.equal(profile.children[0].children.length, 0);
+assert.equal(profile.children[0].children[1].children[1].children[0].textContent, 'Casada com Leah');
 console.log('OK: títulos, habilidades, retratos e paleta de roupa com alternativa padrão.');
