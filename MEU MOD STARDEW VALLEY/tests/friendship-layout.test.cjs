@@ -20,10 +20,11 @@ vm.runInNewContext(fs.readFileSync(path.join(__dirname, '../guide-src/visual.js'
 window.render();
 assert(grid.classes.has('friendship-grid'));
 assert.equal(grid.children.length, 2);
-assert.equal(grid.children[0].style['--npc-card-bg'], 'hsl(0 55% 88%)');
-assert.equal(grid.children[1].style['--npc-card-bg'], 'hsl(225 55% 88%)');
+assert.equal(grid.children[0].style['--npc-card-hue'], '0');
+assert.equal(grid.children[1].style['--npc-card-hue'], '225');
 const [summary, gifts] = grid.children[0].children;
-assert.equal(summary.style['--npc-card-bg'], undefined);
+assert.equal(summary.style['--npc-card-hue'], undefined);
+assert.equal(grid.children[0].style.background, undefined);
 assert.equal(summary.className, 'resident-summary');
 assert.deepEqual(summary.children.map(element => element.className), ['resident-frame', 'hearts', 'resident-name']);
 assert.equal(summary.children[1].attributes['aria-label'], '3 de 10 corações');
