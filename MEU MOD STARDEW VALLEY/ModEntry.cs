@@ -23,7 +23,6 @@ namespace StardewRealtimeTelemetry
         public int UploadIntervalSeconds { get; set; } = 2;
         public bool EnableAlbums { get; set; } = true;
         public int AlbumDailyLimit { get; set; } = 40;
-        public int AlbumMinSecondsBetweenPhotos { get; set; } = 10;
         public bool EnableCoopAlbums { get; set; } = true;
         public bool ShareAlbumPhotos { get; set; } = true;
         public bool AllowSharedPhotoRequests { get; set; } = true;

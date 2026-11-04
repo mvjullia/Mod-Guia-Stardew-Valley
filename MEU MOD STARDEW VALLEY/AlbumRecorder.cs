@@ -31,12 +31,14 @@ internal sealed class AlbumRecorder
     private readonly HashSet<string> visitedRooms = new();
     private Vector2 lastPosition;
     private DateTimeOffset nextPhoto;
+    private readonly Func<bool> cooldownProbe;
     private AlbumMoment? ready;
     private bool enabled;
     private string? rainyWateringDay;
     private sealed class Template { public Template() {} public string Title { get; set; } = ""; public string Description { get; set; } = ""; }
     public AlbumRecorder(IModHelper helper, IMonitor monitor, AlbumStore store, Func<ModConfig> config, string modId)
     {
+        cooldownProbe = () => InCooldown;
         this.monitor = monitor; this.store = store; this.config = config;
         using var stream = typeof(AlbumRecorder).Assembly.GetManifestResourceStream("Guide.album-moments.json") ?? throw new InvalidDataException("Legendas dos álbuns ausentes.");
         templates = JsonSerializer.Deserialize<Dictionary<string, Template>>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
@@ -45,7 +47,7 @@ internal sealed class AlbumRecorder
         helper.Events.Player.Warped += OnWarped;
         helper.Events.GameLoop.UpdateTicked += OnUpdate;
         helper.Events.Display.Rendered += OnRendered;
-        try { coop = new CoopAlbumRecorder(helper, monitor, store, config, Queue, modId); }
+        try { coop = new CoopAlbumRecorder(helper, monitor, store, config, Queue, modId, cooldownProbe); }
         catch (Exception error) { monitor.Log("Álbuns cooperativos indisponíveis; lembranças básicas preservadas: " + error.Message, LogLevel.Warn); }
     }
     private void Load()
@@ -94,9 +96,12 @@ internal sealed class AlbumRecorder
         }
         return result;
     }
+    /// <summary>Fixed 20-minute cooldown after every album/gallery screenshot.</summary>
+    internal const int CooldownSeconds = 20 * 60;
+    internal bool InCooldown => DateTimeOffset.UtcNow < nextPhoto;
     private void Queue(AlbumMoment? moment)
     {
-        if (moment == null || !templates.ContainsKey(moment.Kind) || store.HasEpisode(moment.EpisodeKey)) return;
+        if (InCooldown || moment == null ||!templates.ContainsKey(moment.Kind) || store.HasEpisode(moment.EpisodeKey)) return;
         if (moment.ReuseImageId != null) { Save(moment, null); return; }
         if (!pending.Any(item => moment.EpisodeKey != null ? item.Moment.EpisodeKey == moment.EpisodeKey : item.Moment.Kind == moment.Kind && item.Moment.ItemName == moment.ItemName))
             pending.Add((moment, DateTimeOffset.UtcNow.AddSeconds(moment.Collection == "nights" || moment.CaptureMode == "aftermath" ? 2400 : moment.CaptureMode is "strength" or "joja" or "scene" ? 15 : moment.Kind is "center-delivery" or "center-complete" ? 120 : 45)));
@@ -136,6 +141,7 @@ internal sealed class AlbumRecorder
         if (!enabled || !config().EnableAlbums || !Context.IsWorldReady || !Game1.game1.IsActive || !e.IsMultipleOf(15)) return;
         try {
             var position = Game1.player.Position; bool moving = Vector2.DistanceSquared(position, lastPosition) > 1; lastPosition = position;
+            if (InCooldown) return; // no event checks while the screenshot cooldown runs
             pending.RemoveAll(item => item.Expires < DateTimeOffset.UtcNow || (!item.Moment.FollowLocation && item.Moment.Location != Game1.currentLocation.NameOrUniqueName) ||
                 (item.Moment.Room != null && !notes.Any(note => note.Room == item.Moment.Room && Vector2.DistanceSquared(Game1.player.Tile, note.Tile) <= 25)));
             if (visit.Active && Game1.currentLocation is CommunityCenter)
@@ -183,19 +189,25 @@ internal sealed class AlbumRecorder
     private void OnRendered(object? sender, RenderedEventArgs e)
     {
         var moment = ready; ready = null;
+        if (InCooldown) return;
         if (moment == null) {
             var immediate = pending.Where(item => item.Expires >= DateTimeOffset.UtcNow && item.Moment.CaptureMode != "walking" && CanCapture(item.Moment))
                 .OrderByDescending(item => item.Moment.Priority).FirstOrDefault();
-            if (immediate.Moment != null) { moment = immediate.Moment; if (moment.CaptureMode != "aftermath") pending.Remove(immediate); }
+            if (immediate.Moment != null) moment = immediate.Moment;
         }
         if (moment == null || !CanCapture(moment) || (!moment.FollowLocation && Game1.currentLocation.NameOrUniqueName != moment.Location)) return;
         if (moment.Room != null && !notes.Any(note => note.Room == moment.Room && Vector2.DistanceSquared(Game1.player.Tile, note.Tile) <= 25)) return;
+        // One attempt per moment: a failed capture (blank frame, GPU error, save refused) is discarded, never retried.
+        // Retrying re-read the full back buffer every frame, stalling the game for as long as the moment stayed pending.
+        pending.RemoveAll(item => ReferenceEquals(item.Moment, moment));
         try {
             var graphics = Game1.graphics.GraphicsDevice;
             int width = graphics.PresentationParameters.BackBufferWidth, height = graphics.PresentationParameters.BackBufferHeight;
             var pixels = new Color[width * height]; graphics.GetBackBufferData(pixels);
             // Avoid saving fade/blank frames if a graphics backend cannot expose a valid world frame.
-            if (pixels.Where((_, index) => index % 997 == 0).Select(color => color.PackedValue).Distinct().Take(3).Count() < 3) return;
+            if (pixels.Where((_, index) => index % 997 == 0).Select(color => color.PackedValue).Distinct().Take(3).Count() < 3) {
+                monitor.Log("Álbum: quadro vazio; lembrança descartada sem nova tentativa: " + moment.Kind, LogLevel.Trace); return;
+            }
             int photoWidth = Math.Min(1280, width), photoHeight = Math.Max(1, height * photoWidth / width);
             var scaled = new Color[photoWidth * photoHeight];
             for (int y = 0; y < photoHeight; y++) for (int x = 0; x < photoWidth; x++) {
@@ -205,15 +217,16 @@ internal sealed class AlbumRecorder
             using var image = new Texture2D(graphics, photoWidth, photoHeight); image.SetData(scaled);
             using var stream = new MemoryStream(); image.SaveAsPng(stream, photoWidth, photoHeight);
             var photo = Save(moment, stream.ToArray());
-            if (photo != null) {
-                if (moment.CaptureMode == "aftermath") pending.RemoveAll(item => ReferenceEquals(item.Moment, moment));
+            if (photo == null) return;
+            {
                 // Several memories may describe the same valid frame. Reuse it instead of stalling gameplay with repeated GPU reads.
                 var simultaneous = pending.Where(item => item.Expires >= DateTimeOffset.UtcNow && item.Moment.CaptureMode != "walking" &&
                     (item.Moment.FollowLocation || item.Moment.Location == Game1.currentLocation.NameOrUniqueName) && CanCapture(item.Moment)).Take(3).ToArray();
-                foreach (var extra in simultaneous) { pending.Remove(extra); Save(extra.Moment, null, photo.ImageId); }
+                foreach (var extra in simultaneous) if (Save(extra.Moment, null, photo.ImageId) != null) pending.Remove(extra);
             }
-            nextPhoto = DateTimeOffset.UtcNow.AddSeconds(Math.Max(3, config().AlbumMinSecondsBetweenPhotos));
-        } catch (Exception error) { monitor.Log("Álbum: captura indisponível neste frame: " + error.Message, LogLevel.Trace); }
+            nextPhoto = DateTimeOffset.UtcNow.AddSeconds(CooldownSeconds);
+            pending.Clear(); ready = null;
+        } catch (Exception error) { monitor.Log("Álbum: captura falhou; lembrança descartada sem nova tentativa: " + error.Message, LogLevel.Trace); }
     }
     private AlbumPhoto? Save(AlbumMoment moment, byte[]? png, string? reuseImage = null)
     {
