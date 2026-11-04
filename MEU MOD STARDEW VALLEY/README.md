@@ -34,7 +34,7 @@ As fotos são aguardadas em uma fila e capturadas no evento `Rendered`, com o jo
 
 As imagens e o `index.json` ficam em `albums/<saveId>/<multiplayerId>/` dentro da pasta do mod instalado. As rotas `/api/albums` e `/api/albums/photos/<imageId>.png` exigem a sessão local e só consultam o álbum selecionado. Fotos antigas não são apagadas automaticamente. Um índice corrompido é preservado e o erro é registrado no log, em vez de substituir o álbum.
 
-As opções do `config.json` são `EnableAlbums` (padrão `true`), `AlbumDailyLimit` (40 registros comuns por dia) e `AlbumMinSecondsBetweenPhotos` (10 segundos; mínimo efetivo de 3 para lembranças comuns). Noites e ocorrências da Joja são isentas do limite comum; ocorrências comprovadas usam identificadores distintos para não esconder um segundo consumo. Desativar a captura mantém fotos anteriores disponíveis. Títulos e descrições estão em `guide-src/album-moments.json`; atividades, objetos Joja e critérios de placar estão em `album-rules.json`. As legendas usam nomes reais, sem executar o texto como código.
+As opções do `config.json` são `EnableAlbums` (padrão `true`), `AlbumDailyLimit` (40 registros comuns por dia) e e um cooldown fixo de 20 minutos entre fotos da galeria/álbuns (as verificações de eventos ficam suspensas nesse período). Noites e ocorrências da Joja são isentas do limite comum; ocorrências comprovadas usam identificadores distintos para não esconder um segundo consumo. Desativar a captura mantém fotos anteriores disponíveis. Títulos e descrições estão em `guide-src/album-moments.json`; atividades, objetos Joja e critérios de placar estão em `album-rules.json`. As legendas usam nomes reais, sem executar o texto como código.
 
 ### Coop, noites e Cantinho da vergonha
 

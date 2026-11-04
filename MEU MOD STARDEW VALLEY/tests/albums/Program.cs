@@ -112,7 +112,8 @@ try {
     Check(!pairStore.Sessions.Start(definition with { Day=3 }),"Um índice antigo não pode trocar a data de uma sessão existente.");
     Check(!pairStore.Sessions.Start(definition with { InitiatorId="2" }),"O iniciador de uma sessão existente é imutável.");
     Check(!pairStore.Sessions.Confirm(sid,"1",new string('a',64)),"Não se confirma sessão sem originais.");
-    var left=pairStore.Add(redPng,null,"shared-photo","Duas visões","Alice","Alice","Beach",1,"summer",2,1300,40,collection:"coop",ownerId:"1",sessionId:sid)!;
+    Check(pairStore.Add(png,null,"late-home","Anterior","Anterior","Alice","Beach",1,"summer",2,1200,1,ownerId:"1") != null, "A foto anterior deve preencher o limite diário.");
+    var left=pairStore.Add(redPng,null,"shared-photo","Duas visões","Alice","Alice","Beach",1,"summer",2,1300,1,collection:"coop",ownerId:"1",sessionId:sid) ?? throw new Exception("Pedido manual deve ser gravado mesmo após o limite diário.");
     Check(pairStore.SessionDigest(sid)==null,"Só uma foto não forma uma sessão completa.");
     var right=new AlbumPhoto(Guid.NewGuid().ToString("N"),Guid.NewGuid().ToString("N"),"shared-photo","Duas visões","Bob","Bob","Mountain",1,"summer",2,1300,DateTimeOffset.UtcNow,Collection:"coop",OwnerId:"2",SessionId:sid,ImageHash:AlbumStore.Hash(bluePng));
     Check(pairStore.Import(right,bluePng,"2"),"Segunda visão precisa ser importada após verificação.");

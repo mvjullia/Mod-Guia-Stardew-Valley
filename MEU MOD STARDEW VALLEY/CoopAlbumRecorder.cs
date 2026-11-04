@@ -21,6 +21,7 @@ internal sealed partial class CoopAlbumRecorder
     private readonly Func<ModConfig> config;
     private readonly Action<AlbumMoment> queue;
     private readonly string modId;
+    private readonly Func<bool> cooldown;
     private readonly AlbumCoopRules rules;
     private readonly CoopAlbumDirector director = new();
     private sealed record Peer(string Session, long Sequence, AlbumActor Actor, long Received, bool Sharing, bool Requests);
@@ -40,8 +41,9 @@ internal sealed partial class CoopAlbumRecorder
         public bool Sharing { get; set; } public bool Requests { get; set; }
         public List<AlbumScore>? Scores { get; set; }
     }
-    public CoopAlbumRecorder(IModHelper helper, IMonitor monitor, AlbumStore store, Func<ModConfig> config, Action<AlbumMoment> queue, string modId)
+    public CoopAlbumRecorder(IModHelper helper, IMonitor monitor, AlbumStore store, Func<ModConfig> config, Action<AlbumMoment> queue, string modId, Func<bool>? cooldown = null)
     {
+        this.cooldown = cooldown ?? (() => false);
         this.helper = helper; this.monitor = monitor; this.store = store; this.config = config; this.queue = queue; this.modId = modId;
         using var stream = typeof(CoopAlbumRecorder).Assembly.GetManifestResourceStream("Guide.album-rules.json") ?? throw new InvalidDataException("Regras cooperativas ausentes.");
         rules = JsonSerializer.Deserialize<AlbumCoopRules>(stream, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new();
@@ -108,6 +110,7 @@ internal sealed partial class CoopAlbumRecorder
             if (!e.IsMultipleOf(30)) return;
             ReadCounters(true); Broadcast();
             var equipped = Equipped().ToArray();
+            if (cooldown()) { wearables = equipped.Select(item => item.QualifiedItemId).ToHashSet(); return; } // skip photo-event checks during cooldown
             foreach (var item in equipped.Where(item => !wearables.Contains(item.QualifiedItemId) && IsJojaItem(item.QualifiedItemId)))
                 Record("joja-outfit", "joja", "joja-outfit", item.DisplayName, context: Game1.activeClickableMenu);
             wearables = equipped.Select(item => item.QualifiedItemId).ToHashSet();
@@ -170,7 +173,7 @@ internal sealed partial class CoopAlbumRecorder
     internal void Pulse(string activity) { if (!Ready) return; pulse = activity; pulseUntil = Environment.TickCount64 + 3000; Broadcast(); }
     internal void Record(string kind, string collection, string mode, string item = "", Dictionary<string, string>? values = null, object? context = null)
     {
-        if (!Ready) return; var actor = Actor();
+        if (!Ready || cooldown()) return; var actor = Actor();
         var fields = new Dictionary<string, string>(values ?? new()) { ["player"] = actor.Name, ["place"] = actor.Place, ["item"] = item };
         queue(new AlbumMoment(kind, item, actor.Location, CaptureMode: mode, Collection: collection,
             EpisodeKey: actor.Id + "/" + session + "/" + ++eventSequence, Values: fields, Priority: 100,
